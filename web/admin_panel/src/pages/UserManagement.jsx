@@ -998,7 +998,7 @@ const UserManagement = () => {
             photos, newsroom and parent replies. They cannot access fees, attendance or exams. Share the portal URL and the
             password you set here.{" "}
             <a
-              href={import.meta.env.VITE_SPOC_URL || "http://localhost:5181/login"}
+              href={import.meta.env.VITE_SPOC_URL || "/spoc/login"}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#047857", fontWeight: 700, textDecoration: "underline", display: "inline-flex", alignItems: "center", gap: "4px" }}

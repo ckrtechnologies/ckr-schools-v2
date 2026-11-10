@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5006/api';
+// Relative by default so a production build always talks to the same origin (/api).
+export const API_URL = import.meta.env.VITE_API_URL || '/api';
 const API_ORIGIN = API_URL.replace(/\/api\/?$/, '');
 
 export const getTenantSlug = () => {
@@ -8,7 +9,9 @@ export const getTenantSlug = () => {
 
   const host = window.location.hostname;
   const parts = host.split('.');
-  if (parts.length > 2 && !['admin', 'www', 'localhost'].includes(parts[0])) {
+  // Bare IPs (127.0.0.1, 192.168.x.x) are not tenant subdomains.
+  const isIpHost = /^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.includes(':');
+  if (!isIpHost && parts.length > 2 && !['admin', 'www', 'localhost'].includes(parts[0])) {
     return parts[0].replace(/spoc$/, '');
   }
 
@@ -81,7 +84,7 @@ export const deleteGalleryItem = (id) => api.delete(`/marketplace/manage/gallery
 export const deleteCdnFile = (url) => api.delete('/upload/file', { data: { url } });
 
 export const marketplaceSchoolUrl = (slug) => {
-  const base = (import.meta.env.VITE_MARKETPLACE_URL || 'http://localhost:5175').replace(/\/+$/, '');
+  const base = (import.meta.env.VITE_MARKETPLACE_URL || (typeof window !== 'undefined' ? window.location.origin : '')).replace(/\/+$/, '');
   return slug ? `${base}/schools/${encodeURIComponent(slug)}` : base;
 };
 

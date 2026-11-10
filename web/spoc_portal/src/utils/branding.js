@@ -5,7 +5,7 @@
 export function resolveAssetUrl(url) {
   if (!url) return null;
   if (/^(https?:|data:)/.test(url)) return url;
-  const apiBase = (import.meta.env.VITE_API_URL || 'http://localhost:5006/api').replace(/\/api\/?$/, '');
+  const apiBase = (import.meta.env.VITE_API_URL || '/api').replace(/\/api\/?$/, '');
   return `${apiBase}${url.startsWith('/') ? url : `/${url}`}`;
 }
 
@@ -34,7 +34,7 @@ export function applySchoolBranding(school, portalTitle = 'SPOC Portal') {
 }
 
 export async function fetchSchoolProfile(slug) {
-  const apiBase = (import.meta.env.VITE_API_URL || 'http://localhost:5006/api').replace(/\/api\/?$/, '');
+  const apiBase = (import.meta.env.VITE_API_URL || '/api').replace(/\/api\/?$/, '');
   const targetSlug = slug || localStorage.getItem('spocTenantSlug') || '';
   try {
     const res = await fetch(

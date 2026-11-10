@@ -565,7 +565,7 @@ const SchoolInfo = () => {
                         </div>
                     </div>
                     <a
-                        href={import.meta.env.VITE_SPOC_URL || `http://localhost:5181/login?tenant=${encodeURIComponent(getTenantSlug() || "")}`}
+                        href={import.meta.env.VITE_SPOC_URL || `/spoc/login?tenant=${encodeURIComponent(getTenantSlug() || "")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-primary"

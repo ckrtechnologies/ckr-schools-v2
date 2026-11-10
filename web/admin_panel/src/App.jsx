@@ -68,9 +68,13 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   return children;
 };
 
+// Derived from vite `base`: '/' on tenant subdomains, '/admin' when served from /admin/.
+const BASE_PATH = import.meta.env.BASE_URL || '/';
+const ROUTER_BASENAME = BASE_PATH.replace(/\/$/, '') || '/';
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={ROUTER_BASENAME}>
       <ToastContainer theme="dark" position="top-right" />
       <ErrorBoundary>
         <Routes>

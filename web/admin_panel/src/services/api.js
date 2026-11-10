@@ -1,13 +1,16 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5006/api";
+// Relative by default so a production build always talks to the same origin (/api).
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const getTenantSlug = () => {
   if (typeof window !== "undefined") {
     // 1. From subdomain (e.g. vision.ckrschools.online or visionadmin.ckrtechnologies.in)
     const host = window.location.hostname;
     const parts = host.split(".");
-    if (parts.length > 2 && parts[0] !== "admin" && parts[0] !== "www" && parts[0] !== "localhost") {
+    // Bare IPs (127.0.0.1, 192.168.x.x) are not tenant subdomains.
+    const isIpHost = /^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.includes(":");
+    if (!isIpHost && parts.length > 2 && parts[0] !== "admin" && parts[0] !== "www" && parts[0] !== "localhost") {
       return parts[0].replace(/admin$/, "");
     }
     // 2. From URL query param ?tenant=slug

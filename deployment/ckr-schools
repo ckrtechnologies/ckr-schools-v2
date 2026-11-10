@@ -1,6 +1,33 @@
 # ==============================================================================
 # CKR Technologies — Complete Production Nginx Configuration
 # Multi-Tenant School Operating System (ckrschools.online)
+#
+# IMPORTANT — subdirectory hosting contract
+# ------------------------------------------------------------------------------
+# Every single-page app below is served from a sub-path. For that to work the
+# app MUST be built with a matching Vite `base`:
+#
+#   URL path      Build                                Directory
+#   /             npm run build                        marketplace/
+#   /spoc/        VITE_BASE_PATH=/spoc/ npm run build  spoc/
+#   /superadmin/  VITE_BASE_PATH=/superadmin/ npm run build  superadmin/
+#   /admin/       VITE_BASE_PATH=/admin/ npm run build  admin/
+#   tenant root/  npm run build                        tenant-admin/
+#   /prototype/   (static prototype build)             prototype/
+#
+# `deployment/build.sh` produces exactly this layout.
+#
+# Nginx rules that make the sub-paths safe (do not remove):
+#   1. `^~` on /api/, /cdn/, /uploads/ and every SPA prefix. Without it the
+#      static-file regex at the bottom of the block wins and serves school
+#      logos / gallery photos from the marketplace root, so every /cdn/*.jpg
+#      returns 404.
+#   2. `try_files $uri $uri/ /spoc/index.html;` — the LAST argument is the
+#      fallback. Writing `... /spoc/index.html =404;` makes /spoc/index.html
+#      just another file to test, so every deep link (/spoc/gallery,
+#      /admin/leads, ...) returns 404.
+#   3. `alias` + `try_files` is safe here because the fallback is a URI and
+#      `=404` is never the final argument.
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
@@ -49,7 +76,13 @@ server {
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
 
+    # Default document root = marketplace SPA (served at "/")
+    root /var/www/ckrschools/marketplace;
+    index index.html;
+
     client_max_body_size 50M;
+    client_body_timeout 300s;
+    send_timeout 300s;
 
     gzip on;
     gzip_vary on;
@@ -60,7 +93,11 @@ server {
     # --------------------------------------------------------------------------
     # Surface 1: Express 5 API Reverse Proxy (/api/)
     # --------------------------------------------------------------------------
-    location /api/ {
+    location = /api {
+        return 308 /api/;
+    }
+
+    location ^~ /api/ {
         proxy_pass http://127.0.0.1:5006;
         proxy_http_version 1.1;
 
@@ -70,11 +107,15 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_set_header X-Forwarded-Host $host;
 
+        # Stream large gallery videos instead of buffering them to disk
+        proxy_request_buffering off;
+        proxy_read_timeout 300s;
+        proxy_send_timeout 300s;
+        proxy_connect_timeout 90s;
+
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_cache_bypass $http_upgrade;
-        proxy_read_timeout 90s;
-        proxy_connect_timeout 90s;
     }
 
     # --------------------------------------------------------------------------
@@ -87,14 +128,12 @@ server {
         return 301 /superadmin/;
     }
     location ^~ /super-admin/ {
-        alias /var/www/ckrschools/super-admin/;
-        index index.html;
-        try_files $uri $uri/ /super-admin/index.html =404;
+        rewrite ^/super-admin/(.*)$ /superadmin/$1 permanent;
     }
     location ^~ /superadmin/ {
         alias /var/www/ckrschools/super-admin/;
         index index.html;
-        try_files $uri $uri/ /superadmin/index.html =404;
+        try_files $uri $uri/ /superadmin/index.html;
     }
 
     # --------------------------------------------------------------------------
@@ -106,7 +145,7 @@ server {
     location ^~ /spoc/ {
         alias /var/www/ckrschools/spoc/;
         index index.html;
-        try_files $uri $uri/ /spoc/index.html =404;
+        try_files $uri $uri/ /spoc/index.html;
     }
 
     # --------------------------------------------------------------------------
@@ -118,7 +157,7 @@ server {
     location ^~ /admin/ {
         alias /var/www/ckrschools/admin/;
         index index.html;
-        try_files $uri $uri/ /admin/index.html =404;
+        try_files $uri $uri/ /admin/index.html;
     }
 
     # --------------------------------------------------------------------------
@@ -130,20 +169,20 @@ server {
     location ^~ /prototype/ {
         alias /var/www/ckrschools/prototype/;
         index index.html;
-        try_files $uri $uri/ /prototype/index.html =404;
+        try_files $uri $uri/ /prototype/index.html;
     }
 
     # --------------------------------------------------------------------------
     # Surface 6: Public Uploads & Media Storage (/cdn/ & /uploads/)
     # (Points directly to project uploads directory instead of /srv)
     # --------------------------------------------------------------------------
-    location /cdn/ {
+    location ^~ /cdn/ {
         alias /var/www/ckrschools/uploads/;
         expires 30d;
         add_header Cache-Control "public, no-transform";
     }
 
-    location /uploads/ {
+    location ^~ /uploads/ {
         alias /var/www/ckrschools/uploads/;
         expires 30d;
         add_header Cache-Control "public, no-transform";
@@ -153,9 +192,7 @@ server {
     # Surface 7: Public Website Marketplace (Root /)
     # --------------------------------------------------------------------------
     location / {
-        root /var/www/ckrschools/marketplace;
-        index index.html;
-        try_files $uri $uri/ /index.html =404;
+        try_files $uri $uri/ /index.html;
     }
 
     location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
@@ -188,9 +225,12 @@ server {
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
 
+    # Wildcard tenant admin portal (served at the subdomain root)
     root /var/www/ckrschools/admin;
     index index.html;
     client_max_body_size 50M;
+    client_body_timeout 300s;
+    send_timeout 300s;
 
     gzip on;
     gzip_vary on;
@@ -199,7 +239,11 @@ server {
     gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript application/json image/svg+xml;
 
     # API Proxy to Express Backend with Subdomain Forwarding
-    location /api/ {
+    location = /api {
+        return 308 /api/;
+    }
+
+    location ^~ /api/ {
         proxy_pass http://127.0.0.1:5006;
         proxy_http_version 1.1;
 
@@ -212,9 +256,11 @@ server {
 
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
-        proxy_cache_bypass $http_upgrade;
-        proxy_read_timeout 90s;
+        proxy_request_buffering off;
+        proxy_read_timeout 300s;
+        proxy_send_timeout 300s;
         proxy_connect_timeout 90s;
+        proxy_cache_bypass $http_upgrade;
     }
 
     # Prototype accessible from school subdomain
@@ -224,17 +270,17 @@ server {
     location ^~ /prototype/ {
         alias /var/www/ckrschools/prototype/;
         index index.html;
-        try_files $uri $uri/ /prototype/index.html =404;
+        try_files $uri $uri/ /prototype/index.html;
     }
 
     # Media & Uploads access
-    location /cdn/ {
+    location ^~ /cdn/ {
         alias /var/www/ckrschools/uploads/;
         expires 30d;
         add_header Cache-Control "public, no-transform";
     }
 
-    location /uploads/ {
+    location ^~ /uploads/ {
         alias /var/www/ckrschools/uploads/;
         expires 30d;
         add_header Cache-Control "public, no-transform";
@@ -242,7 +288,7 @@ server {
 
     # School Operations SPA Router
     location / {
-        try_files $uri $uri/ /index.html =404;
+        try_files $uri $uri/ /index.html;
     }
 
     location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {

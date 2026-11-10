@@ -29,6 +29,7 @@ pm2.log
 # Build outputs & caches
 dist/
 build/
+deployment/artifacts/
 .next/
 out/
 coverage/

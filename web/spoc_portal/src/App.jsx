@@ -13,6 +13,10 @@ import Gallery from './pages/Gallery';
 import Press from './pages/Press';
 import Leads from './pages/Leads';
 
+// Derived from vite `base` so the same code works at /spoc/ or at the domain root.
+const BASE_PATH = import.meta.env.BASE_URL || '/';
+const ROUTER_BASENAME = BASE_PATH.replace(/\/$/, '') || '/';
+
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   if (!isAuthenticated) return <Navigate to="/login" replace />;
@@ -22,7 +26,7 @@ const ProtectedRoute = ({ children }) => {
 export default function App() {
   return (
     <ErrorBoundary>
-      <BrowserRouter basename="/spoc">
+      <BrowserRouter basename={ROUTER_BASENAME}>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
