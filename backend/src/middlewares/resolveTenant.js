@@ -15,7 +15,7 @@ export async function resolveTenant(req, res, next) {
   try {
     const forwardedHost = req.headers['x-forwarded-host'];
     const hostHeader = (forwardedHost || req.headers.host || '').toLowerCase().split(':')[0];
-    const queryOverride = req.query?.school;
+    const queryOverride = req.query?.school || req.query?.tenant;
     const headerOverride = req.headers['x-tenant-slug'] || req.headers['x-tenant-subdomain'];
 
     let slug = null;

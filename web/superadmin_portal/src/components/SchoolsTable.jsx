@@ -15,6 +15,7 @@ import {
   IconExternalLink,
   IconStar
 } from '@tabler/icons-react';
+import { getSchoolPortalUrl, resolveAssetUrl } from '../utils/urlHelper.js';
 
 export default function SchoolsTable({
   schools = [],
@@ -304,7 +305,7 @@ export default function SchoolsTable({
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                         {(school.logo_url || school.logoUrl) ? (
                           <img 
-                            src={(school.logo_url || school.logoUrl).startsWith('http') ? (school.logo_url || school.logoUrl) : `http://localhost:5006${school.logo_url || school.logoUrl}`} 
+                            src={resolveAssetUrl(school.logo_url || school.logoUrl)} 
                             alt={school.name} 
                             onError={(e) => {
                               e.currentTarget.style.display = 'none';
@@ -327,7 +328,7 @@ export default function SchoolsTable({
 
                     <td style={{ padding: '0 16px' }} onClick={(e) => e.stopPropagation()}>
                       <a
-                        href={`http://localhost:5174/login?tenant=${encodeURIComponent(school.slug)}`}
+                        href={getSchoolPortalUrl(school.slug)}
                         target="_blank"
                         rel="noreferrer"
                         title={`Launch ${school.name} Admin Portal`}
@@ -419,7 +420,7 @@ export default function SchoolsTable({
                         </button>
 
                         <a
-                          href={`http://localhost:5174/login?tenant=${encodeURIComponent(school.slug)}`}
+                          href={getSchoolPortalUrl(school.slug)}
                           target="_blank"
                           rel="noreferrer"
                           title={`Launch ${school.name} Admin Portal`}
@@ -472,7 +473,7 @@ export default function SchoolsTable({
                           padding: '4px'
                         }}>
                           <a
-                            href={`http://localhost:5174/login?tenant=${encodeURIComponent(school.slug)}`}
+                            href={getSchoolPortalUrl(school.slug)}
                             target="_blank"
                             rel="noreferrer"
                             onClick={() => setDropdownOpenId(null)}

@@ -15,6 +15,7 @@ import {
   IconTrash,
   IconExternalLink
 } from '@tabler/icons-react';
+import { getSchoolPortalUrl, resolveAssetUrl } from '../utils/urlHelper.js';
 
 export default function SchoolDetailModal({ school, isOpen, onClose, onToggleStatus, onEditSchool, onDeleteSchool }) {
   if (!isOpen || !school) return null;
@@ -67,7 +68,7 @@ export default function SchoolDetailModal({ school, isOpen, onClose, onToggleSta
             }}>
               {school.logo_url ? (
                 <img 
-                  src={school.logo_url.startsWith('http') ? school.logo_url : `http://localhost:5006${school.logo_url}`} 
+                  src={resolveAssetUrl(school.logo_url)} 
                   alt={school.name}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
@@ -241,7 +242,7 @@ export default function SchoolDetailModal({ school, isOpen, onClose, onToggleSta
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <a
-                href={`http://localhost:5174/login?tenant=${encodeURIComponent(school.slug)}`}
+                href={getSchoolPortalUrl(school.slug)}
                 target="_blank"
                 rel="noreferrer"
                 style={{

@@ -202,7 +202,7 @@ server {
 }
 
 # ------------------------------------------------------------------------------
-# 3. Wildcard School Tenants: *.ckrschools.online (e.g. vision.ckrschools.online)
+# 3. Wildcard School Tenants: *.ckrschools.online (e.g. arc.ckrschools.online, vision.ckrschools.online)
 # ------------------------------------------------------------------------------
 server {
     listen 443 ssl;
@@ -226,7 +226,7 @@ server {
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
 
     # Wildcard tenant admin portal (served at the subdomain root)
-    root /var/www/ckrschools/admin;
+    root /var/www/ckrschools/tenant-admin;
     index index.html;
     client_max_body_size 50M;
     client_body_timeout 300s;
@@ -263,6 +263,100 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 
+    # --------------------------------------------------------------------------
+    # Subdomain Surfaces: Dedicated Operational Desks on School Subdomain
+    # Allows:
+    # - <school>.ckrschools.online/spoc/             -> SPOC Marketing Portal
+    # - <school>.ckrschools.online/admission/        -> Admissions Desk
+    # - <school>.ckrschools.online/finance/          -> Finance & Fees Desk
+    # - <school>.ckrschools.online/timetable/        -> Timetable & Proxies Desk
+    # - <school>.ckrschools.online/teacher-manager/  -> Teacher Manager Desk
+    # - <school>.ckrschools.online/tc/               -> Transfer Certificate Desk
+    # - <school>.ckrschools.online/academic-manager/ -> Academic Exams Desk
+    # --------------------------------------------------------------------------
+
+    # 1. SPOC Public-Domain Portal (/spoc/)
+    location = /spoc {
+        return 301 /spoc/;
+    }
+    location ^~ /spoc/ {
+        alias /var/www/ckrschools/spoc/;
+        index index.html;
+        try_files $uri $uri/ /spoc/index.html;
+    }
+
+    # 2. Admissions Desk (/admission/)
+    location = /admission {
+        return 301 /admission/;
+    }
+    location ^~ /admission/ {
+        alias /var/www/ckrschools/admission/;
+        index index.html;
+        try_files $uri $uri/ /admission/index.html;
+    }
+
+    # 3. Finance & Fees Desk (/finance/)
+    location = /finance {
+        return 301 /finance/;
+    }
+    location ^~ /finance/ {
+        alias /var/www/ckrschools/finance/;
+        index index.html;
+        try_files $uri $uri/ /finance/index.html;
+    }
+
+    # 4. Timetable Desk (/timetable/)
+    location = /timetable {
+        return 301 /timetable/;
+    }
+    location ^~ /timetable/ {
+        alias /var/www/ckrschools/timetable/;
+        index index.html;
+        try_files $uri $uri/ /timetable/index.html;
+    }
+
+    # 5. Teacher Manager (/teacher-manager/ & /teacher_manager/)
+    location = /teacher-manager {
+        return 301 /teacher-manager/;
+    }
+    location = /teacher_manager {
+        return 301 /teacher-manager/;
+    }
+    location ^~ /teacher_manager/ {
+        rewrite ^/teacher_manager/(.*)$ /teacher-manager/$1 permanent;
+    }
+    location ^~ /teacher-manager/ {
+        alias /var/www/ckrschools/teacher_manager/;
+        index index.html;
+        try_files $uri $uri/ /teacher-manager/index.html;
+    }
+
+    # 6. Transfer Certificate Desk (/tc/)
+    location = /tc {
+        return 301 /tc/;
+    }
+    location ^~ /tc/ {
+        alias /var/www/ckrschools/tc/;
+        index index.html;
+        try_files $uri $uri/ /tc/index.html;
+    }
+
+    # 7. Academic Manager (/academic-manager/ & /academic_manager/)
+    location = /academic-manager {
+        return 301 /academic-manager/;
+    }
+    location = /academic_manager {
+        return 301 /academic-manager/;
+    }
+    location ^~ /academic_manager/ {
+        rewrite ^/academic_manager/(.*)$ /academic-manager/$1 permanent;
+    }
+    location ^~ /academic-manager/ {
+        alias /var/www/ckrschools/academic_manager/;
+        index index.html;
+        try_files $uri $uri/ /academic-manager/index.html;
+    }
+
     # Prototype accessible from school subdomain
     location = /prototype {
         return 301 /prototype/;
@@ -291,8 +385,10 @@ server {
         try_files $uri $uri/ /index.html;
     }
 
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+    # Static assets with caching
+    location ~* \.(css|js|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc|woff|woff2|ttf)$ {
         expires 30d;
+        access_log off;
         add_header Cache-Control "public, no-transform";
     }
 }
