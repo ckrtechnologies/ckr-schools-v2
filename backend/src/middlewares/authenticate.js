@@ -20,6 +20,29 @@ export async function authenticate(req, res, next) {
 
     req.user = decoded;
 
+    // SPOC accounts are confined to the public-domain surface (marketplace management,
+    // uploads and their own profile) — never school operations APIs.
+    const role = String(decoded.role || decoded.type || '').toLowerCase();
+    if (role === 'spoc') {
+      const path = String(req.originalUrl || req.url || '').split('?')[0];
+      const allowedPrefixes = [
+        '/api/marketplace/manage',
+        '/api/marketplace/auth',
+        '/api/auth/me',
+        '/api/auth/profile',
+        '/api/auth/change-password',
+        '/api/auth/auth/change-password',
+        '/api/upload',
+        '/api/public-school-profile'
+      ];
+      if (!allowedPrefixes.some(prefix => path.startsWith(prefix))) {
+        return res.status(403).json({
+          success: false,
+          error: { code: 'SPOC_SCOPE_FORBIDDEN', message: 'SPOC accounts can only use the public-domain portal.' }
+        });
+      }
+    }
+
     // Cross-tenant boundary check: Ensure token's school matches the requested tenant
     if (req.tenant && decoded.schoolId && decoded.schoolId !== req.tenant.id) {
       return res.status(403).json({

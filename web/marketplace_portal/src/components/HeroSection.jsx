@@ -9,6 +9,8 @@ import {
   IconSchool
 } from '@tabler/icons-react';
 import { useGetSchoolsQuery } from '../store/marketplaceApi';
+import SchoolImage from './SchoolImage.jsx';
+import { getCurrentAcademicYearShort } from '../utils/academicYear.js';
 
 export default function HeroSection({ onExploreClick, onSelectSchool }) {
   const { data: schoolsData } = useGetSchoolsQuery({});
@@ -17,21 +19,13 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
   const previewCards = schools.slice(0, 2);
 
   return (
-    <section style={{
+    <section className="mk-hero-section" style={{
       background: 'linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)',
-      padding: '48px 20px 40px',
       borderBottom: '1px solid #e2e8f0',
       position: 'relative',
       overflow: 'hidden'
     }}>
-      <div style={{
-        maxWidth: '1280px',
-        margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: '1.2fr 1fr',
-        gap: '40px',
-        alignItems: 'center'
-      }}>
+      <div className="mk-hero-grid">
         {/* Left Column: Headlines & Value Prop */}
         <div>
           <div style={{
@@ -49,11 +43,11 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             boxShadow: '0 2px 4px rgba(0,0,0,0.03)'
           }}>
             <span className="pulse-indicator" />
-            Admissions Open For Academic Year 2026-27
+            Explore Schools for Academic Year {getCurrentAcademicYearShort()}
           </div>
 
           <h1 style={{
-            fontSize: '44px',
+            fontSize: 'clamp(30px, 4.2vw, 44px)',
             fontWeight: '800',
             lineHeight: '1.15',
             color: '#0f172a',
@@ -62,7 +56,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
           }}>
             Find, Compare & Enrol in India's Top{' '}
             <span style={{ color: '#047857', position: 'relative', display: 'inline-block' }}>
-              Verified Schools
+              Schools
             </span>
           </h1>
 
@@ -73,7 +67,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             marginBottom: '28px',
             maxWidth: '560px'
           }}>
-            Unbiased 5-axis parent ratings, transparent annual fee schedules, official campus photo galleries, and 1-click admission inquiries directly through CKR's verified portal.
+            Unbiased 5-axis parent ratings, transparent annual fee schedules, official campus photo galleries, and 1-click admission inquiries directly through CKR Marketplace.
           </p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
@@ -97,7 +91,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Explore Verified Schools
+              Explore Schools
               <IconArrowRight size={18} />
             </button>
 
@@ -109,14 +103,14 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
                 <span style={{ fontWeight: '700', color: '#0f172a' }}>
                   {schools.length}+ Schools
                 </span>
-                <span>listed & verified</span>
+                <span>listed</span>
               </div>
             )}
           </div>
         </div>
 
         {/* Right Column: Floating Interactive School Preview Cards */}
-        <div style={{ position: 'relative', height: '420px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="mk-hero-cards" style={{ position: 'relative', height: '420px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {previewCards.length === 0 ? (
             /* Loading / empty state — no fake cards */
             <div style={{
@@ -130,7 +124,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             }}>
               <IconSchool size={36} style={{ marginBottom: '12px', color: '#cbd5e1' }} />
               <div style={{ fontSize: '14px', fontWeight: '600' }}>Schools Loading…</div>
-              <div style={{ fontSize: '12px', marginTop: '4px' }}>Fetching verified campuses</div>
+              <div style={{ fontSize: '12px', marginTop: '4px' }}>Fetching school profiles</div>
             </div>
           ) : (
             <>
@@ -138,7 +132,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
               {previewCards[0] && (
                 <div
                   onClick={() => onSelectSchool(previewCards[0].slug)}
-                  className="animate-float"
+                  className="animate-float mk-hero-card"
                   style={{
                     position: 'absolute',
                     top: '20px',
@@ -165,21 +159,13 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
-                    {previewCards[0].hero_image_url ? (
-                      <img
-                        src={previewCards[0].hero_image_url}
-                        alt={previewCards[0].name}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                    ) : previewCards[0].logo_url ? (
-                      <img
-                        src={previewCards[0].logo_url}
-                        alt={previewCards[0].name}
-                        style={{ maxHeight: '90px', objectFit: 'contain' }}
-                      />
-                    ) : (
-                      <IconSchool size={48} style={{ color: '#a7f3d0' }} />
-                    )}
+                    <SchoolImage
+                      school={previewCards[0]}
+                      alt={previewCards[0].name}
+                      height="100%"
+                      objectFit="cover"
+                      logoPadding="30px 34px"
+                    />
                     <span style={{
                       position: 'absolute',
                       top: '8px',
@@ -191,7 +177,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
                       padding: '3px 8px',
                       borderRadius: '4px'
                     }}>
-                      {previewCards[0].board || 'CBSE'}{previewCards[0].city ? ` · ${previewCards[0].city}` : ''}
+                      {[previewCards[0].affiliation_board || previewCards[0].board, previewCards[0].city].filter(Boolean).join(' · ')}
                     </span>
                   </div>
 
@@ -232,6 +218,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
               {previewCards[1] && (
                 <div
                   onClick={() => onSelectSchool(previewCards[1].slug)}
+                  className="mk-hero-card"
                   style={{
                     position: 'absolute',
                     bottom: '20px',
@@ -257,21 +244,13 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
-                    {previewCards[1].hero_image_url ? (
-                      <img
-                        src={previewCards[1].hero_image_url}
-                        alt={previewCards[1].name}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                    ) : previewCards[1].logo_url ? (
-                      <img
-                        src={previewCards[1].logo_url}
-                        alt={previewCards[1].name}
-                        style={{ maxHeight: '80px', objectFit: 'contain' }}
-                      />
-                    ) : (
-                      <IconSchool size={40} style={{ color: '#bfdbfe' }} />
-                    )}
+                    <SchoolImage
+                      school={previewCards[1]}
+                      alt={previewCards[1].name}
+                      height="100%"
+                      objectFit="cover"
+                      logoPadding="26px 30px"
+                    />
                     <span style={{
                       position: 'absolute',
                       top: '8px',
@@ -283,7 +262,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
                       padding: '3px 8px',
                       borderRadius: '4px'
                     }}>
-                      {previewCards[1].board || 'CBSE'}{previewCards[1].city ? ` · ${previewCards[1].city}` : ''}
+                      {[previewCards[1].affiliation_board || previewCards[1].board, previewCards[1].city].filter(Boolean).join(' · ')}
                     </span>
                   </div>
 
@@ -318,8 +297,7 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
       </div>
 
       {/* Trust Stats Ribbon */}
-      <div style={{
-        maxWidth: '1280px',
+      <div className="mk-ribbon" style={{
         margin: '40px auto 0',
         paddingTop: '24px',
         borderTop: '1px solid #e2e8f0',
@@ -332,8 +310,8 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             <IconShieldCheck size={22} />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>100% Verified</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>Accredited CBSE Campuses</div>
+            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>School Profiles</div>
+            <div style={{ fontSize: '12px', color: '#64748b' }}>Maintained by each school</div>
           </div>
         </div>
 
@@ -342,8 +320,8 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             <IconCurrencyRupee size={22} />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>₹0 Parent Fee</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>Zero Brokerage or Markup</div>
+            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>Free Enquiries</div>
+            <div style={{ fontSize: '12px', color: '#64748b' }}>No brokerage or markup</div>
           </div>
         </div>
 
@@ -352,8 +330,8 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             <IconStarFilled size={22} />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>5-Axis Reviews</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>Verified Parent UGC Only</div>
+            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>Parent Ratings</div>
+            <div style={{ fontSize: '12px', color: '#64748b' }}>Tied to signed-in accounts</div>
           </div>
         </div>
 

@@ -200,10 +200,11 @@ export async function deleteChampion(tenantId, championId) {
 
 export async function listGallery(tenantId) {
   const query = `
-    SELECT id, tenant_id, title, image_url, image_url AS media_url, description, media_type, created_at
+    SELECT id, tenant_id, title, image_url, image_url AS media_url, description, media_type,
+           is_marketplace_visible, display_order, created_at
     FROM school_gallery
     WHERE tenant_id = $1
-    ORDER BY created_at DESC;
+    ORDER BY display_order ASC, created_at DESC;
   `;
   const { rows } = await pgPool.query(query, [tenantId]);
   return rows;
@@ -318,3 +319,20 @@ export async function updateTenantProfile(tenantId, data) {
   return rows[0] || null;
 }
 
+
+/**
+ * Current student of the week (latest published week) for public marketplace use.
+ */
+export async function getCurrentStudentOfWeek(tenantId) {
+  const query = `
+    SELECT sow.id, sow.reason, sow.week_start_date, sow.week_end_date,
+           u.name AS student_name, u.avatar_url
+    FROM public.student_of_the_week sow
+    LEFT JOIN public."user" u ON sow.student_id = u.id AND u.tenant_id = sow.tenant_id
+    WHERE sow.tenant_id = $1
+    ORDER BY sow.week_start_date DESC, sow.created_at DESC
+    LIMIT 1;
+  `;
+  const { rows } = await pgPool.query(query, [tenantId]);
+  return rows[0] || null;
+}

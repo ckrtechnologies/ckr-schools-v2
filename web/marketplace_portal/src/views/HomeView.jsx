@@ -9,10 +9,11 @@ import {
   IconShieldCheck, 
   IconCheck, 
   IconHelpCircle,
-  IconChevronDown
+  IconChevronDown,
+  IconArrowRight
 } from '@tabler/icons-react';
 
-export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure, onOpenComparison }) {
+export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure, onOpenComparison, onOpenCatalog }) {
   const [filters, setFilters] = useState({
     search: '',
     city: 'all',
@@ -56,20 +57,20 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
 
   const faqs = [
     {
-      q: 'Are all schools on this marketplace official and verified?',
-      a: 'Yes. Every school featured on CKR Marketplace is an accredited CBSE/ICSE/IB campus directly integrated with our enterprise School ERP suite. Profiles, facilities, and fee schedules are verified.'
+      q: 'Where does the school information come from?',
+      a: 'Each school maintains its own profile, gallery, achievements and contact details in the school portal. The marketplace reads that data directly, so what you see is what the school has published.'
     },
     {
       q: 'Is there any fee or commission charged to parents?',
-      a: 'Zero. Prospective parents can browse, download brochures, and submit admission inquiries 100% free with no brokerage, markups, or hidden charges.'
+      a: 'Browsing, downloading brochures and submitting admission enquiries are free. There is no brokerage or markup on enquiries submitted through the marketplace.'
     },
     {
       q: 'How does the 1-Click Multi-School enquiry work?',
-      a: 'You can select up to 3 schools in the comparison tray or from search results. When you submit your child’s details once, individual inquiries are registered simultaneously across all selected institutions.'
+      a: 'You can select up to 3 schools in the comparison tray or from search results. When you submit your child’s details once, individual enquiries are registered with each selected school.'
     },
     {
-      q: 'Why cannot parents upload photos with their reviews?',
-      a: 'To guarantee total authentic review integrity and avoid misleading or outdated images, parent UGC is focused strictly on 5-axis star ratings and written testimonials. Campus photos are curated and verified directly by the school administration.'
+      q: 'Do I need an account to enquire or to rate a school?',
+      a: 'No account is needed to browse or send an admission enquiry. To rate a school you must log in with the phone number and password issued by your school.'
     }
   ];
 
@@ -85,7 +86,7 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
       />
 
       {/* Main Content Area */}
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 20px 80px' }}>
+      <div className="mk-page" style={{ paddingTop: 0 }}>
         {/* Search Dock Floating */}
         <SearchDock
           filters={filters}
@@ -94,29 +95,43 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
         />
 
         {/* Section Header */}
-        <div id="schools-grid" style={{
-          display: 'flex',
+        <div id="schools-grid" className="mk-section-head" style={{
           alignItems: 'flex-end',
-          justifyContent: 'space-between',
           marginBottom: '24px'
         }}>
           <div>
             <div style={{ fontSize: '12px', fontWeight: '700', color: '#047857', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-              ACCREDITED INSTITUTIONS
+              SCHOOL DIRECTORY
             </div>
             <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a', letterSpacing: '-0.5px', margin: '4px 0 0' }}>
-              Explore Verified Campuses ({schools.length})
+              Explore Schools ({schools.length})
             </h2>
           </div>
-          <div style={{ fontSize: '13px', color: '#64748b' }}>
-            Showing top schools with verified 2026-27 admission seats
-          </div>
+          <button
+            onClick={onOpenCatalog}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              backgroundColor: '#ffffff',
+              color: '#064e3b',
+              border: '1px solid #a7f3d0',
+              borderRadius: '8px',
+              padding: '8px 14px',
+              fontSize: '13px',
+              fontWeight: 700,
+              cursor: 'pointer'
+            }}
+          >
+            Open Campus Catalog
+            <IconArrowRight size={15} />
+          </button>
         </div>
 
         {/* School Cards Grid */}
         {isLoading ? (
           <div style={{ textAlign: 'center', padding: '60px 0', color: '#64748b' }}>
-            Loading Verified School Profiles...
+            Loading school profiles...
           </div>
         ) : schools.length === 0 ? (
           <div style={{
@@ -152,7 +167,7 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(360px, 100%), 1fr))',
             gap: '24px',
             marginBottom: '64px'
           }}>
@@ -169,10 +184,10 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
         )}
 
         {/* Comparison Feature Banner */}
-        <div style={{
+        <div className="mk-compare-banner" style={{
           backgroundColor: '#064e3b',
           borderRadius: '16px',
-          padding: '36px 40px',
+          padding: 'clamp(20px, 3vw, 36px) clamp(18px, 3vw, 40px)',
           color: '#ffffff',
           display: 'grid',
           gridTemplateColumns: '1.4fr 1fr',
@@ -197,10 +212,10 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
               Unsure which school fits your child best? Compare side-by-side.
             </h3>
             <p style={{ fontSize: '14px', color: '#a7f3d0', lineHeight: '1.6', marginBottom: '20px' }}>
-              Evaluate Vision International School vs ARC School across tuition fees, teacher ratios, sports amenities, and CBSE board performance in 1 clear view.
+              Compare tuition fees, student-teacher ratios, facilities and board affiliation side by side in one clear view.
             </p>
             <button
-              onClick={onOpenComparison}
+              onClick={onOpenCatalog}
               style={{
                 backgroundColor: '#ffffff',
                 color: '#064e3b',
@@ -212,7 +227,7 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
                 cursor: 'pointer'
               }}
             >
-              Open Comparison Matrix
+              Choose Schools to Compare
             </button>
           </div>
 
@@ -227,16 +242,16 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '13px', color: '#e2e8f0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <IconCheck size={16} color="#34d399" /> Official CBSE Affiliation & School Code
+                <IconCheck size={16} color="#34d399" /> Board affiliation and school code (where published)
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <IconCheck size={16} color="#34d399" /> Annual Tuition & Transport Fee Range
+                <IconCheck size={16} color="#34d399" /> Tuition fee range (where published)
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <IconCheck size={16} color="#34d399" /> Student-to-Teacher Ratio (18:1 vs 16:1)
+                <IconCheck size={16} color="#34d399" /> Student-to-Teacher Ratio (where published)
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <IconCheck size={16} color="#34d399" /> STEM Robotics Lab & Sports Facilities
+                <IconCheck size={16} color="#34d399" /> Facilities as listed by the school
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <IconCheck size={16} color="#34d399" /> 1-Click Multi-School Joint Enquiry
@@ -288,7 +303,7 @@ export default function HomeView({ onSelectSchool, onOpenEnquiry, onOpenBrochure
         borderTop: '1px solid #1e293b',
         padding: '48px 20px 32px'
       }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+        <div className="mk-shell" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
           <div>
             <div style={{ fontWeight: '800', fontSize: '16px', color: '#ffffff' }}>
               CKR Schools Marketplace

@@ -1,0 +1,252 @@
+# ==============================================================================
+# CKR Technologies — Complete Production Nginx Configuration
+# Multi-Tenant School Operating System (ckrschools.online)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. HTTP -> HTTPS Global Redirect (Port 80)
+# ------------------------------------------------------------------------------
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ckrschools.online www.ckrschools.online *.ckrschools.online;
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 2. Main Platform Domain: ckrschools.online & www.ckrschools.online
+# Path Isolation Architecture:
+# - /              -> Website Marketplace Portal
+# - /superadmin/   -> Platform Super Admin Console
+# - /spoc/         -> School SPOC Public-Domain Portal
+# - /admin/        -> School Admin Operations Portal
+# - /prototype/    -> Clickable Prototype Workbench
+# - /api/          -> Express 5 API
+# - /cdn/          -> Static CDN Assets
+# - /uploads/      -> School Media & Photos
+# ------------------------------------------------------------------------------
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name ckrschools.online www.ckrschools.online hq.ckrschools.online;
+
+    ssl_certificate /etc/letsencrypt/live/ckrschools.online-0001/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/ckrschools.online-0001/privkey.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+    ssl_session_timeout 1d;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_tickets off;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+
+    client_max_body_size 50M;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript application/json image/svg+xml;
+
+    # --------------------------------------------------------------------------
+    # Surface 1: Express 5 API Reverse Proxy (/api/)
+    # --------------------------------------------------------------------------
+    location /api/ {
+        proxy_pass http://127.0.0.1:5006;
+        proxy_http_version 1.1;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 90s;
+        proxy_connect_timeout 90s;
+    }
+
+    # --------------------------------------------------------------------------
+    # Surface 2: Super Admin HQ Console (/superadmin/ and /super-admin/)
+    # --------------------------------------------------------------------------
+    location = /superadmin {
+        return 301 /superadmin/;
+    }
+    location = /super-admin {
+        return 301 /superadmin/;
+    }
+    location ^~ /super-admin/ {
+        alias /var/www/ckrschools/super-admin/;
+        index index.html;
+        try_files $uri $uri/ /super-admin/index.html =404;
+    }
+    location ^~ /superadmin/ {
+        alias /var/www/ckrschools/super-admin/;
+        index index.html;
+        try_files $uri $uri/ /superadmin/index.html =404;
+    }
+
+    # --------------------------------------------------------------------------
+    # Surface 3: School SPOC Public-Domain Portal (/spoc/)
+    # --------------------------------------------------------------------------
+    location = /spoc {
+        return 301 /spoc/;
+    }
+    location ^~ /spoc/ {
+        alias /var/www/ckrschools/spoc/;
+        index index.html;
+        try_files $uri $uri/ /spoc/index.html =404;
+    }
+
+    # --------------------------------------------------------------------------
+    # Surface 4: School Admin Operations Portal (/admin/)
+    # --------------------------------------------------------------------------
+    location = /admin {
+        return 301 /admin/;
+    }
+    location ^~ /admin/ {
+        alias /var/www/ckrschools/admin/;
+        index index.html;
+        try_files $uri $uri/ /admin/index.html =404;
+    }
+
+    # --------------------------------------------------------------------------
+    # Surface 5: Clickable Prototype Workbench (/prototype/)
+    # --------------------------------------------------------------------------
+    location = /prototype {
+        return 301 /prototype/;
+    }
+    location ^~ /prototype/ {
+        alias /var/www/ckrschools/prototype/;
+        index index.html;
+        try_files $uri $uri/ /prototype/index.html =404;
+    }
+
+    # --------------------------------------------------------------------------
+    # Surface 6: Public Uploads & Media Storage (/cdn/ & /uploads/)
+    # (Points directly to project uploads directory instead of /srv)
+    # --------------------------------------------------------------------------
+    location /cdn/ {
+        alias /var/www/ckrschools/uploads/;
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+
+    location /uploads/ {
+        alias /var/www/ckrschools/uploads/;
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+
+    # --------------------------------------------------------------------------
+    # Surface 7: Public Website Marketplace (Root /)
+    # --------------------------------------------------------------------------
+    location / {
+        root /var/www/ckrschools/marketplace;
+        index index.html;
+        try_files $uri $uri/ /index.html =404;
+    }
+
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 3. Wildcard School Tenants: *.ckrschools.online (e.g. vision.ckrschools.online)
+# ------------------------------------------------------------------------------
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name ~^(?<tenant_subdomain>[a-zA-Z0-9-]+)\.ckrschools\.online$;
+
+    ssl_certificate /etc/letsencrypt/live/ckrschools.online-0001/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/ckrschools.online-0001/privkey.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+    ssl_session_timeout 1d;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_tickets off;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+
+    root /var/www/ckrschools/admin;
+    index index.html;
+    client_max_body_size 50M;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript application/json image/svg+xml;
+
+    # API Proxy to Express Backend with Subdomain Forwarding
+    location /api/ {
+        proxy_pass http://127.0.0.1:5006;
+        proxy_http_version 1.1;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Tenant-Subdomain $tenant_subdomain;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 90s;
+        proxy_connect_timeout 90s;
+    }
+
+    # Prototype accessible from school subdomain
+    location = /prototype {
+        return 301 /prototype/;
+    }
+    location ^~ /prototype/ {
+        alias /var/www/ckrschools/prototype/;
+        index index.html;
+        try_files $uri $uri/ /prototype/index.html =404;
+    }
+
+    # Media & Uploads access
+    location /cdn/ {
+        alias /var/www/ckrschools/uploads/;
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+
+    location /uploads/ {
+        alias /var/www/ckrschools/uploads/;
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+
+    # School Operations SPA Router
+    location / {
+        try_files $uri $uri/ /index.html =404;
+    }
+
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+}

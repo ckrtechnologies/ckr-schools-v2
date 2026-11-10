@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { IconX, IconStarFilled, IconStar, IconCheck, IconShieldCheck } from '@tabler/icons-react';
+import { useSelector, useDispatch } from 'react-redux';
+import { IconX, IconStarFilled, IconCheck, IconShieldCheck, IconUser } from '@tabler/icons-react';
 import { useSubmitSchoolReviewMutation } from '../store/marketplaceApi.js';
+import { openLogin } from '../store/authSlice.js';
+import SearchableSelect from './SearchableSelect.jsx';
+
+const RELATIONSHIP_OPTIONS = [
+  { value: 'Parent', label: 'Parent' },
+  { value: 'Student', label: 'Student' },
+  { value: 'Alumni', label: 'Alumni' },
+  { value: 'Guardian', label: 'Guardian' }
+];
 
 export default function ReviewModal({ school, isOpen, onClose }) {
-  if (!isOpen || !school) return null;
-
-  const [reviewerName, setReviewerName] = useState('');
-  const [reviewerPhone, setReviewerPhone] = useState('');
-  const [reviewerEmail, setReviewerEmail] = useState('');
+  const dispatch = useDispatch();
+  const { token, user } = useSelector((state) => state.auth);
   const [relationship, setRelationship] = useState('Parent');
   
   const [overallRating, setOverallRating] = useState(5);
@@ -24,12 +31,20 @@ export default function ReviewModal({ school, isOpen, onClose }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  if (!isOpen || !school) return null;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage('');
 
-    if (!reviewerName.trim() || !reviewText.trim()) {
-      setErrorMessage('Please provide your name and review comments.');
+    if (!token) {
+      dispatch(openLogin());
+      setErrorMessage('Please log in with your phone number and password to rate this school.');
+      return;
+    }
+
+    if (!reviewText.trim()) {
+      setErrorMessage('Please provide your review comments.');
       return;
     }
 
@@ -41,9 +56,6 @@ export default function ReviewModal({ school, isOpen, onClose }) {
     try {
       const res = await submitReview({
         slug: school.slug,
-        reviewer_name: reviewerName,
-        reviewer_phone: reviewerPhone || undefined,
-        reviewer_email: reviewerEmail || undefined,
         relationship,
         overall_rating: overallRating,
         academics_rating: academicsRating,
@@ -59,6 +71,9 @@ export default function ReviewModal({ school, isOpen, onClose }) {
         setIsSuccess(true);
       }
     } catch (err) {
+      if (err.status === 401) {
+        dispatch(openLogin());
+      }
       setErrorMessage(err.data?.error?.message || err.data?.message || 'Failed to submit review.');
     }
   };
@@ -122,7 +137,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
         }}>
           <div>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#a7f3d0', fontWeight: '700' }}>
-              SHARE VERIFIED PARENT REVIEW (5-AXIS UGC)
+              SHARE YOUR REVIEW
             </div>
             <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700' }}>
               {school.name}
@@ -163,7 +178,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 Thank You for Your Feedback!
               </h3>
               <p style={{ fontSize: '13px', color: '#475569', lineHeight: '1.5', maxWidth: '420px', margin: '0 auto 20px' }}>
-                Your review has been verified and posted on the public school micro-site. Your insights help fellow parents make informed education choices.
+                Your review has been posted on the public school profile. Your insights help fellow parents make informed education choices.
               </p>
               <button
                 onClick={onClose}
@@ -179,6 +194,44 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 }}
               >
                 Close
+              </button>
+            </div>
+          ) : !token ? (
+            <div style={{ textAlign: 'center', padding: '20px 0' }}>
+              <div style={{
+                width: '56px',
+                height: '56px',
+                borderRadius: '50%',
+                backgroundColor: '#f0fdf4',
+                color: '#064e3b',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 14px'
+              }}>
+                <IconShieldCheck size={28} />
+              </div>
+              <h3 style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
+                Log in to rate this school
+              </h3>
+              <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, maxWidth: '360px', margin: '0 auto 18px' }}>
+                Ratings are tied to a real account. Use the phone number and password issued by your school.
+                Admission enquiries still work without logging in.
+              </p>
+              <button
+                onClick={() => dispatch(openLogin())}
+                style={{
+                  backgroundColor: '#064e3b',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '8px',
+                  padding: '10px 22px',
+                  fontSize: '13px',
+                  fontWeight: '700',
+                  cursor: 'pointer'
+                }}
+              >
+                Log In to Continue
               </button>
             </div>
           ) : (
@@ -229,48 +282,51 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 {renderStarPicker('Value for Money / Fees', valueForMoneyRating, setValueForMoneyRating)}
               </div>
 
-              {/* Reviewer Details */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '12px', marginBottom: '12px' }}>
-                <div>
-                  <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
-                    YOUR FULL NAME *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Dr. Rajesh Kulkarni"
-                    value={reviewerName}
-                    onChange={(e) => setReviewerName(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '8px 12px',
-                      borderRadius: '6px',
-                      border: '1px solid #cbd5e1',
-                      fontSize: '13px'
-                    }}
-                  />
+              {/* Reviewer identity (from the authenticated account) */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '12px',
+                backgroundColor: '#f0fdf4',
+                border: '1px solid #bbf7d0',
+                borderRadius: '8px',
+                padding: '10px 12px',
+                marginBottom: '14px'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
+                  <div style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '50%',
+                    backgroundColor: '#064e3b',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0
+                  }}>
+                    <IconUser size={16} />
+                  </div>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {user?.name || 'Signed-in reviewer'}
+                    </div>
+                    <div style={{ fontSize: '11px', color: '#64748b' }}>
+                      {user?.phone || user?.schoolName || 'Authenticated account'}
+                    </div>
+                  </div>
                 </div>
-
-                <div>
-                  <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
-                    RELATIONSHIP TO SCHOOL
-                  </label>
-                  <select
+                <div style={{ width: '150px', flexShrink: 0 }}>
+                  <SearchableSelect
                     value={relationship}
-                    onChange={(e) => setRelationship(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '8px 12px',
-                      borderRadius: '6px',
-                      border: '1px solid #cbd5e1',
-                      fontSize: '13px',
-                      backgroundColor: '#ffffff'
-                    }}
-                  >
-                    <option value="Parent">Parent of Current Student</option>
-                    <option value="Alumni">Alumnus / Former Student</option>
-                    <option value="Guardian">Guardian / Family Member</option>
-                  </select>
+                    onChange={(value) => setRelationship(value)}
+                    options={RELATIONSHIP_OPTIONS}
+                    nullable={false}
+                    compact
+                    placeholder="Relationship"
+                    searchPlaceholder="Type…"
+                  />
                 </div>
               </div>
 
@@ -348,7 +404,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                     cursor: isLoading ? 'not-allowed' : 'pointer'
                   }}
                 >
-                  {isLoading ? 'Publishing...' : 'Publish Verified Review'}
+                  {isLoading ? 'Publishing...' : 'Publish Review'}
                 </button>
               </div>
             </form>

@@ -1,20 +1,51 @@
-import React, { useState } from 'react';
-import { IconX, IconCheck, IconSchool, IconShieldCheck, IconUsers } from '@tabler/icons-react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { IconX, IconCheck, IconSchool, IconShieldCheck, IconUsers, IconUser } from '@tabler/icons-react';
 import { useSubmitMultiEnquiryMutation } from '../store/marketplaceApi.js';
+import { openLogin, buildPrefill, fillIfEmpty } from '../store/authSlice.js';
+import SearchableSelect from './SearchableSelect.jsx';
+
+const MULTI_GRADE_OPTIONS = [
+  { value: 'Pre-Primary', label: 'Pre-Primary' },
+  ...Array.from({ length: 12 }, (_, i) => ({ value: `Grade ${i + 1}`, label: `Grade ${i + 1}` }))
+];
 
 export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClose, onSuccess }) {
-  if (!isOpen || selectedSchools.length === 0) return null;
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+  const prefill = useMemo(() => buildPrefill(user), [user]);
 
-  const [studentName, setStudentName] = useState('');
-  const [parentName, setParentName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [grade, setGrade] = useState('Grade 1');
+  const [studentName, setStudentName] = useState(() => prefill.studentName);
+  const [parentName, setParentName] = useState(() => prefill.parentName);
+  const [phone, setPhone] = useState(() => prefill.phone);
+  const [email, setEmail] = useState(() => prefill.email);
+  const [grade, setGrade] = useState(() => prefill.grade || 'Grade 1');
+  const gradeTouched = useRef(false);
   const [activeSchools, setActiveSchools] = useState(selectedSchools.map(s => s.slug));
 
   const [submitMulti, { isLoading }] = useSubmitMultiEnquiryMutation();
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    setParentName(prev => fillIfEmpty(prev, prefill.parentName));
+    setStudentName(prev => fillIfEmpty(prev, prefill.studentName));
+    setPhone(prev => fillIfEmpty(prev, prefill.phone));
+    setEmail(prev => fillIfEmpty(prev, prefill.email));
+    if (!gradeTouched.current && prefill.grade) setGrade(prefill.grade);
+  }, [prefill]);
+
+  const handleChildSelect = (childId) => {
+    const child = prefill.children.find(item => String(item.id) === String(childId));
+    if (!child) return;
+    setStudentName(child.name || '');
+    if (child.className) {
+      const match = String(child.className).match(/\d+/);
+      if (match) setGrade(`Grade ${Number(match[0])}`);
+    }
+  };
+
+  if (!isOpen || selectedSchools.length === 0) return null;
 
   const toggleSchool = (slug) => {
     if (activeSchools.includes(slug)) {
@@ -201,7 +232,77 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                 </div>
               )}
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '12px' }}>
+              {prefill.parentName ? (
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: '#eff6ff',
+                  border: '1px solid #bfdbfe',
+                  padding: '9px 12px',
+                  borderRadius: '8px',
+                  marginBottom: '14px',
+                  fontSize: '12px',
+                  color: '#1e40af'
+                }}>
+                  <IconUser size={15} />
+                  <span>Pre-filled from your account. You can edit any field.</span>
+                </div>
+              ) : (
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: '10px',
+                  backgroundColor: '#f8fafc',
+                  border: '1px solid #e2e8f0',
+                  padding: '9px 12px',
+                  borderRadius: '8px',
+                  marginBottom: '14px',
+                  fontSize: '12px',
+                  color: '#475569'
+                }}>
+                  <span>Already have a school account? Log in to auto-fill your details.</span>
+                  <button
+                    type="button"
+                    onClick={() => dispatch(openLogin())}
+                    style={{
+                      backgroundColor: '#ffffff',
+                      border: '1px solid #064e3b',
+                      color: '#064e3b',
+                      borderRadius: '6px',
+                      padding: '5px 10px',
+                      fontSize: '11px',
+                      fontWeight: '700',
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap'
+                    }}
+                  >
+                    Log In
+                  </button>
+                </div>
+              )}
+
+              {prefill.hasMultipleChildren && (
+                <div style={{ marginBottom: '14px' }}>
+                  <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
+                    WHICH CHILD IS THIS ENQUIRY FOR?
+                  </label>
+                  <SearchableSelect
+                    value={prefill.children.find(child => child.name === studentName)?.id || ''}
+                    onChange={(value) => handleChildSelect(value)}
+                    options={prefill.children.map(child => ({
+                      value: child.id,
+                      label: `${child.name}${child.className ? ` · ${child.className}${child.classSection ? ` ${child.classSection}` : ''}` : ''}`
+                    }))}
+                    nullable={false}
+                    placeholder="Select a child"
+                    searchPlaceholder="Type a child's name…"
+                  />
+                </div>
+              )}
+
+              <div className="mk-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '12px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
                     PARENT NAME *
@@ -209,7 +310,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Nitin Verma"
+                    placeholder="e.g. Parent's full name"
                     value={parentName}
                     onChange={(e) => setParentName(e.target.value)}
                     style={{
@@ -229,7 +330,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Kabir Verma"
+                    placeholder="e.g. Student's full name"
                     value={studentName}
                     onChange={(e) => setStudentName(e.target.value)}
                     style={{
@@ -243,7 +344,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '14px' }}>
+              <div className="mk-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '14px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
                     PHONE NUMBER *
@@ -253,7 +354,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                     <input
                       type="tel"
                       required
-                      placeholder="9810112233"
+                      placeholder="9876543210"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       style={{
@@ -271,32 +372,14 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                   <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
                     TARGET GRADE
                   </label>
-                  <select
+                  <SearchableSelect
                     value={grade}
-                    onChange={(e) => setGrade(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '9px 12px',
-                      borderRadius: '6px',
-                      border: '1px solid #cbd5e1',
-                      fontSize: '13px',
-                      backgroundColor: '#ffffff'
-                    }}
-                  >
-                    <option value="Pre-Primary">Pre-Primary</option>
-                    <option value="Grade 1">Grade 1</option>
-                    <option value="Grade 2">Grade 2</option>
-                    <option value="Grade 3">Grade 3</option>
-                    <option value="Grade 4">Grade 4</option>
-                    <option value="Grade 5">Grade 5</option>
-                    <option value="Grade 6">Grade 6</option>
-                    <option value="Grade 7">Grade 7</option>
-                    <option value="Grade 8">Grade 8</option>
-                    <option value="Grade 9">Grade 9</option>
-                    <option value="Grade 10">Grade 10</option>
-                    <option value="Grade 11">Grade 11</option>
-                    <option value="Grade 12">Grade 12</option>
-                  </select>
+                    onChange={(value) => { gradeTouched.current = true; setGrade(value); }}
+                    options={MULTI_GRADE_OPTIONS}
+                    nullable={false}
+                    placeholder="Select a grade"
+                    searchPlaceholder="Type a grade…"
+                  />
                 </div>
               </div>
 

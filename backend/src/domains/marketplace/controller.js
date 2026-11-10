@@ -1,5 +1,61 @@
 import * as marketService from './service.js';
 
+const LOGIN_WINDOW_MS = 15 * 60 * 1000;
+const LOGIN_MAX_ATTEMPTS = 10;
+const loginAttempts = new Map();
+
+function isLoginRateLimited(req) {
+  const key = `${req.ip || 'unknown'}:${String(req.body?.phone || '').trim()}`;
+  const now = Date.now();
+  const entry = loginAttempts.get(key);
+
+  if (!entry || now - entry.firstAt > LOGIN_WINDOW_MS) {
+    loginAttempts.set(key, { count: 1, firstAt: now });
+    return false;
+  }
+
+  entry.count += 1;
+  return entry.count > LOGIN_MAX_ATTEMPTS;
+}
+
+export async function listFacetsHandler(req, res, next) {
+  try {
+    const facets = await marketService.getFacets();
+    return res.status(200).json({ success: true, data: facets });
+  } catch (error) {
+    next(error);
+  }
+}
+
+export async function marketplaceLoginHandler(req, res, next) {
+  try {
+    if (isLoginRateLimited(req)) {
+      return res.status(429).json({
+        success: false,
+        error: { code: 'TOO_MANY_ATTEMPTS', message: 'Too many login attempts. Please try again later.' }
+      });
+    }
+    const result = await marketService.marketplaceLogin(req.body);
+    return res.status(200).json({
+      success: true,
+      token: result.token,
+      accessToken: result.token,
+      user: result.user
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+export async function marketplaceMeHandler(req, res, next) {
+  try {
+    const account = await marketService.getMarketplaceMe(req.user);
+    return res.status(200).json({ success: true, data: account });
+  } catch (error) {
+    next(error);
+  }
+}
+
 export async function listSchoolsHandler(req, res, next) {
   try {
     const schools = await marketService.getSchools(req.query);
@@ -77,10 +133,10 @@ export async function listReviewsHandler(req, res, next) {
 
 export async function submitReviewHandler(req, res, next) {
   try {
-    const review = await marketService.submitReview(req.params.slug, req.body);
+    const review = await marketService.submitReview(req.params.slug, req.body, req.user);
     return res.status(201).json({
       success: true,
-      message: 'Thank you! Your verified review has been published.',
+      message: 'Thank you! Your review has been published.',
       data: review
     });
   } catch (error) {
@@ -106,31 +162,6 @@ export async function listPressReleasesHandler(req, res, next) {
     return res.status(200).json({
       success: true,
       data: press
-    });
-  } catch (error) {
-    next(error);
-  }
-}
-
-export async function getMySchoolProfileHandler(req, res, next) {
-  try {
-    const profile = await marketService.getMySchoolProfile(req.tenant.id);
-    return res.status(200).json({
-      success: true,
-      data: profile
-    });
-  } catch (error) {
-    next(error);
-  }
-}
-
-export async function updateMySchoolProfileHandler(req, res, next) {
-  try {
-    const updated = await marketService.updateMySchoolProfile(req.tenant.id, req.body);
-    return res.status(200).json({
-      success: true,
-      message: 'Marketplace school profile updated successfully',
-      data: updated
     });
   } catch (error) {
     next(error);

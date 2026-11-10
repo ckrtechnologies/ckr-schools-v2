@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchUsers, fetchClasses, fetchNewUsers, fetchSubjects, fetchSubjectTeachers } from "../features/dataSlice";
 import CustomSelect from "../components/CustomSelect";
-import { Search, Plus, Edit, Trash2, Upload, FileSpreadsheet, FileText, ChevronUp, ChevronDown, ChevronsUpDown, Eye, BookOpen } from "lucide-react";
+import { Search, Plus, Edit, Trash2, Upload, FileSpreadsheet, FileText, ChevronUp, ChevronDown, ChevronsUpDown, Eye, BookOpen, Globe, ExternalLink } from "lucide-react";
 import { toast } from "react-toastify";
 import api, { deleteFile, getTenantSlug } from "../services/api";
 import { exportToExcel, exportToPDF } from "../utils/exportUtils";
@@ -102,7 +102,7 @@ const UserManagement = () => {
   // When URL changes, reset form type and default columns
   useEffect(() => {
     setFormData((prev) => ({ ...prev, type: type }));
-    const defaults = ["name", "email", "phone", "associations"];
+    const defaults = type === "spoc" ? ["name", "email", "phone"] : ["name", "email", "phone", "associations"];
     if (type === "student") defaults.unshift("admission_number");
     if (type === "teacher") defaults.push("subjects", "gender", "doj", "father_spouse_name");
     
@@ -128,6 +128,7 @@ const UserManagement = () => {
       case "teachers_manager":
       case "teacher_manager": return "Teacher Manager Management";
       case "academic_manager": return "Academic Manager Management";
+      case "spoc": return "SPOC Users (Public Domain)";
       default: return `${t} Management`;
     }
   };
@@ -145,6 +146,7 @@ const UserManagement = () => {
       case "teachers_manager":
       case "teacher_manager": return "Teacher Manager";
       case "academic_manager": return "Academic Manager";
+      case "spoc": return "SPOC User";
       default: return t;
     }
   };
@@ -217,6 +219,7 @@ const UserManagement = () => {
         if (type === "timetable") return "Timetable Staff";
         if (type === "teachers_manager" || type === "teacher_manager") return "Teacher Manager Staff";
         if (type === "academic_manager") return "Academic Staff";
+        if (type === "spoc") return "Marketplace SPOC";
         if (type === "finance") return "Accounts Staff";
         return "";
       },
@@ -298,7 +301,10 @@ const UserManagement = () => {
       { key: "email", label: "Email" },
       { key: "phone", label: "Phone" },
       { key: "gender", label: "Gender" },
-      { key: "associations", label: type === "student" ? "Class" : type === "teacher" ? "Classes" : type === "admission" ? "Pipeline Students" : "Connected Students" }
+      ...(type === "spoc" ? [] : [{
+        key: "associations",
+        label: type === "student" ? "Class" : type === "teacher" ? "Classes" : type === "admission" ? "Pipeline Students" : "Connected Students"
+      }])
     ];
     if (type === "student") {
       return [
@@ -969,6 +975,39 @@ const UserManagement = () => {
           </button>
         </div>
       </div>
+
+      {type === 'spoc' && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "10px",
+            padding: "10px 14px",
+            marginBottom: "1rem",
+            borderRadius: "10px",
+            background: "rgba(5, 150, 105, 0.08)",
+            border: "1px solid rgba(5, 150, 105, 0.25)",
+            fontSize: "0.8125rem",
+            lineHeight: 1.5,
+            color: "var(--text-primary)"
+          }}
+        >
+          <Globe size={16} color="#059669" style={{ marginTop: "2px", flexShrink: 0 }} />
+          <span>
+            SPOC users sign in only at the <strong>School SPOC Portal</strong> (public domain) to manage the marketplace profile,
+            photos, newsroom and parent replies. They cannot access fees, attendance or exams. Share the portal URL and the
+            password you set here.{" "}
+            <a
+              href={import.meta.env.VITE_SPOC_URL || "http://localhost:5181/login"}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#047857", fontWeight: 700, textDecoration: "underline", display: "inline-flex", alignItems: "center", gap: "4px" }}
+            >
+              Open SPOC Portal <ExternalLink size={12} />
+            </a>
+          </span>
+        </div>
+      )}
 
       <div className="glass-panel" style={{ flex: 1, display: "flex", flexDirection: "column", minHeight: 0, padding: "1rem" }}>
         <div style={{ flexShrink: 0 }}>

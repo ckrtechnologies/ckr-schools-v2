@@ -30,6 +30,7 @@ import {
   Image as ImageIcon,
   GraduationCap,
   Briefcase,
+  Globe,
   ChevronDown,
   ChevronsUpDown,
   ChevronsDownUp
@@ -471,6 +472,9 @@ const AdminLayout = () => {
                 </NavItem>
                 <NavItem to="/users/academic_manager" icon={BookOpen} color="#2563eb" bg="rgba(37, 99, 235, 0.15)">
                   Academic Managers
+                </NavItem>
+                <NavItem to="/users/spoc" icon={Globe} color="#059669" bg="rgba(5, 150, 105, 0.15)">
+                  SPOC Users
                 </NavItem>
               </NavSection>
             </>

@@ -12,9 +12,10 @@ import {
   IconSchool
 } from '@tabler/icons-react';
 import { addSchoolToCompare, removeSchoolFromCompare } from '../store/comparisonSlice.js';
+import SchoolImage from './SchoolImage.jsx';
 
-function formatPaiseToRupees(num) {
-  if (!num) return '₹0';
+function formatFee(num) {
+  if (num === null || num === undefined || num === '' || Number(num) <= 0) return null;
   return `₹${Number(num).toLocaleString('en-IN')}`;
 }
 
@@ -66,36 +67,29 @@ export default function SchoolCard({
     >
       {/* Hero Image Section */}
       <div style={{ position: 'relative', height: '180px', overflow: 'hidden' }}>
-        <img
-          src={school.hero_image_url || school.gallery_images?.[0]?.url || 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop&q=80'}
-          alt={school.name}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            transition: 'transform 0.3s ease'
-          }}
-        />
+        <SchoolImage school={school} alt={school.name} height="100%" logoPadding="26px 30px 58px" />
 
         {/* Live Admission Status Badge */}
-        <div style={{
-          position: 'absolute',
-          top: '12px',
-          left: '12px',
-          backgroundColor: '#064e3b',
-          color: '#f0fdf4',
-          fontSize: '11px',
-          fontWeight: '700',
-          padding: '4px 10px',
-          borderRadius: '20px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-        }}>
-          <span className="pulse-indicator" />
-          {school.admission_status || 'Admissions Open (2026-27)'}
-        </div>
+        {school.admission_status && (
+          <div style={{
+            position: 'absolute',
+            top: '12px',
+            left: '12px',
+            backgroundColor: '#064e3b',
+            color: '#f0fdf4',
+            fontSize: '11px',
+            fontWeight: '700',
+            padding: '4px 10px',
+            borderRadius: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+          }}>
+            <span className="pulse-indicator" />
+            {school.admission_status}
+          </div>
+        )}
 
         {/* Featured Partner Badge */}
         {school.is_featured && (
@@ -121,20 +115,22 @@ export default function SchoolCard({
         )}
 
         {/* Board & City Pill */}
-        <div style={{
-          position: 'absolute',
-          bottom: '12px',
-          left: '12px',
-          backgroundColor: 'rgba(15, 23, 42, 0.85)',
-          color: '#ffffff',
-          fontSize: '11px',
-          fontWeight: '600',
-          padding: '3px 8px',
-          borderRadius: '4px',
-          backdropFilter: 'blur(4px)'
-        }}>
-          {school.affiliation_board || 'CBSE'} · {school.city}
-        </div>
+        {(school.affiliation_board || school.city) && (
+          <div style={{
+            position: 'absolute',
+            bottom: '12px',
+            left: '12px',
+            backgroundColor: 'rgba(15, 23, 42, 0.85)',
+            color: '#ffffff',
+            fontSize: '11px',
+            fontWeight: '600',
+            padding: '3px 8px',
+            borderRadius: '4px',
+            backdropFilter: 'blur(4px)'
+          }}>
+            {[school.affiliation_board, school.city].filter(Boolean).join(' · ')}
+          </div>
+        )}
 
         {/* Compare Checkbox Button */}
         <button
@@ -194,10 +190,11 @@ export default function SchoolCard({
               gap: '6px'
             }}>
               {school.name}
-              <IconCheck size={16} color="#047857" title="Verified Campus" />
+              {school.is_verified && <IconCheck size={16} color="#047857" title="Verified by CKR" />}
             </h3>
             <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
-              {school.city}, {school.state} · Est. {school.established_year || '2012'}
+              {[school.city, school.state].filter(Boolean).join(', ')}
+              {school.established_year ? ` · Est. ${school.established_year}` : ''}
             </div>
           </div>
         </div>
@@ -213,7 +210,7 @@ export default function SchoolCard({
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden'
         }}>
-          {school.tagline || school.about}
+          {school.tagline || school.about || 'The school has not published an overview yet.'}
         </p>
 
         {/* Stats Grid */}
@@ -228,24 +225,33 @@ export default function SchoolCard({
           border: '1px solid #f1f5f9'
         }}>
           <div>
-            <div style={{ fontSize: '10px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>ANNUAL TUITION</div>
+            <div style={{ fontSize: '10px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>TUITION FEE</div>
             <div style={{ fontSize: '13px', fontWeight: '800', color: '#047857' }}>
-              {formatPaiseToRupees(school.min_fee)} – {formatPaiseToRupees(school.max_fee)}
+              {formatFee(school.min_fee) && formatFee(school.max_fee)
+                ? `${formatFee(school.min_fee)} – ${formatFee(school.max_fee)}`
+                : 'Fees on enquiry'}
             </div>
           </div>
 
           <div>
             <div style={{ fontSize: '10px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>PARENT RATING</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', fontWeight: '800', color: '#0f172a' }}>
-              <IconStarFilled size={14} color="#f59e0b" />
-              <span>{school.avg_rating || '4.8'}</span>
-              <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '500' }}>({school.review_count || 4} reviews)</span>
-            </div>
+            {Number(school.review_count) > 0 && Number(school.avg_rating) > 0 ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', fontWeight: '800', color: '#0f172a' }}>
+                <IconStarFilled size={14} color="#f59e0b" />
+                <span>{Number(school.avg_rating).toFixed(1)}</span>
+                <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '500' }}>({school.review_count} reviews)</span>
+              </div>
+            ) : (
+              <div style={{ fontSize: '12px', color: '#64748b', fontWeight: '500' }}>No reviews yet</div>
+            )}
           </div>
         </div>
 
         {/* Facilities Pills */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px', flex: 1 }}>
+          {facilities.length === 0 && (
+            <span style={{ fontSize: '11px', color: '#94a3b8' }}>Facilities not listed yet</span>
+          )}
           {facilities.slice(0, 3).map((f, i) => (
             <span
               key={i}
@@ -282,6 +288,7 @@ export default function SchoolCard({
               onOpenEnquiry(school);
             }}
             style={{
+              gridColumn: school.brochure_url ? 'auto' : '1 / -1',
               backgroundColor: '#064e3b',
               color: '#ffffff',
               border: 'none',
@@ -300,29 +307,31 @@ export default function SchoolCard({
             Enquire Now
           </button>
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onOpenBrochure(school);
-            }}
-            style={{
-              backgroundColor: '#ffffff',
-              color: '#064e3b',
-              border: '1px solid #064e3b',
-              borderRadius: '8px',
-              padding: '9px 12px',
-              fontSize: '13px',
-              fontWeight: '600',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px'
-            }}
-          >
-            <IconDownload size={14} />
-            Brochure
-          </button>
+          {school.brochure_url && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onOpenBrochure(school);
+              }}
+              style={{
+                backgroundColor: '#ffffff',
+                color: '#064e3b',
+                border: '1px solid #064e3b',
+                borderRadius: '8px',
+                padding: '9px 12px',
+                fontSize: '13px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
+              }}
+            >
+              <IconDownload size={14} />
+              Brochure
+            </button>
+          )}
         </div>
       </div>
     </div>

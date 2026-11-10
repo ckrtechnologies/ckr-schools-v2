@@ -1,4 +1,6 @@
 import { pgPool } from '../../config/db.js';
+import { getCurrentAcademicYear } from '../../utils/academicYear.js';
+import * as infoRepo from '../info/repository.js';
 
 /**
  * Marketplace Repository (ADO)
@@ -12,12 +14,19 @@ export async function listSchools({ board, city, minFee, maxFee, search }) {
       t.logo_url, t.theme_color, t.motto,
       mp.tagline, mp.about, mp.established_year, mp.min_fee, mp.max_fee,
       mp.fee_period, mp.grades_offered, mp.facilities, mp.gallery_images,
-      mp.is_featured, mp.avg_rating, mp.review_count,
+      mp.is_featured, mp.is_verified, mp.avg_rating, mp.review_count,
       mp.admission_status, mp.hero_image_url, mp.student_count_badge,
-      mp.teacher_count_badge, mp.student_teacher_ratio
+      mp.teacher_count_badge, mp.student_teacher_ratio,
+      (SELECT g.image_url
+       FROM school_gallery g
+       WHERE g.tenant_id = t.id AND g.image_url IS NOT NULL
+         AND COALESCE(g.media_type, 'image') <> 'video'
+         AND COALESCE(g.is_marketplace_visible, TRUE) = TRUE
+       ORDER BY g.display_order ASC, g.created_at DESC
+       LIMIT 1) AS gallery_preview
     FROM tenants t
     INNER JOIN marketplace_school_profiles mp ON t.id = mp.tenant_id
-    WHERE t.is_active = TRUE
+    WHERE t.is_active = TRUE AND mp.is_published = TRUE
   `;
   const values = [];
   let idx = 1;
@@ -63,7 +72,7 @@ export async function getSchoolBySlug(slug) {
       mp.teacher_count_badge, mp.student_teacher_ratio
     FROM tenants t
     INNER JOIN marketplace_school_profiles mp ON t.id = mp.tenant_id
-    WHERE LOWER(t.slug) = LOWER($1) AND t.is_active = TRUE
+    WHERE LOWER(t.slug) = LOWER($1) AND t.is_active = TRUE AND mp.is_published = TRUE
     LIMIT 1;
   `;
   const { rows } = await pgPool.query(query, [slug]);
@@ -92,7 +101,7 @@ export async function createMarketplaceEnquiry(tenantId, data) {
     data.phone,
     data.email || null,
     data.grade || data.class_name || 'N/A',
-    data.academic_year || '2026-2027',
+    data.academic_year || getCurrentAcademicYear(),
     data.message || 'Direct admission enquiry from school marketplace profile'
   ];
 
@@ -121,7 +130,7 @@ export async function createBrochureDownloadLead(tenantId, data) {
     data.phone,
     data.email || null,
     data.grade || 'N/A',
-    data.academic_year || '2026-2027'
+    data.academic_year || getCurrentAcademicYear()
   ];
 
   const { rows } = await pgPool.query(query, values);
@@ -156,7 +165,7 @@ export async function createMultiSchoolEnquiry(tenantList, data) {
       data.phone,
       data.email || null,
       data.grade || 'N/A',
-      data.academic_year || '2026-2027',
+      data.academic_year || getCurrentAcademicYear(),
       data.message || '1-Click Multi-School enquiry submitted simultaneously',
       JSON.stringify(tenantIds),
       `Multi-school enquiry batch across: ${tenantList.map(t => t.name).join(', ')}`
@@ -174,7 +183,8 @@ export async function listSchoolReviews(tenantId) {
     SELECT 
       id, reviewer_name, relationship, overall_rating,
       academics_rating, infrastructure_rating, faculty_rating, safety_rating, value_for_money_rating,
-      title, review_text, is_verified, helpful_count, created_at
+      title, review_text, is_verified, helpful_count,
+      school_reply, school_replied_at, created_at
     FROM marketplace_reviews
     WHERE tenant_id = $1 AND is_approved = TRUE
     ORDER BY helpful_count DESC, created_at DESC;
@@ -188,11 +198,13 @@ export async function createSchoolReview(tenantId, data) {
     INSERT INTO marketplace_reviews (
       tenant_id, reviewer_name, reviewer_email, reviewer_phone, relationship,
       overall_rating, academics_rating, infrastructure_rating, faculty_rating, safety_rating, value_for_money_rating,
-      title, review_text, is_verified, is_approved, helpful_count
+      title, review_text, is_verified, is_approved, helpful_count,
+      reviewer_account_id, reviewer_account_type, reviewer_school_id
     ) VALUES (
       $1, $2, $3, $4, $5,
       $6, $7, $8, $9, $10, $11,
-      $12, $13, TRUE, TRUE, 0
+      $12, $13, $14, TRUE, 0,
+      $15, $16, $17
     )
     RETURNING id, reviewer_name, overall_rating, title, review_text, is_verified, helpful_count, created_at;
   `;
@@ -209,7 +221,11 @@ export async function createSchoolReview(tenantId, data) {
     data.safety_rating || data.overall_rating,
     data.value_for_money_rating || data.overall_rating,
     data.title || null,
-    data.review_text
+    data.review_text,
+    data.is_verified === true,
+    data.reviewer_account_id || null,
+    data.reviewer_account_type || null,
+    data.reviewer_school_id || null
   ];
 
   const { rows } = await pgPool.query(query, values);
@@ -233,6 +249,15 @@ export async function createSchoolReview(tenantId, data) {
 
   return rows[0];
 }
+
+export async function findReviewByAccount(tenantId, accountId) {
+  const { rows } = await pgPool.query(
+    `SELECT id FROM marketplace_reviews WHERE tenant_id = $1 AND reviewer_account_id = $2 LIMIT 1;`,
+    [tenantId, accountId]
+  );
+  return rows[0] || null;
+}
+
 
 export async function upvoteReviewHelpful(reviewId) {
   const query = `
@@ -273,6 +298,8 @@ export async function getSchoolMarketplaceProfile(tenantId) {
       t.official_phone as phone,
       t.official_email as email,
       t.affiliation_board,
+      t.motto,
+      t.website,
       mp.id as profile_id,
       mp.tagline,
       mp.about,
@@ -291,6 +318,8 @@ export async function getSchoolMarketplaceProfile(tenantId) {
       mp.student_teacher_ratio,
       mp.is_featured,
       mp.is_verified,
+      mp.is_published,
+      mp.published_at,
       mp.avg_rating,
       mp.review_count,
       mp.updated_at
@@ -320,42 +349,266 @@ export async function updateSchoolMarketplaceProfile(tenantId, data) {
     )
     ON CONFLICT (tenant_id)
     DO UPDATE SET
-      tagline                = COALESCE(EXCLUDED.tagline, marketplace_school_profiles.tagline),
-      about                  = COALESCE(EXCLUDED.about, marketplace_school_profiles.about),
-      established_year       = COALESCE(EXCLUDED.established_year, marketplace_school_profiles.established_year),
-      min_fee                = COALESCE(EXCLUDED.min_fee, marketplace_school_profiles.min_fee),
-      max_fee                = COALESCE(EXCLUDED.max_fee, marketplace_school_profiles.max_fee),
-      fee_period             = COALESCE(EXCLUDED.fee_period, marketplace_school_profiles.fee_period),
-      grades_offered         = COALESCE(EXCLUDED.grades_offered, marketplace_school_profiles.grades_offered),
-      facilities             = COALESCE(EXCLUDED.facilities, marketplace_school_profiles.facilities),
-      brochure_url           = COALESCE(EXCLUDED.brochure_url, marketplace_school_profiles.brochure_url),
-      admission_status       = COALESCE(EXCLUDED.admission_status, marketplace_school_profiles.admission_status),
-      hero_image_url         = COALESCE(EXCLUDED.hero_image_url, marketplace_school_profiles.hero_image_url),
-      student_count_badge    = COALESCE(EXCLUDED.student_count_badge, marketplace_school_profiles.student_count_badge),
-      teacher_count_badge    = COALESCE(EXCLUDED.teacher_count_badge, marketplace_school_profiles.teacher_count_badge),
-      student_teacher_ratio  = COALESCE(EXCLUDED.student_teacher_ratio, marketplace_school_profiles.student_teacher_ratio),
+      tagline                = EXCLUDED.tagline,
+      about                  = EXCLUDED.about,
+      established_year       = EXCLUDED.established_year,
+      min_fee                = EXCLUDED.min_fee,
+      max_fee                = EXCLUDED.max_fee,
+      fee_period             = EXCLUDED.fee_period,
+      grades_offered         = EXCLUDED.grades_offered,
+      facilities             = EXCLUDED.facilities,
+      brochure_url           = EXCLUDED.brochure_url,
+      admission_status       = EXCLUDED.admission_status,
+      hero_image_url         = EXCLUDED.hero_image_url,
+      student_count_badge    = EXCLUDED.student_count_badge,
+      teacher_count_badge    = EXCLUDED.teacher_count_badge,
+      student_teacher_ratio  = EXCLUDED.student_teacher_ratio,
       updated_at             = NOW()
     RETURNING *;
   `;
 
+  const toNullableNumber = (value) => {
+    if (value === undefined || value === null || value === '') return null;
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  };
+  const toNullableText = (value) => {
+    if (value === undefined || value === null) return null;
+    const text = String(value).trim();
+    return text === '' ? null : text;
+  };
+
   const values = [
     tenantId,
-    data.tagline !== undefined ? data.tagline : null,
-    data.about !== undefined ? data.about : null,
-    data.established_year !== undefined ? data.established_year : null,
-    data.min_fee !== undefined ? data.min_fee : null,
-    data.max_fee !== undefined ? data.max_fee : null,
-    data.fee_period || 'per annum',
-    data.grades_offered || 'Nursery - 12th',
+    toNullableText(data.tagline),
+    toNullableText(data.about),
+    toNullableNumber(data.established_year),
+    toNullableNumber(data.min_fee),
+    toNullableNumber(data.max_fee),
+    toNullableText(data.fee_period),
+    toNullableText(data.grades_offered),
     data.facilities ? JSON.stringify(data.facilities) : null,
-    data.brochure_url !== undefined ? data.brochure_url : null,
-    data.admission_status || 'Admissions Open (2026-27)',
-    data.hero_image_url !== undefined ? data.hero_image_url : null,
-    data.student_count_badge || '1,000+ Students',
-    data.teacher_count_badge || '50+ Certified Faculty',
-    data.student_teacher_ratio || '20:1'
+    toNullableText(data.brochure_url),
+    toNullableText(data.admission_status),
+    toNullableText(data.hero_image_url),
+    toNullableText(data.student_count_badge),
+    toNullableText(data.teacher_count_badge),
+    toNullableText(data.student_teacher_ratio)
   ];
 
   const { rows } = await pgPool.query(query, values);
   return rows[0];
+}
+
+/**
+ * Distinct real cities and boards that currently have a marketplace profile.
+ */
+export async function getMarketplaceFacets() {
+  const [citiesRes, boardsRes] = await Promise.all([
+    pgPool.query(`
+      SELECT DISTINCT TRIM(t.city) AS city
+      FROM tenants t
+      INNER JOIN marketplace_school_profiles mp ON mp.tenant_id = t.id
+      WHERE t.is_active = TRUE AND mp.is_published = TRUE
+        AND t.city IS NOT NULL AND TRIM(t.city) <> ''
+      ORDER BY city ASC;
+    `),
+    pgPool.query(`
+      SELECT DISTINCT TRIM(t.affiliation_board) AS board
+      FROM tenants t
+      INNER JOIN marketplace_school_profiles mp ON mp.tenant_id = t.id
+      WHERE t.is_active = TRUE AND mp.is_published = TRUE
+        AND t.affiliation_board IS NOT NULL AND TRIM(t.affiliation_board) <> ''
+      ORDER BY board ASC;
+    `)
+  ]);
+
+  return {
+    cities: citiesRes.rows.map(r => r.city),
+    boards: boardsRes.rows.map(r => r.board)
+  };
+}
+
+/**
+ * Finds every active account (parent or user) owned by the supplied phone number
+ * across all tenants. Password verification happens in the service layer.
+ */
+export async function findMarketplaceAccountsByPhone(phone) {
+  const digits = String(phone || '').replace(/\D/g, '').slice(-10);
+  if (digits.length < 10) return [];
+
+  const query = `
+    SELECT u.id, u.tenant_id, t.slug AS school_slug, t.name AS school_name,
+           u.name, u.phone, u.email, u.password_hash, u.type AS account_type
+    FROM public."user" u
+    JOIN public.tenants t ON t.id = u.tenant_id
+    WHERE t.is_active = TRUE
+      AND u.status = 'active'
+      AND u.password_hash IS NOT NULL
+      AND u.type <> 'spoc'
+      AND (RIGHT(REGEXP_REPLACE(COALESCE(u.phone, ''), '\\D', '', 'g'), 10) = $1
+           OR LOWER(COALESCE(u.email, '')) = LOWER($2))
+    UNION ALL
+    SELECT p.id, p.tenant_id, t.slug AS school_slug, t.name AS school_name,
+           TRIM(CONCAT_WS(' & ', NULLIF(p.father_name, ''), NULLIF(p.mother_name, ''))) AS name,
+           p.phone, p.email,
+           COALESCE(
+             p.password_hash,
+             (SELECT su.password_hash
+              FROM public.student_parents sp
+              JOIN public."user" su ON su.id = sp.student_id
+              WHERE sp.parent_id = p.id AND sp.tenant_id = p.tenant_id AND su.status = 'active'
+              LIMIT 1)
+           ) AS password_hash,
+           'parent' AS account_type
+    FROM public.parents p
+    JOIN public.tenants t ON t.id = p.tenant_id
+    WHERE t.is_active = TRUE
+      AND (RIGHT(REGEXP_REPLACE(COALESCE(p.phone, ''), '\\D', '', 'g'), 10) = $1
+           OR RIGHT(REGEXP_REPLACE(COALESCE(p.alternate_number, ''), '\\D', '', 'g'), 10) = $1
+           OR LOWER(COALESCE(p.email, '')) = LOWER($2));
+  `;
+
+  const { rows } = await pgPool.query(query, [digits, String(phone || '').trim()]);
+  return rows.filter(r => !!r.password_hash);
+}
+
+/**
+ * Community content the school already maintains in its portal:
+ * gallery, achievements, spotlight/thoughts and social handles.
+ */
+export async function getSchoolCommunity(tenantId) {
+  const [settings, gallery, champions, spotlight, thoughts, studentOfWeek] = await Promise.all([
+    infoRepo.getSchoolSettings(tenantId),
+    infoRepo.listGallery(tenantId),
+    infoRepo.listChampions(tenantId),
+    infoRepo.listSpotlights(tenantId),
+    infoRepo.listThoughts(tenantId),
+    infoRepo.getCurrentStudentOfWeek(tenantId)
+  ]);
+
+  const images = (gallery || [])
+    .filter(g => g.image_url && g.media_type !== 'video' && g.is_marketplace_visible !== false)
+    .map(g => ({
+      id: g.id,
+      title: g.title || null,
+      description: g.description || null,
+      url: g.image_url,
+      category: 'Campus'
+    }));
+
+  return {
+    gallery: images,
+    videos: (gallery || []).filter(g => g.media_type === 'video' && g.is_marketplace_visible !== false),
+    achievements: champions || [],
+    studentOfWeek: studentOfWeek || null,
+    spotlight: (spotlight || []).slice(0, 6),
+    thoughts: (thoughts || []).slice(0, 6),
+    social: {
+      website: settings?.website_url || null,
+      instagram: settings?.instagram_url || null,
+      facebook: settings?.facebook_url || null,
+      twitter: settings?.twitter_url || null,
+      linkedin: settings?.linkedin_url || null,
+      youtube: settings?.youtube_url || null,
+      whatsapp: settings?.whatsapp_url || null
+    }
+  };
+}
+
+export async function getAccountIdentity(accountId) {
+  if (!accountId) return null;
+
+  const query = `
+    SELECT u.id, u.tenant_id, u.name, u.phone, u.email, u.type AS account_type
+    FROM public."user" u
+    WHERE u.id = $1
+    UNION ALL
+    SELECT p.id, p.tenant_id,
+           TRIM(CONCAT_WS(' & ', NULLIF(p.father_name, ''), NULLIF(p.mother_name, ''))) AS name,
+           p.phone, p.email, 'parent' AS account_type
+    FROM public.parents p
+    WHERE p.id = $1
+    LIMIT 1;
+  `;
+  const { rows } = await pgPool.query(query, [accountId]);
+  return rows[0] || null;
+}
+
+/**
+ * Details used to prefill the public inquiry forms for a signed-in account.
+ * Parents get their own contact fields plus their linked children; students get
+ * their own record so the form still comes pre-populated.
+ */
+export async function getMarketplaceProfileForPrefill(accountId, accountType) {
+  if (!accountId) return null;
+
+  if (accountType === 'parent') {
+    const parentRes = await pgPool.query(
+      `SELECT p.id, p.tenant_id, p.father_name, p.mother_name, p.phone, p.alternate_number, p.email
+       FROM public.parents p
+       WHERE p.id = $1
+       LIMIT 1;`,
+      [accountId]
+    );
+    const parent = parentRes.rows[0];
+    if (!parent) return null;
+
+    const childrenRes = await pgPool.query(
+      `SELECT DISTINCT u.id, u.name, u.admission_number,
+              c.name AS class_name, c.section AS class_section
+       FROM public.student_parents sp
+       JOIN public."user" u ON u.id = sp.student_id AND u.tenant_id = sp.tenant_id
+       LEFT JOIN public.class_students cs ON cs.student_id = u.id AND cs.tenant_id = u.tenant_id
+       LEFT JOIN public.class c ON c.id = cs.class_id AND c.tenant_id = u.tenant_id
+       WHERE sp.parent_id = $1 AND sp.tenant_id = $2 AND u.status = 'active'
+       ORDER BY u.name ASC;`,
+      [parent.id, parent.tenant_id]
+    );
+
+    return {
+      parentName: parent.father_name || parent.mother_name || '',
+      fatherName: parent.father_name || '',
+      motherName: parent.mother_name || '',
+      phone: parent.phone || '',
+      alternateNumber: parent.alternate_number || '',
+      email: parent.email || '',
+      children: childrenRes.rows.map(row => ({
+        id: row.id,
+        name: row.name,
+        admissionNumber: row.admission_number,
+        className: row.class_name,
+        classSection: row.class_section
+      }))
+    };
+  }
+
+  const studentRes = await pgPool.query(
+    `SELECT u.id, u.tenant_id, u.name, u.phone, u.email, u.admission_number,
+            c.name AS class_name, c.section AS class_section
+     FROM public."user" u
+     LEFT JOIN public.class_students cs ON cs.student_id = u.id AND cs.tenant_id = u.tenant_id
+     LEFT JOIN public.class c ON c.id = cs.class_id AND c.tenant_id = u.tenant_id
+     WHERE u.id = $1
+     LIMIT 1;`,
+    [accountId]
+  );
+  const student = studentRes.rows[0];
+  if (!student) return null;
+
+  return {
+    parentName: '',
+    fatherName: '',
+    motherName: '',
+    phone: student.phone || '',
+    alternateNumber: '',
+    email: student.email || '',
+    children: [{
+      id: student.id,
+      name: student.name,
+      admissionNumber: student.admission_number,
+      className: student.class_name,
+      classSection: student.class_section
+    }]
+  };
 }

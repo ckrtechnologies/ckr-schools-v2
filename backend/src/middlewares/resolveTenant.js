@@ -46,7 +46,7 @@ export async function resolveTenant(req, res, next) {
     }
 
     // Reserved subdomains for platform super admin / API / Marketplace
-    const reserved = ['admin', 'www', 'api', 'app', 'hq', 'portal', 'dashboard', 'superadmin'];
+    const reserved = ['admin', 'www', 'api', 'app', 'hq', 'portal', 'dashboard', 'superadmin', 'marketplace'];
     if (!slug || reserved.includes(slug)) {
       req.isSuperAdmin = true;
       req.tenant = null;

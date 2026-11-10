@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import MarqueeTicker from './components/MarqueeTicker.jsx';
 import Navbar from './components/Navbar.jsx';
 import HomeView from './views/HomeView.jsx';
 import SchoolProfileView from './views/SchoolProfileView.jsx';
 import CompareView from './views/CompareView.jsx';
+import CatalogView from './views/CatalogView.jsx';
 import ComparisonTray from './components/ComparisonTray.jsx';
 import EnquiryModal from './components/EnquiryModal.jsx';
 import BrochureModal from './components/BrochureModal.jsx';
 import MultiEnquiryModal from './components/MultiEnquiryModal.jsx';
+import LoginModal from './components/LoginModal.jsx';
+import { useGetMeQuery } from './store/marketplaceApi.js';
+import { setCredentials } from './store/authSlice.js';
+import { useMarketplaceRoute } from './hooks/useMarketplaceRoute.js';
 
 export default function App() {
-  // View routing state
-  const [currentView, setCurrentView] = useState('home'); // 'home' | 'school-profile' | 'compare'
-  const [activeSlug, setActiveSlug] = useState(null);
+  // Path based routing: / | /schools | /schools/:slug | /compare
+  const { view: currentView, slug: activeSlug, navigate } = useMarketplaceRoute();
 
   // Modal state
   const [enquirySchool, setEnquirySchool] = useState(null);
@@ -21,22 +25,33 @@ export default function App() {
   const [multiEnquiryOpen, setMultiEnquiryOpen] = useState(false);
 
   // Redux comparison state
+  const dispatch = useDispatch();
   const comparedSchools = useSelector(state => state.comparison.comparedSchools);
+  const { isLoginOpen, token } = useSelector(state => state.auth);
+
+  // Refresh the signed-in account so inquiry forms stay pre-filled after a reload.
+  const { data: meRes } = useGetMeQuery(undefined, { skip: !token });
+
+  useEffect(() => {
+    if (meRes?.data && token) {
+      dispatch(setCredentials({ token, user: meRes.data }));
+    }
+  }, [meRes, token, dispatch]);
 
   const handleSelectSchool = (slug) => {
-    setActiveSlug(slug);
-    setCurrentView('school-profile');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('school-profile', slug);
+  };
+
+  const handleOpenCatalog = () => {
+    navigate('catalog');
   };
 
   const handleOpenComparison = () => {
-    setCurrentView('compare');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('compare');
   };
 
   const handleBackToHome = () => {
-    setCurrentView('home');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('home');
   };
 
   return (
@@ -48,7 +63,8 @@ export default function App() {
       <Navbar
         currentView={currentView}
         onNavigateHome={handleBackToHome}
-        onNavigateCompare={handleOpenComparison}
+        onNavigateCatalog={handleOpenCatalog}
+        onOpenComparison={handleOpenComparison}
         onOpenEnquiry={() => setEnquirySchool({ name: 'General Inquiry', slug: null })}
       />
 
@@ -60,6 +76,15 @@ export default function App() {
             onOpenEnquiry={setEnquirySchool}
             onOpenBrochure={setBrochureSchool}
             onOpenComparison={handleOpenComparison}
+            onOpenCatalog={handleOpenCatalog}
+          />
+        )}
+
+        {currentView === 'catalog' && (
+          <CatalogView
+            onSelectSchool={handleSelectSchool}
+            onOpenComparison={handleOpenComparison}
+            onOpenMultiEnquiry={() => setMultiEnquiryOpen(true)}
           />
         )}
 
@@ -78,17 +103,21 @@ export default function App() {
             onSelectSchool={handleSelectSchool}
             onOpenMultiEnquiry={() => setMultiEnquiryOpen(true)}
             onBack={handleBackToHome}
+            onOpenCatalog={handleOpenCatalog}
           />
         )}
       </main>
 
-      {/* Always-visible floating comparison tray */}
-      <ComparisonTray
-        onOpenComparison={handleOpenComparison}
-        onOpenMultiEnquiry={() => setMultiEnquiryOpen(true)}
-      />
+      {/* Floating comparison tray (hidden on the matrix itself) */}
+      {currentView !== 'compare' && (
+        <ComparisonTray
+          onOpenComparison={handleOpenComparison}
+          onOpenMultiEnquiry={() => setMultiEnquiryOpen(true)}
+        />
+      )}
 
       {/* Modals */}
+      <LoginModal isOpen={isLoginOpen} />
       {enquirySchool && (
         <EnquiryModal
           school={enquirySchool}

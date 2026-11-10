@@ -6,7 +6,7 @@ import {
     uploadFile, updateSettings, 
     addGalleryImage, deleteGalleryImage, 
     addNewsletter, deleteNewsletter,
-    getSchoolProfile, updateSchoolProfile
+    getSchoolProfile, updateSchoolProfile, getTenantSlug
 } from "../services/api";
 import { resolveAssetUrl } from "../utils/branding";
 import { toast } from "react-toastify";
@@ -550,6 +550,34 @@ const SchoolInfo = () => {
                         </div>
                     </div>
                 )}
+            </section>
+
+            {/* PUBLIC MARKETPLACE (managed in the SPOC portal) */}
+            <section className="glass-panel" style={{ padding: "1.5rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                        <div style={{ padding: "0.5rem", background: "rgba(16, 185, 129, 0.1)", color: "#10b981", borderRadius: "12px" }}>
+                            <Globe size={20} />
+                        </div>
+                        <div>
+                            <h2 style={{ fontSize: "1.25rem", fontWeight: "700", color: "var(--text-primary)" }}>Public Marketplace</h2>
+                            <span style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>Managed by the school SPOC in the public-domain portal</span>
+                        </div>
+                    </div>
+                    <a
+                        href={import.meta.env.VITE_SPOC_URL || `http://localhost:5181/login?tenant=${encodeURIComponent(getTenantSlug() || "")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                        style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontSize: "0.875rem", padding: "0.5rem 1rem", textDecoration: "none" }}
+                    >
+                        <ExternalLink size={16} /> Open SPOC Portal
+                    </a>
+                </div>
+                <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", marginTop: "0.9rem", lineHeight: 1.5 }}>
+                    The public profile, campus photos, newsroom and parent reviews are managed in the dedicated public-domain portal.
+                    Create a <strong>SPOC user</strong> under Staff Management → SPOC Users and share that portal link with them.
+                </p>
             </section>
 
             {/* GENERAL SETTINGS & SOCIAL HANDLES */}

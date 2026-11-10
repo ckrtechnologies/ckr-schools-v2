@@ -2,12 +2,12 @@ import React from 'react';
 import { IconSparkles, IconAward, IconCheck, IconCalendarEvent, IconShieldCheck } from '@tabler/icons-react';
 
 const TICKER_ITEMS = [
-  { text: 'ADMISSIONS OPEN 2026-27: Limited Seats Across Nursery to Grade IX & XI', icon: IconCalendarEvent, highlight: true },
-  { text: 'CBSE Board Season: Partner Schools on CKR Schools Report Strong First-Class Results', icon: IconAward },
-  { text: 'Junior Robotics & STEM Teams Across Partner Campuses Win National Olympiad Honours', icon: IconSparkles },
-  { text: '100% Verified Parent Reviews & Official Campus Photo Galleries', icon: IconCheck },
-  { text: 'Transparent Fee Structures & Zero Parent Brokerage or Hidden Charges', icon: IconCheck, highlight: true },
-  { text: 'All Partner Schools Are CBSE-Accredited & Background-Verified by CKR', icon: IconShieldCheck, highlight: true }
+  { text: 'Search, compare and enquire with schools listed on CKR Marketplace', icon: IconSparkles, highlight: true },
+  { text: 'Compare fees, boards and facilities side by side', icon: IconAward },
+  { text: 'Download the official brochure directly from the school', icon: IconCheck },
+  { text: 'Submit admission enquiries without creating an account', icon: IconCalendarEvent },
+  { text: 'Parent ratings are tied to a signed-in account', icon: IconShieldCheck, highlight: true },
+  { text: 'Every school profile is maintained by the school itself', icon: IconCheck }
 ];
 
 export default function MarqueeTicker() {

@@ -91,7 +91,7 @@ flowchart TD
   - `GET /api/shared/classes`, `POST /api/admin_panel/classes`, `PUT /api/admin_panel/classes/:id`
   - `GET /api/shared/subjects`, `POST /api/admin_panel/subjects`, `DELETE /api/admin_panel/subjects/:id`
   - `GET/POST /api/admin_panel/rooms`
-- **Frontend App:** `web/school_portal` (or `web/admin_panel`)
+- **Frontend App:** `web/admin_panel` (the single school operations portal; the old `web/school_portal` duplicate was deleted)
   - One-word sidebar options: `Overview`, `Classes`, `Subjects`, `Rooms`.
   - Class Card Grid + Section Management Modal.
   - 38px CKR-standard Subject Registry Table.
@@ -259,6 +259,17 @@ flowchart TD
 - **Domain Structure:** Wildcard DNS `*.ckrschools.online` with Let's Encrypt Wildcard SSL.
 - **Nginx Reverse Proxy:** Resolves `Host` header to pass `x-forwarded-host` to Express 5 on port 5006.
 
+### Phase 13: School SPOC Public-Domain Portal (`web/spoc_portal`)
+> **Status:** `DONE` (portal scaffolded, API live, school-portal marketplace editing removed)
+
+- **Purpose:** Public-domain/marketplace content is owned by a school SPOC in its own portal, so the school operations portal stays focused on fees, attendance, exams and admissions.
+- **App:** React 19 + Vite on port `5181`, same sidebar/top-bar/glass design language as the school admin panel; one-word navigation (`Overview`, `Profile`, `Reviews`, `Gallery`, `Press`, `Leads`); CKR 5-standard tables (38px rows, solid `#064e3b` header, sortable, CSV export, 50-row pagination).
+- **Auth:** `type = 'spoc'` users in `public."user"`. Provisioned either by the school admin (Staff Management → **SPOC Users**, full create/edit/delete with password reset) or by CLI: `node backend/scripts/create_spoc_user.js <slug> <email> <password> "<name>"`. The portal refuses non-SPOC logins, the school ops portal refuses SPOC logins, and `authenticate` blocks SPOC tokens from every API except `/api/marketplace/manage/*`, `/api/upload`, `/api/auth/me` and the public school profile.
+- **API:** `/api/marketplace/manage/*` (`overview`, `profile`, `publish`, `reviews` + reply/report, `gallery`, `press`, `leads`) — `authenticate` + `authorizeRoles('spoc','admin','principal')`, tenant-scoped from the JWT.
+- **Data:** migration `020_spoc_marketplace_portal.sql` adds `is_published` on `marketplace_school_profiles`, reply/report columns on `marketplace_reviews`, and `is_marketplace_visible`/`display_order` on `school_gallery`.
+- **Public gating:** unpublished profiles disappear from `/api/marketplace/schools`, `/schools/:slug` and `/facets`; hidden gallery photos disappear from the public listing.
+- **School portal cleanup:** `web/admin_panel` owns school operations only. Its `School Info` page carries a **Public Marketplace** card linking to the SPOC portal, and SPOC accounts are created/edited/deleted under Staff Management → **SPOC Users**. The duplicate `web/school_portal` app was deleted.
+
 ---
 
 ## 4. Milestone Gates & Verification Protocol
@@ -277,4 +288,5 @@ flowchart TD
 | **Phase 10** | Teacher Mobile App | Native build on Android/iOS + Attendance sync |
 | **Phase 11** | Student & Parent Mobile App | Native build + Dues & Homework submission |
 | **Phase 12** | Production Go-Live | Wildcard SSL, PM2 cluster, Nginx reverse proxy |
+| **Phase 13** | School SPOC Public-Domain Portal | SPOC login + manage API smoke test + `web/spoc_portal` Vite build (PASS) |
 

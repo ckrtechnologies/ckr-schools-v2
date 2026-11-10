@@ -56,6 +56,9 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   }, [user]);
   
   if (!isAuthenticated) return <Navigate to="/login" replace />;
+
+  // SPOC users belong to the public-domain portal, never the operations portal.
+  if (user?.type === "spoc") return <Navigate to="/login" replace />;
   
   if (allowedRoles && user && user.type !== "super_admin" && !allowedRoles.includes(user.type)) {
     // If user tries to access a route they shouldn't, kick them to dashboard

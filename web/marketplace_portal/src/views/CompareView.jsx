@@ -12,21 +12,22 @@ import {
   IconShieldCheck
 } from '@tabler/icons-react';
 import { removeSchoolFromCompare, clearComparison } from '../store/comparisonSlice.js';
+import SchoolImage from '../components/SchoolImage.jsx';
 
 const COMPARE_ATTRIBUTES = [
   { key: 'affiliation_board', label: 'Affiliation Board' },
   { key: 'city', label: 'Location / City' },
   { key: 'established_year', label: 'Year Established' },
   { key: 'grades_offered', label: 'Grades Offered' },
-  { key: '_fees', label: 'Annual Fee Range', render: (s) => s.min_fee && s.max_fee ? `₹${Number(s.min_fee).toLocaleString('en-IN')} – ₹${Number(s.max_fee).toLocaleString('en-IN')}` : '—' },
-  { key: 'avg_rating', label: 'Parent Avg Rating (5-axis)', render: (s) => s.avg_rating ? `${s.avg_rating} / 5 (${s.review_count} reviews)` : '—' },
+  { key: '_fees', label: 'Fee Range', render: (s) => Number(s.min_fee) > 0 && Number(s.max_fee) > 0 ? `₹${Number(s.min_fee).toLocaleString('en-IN')} – ₹${Number(s.max_fee).toLocaleString('en-IN')}` : 'Fees on enquiry' },
+  { key: 'avg_rating', label: 'Parent Avg Rating (5-axis)', render: (s) => Number(s.review_count) > 0 && Number(s.avg_rating) > 0 ? `${Number(s.avg_rating).toFixed(1)} / 5 (${s.review_count} reviews)` : 'No reviews yet' },
   { key: 'student_teacher_ratio', label: 'Student : Teacher Ratio' },
   { key: 'student_count_badge', label: 'Total Enrolled Students' },
   { key: 'teacher_count_badge', label: 'Certified Faculty' },
-  { key: 'admission_status', label: 'Admission Status (2026-27)' }
+  { key: 'admission_status', label: 'Admission Status' }
 ];
 
-export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack }) {
+export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack, onOpenCatalog }) {
   const dispatch = useDispatch();
   const { comparedSchools } = useSelector((state) => state.comparison);
 
@@ -46,21 +47,38 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
           <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '24px' }}>
             Browse schools and click <strong>"Compare"</strong> on any school card to add it to your comparison tray. You can compare up to 3 schools side-by-side.
           </p>
-          <button
-            onClick={onBack}
-            style={{
-              backgroundColor: '#064e3b',
-              color: '#ffffff',
-              border: 'none',
-              borderRadius: '8px',
-              padding: '11px 24px',
-              fontSize: '14px',
-              fontWeight: '700',
-              cursor: 'pointer'
-            }}
-          >
-            Browse Schools
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            <button
+              onClick={onOpenCatalog}
+              style={{
+                backgroundColor: '#064e3b',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '11px 24px',
+                fontSize: '14px',
+                fontWeight: '700',
+                cursor: 'pointer'
+              }}
+            >
+              Open Campus Catalog
+            </button>
+            <button
+              onClick={onBack}
+              style={{
+                backgroundColor: '#ffffff',
+                color: '#064e3b',
+                border: '1px solid #cbd5e1',
+                borderRadius: '8px',
+                padding: '11px 24px',
+                fontSize: '14px',
+                fontWeight: '700',
+                cursor: 'pointer'
+              }}
+            >
+              Browse Schools
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -73,7 +91,7 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
   };
 
   return (
-    <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '32px 20px 80px' }}>
+    <div className="mk-page">
       {/* Header */}
       <div style={{ marginBottom: '28px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
@@ -81,11 +99,11 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
             SCHOOL COMPARISON MATRIX
           </span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a', letterSpacing: '-0.5px' }}>
+        <div className="mk-compare-head">
+          <h2 style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: '800', color: '#0f172a', letterSpacing: '-0.5px' }}>
             Comparing {comparedSchools.length} School{comparedSchools.length > 1 ? 's' : ''} Side-by-Side
           </h2>
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div className="mk-compare-head-actions">
             <button
               onClick={() => {
                 dispatch(clearComparison());
@@ -127,17 +145,17 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
       </div>
 
       {/* Comparison Table */}
-      <div style={{
+      <div className="mk-swipe-hint">Swipe sideways to see every school →</div>
+      <div className="mk-scroll-x" style={{
         backgroundColor: '#ffffff',
         borderRadius: '12px',
         border: '1px solid #e2e8f0',
-        overflow: 'hidden',
         boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)'
       }}>
         {/* School Hero Images Row */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: `200px repeat(${comparedSchools.length}, 1fr)`,
+          gridTemplateColumns: `160px repeat(${comparedSchools.length}, minmax(190px, 1fr))`, minWidth: `calc(160px + ${comparedSchools.length * 190}px)`,
           borderBottom: '2px solid #e2e8f0'
         }}>
           {/* Empty corner */}
@@ -184,11 +202,7 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
                 overflow: 'hidden',
                 marginBottom: '12px'
               }}>
-                <img
-                  src={school.hero_image_url || 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop&q=80'}
-                  alt={school.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
+                <SchoolImage school={school} alt={school.name} height="100%" />
               </div>
 
               {/* School info */}
@@ -203,9 +217,15 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
 
               {/* Star rating */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', marginBottom: '8px' }}>
-                <IconStarFilled size={14} color="#f59e0b" />
-                <span style={{ fontWeight: '700', fontSize: '13px', color: '#0f172a' }}>{school.avg_rating || '4.8'}</span>
-                <span style={{ fontSize: '11px', color: '#64748b' }}>({school.review_count || 0} reviews)</span>
+                {Number(school.review_count) > 0 && Number(school.avg_rating) > 0 ? (
+                  <>
+                    <IconStarFilled size={14} color="#f59e0b" />
+                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#0f172a' }}>{Number(school.avg_rating).toFixed(1)}</span>
+                    <span style={{ fontSize: '11px', color: '#64748b' }}>({school.review_count} reviews)</span>
+                  </>
+                ) : (
+                  <span style={{ fontSize: '11px', color: '#64748b' }}>No reviews yet</span>
+                )}
               </div>
 
               {/* CTA Buttons */}
@@ -251,7 +271,7 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
             key={attr.key}
             style={{
               display: 'grid',
-              gridTemplateColumns: `200px repeat(${comparedSchools.length}, 1fr)`,
+              gridTemplateColumns: `160px repeat(${comparedSchools.length}, minmax(190px, 1fr))`, minWidth: `calc(160px + ${comparedSchools.length * 190}px)`,
               borderBottom: '1px solid #f1f5f9',
               backgroundColor: rowIdx % 2 === 0 ? '#ffffff' : '#f8fafc'
             }}
@@ -291,7 +311,7 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
                   }}
                 >
                   {isAdmissionsOpen && <span className="pulse-indicator" />}
-                  {attr.key === 'avg_rating' && val !== '—' && (
+                  {attr.key === 'avg_rating' && val !== 'No reviews yet' && (
                     <IconStarFilled size={13} color="#f59e0b" />
                   )}
                   {val}
@@ -305,7 +325,7 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: `200px repeat(${comparedSchools.length}, 1fr)`,
+            gridTemplateColumns: `160px repeat(${comparedSchools.length}, minmax(190px, 1fr))`, minWidth: `calc(160px + ${comparedSchools.length * 190}px)`,
             borderBottom: '1px solid #f1f5f9'
           }}
         >
@@ -335,6 +355,9 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
                 }}
               >
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                  {facilities.length === 0 && (
+                    <div style={{ fontSize: '12px', color: '#94a3b8' }}>Facilities not listed yet</div>
+                  )}
                   {facilities.slice(0, 5).map((f, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#334155' }}>
                       <IconCheck size={13} color="#047857" />
@@ -352,22 +375,19 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
       </div>
 
       {/* Bottom CTA Banner */}
-      <div style={{
+      <div className="mk-cta-banner" style={{
         marginTop: '32px',
         backgroundColor: '#064e3b',
         borderRadius: '12px',
-        padding: '24px 32px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        padding: 'clamp(18px, 3vw, 24px) clamp(18px, 3vw, 32px)',
         color: '#ffffff'
       }}>
-        <div>
+        <div style={{ minWidth: 0 }}>
           <div style={{ fontWeight: '800', fontSize: '18px', marginBottom: '4px' }}>
             Ready to Apply? Send One Enquiry to All Schools at Once.
           </div>
           <div style={{ fontSize: '13px', color: '#a7f3d0' }}>
-            Your child's details reach all {comparedSchools.length} selected school admission desks in 1 click. Zero parent fee.
+            Your child's details reach all {comparedSchools.length} selected school admission desks in one step. No brokerage on enquiries.
           </div>
         </div>
         <button

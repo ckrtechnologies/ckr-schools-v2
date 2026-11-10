@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { LogIn, Sparkles } from "lucide-react";
+import { LogIn, Sparkles, Globe } from "lucide-react";
 import { loginSuccess } from "../features/authSlice";
 import api, { getTenantSlug } from "../services/api";
 import { applySchoolBranding, fetchSchoolProfile, resolveAssetUrl } from "../utils/branding";
@@ -16,6 +16,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [spocBlocked, setSpocBlocked] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -69,6 +70,13 @@ const Login = () => {
 
       if (response.data.success) {
         const user = response.data.user;
+
+        if (user?.type === 'spoc') {
+          setSpocBlocked(true);
+          toast.error('SPOC accounts sign in at the School SPOC Portal, not here.');
+          return;
+        }
+
         if (user?.schoolSlug) {
           localStorage.setItem("tenantSlug", user.schoolSlug);
         }

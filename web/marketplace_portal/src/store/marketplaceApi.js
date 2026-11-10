@@ -2,9 +2,21 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const marketplaceApi = createApi({
   reducerPath: 'marketplaceApi',
-  baseQuery: fetchBaseQuery({ baseUrl: '' }),
-  tagTypes: ['Schools', 'SchoolDetail', 'Reviews', 'PressReleases'],
+  baseQuery: fetchBaseQuery({
+    baseUrl: '',
+    prepareHeaders: (headers, { getState }) => {
+      const token = getState().auth?.token;
+      if (token) headers.set('authorization', `Bearer ${token}`);
+      return headers;
+    }
+  }),
+  tagTypes: ['Schools', 'SchoolDetail', 'Reviews', 'Facets', 'Auth', 'PressReleases'],
   endpoints: (builder) => ({
+    getFacets: builder.query({
+      query: () => '/api/marketplace/facets',
+      providesTags: ['Facets']
+    }),
+
     getSchools: builder.query({
       query: (filters = {}) => {
         const q = new URLSearchParams();
@@ -18,9 +30,28 @@ export const marketplaceApi = createApi({
       providesTags: ['Schools']
     }),
 
+    getPressReleases: builder.query({
+      query: (slug) => `/api/marketplace/schools/${slug}/press-releases`,
+      providesTags: (result, error, slug) => [{ type: 'PressReleases', id: slug }]
+    }),
+
     getSchoolBySlug: builder.query({
       query: (slug) => `/api/marketplace/schools/${slug}`,
       providesTags: (result, error, slug) => [{ type: 'SchoolDetail', id: slug }]
+    }),
+
+    login: builder.mutation({
+      query: (body) => ({
+        url: '/api/marketplace/auth/login',
+        method: 'POST',
+        body
+      }),
+      invalidatesTags: ['Auth']
+    }),
+
+    getMe: builder.query({
+      query: () => '/api/marketplace/auth/me',
+      providesTags: ['Auth']
     }),
 
     submitEnquiry: builder.mutation({
@@ -71,24 +102,21 @@ export const marketplaceApi = createApi({
         method: 'POST'
       }),
       invalidatesTags: ['Reviews']
-    }),
-
-    getPressReleases: builder.query({
-      query: (slug) => `/api/marketplace/schools/${slug}/press-releases`,
-      providesTags: (result, error, slug) => [{ type: 'PressReleases', id: slug }]
     })
   })
 });
 
 export const {
+  useGetFacetsQuery,
   useGetSchoolsQuery,
   useGetSchoolBySlugQuery,
+  useGetPressReleasesQuery,
+  useLoginMutation,
+  useGetMeQuery,
   useSubmitEnquiryMutation,
   useSubmitBrochureDownloadMutation,
   useSubmitMultiEnquiryMutation,
   useGetSchoolReviewsQuery,
   useSubmitSchoolReviewMutation,
-  useUpvoteReviewHelpfulMutation,
-  useGetPressReleasesQuery
+  useUpvoteReviewHelpfulMutation
 } = marketplaceApi;
-
