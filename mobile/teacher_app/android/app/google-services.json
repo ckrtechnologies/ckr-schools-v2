@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "353667789372",
+    "project_id": "vision-international-sch-cea2a",
+    "storage_bucket": "vision-international-sch-cea2a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353667789372:android:8bada4fd434d5ebc87c939",
+        "android_client_info": {
+          "package_name": "com.student_app1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJNTz8zjIIhQ1IkLapQ1O5N0X6QS5ZVbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353667789372:android:22ad82919e6d833a87c939",
+        "android_client_info": {
+          "package_name": "com.teacher_app1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJNTz8zjIIhQ1IkLapQ1O5N0X6QS5ZVbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

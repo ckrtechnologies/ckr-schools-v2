@@ -1,0 +1,625 @@
+import React, { useEffect, useState, useMemo } from "react";
+import { createPortal } from "react-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUsers, fetchClasses } from "../features/dataSlice";
+import api from "../services/api";
+import { toast } from "react-toastify";
+import TableFilterHeader from "../components/TableFilterHeader";
+import { useSortableData } from "../hooks/useSortableData";
+import { Eye, Receipt, PlusCircle, CheckCircle, Clock, Printer, CalendarClock } from "lucide-react";
+import { exportToExcel, exportToPDF, generateReceiptPDF } from "../utils/exportUtils";
+import StudentLedgerModal from "../components/StudentLedgerModal";
+import UserAvatar from "../components/UserAvatar";
+
+const Ledger = () => {
+  const dispatch = useDispatch();
+  const { users, classes: globalClasses, loading } = useSelector((state) => state.data);
+  const { academicYear } = useSelector((state) => state.settings);
+
+  const [studentSearch, setStudentSearch] = useState("");
+  const [classFilter, setClassFilter] = useState("");
+  const [sectionFilter, setSectionFilter] = useState("");
+  const [statusFilter, setStatusFilter] = useState("All");
+  const [selectedColumns, setSelectedColumns] = useState([
+    "sno", "name", "admission_number", "doj", "class", "total_due", "total_paid", "balance", "fee_exempted", "actions"
+  ]);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [studentLedger, setStudentLedger] = useState({ fees: [], payments: [] });
+  const [ledgerLoading, setLedgerLoading] = useState(false);
+
+  const [paymentForm, setPaymentForm] = useState({
+    feeIds: [],
+    amount: "",
+    paymentMode: "Cash",
+    remarks: ""
+  });
+  const [isPaying, setIsPaying] = useState(false);
+  const [feeSearchTerm, setFeeSearchTerm] = useState("");
+  const [showFutureLedger, setShowFutureLedger] = useState(false);
+
+  const [balancesMap, setBalancesMap] = useState({});
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+    dispatch(fetchClasses());
+  }, [dispatch]);
+
+  const students = useMemo(() => users.filter(u => u.type === "student"), [users]);
+
+  useEffect(() => {
+    if (students.length > 0) {
+      // Fetch student balances in batch
+      api.post("/finance_panel/studentBalances", {
+        students: students.map(s => ({ id: s.id, type: s.type, fee_exempted: s.fee_exempted, classes: s.classes, bus_fee: s.bus_fee, admission_date: s.admission_date, created_at: s.created_at })),
+        academic_year: academicYear
+      })
+        .then(res => {
+          if (res.data.success) {
+            const bMap = {};
+            const list = Array.isArray(res.data.data) ? res.data.data : [];
+            list.forEach(b => {
+              if (b?.student_id) {
+                bMap[b.student_id] = b;
+                bMap[String(b.student_id).toLowerCase()] = b;
+              }
+              if (b?.id) {
+                bMap[b.id] = b;
+                bMap[String(b.id).toLowerCase()] = b;
+              }
+            });
+            setBalancesMap(bMap);
+          }
+        })
+        .catch(console.error);
+    }
+  }, [students, refreshTrigger, academicYear]);
+
+  // Derive class options
+  const classes = useMemo(() => {
+    if (!globalClasses || globalClasses.length === 0) return [];
+
+    // We only want to show classes that actually have students (or we can show all classes)
+    // Let's show all available classes that are mapped to current students
+    const classSet = new Set();
+    students.forEach(s => {
+      if (s.classes && s.classes.length > 0) {
+        s.classes.forEach(c => classSet.add(c));
+      }
+    });
+
+    return Array.from(new Set(
+      globalClasses.filter(c => classSet.has(c.id)).map(c => c.name)
+    )).filter(Boolean).map(name => ({ value: name, label: name }));
+  }, [students, globalClasses]);
+
+  const sections = useMemo(() => {
+    const classSet = new Set();
+    students.forEach(s => {
+      if (s.classes && s.classes.length > 0) {
+        s.classes.forEach(c => classSet.add(c));
+      }
+    });
+
+    return Array.from(new Set(
+      globalClasses.filter(c => classSet.has(c.id)).map(c => c.section)
+    )).filter(Boolean).map(sec => ({ value: sec, label: sec }));
+  }, [students, globalClasses]);
+
+  const filteredStudents = useMemo(() => {
+    let result = students;
+    if (classFilter || sectionFilter) {
+      result = result.filter(s => {
+        if (!s.classes || s.classes.length === 0) return false;
+        const cls = globalClasses.find(c => String(c.id) === String(s.classes[0]));
+        if (!cls) return false;
+
+        const matchesClass = !classFilter || cls.name === classFilter;
+        const matchesSection = !sectionFilter || cls.section === sectionFilter;
+
+        return matchesClass && matchesSection;
+      });
+    }
+    if (studentSearch) {
+      const search = studentSearch.toLowerCase();
+      result = result.filter(s =>
+        (s.name && s.name.toLowerCase().includes(search)) ||
+        (s.admission_number && String(s.admission_number).toLowerCase().includes(search))
+      );
+    }
+    return result;
+  }, [students, classFilter, studentSearch]);
+
+  const enrichedStudents = useMemo(() => {
+    let enriched = filteredStudents.map(s => {
+      const b = balancesMap[s.id] || balancesMap[String(s.id).toLowerCase()] || { totalDue: 0, totalPaid: 0, balance: 0 };
+
+      return {
+        ...s,
+        className: (() => {
+          const cls = globalClasses.find(c => String(c.id) === String(s.classes?.[0]));
+          return cls ? `${cls.name} ${cls.section || ''}`.trim() : "N/A";
+        })(),
+        baseClassName: globalClasses.find(c => String(c.id) === String(s.classes?.[0]))?.name || "N/A",
+        section: globalClasses.find(c => String(c.id) === String(s.classes?.[0]))?.section || "",
+        doj: s.admission_date ? new Date(s.admission_date).toLocaleDateString() : (s.created_at ? new Date(s.created_at).toLocaleDateString() : "N/A"),
+        total_due: b.totalDue,
+        total_paid: b.totalPaid,
+        balance: b.balance
+      };
+    });
+
+    if (statusFilter !== "All") {
+      enriched = enriched.filter(s => {
+        if (statusFilter === "Exempted") return s.fee_exempted;
+        if (statusFilter === "Pending") return !s.fee_exempted && s.balance > 0;
+        if (statusFilter === "Paid") return !s.fee_exempted && s.balance === 0;
+        return true;
+      });
+    }
+
+    return enriched;
+  }, [filteredStudents, globalClasses, statusFilter]);
+
+  const { items: sortedData, requestSort, sortConfig } = useSortableData(enrichedStudents);
+
+  const renderSortIndicator = (key) => {
+    if (!sortConfig || sortConfig.key !== key) return null;
+    return sortConfig.direction === 'ascending' ? ' ▲' : ' ▼';
+  };
+
+  const handleOpenLedger = async (student) => {
+    setSelectedStudent(student);
+    setIsModalOpen(true);
+    setLedgerLoading(true);
+    try {
+      const res = await api.get(`/finance_panel/getStudentLedger/${student.id}?academic_year=${academicYear}`);
+      if (res.data.success) {
+        setStudentLedger(res.data.data);
+      }
+    } catch (err) {
+      toast.error("Failed to load ledger details");
+    } finally {
+      setLedgerLoading(false);
+    }
+  };
+
+  const handleOpenPaymentModal = async (student) => {
+    setSelectedStudent(student);
+    setIsPaymentModalOpen(true);
+    setLedgerLoading(true);
+    try {
+      const res = await api.get(`/finance_panel/getStudentLedger/${student.id}?includeFuture=${showFutureLedger}&academic_year=${academicYear}`);
+      if (res.data.success) {
+        setStudentLedger(res.data.data);
+      }
+    } catch (err) {
+      toast.error("Failed to load ledger details");
+    } finally {
+      setLedgerLoading(false);
+    }
+  };
+
+  const handlePaymentSubmit = async (e) => {
+    e.preventDefault();
+    if (!paymentForm.feeIds || paymentForm.feeIds.length === 0 || !paymentForm.amount) {
+      return toast.error("Please select at least one fee and enter an amount");
+    }
+
+    setIsPaying(true);
+    try {
+      let remainingAmount = Number(paymentForm.amount);
+      let totalPaymentAmount = 0;
+      const feeTitles = [];
+
+      for (const feeId of paymentForm.feeIds) {
+        const feeObj = studentLedger.fees.find(f => f.id === feeId);
+        if (!feeObj) continue;
+
+        const dueAmount = Number(feeObj.fee?.amount || 0) - Number(feeObj.total_paid_amount || 0);
+        if (remainingAmount <= 0) break;
+
+        const paymentAmount = Math.min(remainingAmount, dueAmount);
+        totalPaymentAmount += paymentAmount;
+        feeTitles.push(feeObj.fee?.title || "Fee");
+        remainingAmount -= paymentAmount;
+      }
+
+      if (totalPaymentAmount === 0) {
+        setIsPaying(false);
+        return toast.error("Invalid payment configuration");
+      }
+
+      const paymentsPayload = [];
+      let tempRemaining = Number(paymentForm.amount);
+
+      for (const feeId of paymentForm.feeIds) {
+        const feeObj = studentLedger.fees.find(f => f.id === feeId);
+        if (!feeObj) continue;
+
+        const dueAmount = Number(feeObj.fee?.amount || 0) - Number(feeObj.total_paid_amount || 0);
+        if (tempRemaining <= 0) break;
+
+        const paymentAmount = Math.min(tempRemaining, dueAmount);
+
+        paymentsPayload.push({
+          feeId: feeId,
+          amount: paymentAmount,
+          title: feeObj.fee?.title || "Fee"
+        });
+
+        tempRemaining -= paymentAmount;
+      }
+
+      const res = await api.post("/finance_panel/logPayment", {
+        data: {
+          studentId: selectedStudent.id,
+          paymentMode: paymentForm.paymentMode,
+          remarks: paymentForm.remarks,
+          payments: paymentsPayload
+        }
+      });
+      if (res.data.success) {
+        toast.success("Payment recorded successfully");
+
+        const completePayments = res.data.payments.map((p, idx) => ({
+          ...p,
+          fee_title: paymentsPayload[idx]?.title || p.remarks || "School Fee",
+          fee: { title: paymentsPayload[idx]?.title || p.remarks || "School Fee" },
+          class_name: selectedStudent?.className,
+          className: selectedStudent?.className
+        }));
+        generateReceiptPDF(completePayments, selectedStudent, res.data.receipt);
+
+        setPaymentForm({ feeIds: [], amount: "", paymentMode: "Cash", remarks: "" });
+        setIsPaymentModalOpen(false); // Close payment modal after success
+        // Refresh ledger if the big modal is still somehow open
+        if (isModalOpen) handleOpenLedger(selectedStudent);
+        dispatch(fetchUsers());
+        setRefreshTrigger(prev => prev + 1);
+      }
+    } catch (err) {
+      toast.error(err.response?.data?.message || "Failed to log payment");
+    } finally {
+      setIsPaying(false);
+    }
+  };
+
+  const exportColumnsList = [
+    { key: "sno", label: "S.No" },
+    { key: "name", label: "Name" },
+    { key: "admission_number", label: "Admission No" },
+    { key: "doj", label: "Date of Joining" },
+    { key: "total_due", label: "Total Due" },
+    { key: "total_paid", label: "Total Paid" },
+    { key: "balance", label: "Balance" },
+    { key: "fee_exempted", label: "Fee Exempted" }
+  ];
+
+  const handleExportExcel = () => {
+    const dataToExport = sortedData.map((item, index) => ({
+      "S.No": index + 1,
+      "Name": item.name,
+      "Admission No": item.admission_number || "-",
+      "Class": item.className,
+      "Total Due": item.total_due,
+      "Total Paid": item.total_paid,
+      "Balance": item.balance,
+      "Fee Exempted": item.fee_exempted ? "Yes" : "No"
+    }));
+    exportToExcel(dataToExport, "Student_Ledger");
+  };
+
+  const handleExportPDF = () => {
+    const columns = ["S.No", "Name", "Admission No", "Class", "Total Due", "Total Paid", "Balance", "Fee Exempted"];
+    const rows = sortedData.map((item, index) => [
+      index + 1,
+      item.name,
+      item.admission_number || "-",
+      item.className,
+      `Rs. ${item.total_due}`,
+      `Rs. ${item.total_paid}`,
+      `Rs. ${item.balance}`,
+      item.fee_exempted ? "Yes" : "No"
+    ]);
+    exportToPDF(columns, rows, "Student_Ledger", "Student Ledger Report");
+  };
+
+  return (
+    <div className="animate-fade-in" style={{ width: "100%", display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div className="glass-panel" style={{ padding: "1.5rem" }}>
+        <div style={{ flexShrink: 0 }}>
+          <TableFilterHeader
+            searchQuery={studentSearch}
+            setSearchQuery={setStudentSearch}
+            searchPlaceholder="Search by name or admission no..."
+            filters={[
+              {
+                label: "All Classes",
+                value: classFilter,
+                onChange: setClassFilter,
+                options: classes
+              },
+              {
+                label: "All Sections",
+                value: sectionFilter,
+                onChange: setSectionFilter,
+                options: sections
+              },
+              {
+                label: "Status",
+                value: statusFilter,
+                onChange: setStatusFilter,
+                options: [
+                  { value: "All", label: "All Students" },
+                  { value: "Pending", label: "Pending Dues" },
+                  { value: "Paid", label: "Fully Paid" },
+                  { value: "Exempted", label: "Fee Exempted" }
+                ]
+              }
+            ]}
+            columns={exportColumnsList}
+            selectedColumns={selectedColumns}
+            setSelectedColumns={setSelectedColumns}
+            onExportExcel={handleExportExcel}
+            onExportPDF={handleExportPDF}
+          />
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "0.5rem", gap: "0.5rem", flexWrap: "wrap", fontSize: "0.875rem" }}>
+          <div style={{ background: "rgba(59, 130, 246, 0.1)", color: "#3b82f6", padding: "0.35rem 0.75rem", borderRadius: "6px", fontWeight: "600", display: "flex", alignItems: "center", gap: "0.25rem" }}>
+            Total Displayed Due: ₹{sortedData.reduce((acc, curr) => acc + Number(curr.total_due || 0), 0).toLocaleString()}
+          </div>
+          <div style={{ background: "rgba(16, 185, 129, 0.1)", color: "#10b981", padding: "0.35rem 0.75rem", borderRadius: "6px", fontWeight: "600", display: "flex", alignItems: "center", gap: "0.25rem" }}>
+            Total Displayed Paid: ₹{sortedData.reduce((acc, curr) => acc + Number(curr.total_paid || 0), 0).toLocaleString()}
+          </div>
+          <div style={{ background: "rgba(239, 68, 68, 0.1)", color: "#ef4444", padding: "0.35rem 0.75rem", borderRadius: "6px", fontWeight: "600", display: "flex", alignItems: "center", gap: "0.25rem" }}>
+            Total Displayed Balance: ₹{sortedData.reduce((acc, curr) => acc + Number(curr.balance || 0), 0).toLocaleString()}
+          </div>
+        </div>
+
+        <div style={{ overflowX: "auto", marginTop: "1rem" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", whiteSpace: "nowrap" }}>
+            <thead>
+              <tr style={{ borderBottom: "2px solid var(--glass-border)", background: "rgba(0,0,0,0.02)" }}>
+                {selectedColumns.includes("sno") && <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)" }}>S.NO</th>}
+                <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)", cursor: "pointer", userSelect: "none" }} onClick={() => requestSort("name")}>
+                  STUDENT{renderSortIndicator("name")}
+                </th>
+                {selectedColumns.includes("admission_number") && <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)", cursor: "pointer", userSelect: "none" }} onClick={() => requestSort("admission_number")}>ADM NO{renderSortIndicator("admission_number")}</th>}
+                {selectedColumns.includes("doj") && <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)", cursor: "pointer", userSelect: "none" }} onClick={() => requestSort("doj")}>DATE OF JOINING{renderSortIndicator("doj")}</th>}
+                {selectedColumns.includes("total_due") && <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)", cursor: "pointer", userSelect: "none" }} onClick={() => requestSort("total_due")}>TOTAL DUE{renderSortIndicator("total_due")}</th>}
+                {selectedColumns.includes("total_paid") && <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)", cursor: "pointer", userSelect: "none" }} onClick={() => requestSort("total_paid")}>TOTAL PAID{renderSortIndicator("total_paid")}</th>}
+                {selectedColumns.includes("balance") && <th style={{ padding: "0.5rem 1rem", textAlign: "left", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)", cursor: "pointer", userSelect: "none" }} onClick={() => requestSort("balance")}>BALANCE{renderSortIndicator("balance")}</th>}
+                {selectedColumns.includes("fee_exempted") && <th style={{ padding: "0.5rem 1rem", textAlign: "center", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)" }}>EXEMPTED</th>}
+                <th style={{ padding: "0.5rem 1rem", textAlign: "right", fontSize: "0.75rem", fontWeight: "600", color: "var(--text-secondary)" }}>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loading ? (
+                <tr><td colSpan="7" style={{ padding: "2rem", textAlign: "center" }}>Loading...</td></tr>
+              ) : sortedData.length === 0 ? (
+                <tr><td colSpan="7" style={{ padding: "2rem", textAlign: "center", color: "var(--text-secondary)" }}>No students found.</td></tr>
+              ) : (
+                sortedData.map((s, idx) => (
+                  <tr key={s.id} onClick={() => handleOpenLedger(s)} style={{ borderBottom: "1px solid var(--glass-border)", transition: "background 0.2s", cursor: "pointer" }} className="hover-row">
+                    {selectedColumns.includes("sno") && <td style={{ padding: "0.5rem 1rem", color: "var(--text-secondary)", fontSize: "0.875rem", fontWeight: "500" }}>{idx + 1}</td>}
+                    <td style={{ padding: "0.5rem 1rem" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                        <UserAvatar src={s.avatar_url} name={s.name} size={32} />
+                        <div>
+                          <div style={{ fontWeight: "500", color: "var(--text-primary)" }}>{s.name}</div>
+                        </div>
+                      </div>
+                    </td>
+                    {selectedColumns.includes("admission_number") && <td style={{ padding: "0.5rem 1rem", color: "var(--text-secondary)", fontSize: "0.875rem" }}>{s.admission_number || "-"}</td>}
+                    {selectedColumns.includes("doj") && <td style={{ padding: "0.5rem 1rem", color: "var(--text-secondary)", fontSize: "0.875rem" }}>{s.doj}</td>}
+                    {selectedColumns.includes("total_due") && <td style={{ padding: "0.5rem 1rem", color: "var(--text-primary)", fontWeight: "500" }}>₹{s.total_due}</td>}
+                    {selectedColumns.includes("total_paid") && <td style={{ padding: "0.5rem 1rem", color: "#10b981", fontWeight: "500" }}>₹{s.total_paid}</td>}
+                    {selectedColumns.includes("balance") && (
+                      <td style={{ padding: "0.5rem 1rem", color: s.balance > 0 ? "#ef4444" : "#10b981", fontWeight: "600" }}>
+                        <div style={{ display: "inline-flex", alignItems: "center", padding: "0.25rem 0.5rem", borderRadius: "12px", background: s.balance > 0 ? "rgba(239, 68, 68, 0.1)" : "rgba(16, 185, 129, 0.1)" }}>
+                          ₹{s.balance}
+                        </div>
+                      </td>
+                    )}
+                    {selectedColumns.includes("fee_exempted") && (
+                      <td style={{ padding: "0.5rem 1rem", textAlign: "center" }}>
+                        {s.fee_exempted ? <span style={{ background: "rgba(16, 185, 129, 0.1)", color: "#10b981", padding: "2px 8px", borderRadius: "4px", fontSize: "0.75rem", fontWeight: "600" }}>YES</span> : "-"}
+                      </td>
+                    )}
+                    <td style={{ padding: "0.5rem 1rem", textAlign: "right", display: "flex", gap: "0.5rem", justifyContent: "flex-end" }}>
+                      <button onClick={(e) => { e.stopPropagation(); handleOpenLedger(s); }} className="btn-ghost" style={{ display: "inline-flex", alignItems: "center", padding: "0.5rem 1rem", color: "var(--accent-primary)", background: "var(--accent-light)", borderRadius: "6px", fontSize: "0.875rem", fontWeight: "500" }}>
+                        <Receipt size={16} style={{ marginRight: "0.5rem" }} /> View Ledger
+                      </button>
+                      <button onClick={(e) => { e.stopPropagation(); handleOpenPaymentModal(s); }} className="btn-primary" style={{ display: "inline-flex", alignItems: "center", padding: "0.5rem 1rem", borderRadius: "6px", fontSize: "0.875rem", fontWeight: "500" }}>
+                        <PlusCircle size={16} style={{ marginRight: "0.5rem" }} /> Log Payment
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <StudentLedgerModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        student={selectedStudent}
+      />
+      {/* Payment Modal */}
+      {isPaymentModalOpen && selectedStudent && createPortal(
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)", display: "flex", justifyContent: "flex-end", zIndex: 9999 }}>
+          <div className="glass-panel" style={{ width: "100%", maxWidth: "600px", height: "100%", display: "flex", flexDirection: "column", padding: "2rem", borderLeft: "1px solid var(--glass-border)", background: "#fff", animation: "slideInRight 0.3s ease-out forwards", overflow: "hidden", borderRadius: 0 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexShrink: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: "700" }}>Log Payment for {selectedStudent.name}</h2>
+              <button onClick={() => setIsPaymentModalOpen(false)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.5rem", color: "var(--text-secondary)" }}>&times;</button>
+            </div>
+
+            {ledgerLoading ? (
+              <p style={{ textAlign: "center", padding: "2rem" }}>Checking dues...</p>
+            ) : selectedStudent.fee_exempted ? (
+              <div style={{ padding: "2rem", textAlign: "center", background: "rgba(16, 185, 129, 0.1)", borderRadius: "8px", color: "#10b981" }}>
+                <p style={{ fontWeight: "600" }}>Student is fee exempted.</p>
+                <button onClick={() => setIsPaymentModalOpen(false)} className="btn-ghost" style={{ marginTop: "1rem" }}>Close</button>
+              </div>
+            ) : (
+              <form onSubmit={handlePaymentSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", flex: 1, overflow: "hidden" }}>
+                <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem", flexShrink: 0, flexWrap: "wrap", gap: "0.5rem" }}>
+                    <label style={{ fontSize: "0.875rem", fontWeight: "600" }}>Select Fee(s)</label>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
+                      <input
+                        type="text"
+                        placeholder="Search fee (e.g. Tuition)"
+                        value={feeSearchTerm}
+                        onChange={(e) => setFeeSearchTerm(e.target.value)}
+                        className="input-glass"
+                        style={{ padding: "0.25rem 0.5rem", fontSize: "0.875rem", width: "200px" }}
+                      />
+                      <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", cursor: "pointer", fontSize: "0.75rem", color: showFutureLedger ? "var(--accent-primary)" : "var(--text-secondary)", fontWeight: "500", userSelect: "none" }}>
+                        <CalendarClock size={14} />
+                        Future Dues
+                        <div
+                          onClick={() => {
+                            const newVal = !showFutureLedger;
+                            setShowFutureLedger(newVal);
+                            // Re-fetch with new param
+                            setLedgerLoading(true);
+                            api.get(`/finance_panel/getStudentLedger/${selectedStudent.id}?includeFuture=${newVal}&academic_year=${academicYear}`)
+                              .then(res => { if (res.data.success) { setStudentLedger(res.data.data); setPaymentForm({ ...paymentForm, feeIds: [], amount: "" }); } })
+                              .catch(() => toast.error("Failed to reload ledger"))
+                              .finally(() => setLedgerLoading(false));
+                          }}
+                          style={{
+                            width: "32px", height: "18px", borderRadius: "9px",
+                            background: showFutureLedger ? "var(--accent-primary)" : "rgba(0,0,0,0.15)",
+                            position: "relative", cursor: "pointer", transition: "background 0.2s",
+                            flexShrink: 0
+                          }}
+                        >
+                          <div style={{
+                            width: "14px", height: "14px", borderRadius: "50%",
+                            background: "white", position: "absolute", top: "2px",
+                            left: showFutureLedger ? "16px" : "2px", transition: "left 0.2s",
+                            boxShadow: "0 1px 3px rgba(0,0,0,0.2)"
+                          }} />
+                        </div>
+                      </label>
+                      <label style={{ fontSize: "0.75rem", display: "flex", alignItems: "center", gap: "0.25rem", cursor: "pointer" }}>
+                        <input
+                          type="checkbox"
+                          checked={studentLedger.fees.filter(f => f.status !== "paid" && (f.fee?.title || "").toLowerCase().includes(feeSearchTerm.toLowerCase())).length > 0 && paymentForm.feeIds.length === studentLedger.fees.filter(f => f.status !== "paid" && (f.fee?.title || "").toLowerCase().includes(feeSearchTerm.toLowerCase())).length}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              const filteredFeeIds = studentLedger.fees.filter(f => f.status !== "paid" && (f.fee?.title || "").toLowerCase().includes(feeSearchTerm.toLowerCase())).map(f => f.id);
+                              let totalAmt = 0;
+                              filteredFeeIds.forEach(id => {
+                                const fObj = studentLedger.fees.find(fee => fee.id === id);
+                                if (fObj) totalAmt += (Number(fObj.fee?.amount || 0) - Number(fObj.total_paid_amount || 0));
+                              });
+                              setPaymentForm({ ...paymentForm, feeIds: filteredFeeIds, amount: totalAmt });
+                            } else {
+                              setPaymentForm({ ...paymentForm, feeIds: [], amount: "" });
+                            }
+                          }}
+                        />
+                        Select All
+                      </label>
+                    </div>
+                  </div>
+                  <div style={{ flex: 1, overflowY: "auto", border: "1px solid var(--glass-border)", borderRadius: "8px", padding: "0.5rem", background: "rgba(255,255,255,0.05)" }}>
+                    {studentLedger.fees.filter(f => f.status !== "paid" && (f.fee?.title || "").toLowerCase().includes(feeSearchTerm.toLowerCase())).length === 0 ? (
+                      <div style={{ padding: "2rem", textAlign: "center", color: "var(--text-secondary)", fontSize: "0.875rem" }}>
+                        <p style={{ fontWeight: "500" }}>No pending dues matching current filters.</p>
+                        <p style={{ marginTop: "0.25rem", fontSize: "0.75rem" }}>Toggle Future Dues or enter a custom amount for an advance payment.</p>
+                      </div>
+                    ) : studentLedger.fees.filter(f => f.status !== "paid" && (f.fee?.title || "").toLowerCase().includes(feeSearchTerm.toLowerCase())).map(f => {
+                      const due = Number(f.fee?.amount || 0) - Number(f.total_paid_amount || 0);
+                      const isChecked = paymentForm.feeIds.includes(f.id);
+                      return (
+                        <label key={f.id} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.5rem", cursor: "pointer", borderBottom: "1px solid var(--glass-border)" }}>
+                          <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={(e) => {
+                              let newFeeIds = [...paymentForm.feeIds];
+                              if (e.target.checked) {
+                                newFeeIds.push(f.id);
+                              } else {
+                                newFeeIds = newFeeIds.filter(id => id !== f.id);
+                              }
+
+                              // Auto-calculate new total
+                              let newAmount = 0;
+                              newFeeIds.forEach(id => {
+                                const fObj = studentLedger.fees.find(fee => fee.id === id);
+                                if (fObj) newAmount += (Number(fObj.fee?.amount || 0) - Number(fObj.total_paid_amount || 0));
+                              });
+
+                              setPaymentForm({
+                                ...paymentForm,
+                                feeIds: newFeeIds,
+                                amount: newAmount > 0 ? newAmount : ""
+                              });
+                            }}
+                          />
+                          <span style={{ flex: 1, fontSize: "0.875rem" }}>
+                            {f.fee?.title}
+                            {f.is_future && (
+                              <span style={{ marginLeft: "0.5rem", padding: "1px 5px", borderRadius: "3px", background: "rgba(59, 130, 246, 0.1)", color: "#3b82f6", fontSize: "0.6rem", fontWeight: "700", letterSpacing: "0.5px", verticalAlign: "middle" }}>ADVANCE</span>
+                            )}
+                          </span>
+                          <span style={{ fontWeight: "600", fontSize: "0.875rem", color: f.is_future ? "#3b82f6" : "#ef4444" }}>₹{due}</span>
+                        </label>
+                      );
+                    })}
+                    {studentLedger.fees.filter(f => f.status !== "paid" && (f.fee?.title || "").toLowerCase().includes(feeSearchTerm.toLowerCase())).length === 0 && (
+                      <div style={{ padding: "1rem", textAlign: "center", color: "var(--text-secondary)", fontSize: "0.875rem" }}>No matching pending fees found</div>
+                    )}
+                  </div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", flexShrink: 0 }}>
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.875rem", marginBottom: "0.5rem" }}>Amount Paying (₹)</label>
+                    <input type="number" required min="1" className="input-glass" style={{ width: "100%" }} value={paymentForm.amount} onChange={e => setPaymentForm({ ...paymentForm, amount: e.target.value })} />
+                  </div>
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.875rem", marginBottom: "0.5rem" }}>Payment Mode</label>
+                    <select className="input-glass" style={{ width: "100%" }} value={paymentForm.paymentMode} onChange={e => setPaymentForm({ ...paymentForm, paymentMode: e.target.value })}>
+                      <option value="Cash">Cash</option>
+                      <option value="Cheque">Cheque</option>
+                      <option value="Online">Online / UPI</option>
+                      <option value="Bank Transfer">Bank Transfer</option>
+                      <option value="Concession">Concession / Discount</option>
+                    </select>
+                  </div>
+                </div>
+                <div style={{ flexShrink: 0 }}>
+                  <label style={{ display: "block", fontSize: "0.875rem", marginBottom: "0.5rem" }}>Remarks / Ref No (Optional)</label>
+                  <input type="text" className="input-glass" style={{ width: "100%" }} value={paymentForm.remarks} onChange={e => setPaymentForm({ ...paymentForm, remarks: e.target.value })} />
+                </div>
+                <div style={{ display: "flex", gap: "1rem", marginTop: "0.5rem", flexShrink: 0 }}>
+                  <button type="button" onClick={() => setIsPaymentModalOpen(false)} className="btn btn-ghost" style={{ flex: 1, justifyContent: "center", border: "1px solid var(--glass-border)" }}>
+                    Cancel
+                  </button>
+                  <button type="submit" disabled={isPaying} className="btn btn-primary" style={{ flex: 1, justifyContent: "center" }}>
+                    {isPaying ? "Processing..." : "Submit Payment"}
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>,
+        document.body
+      )}
+    </div>
+  );
+};
+
+export default Ledger;

@@ -1,0 +1,391 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import api, { getCommunication, getInfo, getResults, getSystemMonitorList } from "../services/api";
+
+const sortAlphabetically = (array, key1 = 'name', key2 = '') => {
+  if (!Array.isArray(array)) return array;
+  return [...array].sort((a, b) => {
+    const valA1 = String((a && a[key1]) || '');
+    const valB1 = String((b && b[key1]) || '');
+    const cmp1 = valA1.localeCompare(valB1, undefined, { numeric: true, sensitivity: 'base' });
+    if (cmp1 !== 0 || !key2) return cmp1;
+    
+    const valA2 = String((a && a[key2]) || '');
+    const valB2 = String((b && b[key2]) || '');
+    return valA2.localeCompare(valB2, undefined, { numeric: true, sensitivity: 'base' });
+  });
+};
+
+export const fetchUsers = createAsyncThunk(
+  "data/fetchUsers",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/admin_panel/users");
+      return response.data.users;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+export const fetchClasses = createAsyncThunk(
+  "data/fetchClasses",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/admin_panel/class/getClass");
+      return response.data.classes;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+export const fetchFees = createAsyncThunk(
+  "data/fetchFees",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/fees/getFees");
+      return response.data.fees;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchExams = createAsyncThunk(
+  "data/fetchExams",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/admin_panel/exams");
+      return response.data.exams || response.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchResults = createAsyncThunk(
+  "data/fetchResults",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await getResults();
+      return response.data.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchGradingScales = createAsyncThunk(
+  "data/fetchGradingScales",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/admin_panel/grading-scales");
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchCourses = createAsyncThunk(
+  "data/fetchCourses",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/course");
+      return response.data.courses;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchSubjects = createAsyncThunk(
+  "data/fetchSubjects",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/admin_panel/subjects/getSubjects");
+      return response.data.subjects;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchRooms = createAsyncThunk(
+  "data/fetchRooms",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/rooms/getRooms");
+      return response.data.rooms;
+    } catch (error) {
+      return rejectWithValue(error.response?.data || "Network Error");
+    }
+  }
+);
+
+export const fetchNewUsers = createAsyncThunk("data/fetchNewUsers", async () => {
+  const response = await api.get("/admission_panel/getAllNewUser");
+  return response.data.users || response.data.data;
+});
+
+export const fetchTimeTables = createAsyncThunk("data/fetchTimeTables", async () => {
+  const response = await api.get("/admin_panel/timeTable/getTimeTable");
+  return response.data.timeTables || [];
+});
+
+export const fetchEvents = createAsyncThunk('data/fetchEvents', async () => {
+    const response = await api.get("/admin_panel/events/getAllEvents");
+    return response.data.data || response.data.events || [];
+});
+
+export const fetchCommunication = createAsyncThunk('data/fetchCommunication', async (type) => {
+    const response = await getCommunication(type);
+    return response.data;
+});
+
+export const fetchSystemMonitorList = createAsyncThunk('data/fetchSystemMonitorList', async (_, { rejectWithValue }) => {
+    try {
+        // Removed dynamic import, using static import
+        const response = await getSystemMonitorList();
+        return response.data.chats || [];
+    } catch (error) {
+        return rejectWithValue(error.response?.data || "Network Error");
+    }
+});
+
+export const fetchInfo = createAsyncThunk('data/fetchInfo', async () => {
+    const response = await getInfo();
+    return response.data;
+});
+
+export const fetchSubjectTeachers = createAsyncThunk('data/fetchSubjectTeachers', async () => {
+    const response = await api.get("/admin_panel/subjectTeachers");
+    return response.data.data || [];
+});
+
+const initialState = {
+  users: [],
+  classes: [],
+  fees: [],
+  exams: [],
+  courses: [],
+  subjects: [],
+  subjectTeachers: [],
+  rooms: [],
+  newUsers: [],
+  timeTables: [],
+  events: [],
+  rooms: [],
+  roles: [],
+  gradingScales: [],
+  communication: null,
+  chats: [],
+  monitorChats: [],
+  results: [],
+  infoSettings: null,
+  infoChampions: [],
+  infoGallery: [],
+  infoNewsletters: [],
+  loading: false,
+  loadingUsers: false,
+  loadingClasses: false,
+  loadingFees: false,
+  loadingExams: false,
+  loadingResults: false,
+  loadingCourses: false,
+  loadingSubjects: false,
+  loadingSubjectTeachers: false,
+  loadingRooms: false,
+  loadingNewUsers: false,
+  error: null,
+};
+
+export const dataSlice = createSlice({
+  name: "data",
+  initialState,
+  reducers: {
+    addLiveChatMessage: (state, action) => {
+      // Append if it doesn't already exist
+      if (state.chats && !state.chats.find(c => c.id === action.payload.id)) {
+        state.chats.push(action.payload);
+      }
+    }
+  },
+  extraReducers: (builder) => {
+    builder
+      // Users
+      .addCase(fetchUsers.pending, (state) => {
+        state.loadingUsers = true;
+      })
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        state.loadingUsers = false;
+        state.users = sortAlphabetically(action.payload, 'name');
+      })
+      .addCase(fetchUsers.rejected, (state, action) => {
+        state.loadingUsers = false;
+        state.error = action.payload;
+      })
+      // Classes
+      .addCase(fetchClasses.pending, (state) => {
+        state.loadingClasses = true;
+      })
+      .addCase(fetchClasses.fulfilled, (state, action) => {
+        state.loadingClasses = false;
+        state.classes = sortAlphabetically(action.payload, 'name', 'section');
+      })
+      .addCase(fetchClasses.rejected, (state, action) => {
+        state.loadingClasses = false;
+        state.error = action.payload;
+      })
+
+      // Fetch Grading Scales
+      .addCase(fetchGradingScales.pending, (state) => { state.loading = true; state.error = null; })
+      .addCase(fetchGradingScales.fulfilled, (state, action) => { state.loading = false; state.gradingScales = action.payload; })
+      .addCase(fetchGradingScales.rejected, (state, action) => { state.loading = false; state.error = action.payload?.message || "Failed to fetch grading scales"; })
+      // Fees
+      .addCase(fetchFees.pending, (state) => {
+        state.loadingFees = true;
+      })
+      .addCase(fetchFees.fulfilled, (state, action) => {
+        state.loadingFees = false;
+        state.fees = sortAlphabetically(action.payload, 'name');
+      })
+      .addCase(fetchFees.rejected, (state, action) => {
+        state.loadingFees = false;
+        state.error = action.payload;
+      })
+      // Exams
+      .addCase(fetchExams.pending, (state) => {
+        state.loadingExams = true;
+      })
+      .addCase(fetchExams.fulfilled, (state, action) => {
+        state.loadingExams = false;
+        state.exams = sortAlphabetically(action.payload, 'name');
+      })
+      .addCase(fetchExams.rejected, (state, action) => {
+        state.loadingExams = false;
+        state.error = action.payload;
+      })
+      // Results
+      .addCase(fetchResults.pending, (state) => {
+        state.loadingResults = true;
+      })
+      .addCase(fetchResults.fulfilled, (state, action) => {
+        state.loadingResults = false;
+        state.results = action.payload;
+      })
+      .addCase(fetchResults.rejected, (state, action) => {
+        state.loadingResults = false;
+        state.error = action.payload;
+      })
+      // Courses
+      .addCase(fetchCourses.pending, (state) => {
+        state.loadingCourses = true;
+      })
+      .addCase(fetchCourses.fulfilled, (state, action) => {
+        state.loadingCourses = false;
+        state.courses = sortAlphabetically(action.payload, 'name');
+      })
+      .addCase(fetchCourses.rejected, (state, action) => {
+        state.loadingCourses = false;
+        state.error = action.payload;
+      })
+      // Subjects
+      .addCase(fetchSubjects.pending, (state) => {
+        state.loadingSubjects = true;
+      })
+      .addCase(fetchSubjects.fulfilled, (state, action) => {
+        state.loadingSubjects = false;
+        state.subjects = sortAlphabetically(action.payload, 'name');
+      })
+      .addCase(fetchSubjects.rejected, (state, action) => {
+        state.loadingSubjects = false;
+        state.error = action.payload;
+      })
+      // Rooms
+      .addCase(fetchRooms.pending, (state) => {
+        state.loadingRooms = true;
+      })
+      .addCase(fetchRooms.fulfilled, (state, action) => {
+        state.loadingRooms = false;
+        state.rooms = sortAlphabetically(action.payload, 'name');
+      })
+      .addCase(fetchRooms.rejected, (state, action) => {
+        state.loadingRooms = false;
+        state.error = action.payload;
+      })
+      // New Users (Admissions)
+      .addCase(fetchNewUsers.pending, (state) => {
+        state.loadingNewUsers = true;
+      })
+      .addCase(fetchNewUsers.fulfilled, (state, action) => {
+        state.loadingNewUsers = false;
+        state.newUsers = action.payload;
+      })
+      .addCase(fetchNewUsers.rejected, (state, action) => {
+        state.loadingNewUsers = false;
+        state.error = action.payload;
+      })
+      .addCase(fetchTimeTables.fulfilled, (state, action) => {
+        state.timeTables = action.payload;
+      })
+      .addCase(fetchEvents.fulfilled, (state, action) => {
+        state.events = action.payload;
+      })
+      // Communication
+      .addCase(fetchCommunication.pending, (state) => {
+          state.loading = true;
+      })
+      .addCase(fetchCommunication.fulfilled, (state, action) => {
+          state.loading = false;
+          state.chats = action.payload.chats || [];
+      })
+      .addCase(fetchCommunication.rejected, (state, action) => {
+          state.loading = false;
+          state.error = action.error.message;
+      })
+      // Monitor Chats
+      .addCase(fetchSystemMonitorList.pending, (state) => {
+          state.loading = true;
+      })
+      .addCase(fetchSystemMonitorList.fulfilled, (state, action) => {
+          state.loading = false;
+          state.monitorChats = action.payload || [];
+      })
+      .addCase(fetchSystemMonitorList.rejected, (state, action) => {
+          state.loading = false;
+          state.error = action.error.message;
+      })
+      // Info
+      .addCase(fetchInfo.pending, (state) => {
+          state.loading = true;
+      })
+      .addCase(fetchInfo.fulfilled, (state, action) => {
+          state.loading = false;
+          const data = action.payload?.data || {};
+          state.infoSettings = data.settings || null;
+          state.infoChampions = data.champions || [];
+          state.infoGallery = data.gallery || [];
+          state.infoNewsletters = data.newsletters || [];
+      })
+      .addCase(fetchInfo.rejected, (state, action) => {
+          state.loading = false;
+          state.error = action.error.message;
+      })
+      // Subject Teachers
+      .addCase(fetchSubjectTeachers.pending, (state) => {
+          state.loadingSubjectTeachers = true;
+      })
+      .addCase(fetchSubjectTeachers.fulfilled, (state, action) => {
+          state.loadingSubjectTeachers = false;
+          state.subjectTeachers = action.payload;
+      })
+      .addCase(fetchSubjectTeachers.rejected, (state, action) => {
+          state.loadingSubjectTeachers = false;
+          state.error = action.error.message;
+      });
+  },
+});
+
+export const { addLiveChatMessage } = dataSlice.actions;
+export default dataSlice.reducer;

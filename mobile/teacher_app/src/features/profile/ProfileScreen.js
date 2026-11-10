@@ -1,0 +1,287 @@
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, RefreshControl, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSelector, useDispatch } from 'react-redux';
+import Icon from 'react-native-vector-icons/Feather';
+import * as Keychain from 'react-native-keychain';
+import { logout, updateUserProfile } from '../../store/authSlice';
+import { apiSlice, useGetTeacherProfileQuery } from '../../store/apiSlice';
+import { clearAppState } from '../../store/appSlice';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { colors } from '../../theme/colors';
+import UserAvatar from '../../components/UserAvatar';
+
+const ProfileScreen = ({ navigation }) => {
+  const { user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  
+  const { data: profileData, isLoading, refetch, isFetching } = useGetTeacherProfileQuery();
+  
+  const onRefresh = React.useCallback(() => {
+    refetch();
+  }, [refetch]);
+
+  React.useEffect(() => {
+    const fetchedAvatar = profileData?.data?.avatar_url || profileData?.data?.teacher?.avatar_url;
+    if (fetchedAvatar && user && user.avatar_url !== fetchedAvatar) {
+      dispatch(updateUserProfile({ avatar_url: fetchedAvatar, avatarUrl: fetchedAvatar }));
+      AsyncStorage.getItem('@auth_user').then((raw) => {
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          parsed.avatar_url = fetchedAvatar;
+          parsed.avatarUrl = fetchedAvatar;
+          AsyncStorage.setItem('@auth_user', JSON.stringify(parsed));
+        }
+      }).catch(() => {});
+    }
+  }, [profileData, user, dispatch]);
+  
+  const assignedClassesText = profileData?.data?.assignedClasses?.length > 0 
+    ? profileData.data.assignedClasses.map(c => `${c.className}${c.section ? ` - ${c.section}` : ''}`).join(', ')
+    : 'Not Assigned';
+
+  const classTeacherText = profileData?.data?.classTeacherOf?.length > 0
+    ? profileData.data.classTeacherOf.map(c => `${c.className}${c.section ? ` - ${c.section}` : ''}`).join(', ')
+    : 'None';
+
+  const subjectsList = React.useMemo(() => {
+    if (!profileData?.data?.subjects?.length) return [];
+    
+    const subjectMap = {};
+    profileData.data.subjects.forEach(s => {
+      if (!s.subjectName) return;
+      if (!subjectMap[s.subjectName]) subjectMap[s.subjectName] = [];
+      const classStr = `${s.className}${s.section ? `-${s.section}` : ''}`;
+      subjectMap[s.subjectName].push(classStr);
+    });
+
+    return Object.entries(subjectMap).map(([subject, classes]) => ({
+      subject,
+      classesText: classes.join(', ')
+    }));
+  }, [profileData]);
+
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.clear();
+    } catch (e) {
+      try {
+        await AsyncStorage.multiRemove(['@auth_user', '@auth_token']);
+      } catch (err) {
+        console.warn("Error clearing storage on logout:", err);
+      }
+    }
+    try {
+      await Keychain.resetGenericPassword();
+    } catch (e) {
+      console.warn("Error resetting keychain:", e);
+    }
+    try {
+      dispatch(apiSlice.util.resetApiState());
+      dispatch(clearAppState());
+    } catch (e) {
+      console.warn("Error resetting app/api state:", e);
+    }
+    dispatch(logout());
+  };
+
+  const InfoCard = ({ icon, title, value, children, color }) => (
+    <View style={styles.infoCard}>
+      <View style={[styles.iconBox, { backgroundColor: color + '20' }]}>
+        <Icon name={icon} size={20} color={color} />
+      </View>
+      <View style={styles.infoContent}>
+        <Text style={styles.infoTitle}>{title}</Text>
+        {children ? children : <Text style={styles.infoValue}>{value || 'N/A'}</Text>}
+      </View>
+    </View>
+  );
+
+  return (
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <ScrollView 
+        contentContainerStyle={styles.scrollContent}
+        refreshControl={<RefreshControl refreshing={isFetching} onRefresh={onRefresh} colors={[colors.primary]} />}
+      >
+        
+        {/* Profile Header */}
+        <View style={styles.header}>
+          <UserAvatar
+            url={user?.avatar_url || user?.avatarUrl || profileData?.data?.avatar_url || profileData?.data?.teacher?.avatar_url}
+            name={user?.name || profileData?.data?.teacher?.name || 'T'}
+            size={96}
+            placeholderBg={colors.primary}
+            placeholderColor={colors.background}
+            borderWidth={3}
+            borderColor={colors.primary}
+            style={{ marginBottom: 16 }}
+          />
+          <Text style={styles.name}>{user?.name || 'Teacher Name'}</Text>
+          <Text style={styles.email}>{user?.email || 'teacher@school.com'}</Text>
+          <View style={styles.badge}>
+            <Text style={styles.badgeText}>
+              {classTeacherText !== 'None' ? 'Class Teacher' : 'Faculty • Subject Teacher'}
+            </Text>
+          </View>
+        </View>
+
+        <Text style={styles.sectionTitle}>Roles & Assignments</Text>
+        
+        <InfoCard 
+          icon="users" 
+          title="Class Teacher Of" 
+          value={isLoading ? "Loading..." : classTeacherText} 
+          color={colors.primary}
+        />
+
+        <InfoCard 
+          icon="book-open" 
+          title="Subjects Taught" 
+          color={'#e67e22'}
+        >
+          {isLoading ? (
+            <Text style={styles.infoValue}>Loading...</Text>
+          ) : subjectsList.length === 0 ? (
+            <Text style={styles.infoValue}>None Assigned</Text>
+          ) : (
+            <View style={styles.subjectListWrapper}>
+              {subjectsList.map((item, idx) => (
+                <View key={idx} style={styles.subjectRow}>
+                  <Text style={styles.subjectName}>{item.subject}</Text>
+                  <View style={styles.classBadge}>
+                    <Text style={styles.classBadgeText}>{item.classesText}</Text>
+                  </View>
+                </View>
+              ))}
+            </View>
+          )}
+        </InfoCard>
+        
+        <InfoCard 
+          icon="phone" 
+          title="Contact" 
+          value={user?.phone || 'Not Provided'} 
+          color={colors.success}
+        />
+
+        {/* Action Buttons */}
+        <View style={styles.actionsContainer}>
+          <TouchableOpacity 
+            style={styles.changePasswordButton} 
+            onPress={() => navigation.navigate('Home', { screen: 'ChangePassword' })}
+          >
+            <Icon name="lock" size={20} color={colors.primary} style={{ marginRight: 8 }} />
+            <Text style={styles.changePasswordText}>Change Password</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+            <Icon name="log-out" size={20} color={colors.danger} style={{ marginRight: 8 }} />
+            <Text style={styles.logoutText}>Logout</Text>
+          </TouchableOpacity>
+        </View>
+
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: colors.background },
+  scrollContent: { padding: 24 },
+  header: {
+    alignItems: 'center',
+    marginBottom: 32,
+    marginTop: 16,
+  },
+  avatar: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    backgroundColor: colors.pink,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 16,
+    shadowColor: colors.pink,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
+    overflow: 'hidden',
+  },
+  avatarImage: { width: '100%', height: '100%', borderRadius: 48, resizeMode: 'cover' },
+  avatarText: { fontSize: 36, fontWeight: 'bold', color: colors.background },
+  name: { fontSize: 24, fontWeight: 'bold', color: colors.text, marginBottom: 4 },
+  email: { fontSize: 14, color: colors.textMuted, marginBottom: 12 },
+  badge: {
+    backgroundColor: colors.primary + '20',
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  badgeText: { fontSize: 12, fontWeight: '600', color: colors.primary },
+  sectionTitle: { fontSize: 18, fontWeight: 'bold', color: colors.text, marginBottom: 16 },
+  infoCard: {
+    flexDirection: 'row',
+    backgroundColor: colors.surface,
+    padding: 16,
+    borderRadius: 16,
+    marginBottom: 12,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  iconBox: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 16,
+  },
+  infoContent: { flex: 1 },
+  infoTitle: { fontSize: 12, color: colors.textMuted, marginBottom: 4 },
+  infoValue: { fontSize: 16, fontWeight: '600', color: colors.text },
+  subjectListWrapper: { marginTop: 4, gap: 6 },
+  subjectRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 3,
+  },
+  subjectName: { fontSize: 14, fontWeight: '700', color: colors.text },
+  classBadge: {
+    backgroundColor: '#fff7ed',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: '#ffedd5',
+  },
+  classBadgeText: { fontSize: 12, fontWeight: '600', color: '#ea580c' },
+  actionsContainer: { marginTop: 32 },
+  changePasswordButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.primary + '10',
+    padding: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.primary + '30',
+    marginBottom: 16,
+  },
+  changePasswordText: { fontSize: 16, fontWeight: '600', color: colors.primary },
+  logoutButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.danger + '10',
+    padding: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.danger + '30',
+  },
+  logoutText: { fontSize: 16, fontWeight: '600', color: colors.danger },
+});
+
+export default ProfileScreen;

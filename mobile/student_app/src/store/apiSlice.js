@@ -1,0 +1,265 @@
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import * as Keychain from 'react-native-keychain';
+import { Platform } from 'react-native';
+import { API_URL, DEFAULT_TENANT_SLUG } from '@env';
+
+export const getBaseUrl = () => {
+  let url = API_URL || 'http://localhost:5006/api';
+  if (Platform.OS === 'android' && url.includes('localhost')) {
+    url = url.replace('localhost', '10.0.2.2');
+  }
+  return url;
+};
+
+export const apiSlice = createApi({
+  reducerPath: 'api',
+  baseQuery: fetchBaseQuery({
+    baseUrl: getBaseUrl(),
+    prepareHeaders: async (headers, { getState }) => {
+      try {
+        const state = getState();
+        let token = state?.auth?.token;
+        const tenantSlug = state?.auth?.tenantSlug || DEFAULT_TENANT_SLUG || 'arc';
+
+        if (!token) {
+          const credentials = await Keychain.getGenericPassword();
+          if (credentials && credentials.password) {
+            token = credentials.password;
+          }
+        }
+        if (token) {
+          headers.set('Authorization', `Bearer ${token}`);
+        }
+        if (tenantSlug) {
+          headers.set('x-tenant-slug', tenantSlug);
+        }
+        const activeStudentId = state?.auth?.activeStudentId;
+        if (activeStudentId) {
+          headers.set('x-student-id', activeStudentId);
+        }
+      } catch (error) {
+        console.log('Error fetching token for headers:', error);
+      }
+      headers.set('Content-Type', 'application/json');
+      return headers;
+    },
+  }),
+  tagTypes: ['Dashboard', 'Academics', 'Attendance', 'Notifications', 'Chats', 'LiveChat', 'Quote', 'Rewards', 'Timetable', 'CourseWork', 'Events', 'Fees', 'Consents', 'Circulars', 'Gallery', 'Settings', 'Newsletters', 'Siblings'],
+  endpoints: (builder) => ({
+    // Auth endpoints
+    login: builder.mutation({
+      query: (credentials) => ({
+        url: '/user/loginUser',
+        method: 'POST',
+        body: { data: credentials },
+      }),
+    }),
+    
+    changePassword: builder.mutation({
+      query: (data) => ({
+        url: '/student_app/auth/change-password',
+        method: 'POST',
+        body: data,
+      }),
+    }),
+    
+    // Student Endpoints
+    getDashboard: builder.query({
+      query: () => '/student_app/dashboard',
+      providesTags: ['Dashboard'],
+    }),
+    
+    getAcademics: builder.query({
+      query: (academicYear) => ({
+        url: '/student_app/exams',
+        params: { academic_year: academicYear },
+      }),
+      providesTags: ['Academics'],
+    }),
+    
+    getAttendance: builder.query({
+      query: (params) => ({
+        url: '/student_app/attendance',
+        params,
+      }),
+      providesTags: ['Attendance'],
+    }),
+
+    getNewsletters: builder.query({
+      query: () => '/student_app/newsletters',
+      providesTags: ['Newsletters'],
+    }),
+
+    getTimetable: builder.query({
+      query: () => '/student_app/timetable',
+      providesTags: ['Timetable'],
+    }),
+
+    getCourseWork: builder.query({
+      query: () => '/student_app/course',
+      providesTags: ['CourseWork'],
+    }),
+
+    getQuote: builder.query({
+      query: () => '/student_app/quote',
+      providesTags: ['Quote'],
+    }),
+
+    getEvents: builder.query({
+      query: (academicYear) => ({
+        url: '/student_app/events',
+        params: { academic_year: academicYear },
+      }),
+      providesTags: ['Events'],
+    }),
+
+    getRewards: builder.query({
+      query: () => '/student_app/rewards',
+      providesTags: ['Rewards'],
+    }),
+
+    getFees: builder.query({
+      query: (academicYear) => ({
+        url: '/student_app/fees',
+        params: { academic_year: academicYear },
+      }),
+      providesTags: ['Fees'],
+    }),
+
+    getChats: builder.query({
+      query: (type) => `/student_app/communication/getChat/${type}`,
+      providesTags: ['Chats'],
+    }),
+
+    createChat: builder.mutation({
+      query: (data) => ({
+        url: '/student_app/communication/createChat',
+        method: 'POST',
+        body: data,
+      }),
+      invalidatesTags: ['Chats'],
+    }),
+
+    getLiveChatHistory: builder.query({
+      query: (teacherId) => `/live_chat/history/${teacherId}`,
+      providesTags: (result, error, id) => [{ type: 'LiveChat', id }],
+    }),
+
+    getTeachers: builder.query({
+      query: () => '/live_chat/teachers',
+    }),
+    getPrincipal: builder.query({
+      query: () => '/live_chat/principal',
+    }),
+    getLiveChatsList: builder.query({
+      query: () => '/live_chat/list',
+      providesTags: ['LiveChat'],
+    }),
+
+    // Notifications
+    registerFcmToken: builder.mutation({
+      query: ({ fcm_token, device_type }) => ({
+        url: '/student_app/notifications/register-token',
+        method: 'POST',
+        body: { fcm_token, device_type },
+      }),
+    }),
+    
+    getSettings: builder.query({
+      query: () => '/student_app/settings',
+      providesTags: ['Settings'],
+    }),
+    
+    getNotifications: builder.query({
+      query: () => '/student_app/notifications',
+      providesTags: ['Notifications'],
+    }),
+    
+    markNotificationRead: builder.mutation({
+      query: (id) => ({
+        url: `/student_app/notifications/${id}/read`,
+        method: 'PUT',
+      }),
+      invalidatesTags: ['Notifications'],
+    }),
+    // Consents
+    getConsents: builder.query({
+      query: () => '/student_app/consents/student',
+      providesTags: ['Consents'],
+    }),
+    updateConsentStatus: builder.mutation({
+      query: ({ id, status }) => ({
+        url: `/student_app/consents/student/${id}/status`,
+        method: 'PUT',
+        body: { status },
+      }),
+      invalidatesTags: ['Consents'],
+    }),
+
+    // Circulars
+    getCirculars: builder.query({
+      query: () => '/circulars',
+      providesTags: ['Circulars'],
+    }),
+
+    getThoughtOfDay: builder.query({
+      query: () => '/thoughts/today',
+    }),
+
+    getSpotlightOfToday: builder.query({
+      query: () => '/spotlight/today',
+    }),
+
+    getGalleryItems: builder.query({
+      query: () => '/gallery',
+      providesTags: ['Gallery'],
+    }),
+
+    getStudentOfWeek: builder.query({
+      query: (classId) => `/shared/student-of-week/current${classId ? `?classId=${classId}` : ''}`,
+    }),
+
+    getPublicSchools: builder.query({
+      query: () => '/public/schools',
+    }),
+
+    getSiblings: builder.query({
+      query: () => '/student_app/siblings',
+      providesTags: ['Siblings'],
+    }),
+  }),
+});
+
+export const {
+  useLoginMutation,
+  useChangePasswordMutation,
+  useGetDashboardQuery,
+  useGetAcademicsQuery,
+  useGetAttendanceQuery,
+  useGetNewslettersQuery,
+  useGetTimetableQuery,
+  useGetCourseWorkQuery,
+  useGetQuoteQuery,
+  useGetEventsQuery,
+  useGetRewardsQuery,
+  useGetFeesQuery,
+  useGetChatsQuery,
+  useCreateChatMutation,
+  useRegisterFcmTokenMutation,
+  useGetNotificationsQuery,
+  useMarkNotificationReadMutation,
+  useGetLiveChatHistoryQuery,
+  useGetTeachersQuery,
+  useGetPrincipalQuery,
+  useGetLiveChatsListQuery,
+  useGetConsentsQuery,
+  useUpdateConsentStatusMutation,
+  useGetThoughtOfDayQuery,
+  useGetSpotlightOfTodayQuery,
+  useGetStudentOfWeekQuery,
+  useGetCircularsQuery,
+  useGetGalleryItemsQuery,
+  useGetSettingsQuery,
+  useGetPublicSchoolsQuery,
+  useGetSiblingsQuery,
+} = apiSlice;

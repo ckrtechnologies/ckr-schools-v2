@@ -1,0 +1,22 @@
+{
+  "app_name": "CKR Student",
+  "subtitle": "Student & Parent School Portal",
+  "primary_category": "Education",
+  "secondary_category": "Productivity",
+  "promotional_text": "Access your timetable, coursework, exam results, attendance, fee receipts, and school circulars in one unified place with CKR Student App.",
+  "keywords": "ckr schools,student portal,school timetable,homework,exam results,attendance,fee receipt,school app,grades",
+  "support_url": "https://ckrschools.com/support",
+  "marketing_url": "https://ckrschools.com",
+  "privacy_policy_url": "https://ckrschools.com/privacy",
+  "copyright": "2026 CKR Technologies",
+  "app_review": {
+    "sign_in_required": true,
+    "demo_user": "parent.test@ckrschools.com",
+    "demo_password": "CkrTest@2026#",
+    "notes": "This app is the student & parent portal for CKR Schools. Please log in using the demo account to test features including Dashboard, Timetable, Coursework, Attendance, Fee Receipts, and Circulars."
+  },
+  "screenshots_spec": {
+    "display_6_7": "1284x2778",
+    "display_6_5": "1242x2688"
+  }
+}

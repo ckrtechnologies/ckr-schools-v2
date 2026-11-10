@@ -1,0 +1,1072 @@
+/* ==========================================================================
+   CBSE TRANSFER CERTIFICATE / SCHOOL LEAVING CERTIFICATE (A4 PRINT ENGINE)
+   Vision International School Standard Template (Customized to Sample)
+   ========================================================================== */
+
+.certificate-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+}
+
+/* Master A4 Sheet */
+.cbse-certificate {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Calisto MT", "Baskerville Old Face", "Baskerville", "Bell MT", "Book Antiqua", Georgia, serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+  padding: 8mm 10mm;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Background Watermark */
+.cert-watermark-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  width: 390px;
+  height: 390px;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.12;
+}
+
+/* Outer Border Frame */
+.cbse-border-outer {
+  border: 2px solid #000000;
+  padding: 8px 12px 10px 12px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Header Section */
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.cert-logo-section {
+  flex-shrink: 0;
+  width: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-official-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.cert-school-info {
+  flex: 1;
+  text-align: center;
+}
+
+.school-trust-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.school-title {
+  font-size: 23px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 1px 0 2px 0;
+  letter-spacing: 0.6px;
+  font-family: "Calisto MT", "Baskerville Old Face", "Bell MT", "Book Antiqua", Georgia, serif;
+  line-height: 1.15;
+}
+
+.school-codes-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.school-address-line {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 1px 0;
+  line-height: 1.2;
+}
+
+.school-contact-line {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.school-contact-line b,
+.school-contact-line span {
+  font-weight: 800;
+  color: #000000;
+}
+
+/* Divider Line Below Header */
+.header-separator-line {
+  height: 2px;
+  background: #000000;
+  margin: 6px 0 8px 0;
+  width: 100%;
+}
+
+/* Certificate Title */
+.cert-title-heading {
+  text-align: center;
+  margin: 6px 0 8px 0;
+}
+
+.cert-title-heading span,
+.cert-title-heading .cert-title-underline {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #000000;
+  display: inline-block;
+  border-bottom: 1.5px solid #000000;
+  padding-bottom: 2px;
+}
+
+/* ==========================================================================
+   23 CBSE STANDARD UNDERLINE FIELDS (TC CERTIFICATE)
+   ========================================================================== */
+.tc23-meta-grid {
+  border: 1.5px solid #000000;
+  margin-bottom: 5px;
+  background: transparent;
+  font-size: 11px;
+}
+
+.tc23-meta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5px 8px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.tc23-meta-row:last-child {
+  border-bottom: none;
+}
+
+.tc23-meta-col {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.meta-lbl {
+  font-weight: 800;
+  color: #000000;
+}
+
+.underline-meta {
+  border-bottom: 1px solid #000000;
+  min-width: 80px;
+  padding: 0 4px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   2-COLUMN TABLE LAYOUT FOR TRANSFER CERTIFICATE (24 CBSE FIELDS)
+   ========================================================================== */
+.tc-two-col-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid #000000;
+  margin: 4px 0 6px 0;
+  font-family: "Calisto MT", "Baskerville Old Face", "Baskerville", "Bell MT", "Book Antiqua", Georgia, serif;
+  font-size: 11px;
+  line-height: 1.25;
+  color: #000000;
+  background: transparent;
+}
+
+.tc-two-col-table tr {
+  page-break-inside: avoid;
+  background: transparent;
+}
+
+.tc-two-col-table td {
+  border: 1px solid #000000;
+  padding: 3px 6px;
+  vertical-align: middle;
+  color: #000000;
+  background: transparent;
+}
+
+.tc-two-col-table .tc-tbl-label {
+  width: 45%;
+  font-weight: 700;
+  color: #000000;
+}
+
+.tc-two-col-table .tc-tbl-num {
+  display: inline-block;
+  width: 24px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.tc-two-col-table .tc-tbl-val {
+  width: 55%;
+  color: #000000;
+  font-weight: 700;
+  padding-left: 8px !important;
+}
+
+.tc-two-col-table strong,
+.tc-two-col-table .bold-val {
+  font-weight: 800;
+  color: #000000;
+}
+
+.dob-cell-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dob-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000000;
+  margin-right: 4px;
+}
+
+/* 23 Rows List (Legacy fallback) */
+.tc23-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 10.5px;
+  line-height: 1.22;
+}
+
+.tc23-row {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+
+.tc23-num {
+  width: 20px;
+  font-weight: 800;
+  flex-shrink: 0;
+  color: #000000;
+}
+
+.tc23-label {
+  font-weight: 600;
+  color: #000000;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
+
+.tc23-val {
+  flex: 1;
+  color: #000000;
+  min-height: 14px;
+}
+
+.bold-val {
+  font-weight: 700;
+  color: #000000;
+}
+
+.tc23-row-multiline {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tc23-content-wrap {
+  flex: 1;
+}
+
+.tc23-sub-label {
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1px;
+}
+
+.tc23-inline-lead {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.tc23-lead-text {
+  font-weight: 600;
+  color: #000000;
+}
+
+.tc23-inline-fields {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  width: 100%;
+}
+
+.inline-tag {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 9.8px;
+  flex-shrink: 0;
+}
+
+.field-narrow {
+  width: 85px;
+  text-align: center;
+}
+
+.field-extra-narrow {
+  width: 45px;
+  text-align: center;
+}
+
+.field-medium {
+  width: 125px;
+  text-align: center;
+}
+
+.field-wide {
+  flex: 1;
+}
+
+/* Identifiers Box: Sr No, GR No, PEN NO, Aadhar Card No */
+.cert-id-box {
+  border: 1.5px solid #000000;
+  border-bottom: none;
+  font-size: 11.5px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.cert-id-row {
+  display: flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-bottom: 1.5px solid #000000;
+  line-height: 1.3;
+}
+
+.cert-id-row-split {
+  justify-content: space-between;
+}
+
+.cert-id-col-left,
+.cert-id-col-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.id-label {
+  font-weight: 800;
+  color: #000000;
+}
+
+.id-val {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* 17 Table Rows with 2-Column Bordered Layout */
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid #000000;
+  font-size: 11px;
+  line-height: 1.25;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.cert-table tr {
+  page-break-inside: avoid;
+}
+
+.cert-table td {
+  border: 1.5px solid #000000;
+  padding: 2.5px 8px;
+  vertical-align: middle;
+}
+
+.col-label {
+  width: 48%;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.row-num {
+  display: inline-block;
+  width: 26px;
+  font-weight: 800;
+}
+
+.row-text {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.col-val {
+  width: 52%;
+  color: #000000;
+  font-weight: 600;
+  padding-left: 10px !important;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+/* DOB Split Lines */
+.col-val-dob {
+  padding: 1px 0 !important;
+}
+
+.dob-figures-line {
+  padding: 2px 10px;
+}
+
+.dob-divider {
+  border-bottom: 1.5px solid #000000;
+  width: 100%;
+}
+
+.dob-words-line {
+  padding: 2px 10px;
+}
+
+/* Statutory Note Section (Green Circle in Sample) */
+.statutory-note-section {
+  margin-top: 6px;
+  padding: 3px 4px 2px 4px;
+  font-size: 10.5px;
+  color: #000000;
+  line-height: 1.3;
+}
+
+.statutory-certify {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3px;
+  color: #000000;
+}
+
+.statutory-note {
+  font-weight: 700;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #000000;
+  font-size: 10px;
+  line-height: 1.28;
+}
+
+/* Signatures & Seal Section */
+.cert-signatures-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+  padding: 0 4px;
+}
+
+.sig-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.clerk-column {
+  text-align: left;
+  width: 35%;
+}
+
+.principal-column {
+  text-align: right;
+  width: 35%;
+}
+
+.seal-column {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sig-space {
+  height: 24px;
+}
+
+.sig-designation {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin-bottom: 2px;
+}
+
+.sig-school-name {
+  font-size: 11px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.sig-address {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+/* Circular Official Seal */
+.school-round-seal {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1.5px solid #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+}
+
+.seal-outer-circle {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px dashed #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seal-inner-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1e3a8a;
+  font-family: Arial, sans-serif;
+}
+
+.seal-top-curved {
+  font-size: 5.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.seal-center-city {
+  font-size: 7.5px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 1px 0;
+}
+
+.seal-bottom-curved {
+  font-size: 5.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   TOP CERTIFICATE TYPE SELECTOR TABS
+   ========================================================================== */
+.cert-type-tabs-wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.cert-type-tabs-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  padding: 8px 10px;
+  border-radius: 12px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.cert-type-tabs-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.cert-type-tabs-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.cert-type-tabs-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cert-type-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cert-type-tab-btn svg {
+  color: #64748b;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cert-type-tab-btn:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.cert-type-tab-btn:hover svg {
+  color: #1b8b3b;
+}
+
+.cert-type-tab-btn.active {
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+  color: #ffffff !important;
+  border-color: #15803d;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(22, 101, 52, 0.28);
+}
+
+.cert-type-tab-btn.active svg {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   OFFICIAL LETTERHEAD CERTIFICATE LAYOUT (FOR 4 ADDITIONAL CERTIFICATES)
+   ========================================================================== */
+.letterhead-certificate {
+  display: flex;
+  flex-direction: column;
+}
+
+.letterhead-cert-border {
+  border: 2px solid #000000;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  min-height: 275mm;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Reusable Header */
+.official-letterhead {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.letterhead-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.letterhead-logo-container {
+  flex-shrink: 0;
+  width: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letterhead-logo {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.letterhead-school-details {
+  flex: 1;
+  text-align: center;
+}
+
+.letterhead-trust {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+}
+
+.letterhead-school-name {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 2px 0 3px 0;
+  letter-spacing: 0.8px;
+  font-family: "Calisto MT", "Baskerville Old Face", "Bell MT", "Book Antiqua", Georgia, serif;
+}
+
+.letterhead-codes-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.25;
+  margin: 1px 0;
+}
+
+.letterhead-address {
+  font-size: 11px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.3;
+  margin: 1px 0;
+}
+
+.letterhead-contact {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.25;
+  margin-top: 1px;
+}
+
+.letterhead-contact b,
+.letterhead-contact span {
+  font-weight: 800;
+  color: #000000;
+}
+
+.letterhead-separator {
+  height: 2px;
+  background: #000000;
+  margin: 12px 0 16px 0;
+}
+
+.letterhead-cert-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.letterhead-cert-title h2 {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  display: inline-block;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 3px;
+}
+
+/* Document Meta Bar (Cert No & Date) */
+.cert-doc-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15.5px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding: 0 4px;
+}
+
+.meta-bar-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.meta-bar-label {
+  font-weight: 800;
+  color: #000000;
+  font-size: 15.5px;
+}
+
+.meta-bar-val {
+  font-weight: 700;
+  color: #000000;
+  font-size: 15.5px;
+}
+
+.underline-field {
+  border-bottom: 1.5px solid #000000;
+  min-width: 140px;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+/* Certificate Body Paragraphs */
+.cert-letter-body {
+  font-size: 16.5px;
+  line-height: 2.45;
+  color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0 6px;
+}
+
+.cert-body-p {
+  font-size: 16.5px;
+  line-height: 2.45;
+  margin-bottom: 24px;
+  font-family: "Calisto MT", "Baskerville Old Face", "Baskerville", "Bell MT", "Book Antiqua", Georgia, serif;
+}
+
+.cert-body-highlight {
+  background: rgba(245, 245, 245, 0.4);
+  padding: 6px 12px;
+  border-left: 2px solid #000000;
+  margin: 18px 0;
+  font-size: 16.5px;
+  line-height: 2.4;
+}
+
+.fill-val {
+  color: #000000;
+}
+
+.underline-strong {
+  font-weight: 800;
+  font-size: 16.5px;
+  border-bottom: 1px solid #000000;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.underline-dotted {
+  font-weight: 700;
+  font-size: 16.5px;
+  border-bottom: 1px dotted #000000;
+  padding: 0 4px;
+}
+
+.underline-blank {
+  min-width: 140px;
+  display: inline-block;
+  border-bottom: 1px solid #000000;
+  vertical-align: baseline;
+  height: 18px;
+}
+
+/* Fee Breakdown Card */
+.fee-breakdown-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1.5px solid #000000;
+  padding: 10px 16px;
+  margin: 18px 0 24px 0;
+  background: rgba(250, 250, 250, 0.6);
+  font-size: 13.5px;
+}
+
+.fee-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.fee-item-total {
+  font-weight: 800;
+}
+
+.fee-label {
+  font-weight: 700;
+  color: #000000;
+}
+
+.fee-val {
+  font-weight: 800;
+  color: #000000;
+}
+
+.fee-pipe {
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* Reusable Footer */
+.official-cert-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-end;
+  margin-top: 48px;
+  padding: 0 6px;
+  width: 100%;
+}
+
+.footer-place-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+.footer-place-line {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.footer-place-line .place-val {
+  font-weight: 800;
+  color: #000000;
+}
+
+.footer-seal-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.seal-empty-space {
+  min-height: 65px;
+  width: 80px;
+}
+
+.footer-principal-col {
+  text-align: center;
+  justify-self: end;
+  width: 220px;
+}
+
+.principal-sig-line {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.principal-title {
+  font-size: 14px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.principal-school {
+  font-size: 12px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.principal-location {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   PRINT MEDIA RULES (A4 PRINT ENGINE)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #printable-certificate,
+  #printable-certificate * {
+    visibility: visible;
+  }
+
+  #printable-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    padding: 6mm 8mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    overflow: hidden !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .cbse-certificate {
+    box-shadow: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

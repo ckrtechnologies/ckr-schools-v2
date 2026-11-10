@@ -1,0 +1,66 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useSelector } from 'react-redux';
+
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Ledger from './pages/Ledger';
+import Reports from './pages/Reports';
+
+import DashboardMetrics from './pages/DashboardMetrics';
+import FeeStructures from './pages/FeeStructures';
+import IncomeLedger from './pages/IncomeLedger';
+import ExpenseLedger from './pages/ExpenseLedger';
+import StudentMaster from './pages/StudentMaster';
+import StudentFinanceDetails from './pages/StudentFinanceDetails';
+import IncomeCategories from './pages/IncomeCategories';
+import ExpenseCategories from './pages/ExpenseCategories';
+import ProfitLoss from './pages/ProfitLoss';
+import Gallery from './pages/Gallery';
+import TransportManagement from './pages/TransportManagement';
+import FinanceLayout from './layouts/FinanceLayout';
+import ErrorBoundary from './components/ErrorBoundary';
+
+const PrivateRoute = ({ children }) => {
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  return isAuthenticated ? children : <Navigate to="/login" />;
+};
+
+function App() {
+  return (
+    <BrowserRouter>
+      <ToastContainer position="top-right" autoClose={3000} theme="colored" />
+      <ErrorBoundary>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          
+          <Route path="/" element={<PrivateRoute><FinanceLayout /></PrivateRoute>}>
+            <Route index element={<Navigate to="/dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="ledger" element={<Ledger />} />
+
+            <Route path="fee-structures" element={<FeeStructures />} />
+            <Route path="income" element={<IncomeLedger />} />
+            <Route path="expenses" element={<ExpenseLedger />} />
+            <Route path="income-categories" element={<IncomeCategories />} />
+            <Route path="expense-categories" element={<ExpenseCategories />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="profit-loss" element={<ProfitLoss />} />
+            <Route path="metrics" element={<DashboardMetrics />} />
+            <Route path="student-master" element={<StudentMaster />} />
+            <Route path="student-master/:id" element={<StudentFinanceDetails />} />
+            <Route path="transport" element={<TransportManagement />} />
+            <Route path="gallery" element={<Gallery />} />
+          </Route>
+          
+          {/* Fallback routing temporarily */}
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </ErrorBoundary>
+    </BrowserRouter>
+  );
+}
+
+export default App;

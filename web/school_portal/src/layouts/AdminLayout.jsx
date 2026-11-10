@@ -1,0 +1,645 @@
+import { Outlet, useNavigate, NavLink, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { 
+  LogOut, 
+  LayoutDashboard, 
+  Users, 
+  BookOpen, 
+  UserCircle, 
+  Settings, 
+  UserCheck, 
+  IndianRupee, 
+  FileEdit, 
+  Clock, 
+  Calendar, 
+  ClipboardCheck, 
+  Bell, 
+  DollarSign, 
+  MessageSquare, 
+  Info, 
+  ShieldAlert, 
+  MapPin, 
+  ExternalLink, 
+  TrendingUp, 
+  FileSignature, 
+  Quote, 
+  Award, 
+  FileText, 
+  Sparkles, 
+  Image as ImageIcon,
+  GraduationCap,
+  Briefcase,
+  ChevronDown,
+  ChevronsUpDown,
+  ChevronsDownUp
+} from "lucide-react";
+import { toast } from "react-toastify";
+import { logout } from "../features/authSlice";
+import UserAvatar from "../components/UserAvatar";
+import { addLiveChatMessage, fetchSystemMonitorList } from "../features/dataSlice";
+import { messaging } from "../config/firebase";
+import { getToken, onMessage } from "firebase/messaging";
+import api, { getTenantSlug } from "../services/api";
+import { socket } from "../lib/socket";
+import { applySchoolBranding, resolveAssetUrl } from "../utils/branding";
+
+const NavItem = ({ to, href, icon: Icon, color, bg, children, badge }) => {
+  const content = (
+    <>
+      <div 
+        style={{ 
+          width: "22px", 
+          height: "22px", 
+          borderRadius: "5px", 
+          background: bg, 
+          color: color, 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "center", 
+          flexShrink: 0,
+          boxShadow: `0 1px 2px ${bg}`
+        }}
+      >
+        <Icon size={12.5} strokeWidth={2.4} />
+      </div>
+      <span style={{ flex: 1, fontSize: "0.82rem", fontWeight: "600", lineHeight: 1.2 }}>{children}</span>
+      {badge}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          padding: "0.18rem 0.5rem",
+          borderRadius: "6px",
+          color: "var(--text-secondary)",
+          textDecoration: "none",
+          transition: "all 0.2s ease"
+        }}
+        className="table-row-hover"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <NavLink
+      to={to}
+      style={({ isActive }) => ({
+        display: "flex",
+        alignItems: "center",
+        gap: "0.5rem",
+        padding: "0.18rem 0.5rem",
+        borderRadius: "6px",
+        color: isActive ? "var(--accent-primary)" : "var(--text-primary)",
+        background: isActive ? "var(--accent-light)" : "transparent",
+        textDecoration: "none",
+        transition: "all 0.2s ease",
+        borderLeft: isActive ? "3px solid var(--accent-primary)" : "3px solid transparent"
+      })}
+    >
+      {content}
+    </NavLink>
+  );
+};
+
+const AdminLayout = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const authUser = useSelector((state) => state.auth.user);
+  const user = authUser || (() => {
+    try {
+      return JSON.parse(localStorage.getItem('adminUser')) || null;
+    } catch(e) {
+      return null;
+    }
+  })();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
+
+  const [unreadNotifications, setUnreadNotifications] = useState(0);
+  const [unreadChats, setUnreadChats] = useState(0);
+
+  useEffect(() => {
+    if (user) {
+      applySchoolBranding(user, 'Admin Portal');
+    }
+  }, [user]);
+
+  useEffect(() => {
+    if (user && messaging) {
+      const setupFCM = async () => {
+        try {
+          const permission = await Notification.requestPermission();
+          if (permission === "granted") {
+            const token = await getToken(messaging);
+            if (token) {
+              await api.post('/admin_panel/notifications/register-token', {
+                fcm_token: token,
+                device_type: 'web'
+              });
+            }
+          }
+        } catch (error) {
+          console.warn("FCM Web Push not enabled or blocked by browser:", error.message);
+        }
+      };
+
+      const fetchUnread = async () => {
+        try {
+          const res = await api.get('/admin_panel/notifications');
+          if (res.data && res.data.data) {
+            const unreadNotifs = res.data.data.filter(n => !n.is_read && n.type !== 'live_chat').length;
+            const unreadChatsCount = res.data.data.filter(n => !n.is_read && n.type === 'live_chat').length;
+            setUnreadNotifications(unreadNotifs);
+            setUnreadChats(unreadChatsCount);
+          }
+        } catch (e) {
+          console.error("Error fetching unread notifications:", e);
+        }
+      };
+
+      setupFCM();
+      fetchUnread();
+
+      const unsubscribe = onMessage(messaging, (payload) => {
+        toast.info(
+          <div>
+            <strong>{payload.notification.title}</strong>
+            <p style={{ margin: 0 }}>{payload.notification.body}</p>
+          </div>
+        );
+        if (payload.data?.type === 'live_chat') {
+          setUnreadChats(prev => prev + 1);
+        } else {
+          setUnreadNotifications(prev => prev + 1);
+        }
+      });
+
+      const handleNotificationsRead = () => {
+        setUnreadNotifications(0);
+      };
+      window.addEventListener('notificationsRead', handleNotificationsRead);
+
+      return () => {
+        unsubscribe();
+        window.removeEventListener('notificationsRead', handleNotificationsRead);
+      };
+    }
+  }, [user, dispatch]);
+
+  useEffect(() => {
+    const targetUserId = user?.id;
+    if (!targetUserId) return;
+
+    if (!socket.connected) {
+      socket.connect();
+    }
+
+    const onSocketConnect = () => {
+      socket.emit('identify', targetUserId);
+    };
+
+    const onReceiveMessage = (newChat) => {
+      if (newChat.sender_id !== targetUserId) {
+        toast.info(`New message received`);
+        if (!window.location.pathname.includes('/communication')) {
+          setUnreadChats(prev => prev + 1);
+        }
+      }
+      dispatch(addLiveChatMessage(newChat));
+      dispatch(fetchSystemMonitorList());
+    };
+
+    socket.on('connect', onSocketConnect);
+    socket.on('receive_message', onReceiveMessage);
+
+    if (socket.connected) {
+      socket.emit('identify', targetUserId);
+    }
+
+    return () => {
+      socket.off('connect', onSocketConnect);
+      socket.off('receive_message', onReceiveMessage);
+    };
+  }, [user?.id, dispatch]);
+
+  useEffect(() => {
+    if (location.pathname.includes('/communication')) {
+      setUnreadChats(0);
+    }
+  }, [location.pathname]);
+
+  const ALL_GROUPS = ["people", "staff", "academics", "management", "portals"];
+  const DEFAULT_COLLAPSED_STATE = {
+    people: true,
+    staff: true,
+    academics: true,
+    management: true,
+    portals: true
+  };
+
+  const [collapsedGroups, setCollapsedGroups] = useState(() => {
+    try {
+      const saved = localStorage.getItem('admin_sidebar_collapsed');
+      if (saved !== null) {
+        return JSON.parse(saved);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    return DEFAULT_COLLAPSED_STATE;
+  });
+
+  const areAllExpanded = ALL_GROUPS.every(id => !collapsedGroups[id]);
+
+  const toggleAllGroups = () => {
+    const nextState = {};
+    const newCollapsedVal = areAllExpanded ? true : false;
+    ALL_GROUPS.forEach(id => {
+      nextState[id] = newCollapsedVal;
+    });
+    setCollapsedGroups(nextState);
+    try {
+      localStorage.setItem('admin_sidebar_collapsed', JSON.stringify(nextState));
+    } catch (e) {}
+  };
+
+  const toggleGroup = (groupId) => {
+    setCollapsedGroups(prev => {
+      const next = { ...prev, [groupId]: !prev[groupId] };
+      try {
+        localStorage.setItem('admin_sidebar_collapsed', JSON.stringify(next));
+      } catch (e) {}
+      return next;
+    });
+  };
+
+  const NavSection = ({ id, title, routes, children }) => {
+    const isCollapsed = !!collapsedGroups[id];
+    const hasActiveChild = routes ? routes.some(r => location.pathname.startsWith(r)) : false;
+
+    return (
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <div 
+          onClick={() => toggleGroup(id)}
+          style={{ 
+            marginTop: "0.45rem", 
+            marginBottom: "0.15rem", 
+            padding: "0.15rem 0.4rem", 
+            borderBottom: "1px solid var(--glass-border)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            cursor: "pointer",
+            userSelect: "none",
+            borderRadius: "4px"
+          }}
+          className="table-row-hover"
+          title={`Click to ${isCollapsed ? "expand" : "collapse"} ${title}`}
+        >
+          <span style={{ 
+            fontSize: "0.72rem", 
+            textTransform: "uppercase", 
+            letterSpacing: "0.08em", 
+            color: "var(--accent-primary)", 
+            fontWeight: "800",
+            lineHeight: 1.1
+          }}>
+            {title}
+          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
+            {isCollapsed && hasActiveChild && (
+              <span 
+                style={{ 
+                  width: "6px", 
+                  height: "6px", 
+                  borderRadius: "50%", 
+                  backgroundColor: "var(--accent-primary)" 
+                }} 
+                title="Active item inside"
+              />
+            )}
+            <ChevronDown 
+              size={12} 
+              strokeWidth={2.4}
+              style={{ 
+                color: "var(--text-secondary)", 
+                transform: isCollapsed ? "rotate(-90deg)" : "rotate(0deg)", 
+                transition: "transform 0.2s ease" 
+              }} 
+            />
+          </div>
+        </div>
+        {!isCollapsed && (
+          <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
+            {children}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div style={{ display: "flex", height: "100%", width: "100%", overflow: "hidden" }}>
+      <style>
+        {`
+          .sidebar-nav::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
+      
+      {/* Sidebar */}
+      <aside className="glass-panel" style={{ width: "235px", padding: "0.55rem 0.6rem", display: "flex", flexDirection: "column", borderTopLeftRadius: 0, borderBottomLeftRadius: 0, height: "100%", overflow: "hidden" }}>
+        
+        {/* Brand Header */}
+        <div style={{ marginBottom: "0.55rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.55rem" }}>
+            {user?.logoUrl ? (
+              <img src={resolveAssetUrl(user.logoUrl)} alt={user?.schoolName || "School Campus"} style={{ height: "34px", width: "34px", borderRadius: "50%", objectFit: "cover", boxShadow: "0 2px 4px rgba(0,0,0,0.08)" }} />
+            ) : (
+              <div style={{ height: "34px", width: "34px", borderRadius: "50%", backgroundColor: user?.themeColor || "var(--primary-color, #064e3b)", color: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800", fontSize: "14px" }}>
+                {(user?.schoolName || "S").charAt(0)}
+              </div>
+            )}
+            <div>
+              <h2 style={{ fontSize: "1.15rem", fontWeight: "800", color: "var(--text-primary)", lineHeight: 1.15 }}>{user?.schoolName || "School Campus"}</h2>
+              <p style={{ color: "var(--text-secondary)", fontSize: "0.78rem", fontWeight: "600", lineHeight: 1.1 }}>Admin Portal</p>
+            </div>
+          </div>
+          
+          <button 
+            onClick={toggleAllGroups}
+            title={areAllExpanded ? "Collapse all categories" : "Open all categories"}
+            style={{ 
+              width: "26px", 
+              height: "26px", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center", 
+              borderRadius: "6px", 
+              border: "1px solid var(--glass-border)", 
+              background: "rgba(255, 255, 255, 0.7)", 
+              color: "var(--text-secondary)", 
+              cursor: "pointer", 
+              transition: "all 0.2s ease",
+              flexShrink: 0
+            }}
+            className="table-row-hover"
+          >
+            {areAllExpanded ? (
+              <ChevronsDownUp size={14} strokeWidth={2.4} />
+            ) : (
+              <ChevronsUpDown size={14} strokeWidth={2.4} />
+            )}
+          </button>
+        </div>
+
+        {/* Navigation Items with Solid Colorful Badges */}
+        <nav className="sidebar-nav" style={{ flex: 1, display: "flex", flexDirection: "column", gap: "1px", overflowY: "auto", overflowX: "hidden", scrollbarWidth: "none", msOverflowStyle: "none", paddingBottom: "0.35rem" }}>
+          
+          <NavItem to="/dashboard" icon={LayoutDashboard} color="#059669" bg="rgba(16, 185, 129, 0.15)">
+            Dashboard
+          </NavItem>
+          
+          {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal") && (
+            <>
+              <NavSection
+                id="people"
+                title="People"
+                routes={["/users/parent", "/users/student", "/users/teacher"]}
+              >
+                <NavItem to="/users/parent" icon={Users} color="#db2777" bg="rgba(219, 39, 119, 0.15)">
+                  Parents
+                </NavItem>
+                <NavItem to="/users/student" icon={GraduationCap} color="#2563eb" bg="rgba(37, 99, 235, 0.15)">
+                  Students
+                </NavItem>
+                <NavItem to="/users/teacher" icon={UserCircle} color="#d97706" bg="rgba(217, 119, 6, 0.15)">
+                  Teachers
+                </NavItem>
+              </NavSection>
+
+              <NavSection
+                id="staff"
+                title="Staff Management"
+                routes={["/users/finance", "/users/admission", "/users/tc", "/users/timetable", "/users/teachers_manager", "/users/academic_manager"]}
+              >
+                <NavItem to="/users/finance" icon={IndianRupee} color="#0d9488" bg="rgba(13, 148, 136, 0.15)">
+                  Accountants
+                </NavItem>
+                <NavItem to="/users/admission" icon={UserCheck} color="#7c3aed" bg="rgba(124, 58, 237, 0.15)">
+                  Counselors
+                </NavItem>
+                <NavItem to="/users/tc" icon={FileText} color="#1b8b3b" bg="rgba(27, 139, 59, 0.15)">
+                  TC Incharges
+                </NavItem>
+                <NavItem to="/users/timetable" icon={Calendar} color="#d97706" bg="rgba(217, 119, 6, 0.15)">
+                  Timetable Managers
+                </NavItem>
+                <NavItem to="/users/teachers_manager" icon={Award} color="#8b5cf6" bg="rgba(139, 92, 246, 0.15)">
+                  Teacher Managers
+                </NavItem>
+                <NavItem to="/users/academic_manager" icon={BookOpen} color="#2563eb" bg="rgba(37, 99, 235, 0.15)">
+                  Academic Managers
+                </NavItem>
+              </NavSection>
+            </>
+          )}
+          
+          {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal" || user?.type === "academic_manager") && (
+            <NavSection
+              id="academics"
+              title="Academics"
+              routes={[
+                "/admissions", "/attendance", "/circulars", "/classes", 
+                "/coursework", "/communication", "/consents", "/exams", 
+                "/notification", "/school-info", "/subject-teachers", 
+                "/subjects", "/timetable"
+              ]}
+            >
+              <NavItem to="/admissions" icon={TrendingUp} color="#0284c7" bg="rgba(2, 132, 199, 0.15)">
+                Admissions Pipeline
+              </NavItem>
+              <NavItem to="/attendance" icon={UserCheck} color="#16a34a" bg="rgba(22, 163, 74, 0.15)">
+                Attendance
+              </NavItem>
+              <NavItem to="/circulars" icon={FileText} color="#ea580c" bg="rgba(234, 88, 12, 0.15)">
+                Circulars
+              </NavItem>
+              <NavItem to="/classes" icon={BookOpen} color="#6366f1" bg="rgba(99, 102, 241, 0.15)">
+                Classes
+              </NavItem>
+              <NavItem to="/coursework" icon={FileEdit} color="#0284c7" bg="rgba(2, 132, 199, 0.15)">
+                Coursework
+              </NavItem>
+              <NavItem 
+                to="/communication/inbox" 
+                icon={MessageSquare} 
+                color="#10b981" 
+                bg="rgba(16, 185, 129, 0.15)"
+                badge={unreadChats > 0 ? (
+                  <span style={{ width: "8px", height: "8px", backgroundColor: "#22c55e", borderRadius: "50%", marginLeft: "auto" }} />
+                ) : null}
+              >
+                Communication
+              </NavItem>
+              <NavItem to="/consents" icon={FileSignature} color="#c026d3" bg="rgba(192, 38, 211, 0.15)">
+                Consents
+              </NavItem>
+              <NavItem to="/exams" icon={ClipboardCheck} color="#e11d48" bg="rgba(225, 29, 72, 0.15)">
+                Exams & Grading
+              </NavItem>
+              <NavItem to="/notification" icon={Bell} color="#f59e0b" bg="rgba(245, 158, 11, 0.15)">
+                Notifications
+              </NavItem>
+              <NavItem to="/school-info" icon={Info} color="#0891b2" bg="rgba(8, 145, 178, 0.15)">
+                School Info
+              </NavItem>
+              <NavItem to="/subject-teachers" icon={Users} color="#4f46e5" bg="rgba(79, 70, 229, 0.15)">
+                Subject Teachers
+              </NavItem>
+              <NavItem to="/subjects" icon={BookOpen} color="#0d9488" bg="rgba(13, 148, 136, 0.15)">
+                Subjects
+              </NavItem>
+              <NavItem to="/timetable" icon={Clock} color="#6366f1" bg="rgba(99, 102, 241, 0.15)">
+                Timetable
+              </NavItem>
+            </NavSection>
+          )}
+
+          {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal" || user?.type === "finance") && (
+            <NavSection
+              id="management"
+              title="Management"
+              routes={[
+                "/annual-planner", "/fees", "/gallery", "/pnl", 
+                "/rooms", "/spotlight", "/student-of-week", "/thoughts"
+              ]}
+            >
+              {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal") && (
+                <NavItem to="/annual-planner" icon={Calendar} color="#3b82f6" bg="rgba(59, 130, 246, 0.15)">
+                  Annual Planner
+                </NavItem>
+              )}
+              <NavItem to="/fees" icon={IndianRupee} color="#15803d" bg="rgba(21, 128, 61, 0.15)">
+                Fees
+              </NavItem>
+              {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal") && (
+                <NavItem to="/gallery" icon={ImageIcon} color="#db2777" bg="rgba(219, 39, 119, 0.15)">
+                  Gallery
+                </NavItem>
+              )}
+              <NavItem to="/pnl" icon={TrendingUp} color="#b45309" bg="rgba(180, 83, 9, 0.15)">
+                Profit & Loss
+              </NavItem>
+              {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal") && (
+                <>
+                  <NavItem to="/rooms" icon={MapPin} color="#0891b2" bg="rgba(8, 145, 178, 0.15)">
+                    Rooms Management
+                  </NavItem>
+                  <NavItem to="/spotlight" icon={Sparkles} color="#d97706" bg="rgba(217, 119, 6, 0.15)">
+                    Spotlight of the Day
+                  </NavItem>
+                  <NavItem to="/student-of-week" icon={Award} color="#9333ea" bg="rgba(147, 51, 234, 0.15)">
+                    Student of the Week
+                  </NavItem>
+                  <NavItem to="/thoughts" icon={Quote} color="#7c3aed" bg="rgba(124, 58, 237, 0.15)">
+                    Thought of the Day
+                  </NavItem>
+                </>
+              )}
+            </NavSection>
+          )}
+
+          {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal") && (() => {
+            const currentSlug = getTenantSlug() || user?.tenant_slug || user?.schoolSlug || "";
+            const isLocal = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+            const resolvePortalUrl = (portalKey, localPort) => {
+              if (isLocal) {
+                return `http://localhost:${localPort}/login?tenant=${encodeURIComponent(currentSlug)}`;
+              }
+              return `https://${portalKey}.ckrschools.online/login?tenant=${encodeURIComponent(currentSlug)}`;
+            };
+
+            return (
+              <NavSection
+                id="portals"
+                title="Portals"
+              >
+                <NavItem href={import.meta.env.VITE_ADMISSIONS_URL || resolvePortalUrl('admissions', 5175)} icon={ExternalLink} color="#2563eb" bg="rgba(37, 99, 235, 0.15)">
+                  Admission Portal
+                </NavItem>
+                <NavItem href={import.meta.env.VITE_FINANCE_URL || resolvePortalUrl('finance', 5175)} icon={ExternalLink} color="#16a34a" bg="rgba(22, 163, 74, 0.15)">
+                  Finance Portal
+                </NavItem>
+                <NavItem href={import.meta.env.VITE_TC_URL || resolvePortalUrl('tc', 5176)} icon={ExternalLink} color="#1b8b3b" bg="rgba(27, 139, 59, 0.15)">
+                  TC Portal
+                </NavItem>
+                <NavItem href={import.meta.env.VITE_TEACHER_MANAGER_URL || import.meta.env.VITE_TEACHERS_URL || resolvePortalUrl('teachers', 5177)} icon={ExternalLink} color="#8b5cf6" bg="rgba(139, 92, 246, 0.15)">
+                  Teacher Portal
+                </NavItem>
+                <NavItem href={import.meta.env.VITE_ACADEMICS_URL || resolvePortalUrl('academics', 5178)} icon={ExternalLink} color="#ea580c" bg="rgba(234, 88, 12, 0.15)">
+                  Academic Portal
+                </NavItem>
+                <NavItem href={import.meta.env.VITE_TIMETABLE_URL || resolvePortalUrl('timetable', 5180)} icon={ExternalLink} color="#06b6d4" bg="rgba(6, 182, 212, 0.15)">
+                  Timetable Portal
+                </NavItem>
+              </NavSection>
+            );
+          })()}
+        </nav>
+
+        {/* User profile & Logout */}
+        <div style={{ marginTop: "auto", borderTop: "1px solid var(--glass-border)", paddingTop: "0.45rem" }}>
+          <div style={{ marginBottom: "0.35rem", display: "flex", alignItems: "center", gap: "0.55rem" }}>
+            <UserAvatar src={user?.avatar_url} name={user?.name || "System Admin"} size={28} />
+            <div style={{ overflow: "hidden", flex: 1, minWidth: 0 }}>
+              <p style={{ fontSize: "0.82rem", fontWeight: "700", color: "var(--text-primary)", whiteSpace: "nowrap", textOverflow: "ellipsis", overflow: "hidden", lineHeight: 1.2 }}>{user?.name || "System Admin"}</p>
+              <p style={{ fontSize: "0.72rem", color: "var(--text-secondary)", textTransform: "capitalize", lineHeight: 1.1 }}>{user?.type || "Super_admin"}</p>
+            </div>
+          </div>
+          
+          <button 
+            onClick={handleLogout} 
+            className="btn btn-ghost" 
+            style={{ 
+              width: "100%", 
+              justifyContent: "center", 
+              gap: "0.4rem",
+              color: "#dc2626",
+              backgroundColor: "rgba(220, 38, 38, 0.06)",
+              border: "1px solid rgba(220, 38, 38, 0.15)",
+              fontSize: "0.8rem",
+              padding: "0.22rem 0.5rem",
+              borderRadius: "6px"
+            }}
+          >
+            <LogOut size={14} strokeWidth={2.4} /> Logout
+          </button>
+        </div>
+      </aside>
+
+      {/* Main Content */}
+      <main style={{ flex: 1, padding: "1.25rem", overflowY: "auto", height: "100%", width: "100%" }}>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default AdminLayout;

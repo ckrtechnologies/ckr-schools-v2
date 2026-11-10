@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Teacher Monthly Score Card — Pixel-Match for Image 2
+   (Vision International School, Shirur — Monthly Score Board)
+   ========================================================================== */
+
+.scorecard-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.scorecard-container {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  max-width: 650px;
+  width: 100%;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scorecard-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.scorecard-scroll-area {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background: #e2e8f0;
+}
+
+/* Document Frame */
+.scorecard-wrapper {
+  width: 100%;
+  max-width: 540px;
+  background: #ffffff;
+  padding: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Excel-Style Scorecard Table (Single Unified Grid)
+   ========================================================================== */
+.excel-scorecard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px double #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  background: #ffffff;
+}
+
+/* Headers */
+.excel-scorecard-table .row-school-title th {
+  border: 1px solid #000000;
+  font-size: 13pt;
+  font-weight: 900;
+  text-align: center;
+  padding: 6px 4px 3px 4px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  background: #ffffff;
+}
+
+.excel-scorecard-table .row-school-subtitle th {
+  border: 1px solid #000000;
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: center;
+  padding: 3px 4px 6px 4px;
+  color: #000000;
+  background: #ffffff;
+}
+
+/* Teacher Metadata Rows */
+.excel-scorecard-table .cell-meta-label {
+  border: 1px solid #000000;
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #000000;
+  background: #ffffff;
+  padding: 6px 8px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.excel-scorecard-table .cell-teacher-name {
+  border: 1px solid #000000;
+  font-size: 11pt;
+  font-weight: 800;
+  color: #000000;
+  background: #a4c2f4; /* Light blue cell */
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+.excel-scorecard-table .cell-month-val {
+  border: 1px solid #000000;
+  font-size: 10.5pt;
+  font-weight: 800;
+  color: #000000;
+  background: #a4c2f4; /* Light blue cell */
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+.excel-scorecard-table .cell-teacher-photo {
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px;
+  background: #ffffff;
+  width: 95px;
+}
+
+.excel-scorecard-table .photo-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  display: block;
+}
+
+.excel-scorecard-table .photo-placeholder {
+  width: 100%;
+  height: 90px;
+  background: #f1f5f9;
+  border: 1px dashed #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Column Headers Row */
+.excel-scorecard-table .row-table-headers th {
+  border: 1px solid #000000;
+  background: #bdd7ee; /* Light blue header from Excel */
+  padding: 4px;
+  font-size: 10pt;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+.excel-scorecard-table .th-sr-no {
+  color: #c00000 !important; /* RED text matching Screenshot 2 */
+  text-align: center;
+}
+
+.excel-scorecard-table .th-topic {
+  color: #000000;
+  text-align: center;
+}
+
+.excel-scorecard-table .th-points {
+  color: #000000;
+  text-align: center;
+}
+
+/* Table Body: Pale Sage-Green/Olive Background from Image 2 */
+.excel-scorecard-table .row-topic-item td {
+  border: 1px solid #000000;
+  background: #e2efda; /* Exact pale olive/sage-green from Excel screenshot */
+  padding: 2.5px 6px;
+  vertical-align: middle;
+}
+
+.excel-scorecard-table .td-sr-no {
+  text-align: center;
+  font-weight: 800;
+  font-size: 9.5pt;
+  color: #000000;
+}
+
+.excel-scorecard-table .td-topic-title {
+  text-align: left;
+  font-weight: 700;
+  font-size: 9pt;
+  color: #3c148c; /* Exact deep purple tone from Excel screenshot */
+  padding-left: 8px !important;
+}
+
+.excel-scorecard-table .td-points-val {
+  text-align: center;
+  font-weight: 800;
+  font-size: 9.5pt;
+  color: #000000;
+}
+
+/* Summary Rows */
+.excel-scorecard-table .cell-summary-label {
+  border: 1px solid #000000;
+  text-align: center;
+  font-weight: 800;
+  font-size: 10pt;
+  letter-spacing: 0.05em;
+  padding: 4px;
+  color: #000000;
+}
+
+.excel-scorecard-table .cell-summary-val {
+  border: 1px solid #000000;
+  text-align: center;
+  font-weight: 800;
+  font-size: 10pt;
+  padding: 4px;
+  color: #000000;
+}
+
+/* Total: Sky Blue */
+.excel-scorecard-table .row-sum-total td {
+  background: #5b9bd5 !important;
+}
+
+/* Out of: Coral Red */
+.excel-scorecard-table .row-sum-out-of td {
+  background: #ea5a5a !important;
+}
+
+/* Percentage: Crisp Green */
+.excel-scorecard-table .row-sum-pct td {
+  background: #70d68a !important;
+}
+
+/* Rank: Vibrant Orange */
+.excel-scorecard-table .row-sum-rank td {
+  background: #f5a623 !important;
+}
+
+/* Signatures Box */
+.excel-scorecard-table .row-signatures td {
+  border: 1px solid #000000;
+  background: #fce4d6; /* Soft pinkish-peach background from screenshot */
+  padding: 0;
+}
+
+.excel-scorecard-table .signatures-inner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 8px 18px;
+}
+
+.excel-scorecard-table .sig-item {
+  font-weight: 800;
+  font-size: 9.5pt;
+  color: #000000;
+}
+
+/* ==========================================================================
+   Print Optimization (@media print)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 6mm 8mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  .app-header,
+  .matrix-container,
+  .scorecard-actions-bar,
+  .modal-overlay:not(.print-active),
+  .scorecard-modal-backdrop:not(.print-active),
+  .no-print {
+    display: none !important;
+  }
+
+  .scorecard-modal-backdrop.print-active {
+    position: static !important;
+    background: none !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .scorecard-container {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    max-height: none !important;
+  }
+
+  .scorecard-scroll-area {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .scorecard-wrapper {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .excel-scorecard-table {
+    border: 3px double #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .excel-scorecard-table td,
+  .excel-scorecard-table th {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .excel-scorecard-table .row-topic-item td {
+    padding: 2px 5px !important;
+  }
+}

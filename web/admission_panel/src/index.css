@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Brand Colors (Daily Fresh Inspired) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  
+  --accent-primary: #1b8b3b;
+  --accent-hover: #16a34a;
+  --accent-light: #e8f5e9;
+  
+  --glass-bg: #ffffff;
+  --glass-border: #e2e8f0;
+  --glass-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-family: 'Inter', sans-serif;
+  --heading-font: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px; /* Compact layout */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Paper/Card classes */
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+}
+
+.glass-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+/* Button variants */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem; /* Compact padding */
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  outline: none;
+  font-family: var(--font-family);
+  font-size: 13px;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(27, 139, 59, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(27, 139, 59, 0.4);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: #f1f5f9;
+  color: var(--text-primary);
+}
+
+/* Inputs */
+.input-glass {
+  width: 100%;
+  background: #fcfdfe;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.8rem;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  transition: var(--transition);
+  font-size: 13px;
+}
+
+.input-glass:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(27, 139, 59, 0.1);
+}
+
+.input-glass::placeholder {
+  color: #94a3b8;
+}
+
+/* Scrollbar (Compact) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Data Table standard */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background: #f1f5f9;
+  padding: 6px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--glass-border);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+tr:hover {
+  background: #f8fafc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Modal Content */
+@keyframes slideUp {
+  from { transform: translateY(100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Right-side Slide-in Drawer */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.drawer-right {
+  position: relative;
+  width: 720px;
+  max-width: 95vw;
+  height: 100vh;
+  max-height: 100vh;
+  background: #ffffff;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  overflow: hidden;
+}
+
+/* Official Letterhead Header (matching TC official standard) */
+.official-letterhead {
+  width: 100%;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.letterhead-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.letterhead-logo-container {
+  width: 85px;
+  min-width: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letterhead-logo {
+  max-width: 85px;
+  max-height: 85px;
+  object-fit: contain;
+}
+
+.letterhead-school-details {
+  flex: 1;
+  text-align: center;
+}
+
+.letterhead-trust {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.letterhead-school-name {
+  font-size: 21px;
+  font-weight: 900;
+  color: #8b1d1d;
+  margin: 1px 0;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.letterhead-codes-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 2px 0;
+}
+
+.letterhead-address {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 1.2;
+}
+
+.letterhead-contact {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 9px;
+  color: #1a1a1a;
+  margin-top: 2px;
+}
+
+.letterhead-separator {
+  height: 2px !important;
+  background: #000000 !important;
+  border-top: 2px solid #000000 !important;
+  margin: 8px 0 12px 0 !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+.letterhead-cert-title {
+  text-align: center;
+  margin: 6px 0 12px 0;
+}
+
+.letterhead-cert-title h2 {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #000000 !important;
+  padding-bottom: 3px;
+  margin: 0;
+}
+
+/* Admission Printout Layout */
+.admission-printout-wrapper {
+  display: none;
+}
+
+/* Print CSS */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .admission-printout-wrapper,
+  .admission-printout-wrapper * {
+    visibility: visible;
+  }
+
+  .admission-printout-wrapper {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    z-index: 99999;
+  }
+
+  .enquiry-print-sheet {
+    width: 200mm !important;
+    max-width: 200mm !important;
+    min-height: 285mm !important;
+    margin: 0 auto !important;
+    padding: 6mm 8mm !important;
+    box-sizing: border-box !important;
+    border: 2px solid #000000 !important;
+    font-family: "Calisto MT", "Baskerville Old Face", "Bell MT", "Book Antiqua", Georgia, serif !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 5mm;
+  }
+}
+
+.enquiry-print-sheet {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Calisto MT", "Baskerville Old Face", "Bell MT", "Book Antiqua", Georgia, serif;
+  font-size: 11px;
+  line-height: 1.25;
+  border: 2px solid #000000;
+  padding: 6mm 8mm;
+  box-sizing: border-box;
+}
+
+/* Enquiry Print Meta Bar */
+.enquiry-print-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.enquiry-print-meta-row .meta-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex: 1;
+}
+
+.enquiry-print-meta-row .meta-cell:first-child {
+  flex: 1.2;
+}
+
+.enquiry-print-meta-row .meta-cell:last-child {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.enquiry-print-meta-row .meta-label {
+  font-weight: 800;
+  color: #000000;
+  white-space: nowrap;
+}
+
+/* Sections */
+.enquiry-form-section {
+  margin-bottom: 8px;
+  padding: 2px 4px;
+}
+
+.enquiry-form-section.office-box {
+  border: 1.5px dashed #000000;
+  padding: 6px 8px;
+  background: #fafafa;
+}
+
+.section-heading {
+  font-size: 11.5px;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid #000000;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+.section-heading.office-head {
+  color: #000000;
+}
+
+.form-line {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.form-line.full-line {
+  width: 100%;
+}
+
+.form-line-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 18px;
+}
+
+.form-line-grid-3 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  column-gap: 14px;
+}
+
+.line-label {
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.single-line-val {
+  border-bottom: 1px solid #000000;
+  flex: 1;
+  min-height: 15px;
+  padding: 0 4px;
+  color: #000000;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.single-line-val.bold-val {
+  font-weight: 800;
+}
+
+.checkbox-group {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.checkbox-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #000000;
+}
+
+.box-sq {
+  font-size: 12px;
+  line-height: 1;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Dual Signatures for Parent & Counsellor */
+.enquiry-dual-signatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 14px;
+  margin-bottom: 4px;
+  padding: 0 6px;
+}
+
+.dual-sig-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dual-sig-item .sig-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.dual-sig-item .sig-single-line {
+  border-bottom: 1px solid #000000;
+  width: 220px;
+  height: 24px;
+  display: inline-block;
+}
+
+/* Official Certificate Footer (Matching TC standard) */
+.official-cert-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-end;
+  margin-top: 14px;
+  padding: 0 6px;
+  width: 100%;
+}
+
+.footer-place-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 4px;
+}
+
+.footer-place-line {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.footer-place-line .place-val {
+  font-weight: 800;
+  color: #000000;
+}
+
+.footer-seal-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.seal-empty-space {
+  min-height: 48px;
+  width: 70px;
+}
+
+.footer-principal-col {
+  text-align: center;
+  justify-self: end;
+  width: 210px;
+}
+
+.principal-sig-line {
+  border-bottom: 1.5px solid #000000;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.principal-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.principal-school {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.principal-location {
+  font-size: 11px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+}

@@ -1,0 +1,604 @@
+/* ==========================================================================
+   Teacher Evaluation Matrix — Premium Spreadsheet Style View
+   Features:
+   - Sticky Left Columns: Sr. No. and Teacher Details
+   - Smooth Horizontally Scrollable Middle Criteria
+   - Sticky Right Columns (PINNED IN VIEW): Out of, Total, Percentage, Rank, Action
+   - High-contrast, elegant aesthetic matching Vision International School
+   ========================================================================== */
+
+.matrix-container {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Toolbar */
+.matrix-toolbar {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: #ffffff;
+}
+
+.search-box {
+  position: relative;
+  min-width: 280px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 0.85rem 0.5rem 2.3rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.search-box input:focus {
+  border-color: var(--accent-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(27, 139, 59, 0.12);
+}
+
+.search-box svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.toolbar-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+.toolbar-stats strong {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Scrollable Table Area & Sticky Column Engine
+   ========================================================================== */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.825rem;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   SOLID TABLE HEADING ROW 1 (Numbers Row)
+   Background: Deep Forest Green (#14532d)
+   Text: Crisp White/Mint (#ffffff / #ecfdf5)
+   ========================================================================== */
+.matrix-table thead tr.row-thead-numbers th {
+  background: #14532d !important;
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 0.35rem 0.2rem;
+  border-bottom: 1px solid #166534;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  user-select: none;
+  height: 28px;
+}
+
+.matrix-table thead tr.row-thead-numbers th.sticky-col-1,
+.matrix-table thead tr.row-thead-numbers th.sticky-col-2 {
+  background: #14532d !important;
+  color: #ffffff !important;
+  z-index: 45 !important;
+}
+
+/* Row 1 Right Sticky Numbers */
+.matrix-table thead tr.row-thead-numbers th.col-sticky-out-of {
+  background: #881337 !important;
+  color: #ffe4e6 !important;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-numbers th.col-sticky-total {
+  background: #312e81 !important;
+  color: #e0e7ff !important;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-numbers th.col-sticky-pct {
+  background: #064e3b !important;
+  color: #d1fae5 !important;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-numbers th.col-sticky-rank {
+  background: #78350f !important;
+  color: #fef3c7 !important;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-numbers th.col-sticky-actions {
+  background: #14532d !important;
+  color: #ffffff !important;
+  z-index: 45 !important;
+}
+
+/* ==========================================================================
+   SOLID TABLE HEADING ROW 2 (Titles Row)
+   Background: Solid Vision School Brand Green (#1b8b3b)
+   Text: Crisp Pure White (#ffffff)
+   ========================================================================== */
+.matrix-table thead tr.row-thead-titles th {
+  background: #1b8b3b !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.4rem;
+  border-bottom: 2px solid #0f5132;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 28px;
+  z-index: 25;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.matrix-table thead tr.row-thead-titles th.sticky-col-1,
+.matrix-table thead tr.row-thead-titles th.sticky-col-2 {
+  background: #1b8b3b !important;
+  color: #ffffff !important;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-titles th.th-criteria {
+  font-size: 0.74rem;
+  line-height: 1.25;
+  min-width: 96px;
+  max-width: 112px;
+  word-wrap: break-word;
+  white-space: normal;
+  padding: 0.6rem 0.35rem;
+  vertical-align: bottom;
+  height: 92px;
+  background: #1b8b3b !important;
+}
+
+.criteria-header-title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.criteria-header-limit {
+  font-size: 0.65rem;
+  color: #bbf7d0; /* Soft bright mint for min-max bounds */
+  margin-top: 3px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Row 2 Right Sticky Titles (Matching their vibrant column colors!) */
+.matrix-table thead tr.row-thead-titles th.col-sticky-out-of {
+  background: #be123c !important; /* Rich solid rose-red */
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 800;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-titles th.col-sticky-total {
+  background: #4338ca !important; /* Rich solid royal indigo */
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 800;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-titles th.col-sticky-pct {
+  background: #059669 !important; /* Rich solid emerald green */
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 800;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-titles th.col-sticky-rank {
+  background: #d97706 !important; /* Rich solid amber-orange */
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 800;
+  z-index: 45 !important;
+}
+
+.matrix-table thead tr.row-thead-titles th.col-sticky-actions {
+  background: #15803d !important;
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 45 !important;
+}
+
+.matrix-table td {
+  padding: 0.35rem 0.3rem;
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+/* Alternating Row Colors */
+.matrix-table tbody tr:nth-child(even) {
+  background-color: #fbfcfe;
+}
+
+.matrix-table tbody tr:hover {
+  background-color: #f0fdf4 !important;
+}
+
+/* ==========================================================================
+   LEFT PINNED / STICKY COLUMNS
+   ========================================================================== */
+.sticky-col-1 {
+  position: sticky;
+  left: 0;
+  z-index: 15;
+  background: #ffffff;
+  width: 44px;
+  min-width: 44px;
+  max-width: 44px;
+  border-right: 1px solid #cbd5e1;
+  text-align: center;
+}
+
+.sticky-col-2 {
+  position: sticky;
+  left: 44px;
+  z-index: 15;
+  background: #ffffff;
+  width: 290px;
+  min-width: 290px;
+  max-width: 290px;
+  text-align: left !important;
+  padding: 0.5rem 0.75rem !important;
+  border-right: 2px solid #94a3b8 !important;
+  box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.08);
+}
+
+th.sticky-col-1,
+th.sticky-col-2 {
+  z-index: 40 !important;
+  background: #f1f5f9 !important;
+}
+
+.matrix-table tbody tr:nth-child(even) .sticky-col-1,
+.matrix-table tbody tr:nth-child(even) .sticky-col-2 {
+  background-color: #fbfcfe;
+}
+
+.matrix-table tbody tr:hover .sticky-col-1,
+.matrix-table tbody tr:hover .sticky-col-2 {
+  background-color: #f0fdf4 !important;
+}
+
+/* ==========================================================================
+   RIGHT PINNED / STICKY COLUMNS (FIXED IN VIEW WHILE SCROLLING)
+   Widths:
+   - Action: 84px   -> right: 0
+   - Rank:   66px   -> right: 84px
+   - Pct:    86px   -> right: 150px
+   - Total:  68px   -> right: 236px
+   - Out of: 68px   -> right: 304px
+   ========================================================================== */
+.col-sticky-out-of {
+  position: sticky;
+  right: 304px;
+  z-index: 15;
+  width: 68px;
+  min-width: 68px;
+  max-width: 68px;
+  background: #ffe4e6 !important;
+  color: #9f1239 !important;
+  font-weight: 800 !important;
+  border-left: 2px solid #94a3b8 !important;
+  box-shadow: -4px 0 10px -2px rgba(0, 0, 0, 0.08);
+}
+
+.col-sticky-total {
+  position: sticky;
+  right: 236px;
+  z-index: 15;
+  width: 68px;
+  min-width: 68px;
+  max-width: 68px;
+  background: #e0e7ff !important;
+  color: #3730a3 !important;
+  font-weight: 800 !important;
+}
+
+.col-sticky-pct {
+  position: sticky;
+  right: 150px;
+  z-index: 15;
+  width: 86px;
+  min-width: 86px;
+  max-width: 86px;
+  background: #dcfce7 !important;
+  color: #14532d !important;
+  font-weight: 800 !important;
+}
+
+.col-sticky-rank {
+  position: sticky;
+  right: 84px;
+  z-index: 15;
+  width: 66px;
+  min-width: 66px;
+  max-width: 66px;
+  background: #fef3c7 !important;
+  color: #b45309 !important;
+  font-weight: 800 !important;
+}
+
+.col-sticky-actions {
+  position: sticky;
+  right: 0;
+  z-index: 15;
+  width: 84px;
+  min-width: 84px;
+  max-width: 84px;
+  background: #ffffff !important;
+  border-left: 1px solid #cbd5e1;
+}
+
+.matrix-table tbody tr:nth-child(even) .col-sticky-actions {
+  background: #fbfcfe !important;
+}
+
+.matrix-table tbody tr:hover .col-sticky-actions {
+  background: #f0fdf4 !important;
+}
+
+/* Headers for Right Sticky Columns */
+th.col-sticky-out-of,
+th.col-sticky-total,
+th.col-sticky-pct,
+th.col-sticky-rank,
+th.col-sticky-actions {
+  z-index: 40 !important;
+}
+
+th.col-sticky-actions {
+  background: #f8fafc !important;
+}
+
+/* ==========================================================================
+   Interactive Score Cell Styling (Beautiful Badges & Inputs)
+   ========================================================================== */
+.score-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-input {
+  width: 44px;
+  height: 30px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 800;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  outline: none;
+  transition: all 0.18s ease;
+  cursor: text;
+}
+
+.score-input:hover {
+  box-shadow: 0 0 0 2px #cbd5e1;
+  background: #ffffff;
+}
+
+.score-input:focus {
+  border-color: var(--accent-primary) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(27, 139, 59, 0.25) !important;
+  color: #0f172a !important;
+}
+
+/* Dynamic Score Tone Badges */
+.score-val-3 {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.score-val-2 {
+  color: #0284c7;
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+.score-val-1 {
+  color: #b45309;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.score-val-0 {
+  color: #e11d48;
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.score-val-na {
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  font-weight: 700;
+  font-size: 0.775rem;
+}
+
+.score-val-empty {
+  color: #cbd5e1;
+  background: transparent;
+}
+
+/* NA toggle small button */
+.na-toggle-btn {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  padding: 1px 3px;
+  border-radius: 3px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+  line-height: 1;
+}
+
+.score-cell:hover .na-toggle-btn {
+  opacity: 1;
+}
+
+.na-toggle-btn:hover {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+/* Teacher Avatar & Info */
+.teacher-col-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.teacher-avatar-sm {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #334155;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-avatar-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teacher-name-txt {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.25;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.teacher-name-clickable {
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.teacher-name-clickable:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+/* Ranks Badges */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-radius: 9999px;
+  line-height: 1;
+}
+
+.rank-gold {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fcd34d;
+  box-shadow: 0 1px 2px rgba(180, 83, 9, 0.15);
+}
+
+.rank-silver {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.rank-bronze {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fdba74;
+}
+
+.rank-other {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
