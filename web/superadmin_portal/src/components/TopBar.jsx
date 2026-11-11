@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setDateRange } from '../store/filtersSlice.js';
 import { logout } from '../store/authSlice.js';
-import { IconLogout, IconUserCheck, IconCalendar } from '@tabler/icons-react';
+import { IconLogout, IconCalendar } from '@tabler/icons-react';
 
 const DATE_OPTIONS = [
   { id: 'today', label: 'Today' },
@@ -82,7 +82,7 @@ export default function TopBar() {
           })}
         </div>
 
-        {/* Admin Avatar with Mouseover Popover */}
+        {/* Clean Admin Avatar Menu */}
         <div 
           style={{ position: 'relative' }}
           onMouseEnter={() => setAvatarMenuOpen(true)}
@@ -115,70 +115,46 @@ export default function TopBar() {
               <span style={{ fontSize: '13px', fontWeight: '600', color: '#0f172a', lineHeight: '1.2' }}>
                 {user?.name || 'Super Admin'}
               </span>
-              <span style={{ fontSize: '11px', color: '#10b981', fontWeight: '500' }}>
-                Platform Root
+              <span style={{ fontSize: '11px', color: '#64748b' }}>
+                {user?.email || 'admin@ckrschools.online'}
               </span>
             </div>
           </div>
 
-          {/* Mouseover Popover */}
+          {/* Simple Dropdown Menu */}
           {avatarMenuOpen && (
             <div style={{
               position: 'absolute',
               top: '44px',
               right: 0,
-              width: '260px',
+              width: '180px',
               backgroundColor: '#ffffff',
-              borderRadius: '10px',
+              borderRadius: '8px',
               boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
               border: '1px solid #e2e8f0',
-              padding: '16px',
+              padding: '6px',
               zIndex: 200
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <IconUserCheck size={18} color="#064e3b" />
-                <span style={{ fontSize: '13px', fontWeight: '700', color: '#0f172a' }}>
-                  {user?.name || 'Platform Super Admin'}
-                </span>
-              </div>
-              <div style={{ fontSize: '12px', color: '#64748b', wordBreak: 'break-all', marginBottom: '12px' }}>
-                {user?.email || 'superadmin@ckrschools.online'}
-              </div>
-              <div style={{
-                padding: '6px 10px',
-                borderRadius: '6px',
-                backgroundColor: '#ecfdf5',
-                color: '#064e3b',
-                fontSize: '11px',
-                fontWeight: '600',
-                marginBottom: '16px',
-                display: 'inline-block'
-              }}>
-                Role: PLATFORM_SUPER_ADMIN
-              </div>
-
-              <hr style={{ border: 'none', borderTop: '1px solid #f1f5f9', margin: '0 0 12px 0' }} />
-
               <button
                 onClick={() => dispatch(logout())}
                 style={{
                   width: '100%',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
                   gap: '8px',
                   padding: '8px 12px',
-                  backgroundColor: '#fee2e2',
+                  backgroundColor: 'transparent',
                   color: '#dc2626',
                   border: 'none',
                   borderRadius: '6px',
                   fontSize: '13px',
                   fontWeight: '600',
                   cursor: 'pointer',
+                  textAlign: 'left',
                   transition: 'background-color 0.15s ease'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#fecaca'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#fee2e2'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#fee2e2'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
               >
                 <IconLogout size={16} />
                 <span>Sign Out</span>
@@ -190,4 +166,3 @@ export default function TopBar() {
     </header>
   );
 }
-

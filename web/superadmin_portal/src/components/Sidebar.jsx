@@ -15,9 +15,7 @@ const MENU_ITEMS = [
   { label: 'Overview', icon: IconLayoutDashboard },
   { label: 'Schools', icon: IconSchool },
   { label: 'Leads', icon: IconTarget },
-  { label: 'Reviews', icon: IconStar },
-  { label: 'Billing', icon: IconReceipt2 },
-  { label: 'Audit', icon: IconShieldCheck }
+  { label: 'Reviews', icon: IconStar }
 ];
 
 export default function Sidebar() {

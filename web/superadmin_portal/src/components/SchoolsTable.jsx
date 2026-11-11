@@ -327,18 +327,7 @@ export default function SchoolsTable({
                       {school.affiliation_board || 'CBSE'}
                     </td>
 
-                    <td style={{ padding: '0 16px' }}>
-                      <span style={{
-                        padding: '2px 8px',
-                        borderRadius: '4px',
-                        fontSize: '11px',
-                        fontWeight: '600',
-                        backgroundColor: school.plan_tier === 'ENTERPRISE_AI' ? '#fdf4ff' : school.plan_tier === 'PRO_CAMPUS' ? '#eff6ff' : '#f0fdf4',
-                        color: school.plan_tier === 'ENTERPRISE_AI' ? '#9333ea' : school.plan_tier === 'PRO_CAMPUS' ? '#1d4ed8' : '#15803d'
-                      }}>
-                        {school.plan_tier?.replace('_', ' ')}
-                      </span>
-                    </td>
+                    
 
                     <td style={{ padding: '0 16px', color: '#64748b' }}>
                       {school.city ? `${school.city}, ${school.state || ''}` : '—'}

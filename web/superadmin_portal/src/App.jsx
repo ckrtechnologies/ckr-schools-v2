@@ -8,8 +8,6 @@ import OnboardSchoolModal from './components/OnboardSchoolModal.jsx';
 import EditSchoolModal from './components/EditSchoolModal.jsx';
 import DeleteSchoolModal from './components/DeleteSchoolModal.jsx';
 import SchoolDetailModal from './components/SchoolDetailModal.jsx';
-import BillingView from './components/BillingView.jsx';
-import AuditView from './components/AuditView.jsx';
 import MarketplaceLeadsView from './components/MarketplaceLeadsView.jsx';
 import MarketplaceReviewsView from './components/MarketplaceReviewsView.jsx';
 import LoginView from './components/LoginView.jsx';
@@ -244,14 +242,8 @@ export default function App() {
             <MarketplaceReviewsView />
           )}
 
-          {activeTab === 'Billing' && (
-            <BillingView stats={stats} />
-          )}
-
-          {activeTab === 'Audit' && (
-            <AuditView />
-          )}
-        </main>
+          
+                  </main>
       </div>
 
       {/* Onboard School Modal */}

@@ -1,22 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setActiveTab, setPlanFilter } from '../store/filtersSlice.js';
+import { setActiveTab } from '../store/filtersSlice.js';
 import { 
   IconBuildingCommunity, 
   IconUsers, 
-  IconCurrencyRupee, 
   IconActivityHeartbeat 
 } from '@tabler/icons-react';
 
 function formatIndianNumber(val) {
   if (val === undefined || val === null) return '0';
   return Number(val).toLocaleString('en-IN');
-}
-
-function formatPaiseToRupees(paise) {
-  if (!paise) return '₹0';
-  const rupees = Math.round(paise / 100);
-  return `₹${rupees.toLocaleString('en-IN')}`;
 }
 
 export default function KPITiles({ stats, isLoading }) {
@@ -31,53 +24,34 @@ export default function KPITiles({ stats, isLoading }) {
       icon: IconBuildingCommunity,
       iconBg: '#ecfdf5',
       iconColor: '#064e3b',
-      action: () => {
-        dispatch(setActiveTab('Schools'));
-        dispatch(setPlanFilter('all'));
-      }
+      action: () => dispatch(setActiveTab('Schools'))
     },
     {
       id: 'students',
       label: 'Students',
       value: isLoading ? '...' : formatIndianNumber(stats?.total_students || 0),
-      subtitle: `Across all school tenants`,
+      subtitle: 'Across all school tenants',
       icon: IconUsers,
       iconBg: '#eff6ff',
       iconColor: '#1d4ed8',
-      action: () => {
-        dispatch(setActiveTab('Schools'));
-      }
-    },
-    {
-      id: 'revenue',
-      label: 'Revenue',
-      value: isLoading ? '...' : `${formatPaiseToRupees(stats?.estimatedMRRPaise)}/mo`,
-      subtitle: `Estimated platform MRR`,
-      icon: IconCurrencyRupee,
-      iconBg: '#fef3c7',
-      iconColor: '#b45309',
-      action: () => {
-        dispatch(setActiveTab('Billing'));
-      }
+      action: () => dispatch(setActiveTab('Schools'))
     },
     {
       id: 'active',
-      label: 'Active',
+      label: 'Tenant Health',
       value: isLoading ? '...' : `${stats?.active_schools || 0} / ${stats?.total_schools || 0}`,
-      subtitle: `100% cloud tenant health`,
+      subtitle: 'Active & live cloud deployments',
       icon: IconActivityHeartbeat,
       iconBg: '#f0fdf4',
       iconColor: '#15803d',
-      action: () => {
-        dispatch(setActiveTab('Schools'));
-      }
+      action: () => dispatch(setActiveTab('Schools'))
     }
   ];
 
   return (
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridTemplateColumns: 'repeat(3, 1fr)',
       gap: '16px',
       marginBottom: '20px'
     }}>
@@ -142,4 +116,3 @@ export default function KPITiles({ stats, isLoading }) {
     </div>
   );
 }
-
