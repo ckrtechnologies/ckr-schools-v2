@@ -18,6 +18,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import { setActiveStudent } from '../store/authSlice';
 import { apiSlice, useGetNotificationsQuery } from '../store/apiSlice';
 import { colors } from '../theme/colors';
+import { getSafeImageUrl } from './UserAvatar';
 
 const DEFAULT_LOGO = require('../assets/images/logo.jpeg');
 
@@ -26,16 +27,21 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
   const insets = useSafeAreaInsets();
   const dispatch = useDispatch();
 
-  const { activeStudent, activeStudentId, siblings, user } = useSelector((state) => state.auth);
+  const { activeStudent, activeStudentId, siblings, user, schoolInfo } = useSelector((state) => state.auth);
   const [showSiblingModal, setShowSiblingModal] = useState(false);
 
   const { data: notificationsData } = useGetNotificationsQuery();
   const unreadCount = notificationsData?.data?.filter((n) => !n.is_read)?.length || 0;
 
-  const headerBgColor = colors.primaryDark; // #0F172A - Clean consistent midnight slate
-  const brandAccent = colors.brandAccent || '#2563EB';
-  const schoolName = user?.schoolName || 'CKR Schools';
+  const headerBgColor = colors.primaryDark; // #022C22 - Deep Forest Midnight
+  const brandAccent = colors.brandAccent || '#10B981';
+  const schoolName = schoolInfo?.name || user?.schoolName || 'ARC School';
   const hasSiblings = siblings && siblings.length > 1;
+
+  // School logo resolution
+  const brandLogoUrl = schoolInfo?.logoUrl || schoolInfo?.logo_url || user?.logoUrl || user?.logo_url;
+  const safeBrandLogo = getSafeImageUrl(brandLogoUrl);
+  const logoSource = safeBrandLogo ? { uri: safeBrandLogo } : DEFAULT_LOGO;
 
   // Active student display name & class
   const studentName = activeStudent?.name || user?.name || 'Student';
@@ -102,7 +108,7 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
           </TouchableOpacity>
         ) : (
           <View style={styles.schoolBrand}>
-            <Image source={DEFAULT_LOGO} style={styles.logo} />
+            <Image source={logoSource} style={styles.logo} resizeMode="contain" />
             <Text style={styles.schoolNameText} numberOfLines={1}>
               {title || schoolName}
             </Text>
@@ -117,7 +123,7 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
         >
           <View style={styles.childAvatarSmall}>
             {activeStudent?.avatar_url ? (
-              <Image source={{ uri: activeStudent.avatar_url }} style={styles.childAvatarSmallImg} />
+              <Image source={{ uri: getSafeImageUrl(activeStudent.avatar_url) }} style={styles.childAvatarSmallImg} />
             ) : (
               <Text style={styles.childAvatarSmallText}>
                 {studentName.charAt(0).toUpperCase()}
@@ -163,7 +169,7 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
             activeOpacity={0.8}
           >
             {activeStudent?.avatar_url ? (
-              <Image source={{ uri: activeStudent.avatar_url }} style={styles.headerAvatarImg} />
+              <Image source={{ uri: getSafeImageUrl(activeStudent.avatar_url) }} style={styles.headerAvatarImg} />
             ) : (
               <Text style={styles.headerAvatarInitial}>
                 {studentName.charAt(0).toUpperCase()}

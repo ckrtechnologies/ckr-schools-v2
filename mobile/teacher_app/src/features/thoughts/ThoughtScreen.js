@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Text, StyleSheet, Animated } from 'react-native';
+import { View, Text, StyleSheet, Animated, Image, StatusBar } from 'react-native';
 import { colors } from '../../theme/colors';
 import { useGetThoughtOfDayQuery } from '../../store/apiSlice';
 
@@ -17,7 +17,6 @@ const ThoughtScreen = ({ navigation }) => {
   }, [response, isError]);
 
   useEffect(() => {
-
     // Start fade-in animation
     Animated.timing(fadeAnim, {
       toValue: 1,
@@ -35,7 +34,16 @@ const ThoughtScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="light-content" backgroundColor="#022C22" />
       <Animated.View style={[styles.content, { opacity: fadeAnim }]}>
+        <View style={styles.logoWrap}>
+          <Image
+            source={require('../../assets/images/logo.jpeg')}
+            style={styles.schoolLogo}
+            resizeMode="contain"
+          />
+        </View>
+        <Text style={styles.schoolName}>ARC SCHOOL</Text>
         <Text style={styles.title}>Thought of the Day</Text>
         <Text style={styles.quote}>"{thought?.thought || '...'}"</Text>
         {thought?.author && <Text style={styles.author}>- {thought.author}</Text>}
@@ -47,41 +55,63 @@ const ThoughtScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.primary,
+    backgroundColor: '#022C22', // Dark Forest Green
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
   content: {
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     padding: 30,
     borderRadius: 20,
     width: '100%',
   },
+  logoWrap: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 12,
+    overflow: 'hidden',
+  },
+  schoolLogo: {
+    width: 62,
+    height: 62,
+    borderRadius: 31,
+  },
+  schoolName: {
+    color: '#A7F3D0',
+    fontSize: 14,
+    fontWeight: '800',
+    letterSpacing: 2,
+    marginBottom: 16,
+    textTransform: 'uppercase',
+  },
   title: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: '600',
-    marginBottom: 20,
+    marginBottom: 16,
     textTransform: 'uppercase',
-    letterSpacing: 2,
-    opacity: 0.8,
+    letterSpacing: 1.5,
+    opacity: 0.85,
   },
   quote: {
     color: '#fff',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '700',
     textAlign: 'center',
-    lineHeight: 34,
+    lineHeight: 30,
     fontStyle: 'italic',
-    marginBottom: 20,
+    marginBottom: 16,
   },
   author: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: '500',
-    opacity: 0.9,
+    color: '#A7F3D0',
+    fontSize: 15,
+    fontWeight: '600',
   }
 });
 

@@ -54,8 +54,13 @@ const RootNavigator = () => {
         }
       };
 
+      const onNewNotification = () => {
+        dispatch(apiSlice.util.invalidateTags(['Notifications', 'Dashboard']));
+      };
+
       socket.on('connect', onSocketConnect);
       socket.on('receive_message', onReceiveMessage);
+      socket.on('new_notification', onNewNotification);
 
       if (socket.connected) {
         socket.emit('identify', user.id);
@@ -64,6 +69,7 @@ const RootNavigator = () => {
       return () => {
         socket.off('connect', onSocketConnect);
         socket.off('receive_message', onReceiveMessage);
+        socket.off('new_notification', onNewNotification);
         socket.disconnect();
       };
     }

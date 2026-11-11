@@ -408,7 +408,15 @@ export default function Notifications() {
 
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "0.25rem" }}>
                       <p style={{ fontSize: "0.75rem", color: "var(--text-primary)", fontWeight: 500, margin: 0 }}>
-                          To: <span style={{ color: "var(--text-secondary)" }}>{item.user ? `${item.user.name} (${item.user.email})` : "Unknown User"}</span>
+                          To: <span style={{ color: "var(--text-secondary)" }}>
+                            {item.user_name 
+                              ? `${item.user_name} (${item.user_email || item.user_type || 'User'})` 
+                              : item.user 
+                                ? `${item.user.name} (${item.user.email || 'User'})` 
+                                : item.type === 'broadcast'
+                                  ? 'All Campus Users (Broadcast)'
+                                  : 'School User'}
+                          </span>
                       </p>
                       <p style={{ fontSize: "0.7rem", color: "#94a3b8", display: "flex", alignItems: "center", margin: 0 }}>
                           {new Date(item.created_at || item.date).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })}

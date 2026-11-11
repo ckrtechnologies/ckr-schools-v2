@@ -16,6 +16,7 @@ import {
 } from '../../store/apiSlice';
 import Icon from 'react-native-vector-icons/Feather';
 import { theme } from '../../theme/theme';
+import { useFocusEffect } from '@react-navigation/native';
 import { useDrawer } from '../../navigation/DrawerContext';
 import { PieChart } from 'react-native-gifted-charts';
 import UserAvatar from '../../components/UserAvatar';
@@ -181,6 +182,12 @@ const DashboardScreen = ({ navigation }) => {
     };
     initNotifications();
   }, [registerFcmToken, fadeAnim]);
+
+  useFocusEffect(
+    useCallback(() => {
+      refetchNotifs();
+    }, [refetchNotifs])
+  );
 
   const rotationInterpolate = spotlightRotation.interpolate({
     inputRange: [0, 1],

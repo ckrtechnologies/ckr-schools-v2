@@ -54,6 +54,28 @@ export async function toggleCircularMarketplaceHandler(req, res, next) {
 export async function sendMessageHandler(req, res, next) {
   try {
     const data = await service.postMessage(req.tenant.id, req.user.sub, req.body);
+
+    // Realtime emit over Socket.io so recipient client / mobile app sees message immediately
+    try {
+      const { getIO } = await import('../../sockets/socketManager.js');
+      const io = getIO();
+      if (io && data?.receiver_id) {
+        const sortedPair = [data.sender_id, data.receiver_id].sort().join('_');
+        io.to(`tenant:${req.tenant.id}:chat:${sortedPair}`)
+          .to(`chat:${sortedPair}`)
+          .to(sortedPair)
+          .to(`tenant:${req.tenant.id}:user:${data.receiver_id}`)
+          .to(`tenant:${req.tenant.id}:user:${data.sender_id}`)
+          .to(`tenant:${req.tenant.id}:admin_monitor`)
+          .to(data.receiver_id)
+          .to(data.sender_id)
+          .to('admin_monitor')
+          .emit('receive_message', data);
+      }
+    } catch (sockErr) {
+      // Non-fatal if socket is uninitialized
+    }
+
     return res.status(201).json({ success: true, message: 'Message sent', data });
   } catch (err) {
     next(err);

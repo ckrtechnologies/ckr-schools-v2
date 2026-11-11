@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { SOCKET_URL, API_URL } from '@env';
 
 export const getSafeImageUrl = (url) => {
   if (!url || typeof url !== 'string') return null;
-  const trimmed = url.trim();
+  let trimmed = url.trim();
   if (!trimmed) return null;
+
+  if (trimmed.startsWith('/')) {
+    const host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'https://ckrschools.online');
+    trimmed = `${host}${trimmed}`;
+  }
+
   if (
     trimmed.startsWith('http://') &&
     !trimmed.includes('localhost') &&

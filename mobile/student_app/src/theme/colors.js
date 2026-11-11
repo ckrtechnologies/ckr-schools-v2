@@ -1,12 +1,12 @@
 export const colors = {
-  // Brand Primary — Modern Royal Slate & Midnight Navy (Clean, Consistent & Professional)
-  primary: '#1E293B',       // Deep Royal Slate
-  primaryDark: '#0F172A',   // Midnight Dark Slate (Status bars, headers)
-  primaryLight: '#334155',  // Cool Slate Accent
-  brandAccent: '#2563EB',   // Electric Royal Blue for primary CTAs & active highlights
+  // Brand Primary — Premium Dark Forest Green (#064E3B)
+  primary: '#064E3B',       // Deep Dark Emerald Green
+  primaryDark: '#022C22',   // Deep Forest Midnight (Headers, Status bars)
+  primaryLight: '#047857',  // Rich Emerald Accent
+  brandAccent: '#10B981',   // Crisp Mint / Emerald highlight for active tabs & CTAs
 
   // Accent & Secondary
-  secondary: '#0284C7',     // Sky blue
+  secondary: '#0D9488',     // Teal
   accent: '#F59E0B',        // Gold / Amber for medals & highlights
   
   // Status Colors

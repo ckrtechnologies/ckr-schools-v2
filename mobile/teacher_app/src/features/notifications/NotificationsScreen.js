@@ -14,6 +14,7 @@ const NotificationsScreen = ({ navigation }) => {
   const [markAsRead] = useMarkNotificationReadMutation();
 
   React.useEffect(() => {
+    refetch();
     const { DeviceEventEmitter } = require('react-native');
     const sub = DeviceEventEmitter.addListener('onNotificationReceived', () => {
       refetch();

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, StatusBar } from 'react-native';
+import { View, Text, StyleSheet, Animated, StatusBar, Image } from 'react-native';
 import { useDispatch } from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/Feather';
@@ -119,23 +119,27 @@ const SplashScreen = ({ onFinish }) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={colors.primaryDark} />
+      <StatusBar barStyle="light-content" backgroundColor="#022C22" />
 
-      {/* CKR Schools Brand Crest & Emblem */}
+      {/* School Brand Emblem */}
       <Animated.View style={[styles.emblemContainer, { opacity: opacityAnim, transform: [{ scale: scaleAnim }] }]}>
         <View style={styles.outerGlow}>
           <View style={styles.crestCircle}>
-            <Icon name="book-open" size={44} color={colors.primaryDark} />
+            <Image
+              source={require('../../assets/images/logo.jpeg')}
+              style={styles.schoolLogo}
+              resizeMode="contain"
+            />
           </View>
         </View>
       </Animated.View>
 
       <Animated.View style={[styles.textContainer, { opacity: textOpacityAnim, transform: [{ translateY: translateYAnim }] }]}>
-        <Text style={styles.brandTitle}>CKR SCHOOLS</Text>
+        <Text style={styles.brandTitle}>ARC SCHOOL</Text>
         <View style={styles.taglineBadge}>
-          <Text style={styles.brandTagline}>NEXT-GEN SCHOOL OPERATING SYSTEM</Text>
+          <Text style={styles.brandTagline}>INSPIRING EXCELLENCE, EMPOWERING MINDS</Text>
         </View>
-        <Text style={styles.portalLabel}>Student & Parent App</Text>
+        <Text style={styles.portalLabel}>Student & Parent Portal</Text>
       </Animated.View>
     </View>
   );
@@ -144,7 +148,7 @@ const SplashScreen = ({ onFinish }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F172A', // Midnight Dark Slate
+    backgroundColor: '#022C22', // Dark Forest Green
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -173,6 +177,12 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
     shadowRadius: 10,
+    overflow: 'hidden',
+  },
+  schoolLogo: {
+    width: 76,
+    height: 76,
+    borderRadius: 38,
   },
   textContainer: {
     alignItems: 'center',
@@ -195,13 +205,13 @@ const styles = StyleSheet.create({
   brandTagline: {
     fontSize: 10,
     fontWeight: '700',
-    color: '#93C5FD', // Light Ice Blue
+    color: '#A7F3D0', // Mint Emerald
     letterSpacing: 1.2,
   },
   portalLabel: {
     fontSize: 14,
     fontWeight: '600',
-    color: 'rgba(255, 255, 255, 0.85)',
+    color: 'rgba(255, 255, 255, 0.9)',
     letterSpacing: 0.5,
   },
 });

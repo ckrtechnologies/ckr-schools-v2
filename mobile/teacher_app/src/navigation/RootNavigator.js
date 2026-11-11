@@ -2,7 +2,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import socket from '../api/socket';
+import { apiSlice } from '../store/apiSlice';
 import Icon from 'react-native-vector-icons/Feather';
 import { Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -202,7 +204,45 @@ const AuthenticatedStack = () => (
 );
 
 const RootNavigator = () => {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    if (isAuthenticated && user?.id) {
+      if (!socket.connected) {
+        socket.connect();
+      }
+
+      const onSocketConnect = () => {
+        socket.emit('identify', { userId: user.id, tenantId: user.schoolId || user.tenant_id });
+      };
+
+      const onReceiveMessage = (newChat) => {
+        if (newChat.sender_id !== user.id) {
+          dispatch(apiSlice.util.invalidateTags(['LiveChat', 'Chats']));
+        }
+      };
+
+      const onNewNotification = () => {
+        dispatch(apiSlice.util.invalidateTags(['Notifications']));
+      };
+
+      socket.on('connect', onSocketConnect);
+      socket.on('receive_message', onReceiveMessage);
+      socket.on('new_notification', onNewNotification);
+
+      if (socket.connected) {
+        socket.emit('identify', { userId: user.id, tenantId: user.schoolId || user.tenant_id });
+      }
+
+      return () => {
+        socket.off('connect', onSocketConnect);
+        socket.off('receive_message', onReceiveMessage);
+        socket.off('new_notification', onNewNotification);
+        socket.disconnect();
+      };
+    }
+  }, [isAuthenticated, user?.id, user?.schoolId, user?.tenant_id, dispatch]);
 
   return (
     <NavigationContainer ref={navigationRef}>
