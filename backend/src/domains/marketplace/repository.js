@@ -487,19 +487,20 @@ export async function getSchoolCommunity(tenantId) {
     infoRepo.getCurrentStudentOfWeek(tenantId)
   ]);
 
-  const images = (gallery || [])
-    .filter(g => g.image_url && g.media_type !== 'video' && g.is_marketplace_visible !== false)
+  const mediaItems = (gallery || [])
+    .filter(g => (g.image_url || g.media_url) && g.is_marketplace_visible !== false)
     .map(g => ({
       id: g.id,
       title: g.title || null,
       description: g.description || null,
-      url: g.image_url,
+      url: g.image_url || g.media_url,
+      media_type: g.media_type || (String(g.image_url || g.media_url).includes('youtu') ? 'video' : 'image'),
       category: 'Campus'
     }));
 
   return {
-    gallery: images,
-    videos: (gallery || []).filter(g => g.media_type === 'video' && g.is_marketplace_visible !== false),
+    gallery: mediaItems,
+    videos: mediaItems.filter(g => g.media_type === 'video'),
     achievements: champions || [],
     studentOfWeek: studentOfWeek || null,
     spotlight: (spotlight || []).slice(0, 6),

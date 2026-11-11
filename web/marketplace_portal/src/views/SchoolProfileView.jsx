@@ -21,7 +21,9 @@ import {
   IconBulb,
   IconSparkles,
   IconCalendarEvent,
-  IconNews
+  IconNews,
+  IconPlayerPlayFilled,
+  IconBrandYoutube
 } from '@tabler/icons-react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -35,6 +37,18 @@ import EnquiryModal from '../components/EnquiryModal.jsx';
 import BrochureModal from '../components/BrochureModal.jsx';
 import ReviewModal from '../components/ReviewModal.jsx';
 import SchoolImage from '../components/SchoolImage.jsx';
+
+const getYoutubeId = (url = '') => {
+  const match = String(url).match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+  return match ? match[1] : null;
+};
+
+const getThumbnailUrl = (item) => {
+  const url = item?.url || item?.image_url || item?.media_url;
+  const ytid = getYoutubeId(url);
+  if (ytid) return `https://img.youtube.com/vi/${ytid}/hqdefault.jpg`;
+  return url;
+};
 
 function StarRow({ label, value }) {
   return (
@@ -748,102 +762,168 @@ export default function SchoolProfileView({ slug, onBack, onOpenComparison }) {
           <div>
             {galleryImages.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '48px', color: '#64748b' }}>
-                Gallery images will be added by the school administration.
+                Gallery images and videos will be added by the school administration.
               </div>
             ) : (
               <div>
-                {/* Main featured image */}
-                <div style={{
-                  borderRadius: '14px',
-                  overflow: 'hidden',
-                  height: 'clamp(220px, 42vw, 400px)',
-                  marginBottom: '16px',
-                  position: 'relative',
-                  boxShadow: '0 8px 20px rgba(0,0,0,0.12)'
-                }}>
-                  <img
-                    src={galleryImages[galleryIndex]?.url}
-                    alt={galleryImages[galleryIndex]?.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                  <div style={{
-                    position: 'absolute',
-                    bottom: '16px',
-                    left: '16px',
-                    backgroundColor: 'rgba(0,0,0,0.7)',
-                    color: '#ffffff',
-                    padding: '6px 14px',
-                    borderRadius: '6px',
-                    fontSize: '13px',
-                    fontWeight: '600',
-                    backdropFilter: 'blur(4px)'
-                  }}>
-                    {galleryImages[galleryIndex]?.title || 'Campus Photo'} · {galleryImages[galleryIndex]?.category || 'Campus'}
-                  </div>
+                {/* Main featured viewer */}
+                {(() => {
+                  const currentItem = galleryImages[galleryIndex];
+                  const ytid = getYoutubeId(currentItem?.url);
 
-                  {galleryImages.length > 1 && (
-                    <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 12px', pointerEvents: 'none' }}>
-                      <button
-                        onClick={() => setGalleryIndex(i => Math.max(0, i - 1))}
-                        disabled={galleryIndex === 0}
-                        style={{
-                          backgroundColor: 'rgba(255,255,255,0.9)',
-                          border: 'none',
-                          borderRadius: '50%',
-                          width: '36px',
-                          height: '36px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          cursor: 'pointer',
-                          pointerEvents: 'all',
-                          opacity: galleryIndex === 0 ? 0.4 : 1
-                        }}
-                      >
-                        <IconChevronLeft size={18} />
-                      </button>
-                      <button
-                        onClick={() => setGalleryIndex(i => Math.min(galleryImages.length - 1, i + 1))}
-                        disabled={galleryIndex === galleryImages.length - 1}
-                        style={{
-                          backgroundColor: 'rgba(255,255,255,0.9)',
-                          border: 'none',
-                          borderRadius: '50%',
-                          width: '36px',
-                          height: '36px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          cursor: 'pointer',
-                          pointerEvents: 'all',
-                          opacity: galleryIndex === galleryImages.length - 1 ? 0.4 : 1
-                        }}
-                      >
-                        <IconChevronRight size={18} />
-                      </button>
+                  return (
+                    <div style={{
+                      borderRadius: '14px',
+                      overflow: 'hidden',
+                      height: 'clamp(240px, 48vw, 440px)',
+                      marginBottom: '16px',
+                      position: 'relative',
+                      backgroundColor: '#000000',
+                      boxShadow: '0 8px 20px rgba(0,0,0,0.12)'
+                    }}>
+                      {ytid ? (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${ytid}?autoplay=0&rel=0`}
+                          title={currentItem?.title || 'YouTube Video'}
+                          style={{ width: '100%', height: '100%', border: 'none' }}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <img
+                          src={currentItem?.url}
+                          alt={currentItem?.title || 'Campus Photo'}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                      )}
+
+                      {!ytid && (
+                        <div style={{
+                          position: 'absolute',
+                          bottom: '16px',
+                          left: '16px',
+                          backgroundColor: 'rgba(0,0,0,0.7)',
+                          color: '#ffffff',
+                          padding: '6px 14px',
+                          borderRadius: '6px',
+                          fontSize: '13px',
+                          fontWeight: '600',
+                          backdropFilter: 'blur(4px)'
+                        }}>
+                          {currentItem?.title || 'Campus Photo'} · {currentItem?.category || 'Campus'}
+                        </div>
+                      )}
+
+                      {galleryImages.length > 1 && (
+                        <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 12px', pointerEvents: 'none', zIndex: 10 }}>
+                          <button
+                            onClick={() => setGalleryIndex(i => Math.max(0, i - 1))}
+                            disabled={galleryIndex === 0}
+                            style={{
+                              backgroundColor: 'rgba(255,255,255,0.92)',
+                              border: 'none',
+                              borderRadius: '50%',
+                              width: '38px',
+                              height: '38px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              cursor: 'pointer',
+                              pointerEvents: 'all',
+                              opacity: galleryIndex === 0 ? 0.4 : 1,
+                              boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
+                            }}
+                          >
+                            <IconChevronLeft size={20} color="#0f172a" />
+                          </button>
+                          <button
+                            onClick={() => setGalleryIndex(i => Math.min(galleryImages.length - 1, i + 1))}
+                            disabled={galleryIndex === galleryImages.length - 1}
+                            style={{
+                              backgroundColor: 'rgba(255,255,255,0.92)',
+                              border: 'none',
+                              borderRadius: '50%',
+                              width: '38px',
+                              height: '38px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              cursor: 'pointer',
+                              pointerEvents: 'all',
+                              opacity: galleryIndex === galleryImages.length - 1 ? 0.4 : 1,
+                              boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
+                            }}
+                          >
+                            <IconChevronRight size={20} color="#0f172a" />
+                          </button>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  );
+                })()}
 
                 {/* Thumbnail strip */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(180px, 100%), 1fr))', gap: '10px' }}>
-                  {galleryImages.map((img, i) => (
-                    <div
-                      key={i}
-                      onClick={() => setGalleryIndex(i)}
-                      style={{
-                        height: '110px',
-                        borderRadius: '8px',
-                        overflow: 'hidden',
-                        cursor: 'pointer',
-                        border: i === galleryIndex ? '3px solid #064e3b' : '2px solid transparent',
-                        opacity: i === galleryIndex ? 1 : 0.75,
-                        transition: 'all 0.15s ease'
-                      }}
-                    >
-                      <img src={img.url} alt={img.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                  ))}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(180px, 100%), 1fr))', gap: '12px' }}>
+                  {galleryImages.map((item, i) => {
+                    const isYt = !!getYoutubeId(item.url);
+                    const thumb = getThumbnailUrl(item);
+
+                    return (
+                      <div
+                        key={i}
+                        onClick={() => setGalleryIndex(i)}
+                        style={{
+                          height: '110px',
+                          borderRadius: '8px',
+                          overflow: 'hidden',
+                          cursor: 'pointer',
+                          position: 'relative',
+                          border: i === galleryIndex ? '3px solid #064e3b' : '2px solid transparent',
+                          opacity: i === galleryIndex ? 1 : 0.8,
+                          transition: 'all 0.15s ease',
+                          backgroundColor: '#0f172a'
+                        }}
+                      >
+                        <img src={thumb} alt={item.title || 'Media'} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        {isYt && (
+                          <div style={{
+                            position: 'absolute',
+                            top: '6px',
+                            right: '6px',
+                            backgroundColor: '#dc2626',
+                            color: '#ffffff',
+                            borderRadius: '4px',
+                            padding: '2px 6px',
+                            fontSize: '11px',
+                            fontWeight: '700',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '3px',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.4)'
+                          }}>
+                            <IconPlayerPlayFilled size={10} />
+                            Video
+                          </div>
+                        )}
+                        <div style={{
+                          position: 'absolute',
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          backgroundColor: 'rgba(0,0,0,0.65)',
+                          color: '#ffffff',
+                          padding: '3px 8px',
+                          fontSize: '11px',
+                          fontWeight: '600',
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis'
+                        }}>
+                          {item.title || (isYt ? 'YouTube Video' : 'Photo')}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
