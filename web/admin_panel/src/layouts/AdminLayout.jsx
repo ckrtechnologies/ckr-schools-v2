@@ -591,11 +591,12 @@ const AdminLayout = () => {
           {((user?.type === "admin" || user?.type === "super_admin") || user?.type === "principal") && (() => {
             const currentSlug = user?.schoolSlug || user?.tenant_slug || getTenantSlug() || "";
             const isLocal = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
-            const resolvePortalUrl = (portalKey, localPort) => {
+            const resolvePortalUrl = (surfacePath, localPort) => {
               if (isLocal) {
                 return `http://localhost:${localPort}/login?tenant=${encodeURIComponent(currentSlug)}`;
               }
-              return `https://${portalKey}.ckrschools.online/login?tenant=${encodeURIComponent(currentSlug)}`;
+              const slug = currentSlug || 'vision';
+              return `https://${slug}.ckrschools.online/${surfacePath}`;
             };
 
             return (
@@ -603,7 +604,10 @@ const AdminLayout = () => {
                 id="portals"
                 title="Portals"
               >
-                <NavItem href={import.meta.env.VITE_ADMISSIONS_URL || resolvePortalUrl('admissions', 5175)} icon={ExternalLink} color="#2563eb" bg="rgba(37, 99, 235, 0.15)">
+                <NavItem href={import.meta.env.VITE_SPOC_URL || resolvePortalUrl('spoc', 5181)} icon={ExternalLink} color="#059669" bg="rgba(5, 150, 105, 0.15)">
+                  SPOC Portal
+                </NavItem>
+                <NavItem href={import.meta.env.VITE_ADMISSIONS_URL || resolvePortalUrl('admission', 5175)} icon={ExternalLink} color="#2563eb" bg="rgba(37, 99, 235, 0.15)">
                   Admission Portal
                 </NavItem>
                 <NavItem href={import.meta.env.VITE_FINANCE_URL || resolvePortalUrl('finance', 5177)} icon={ExternalLink} color="#16a34a" bg="rgba(22, 163, 74, 0.15)">
@@ -612,17 +616,14 @@ const AdminLayout = () => {
                 <NavItem href={import.meta.env.VITE_TC_URL || resolvePortalUrl('tc', 5176)} icon={ExternalLink} color="#1b8b3b" bg="rgba(27, 139, 59, 0.15)">
                   TC Portal
                 </NavItem>
-                <NavItem href={import.meta.env.VITE_TEACHER_MANAGER_URL || import.meta.env.VITE_TEACHERS_URL || resolvePortalUrl('teachers', 5178)} icon={ExternalLink} color="#8b5cf6" bg="rgba(139, 92, 246, 0.15)">
+                <NavItem href={import.meta.env.VITE_TEACHER_MANAGER_URL || import.meta.env.VITE_TEACHERS_URL || resolvePortalUrl('teacher-manager', 5178)} icon={ExternalLink} color="#8b5cf6" bg="rgba(139, 92, 246, 0.15)">
                   Teacher Portal
                 </NavItem>
-                <NavItem href={import.meta.env.VITE_ACADEMICS_URL || resolvePortalUrl('academics', 5179)} icon={ExternalLink} color="#ea580c" bg="rgba(234, 88, 12, 0.15)">
+                <NavItem href={import.meta.env.VITE_ACADEMICS_URL || resolvePortalUrl('academic-manager', 5179)} icon={ExternalLink} color="#ea580c" bg="rgba(234, 88, 12, 0.15)">
                   Academic Portal
                 </NavItem>
                 <NavItem href={import.meta.env.VITE_TIMETABLE_URL || resolvePortalUrl('timetable', 5180)} icon={ExternalLink} color="#06b6d4" bg="rgba(6, 182, 212, 0.15)">
                   Timetable Portal
-                </NavItem>
-                <NavItem href={import.meta.env.VITE_SCHOOL_PORTAL_URL || resolvePortalUrl('school', 5181)} icon={ExternalLink} color="#10b981" bg="rgba(16, 185, 129, 0.15)">
-                  School Portal
                 </NavItem>
               </NavSection>
             );
