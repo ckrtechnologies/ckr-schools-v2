@@ -72,7 +72,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
         student_name: studentName,
         parent_name: parentName,
         phone,
-        email: email || null,
+        ...(email?.trim() ? { email: email.trim() } : {}),
         grade,
         message: '1-Click Multi-School admission enquiry'
       }).unwrap();
@@ -104,7 +104,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
         width: '100%',
         maxWidth: '560px',
         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-        overflow: 'hidden'
+        overflow: 'visible'
       }}>
         {/* Header */}
         <div style={{
