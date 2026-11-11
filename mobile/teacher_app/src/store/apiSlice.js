@@ -13,8 +13,11 @@ export const getBaseUrl = () => {
 
 export const apiSlice = createApi({
   reducerPath: 'api',
+  refetchOnFocus: true,
+  refetchOnReconnect: true,
   baseQuery: fetchBaseQuery({
     baseUrl: getBaseUrl(),
+    timeout: 15000,
     prepareHeaders: async (headers, { getState }) => {
       try {
         const state = getState();
