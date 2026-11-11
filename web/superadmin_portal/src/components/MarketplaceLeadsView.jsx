@@ -115,7 +115,7 @@ export default function MarketplaceLeadsView() {
     new: { bg: '#eff6ff', color: '#1d4ed8', border: '#bfdbfe', label: 'New' },
     qualified: { bg: '#fef3c7', color: '#b45309', border: '#fde68a', label: 'Qualified' },
     school_contacted: { bg: '#f3e8ff', color: '#7e22ce', border: '#e9d5ff', label: 'Contacted' },
-    transferred: { bg: '#ecfdf5', color: '#047857', border: '#a7f3d0', label: 'Transferred' },
+    transferred: { bg: '#ecfdf5', color: '#047857', border: '#a7f3d0', label: 'Delivered' },
     archived: { bg: '#f1f5f9', color: '#64748b', border: '#cbd5e1', label: 'Archived' }
   };
 
@@ -488,10 +488,7 @@ export default function MarketplaceLeadsView() {
                         </span>
                       </td>
 
-                      {/* Lead Fee */}
-                      <td style={{ padding: '0 16px', textAlign: 'right', fontWeight: '700', color: '#047857' }}>
-                        {formatPaiseToRupees(lead.monetization_fee_paise || 0)}
-                      </td>
+                      
 
                       {/* Actions */}
                       <td style={{ padding: '0 16px', textAlign: 'center' }} onClick={(e) => e.stopPropagation()}>

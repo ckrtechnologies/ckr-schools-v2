@@ -316,33 +316,7 @@ export default function LeadDetailModal({
                   School Pitch Dossier
                 </button>
 
-                {lead.status !== 'transferred' && onTransferLead && (
-                  <button
-                    type="button"
-                    disabled={isTransferring}
-                    onClick={() => {
-                      if (window.confirm(`Release this lead to ${lead.school_name}'s Admissions Desk? This will insert the student into their active CRM.`)) {
-                        onTransferLead(lead.id, adminNotes);
-                      }
-                    }}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      backgroundColor: '#ecfdf5',
-                      color: '#059669',
-                      border: '1px solid #a7f3d0',
-                      borderRadius: '6px',
-                      padding: '8px 14px',
-                      fontSize: '13px',
-                      fontWeight: '700',
-                      cursor: isTransferring ? 'not-allowed' : 'pointer'
-                    }}
-                  >
-                    <IconCheck size={16} />
-                    {isTransferring ? 'Releasing...' : 'Release to School CRM'}
-                  </button>
-                )}
+                
               </div>
 
               <div style={{ display: 'flex', gap: '10px' }}>
