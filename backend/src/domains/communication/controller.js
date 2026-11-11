@@ -214,16 +214,83 @@ export async function markAllNotificationsReadHandler(req, res, next) {
 export async function broadcastNotificationHandler(req, res, next) {
   try {
     const tenantId = req.tenant.id;
-    const { title, body, message } = req.body;
-    const notifTitle = title || 'Announcement';
-    const notifBody = body || message || '';
+    const {
+      title,
+      body,
+      message,
+      targetAudience,
+      targetUserIds,
+      routeScreen,
+      routeParams
+    } = req.body;
 
-    await pgPool.query(`
-      INSERT INTO notifications (tenant_id, user_id, title, body, is_read, created_at)
-      SELECT u.tenant_id, u.id, $2, $3, false, NOW()
-      FROM "user" u
-      WHERE u.tenant_id = $1
-    `, [tenantId, notifTitle, notifBody]);
+    const notifTitle = title || 'Announcement';
+    let notifMessage = message || body || '';
+
+    // Encode route navigation payload if provided so mobile apps navigate on tap
+    if (routeScreen) {
+      const navMeta = {
+        routeScreen,
+        routeParams: routeParams || {}
+      };
+      notifMessage = `${notifMessage} ||| ${JSON.stringify(navMeta)}`;
+    }
+
+    let insertQuery;
+    let queryParams;
+
+    if (Array.isArray(targetUserIds) && targetUserIds.length > 0) {
+      // Send to specific target user IDs
+      insertQuery = `
+        INSERT INTO notifications (tenant_id, user_id, title, message, type, is_read, created_at)
+        SELECT $1, u.id, $2, $3, 'broadcast', false, NOW()
+        FROM "user" u
+        WHERE u.tenant_id = $1 AND u.id = ANY($4::uuid[])
+      `;
+      queryParams = [tenantId, notifTitle, notifMessage, targetUserIds];
+    } else if (targetAudience && targetAudience !== 'all') {
+      // Send to role-based audience: 'students', 'teachers', 'parents', etc.
+      let roleFilter = targetAudience.toLowerCase();
+      if (roleFilter === 'teachers') roleFilter = 'teacher';
+      if (roleFilter === 'students') roleFilter = 'student';
+      if (roleFilter === 'parents') roleFilter = 'parent';
+
+      insertQuery = `
+        INSERT INTO notifications (tenant_id, user_id, title, message, type, is_read, created_at)
+        SELECT $1, u.id, $2, $3, 'broadcast', false, NOW()
+        FROM "user" u
+        WHERE u.tenant_id = $1 AND LOWER(u.type) = $4
+      `;
+      queryParams = [tenantId, notifTitle, notifMessage, roleFilter];
+    } else {
+      // Broadcast to all active users in the school tenant
+      insertQuery = `
+        INSERT INTO notifications (tenant_id, user_id, title, message, type, is_read, created_at)
+        SELECT $1, u.id, $2, $3, 'broadcast', false, NOW()
+        FROM "user" u
+        WHERE u.tenant_id = $1
+      `;
+      queryParams = [tenantId, notifTitle, notifMessage];
+    }
+
+    await pgPool.query(insertQuery, queryParams);
+
+    // Realtime notification broadcast across tenant sockets if connected
+    try {
+      const { getIO } = await import('../../sockets/socketManager.js');
+      const io = getIO();
+      if (io) {
+        io.to(`tenant:${tenantId}`).emit('new_notification', {
+          title: notifTitle,
+          message: notifMessage,
+          routeScreen,
+          routeParams,
+          created_at: new Date().toISOString()
+        });
+      }
+    } catch (sockErr) {
+      // Non-fatal if socket not ready
+    }
 
     return res.status(200).json({ success: true, message: 'Broadcast notification sent successfully' });
   } catch (err) {
