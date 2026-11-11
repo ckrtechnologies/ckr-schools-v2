@@ -252,6 +252,21 @@ export async function createTenantWithAdmin(data) {
     const { rows: adminRows } = await client.query(insertAdminQuery, adminValues);
     const adminUser = adminRows[0];
 
+    // Automatically create public marketplace profile so the school immediately appears on the platform marketplace
+    const insertMarketplaceProfileQuery = `
+      INSERT INTO public.marketplace_school_profiles (
+        tenant_id, tagline, about, is_published, is_verified, grades_offered
+      ) VALUES (
+        $1, $2, $3, TRUE, TRUE, 'Nursery to XII'
+      )
+      ON CONFLICT (tenant_id) DO UPDATE SET is_published = TRUE;
+    `;
+    await client.query(insertMarketplaceProfileQuery, [
+      tenant.id,
+      data.motto || `Empowering excellence at ${tenant.name}`,
+      `Welcome to ${tenant.name}, affiliated with ${tenant.affiliation_board || 'CBSE'}. Providing holistic education and campus excellence.`
+    ]);
+
     await client.query('COMMIT');
 
     // Automatically provision all structured CDN directories for this school tenant
