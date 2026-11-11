@@ -8,15 +8,8 @@ export const getSafeImageUrl = (url) => {
   if (!trimmed) return null;
 
   if (trimmed.startsWith('/')) {
-    let host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'http://localhost:5006');
-    if (Platform.OS === 'android' && host.includes('localhost')) {
-      host = host.replace('localhost', '10.0.2.2');
-    }
+    const host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'https://ckrschools.online');
     trimmed = `${host}${trimmed}`;
-  }
-
-  if (Platform.OS === 'android' && trimmed.includes('localhost')) {
-    trimmed = trimmed.replace('localhost', '10.0.2.2');
   }
 
   if (

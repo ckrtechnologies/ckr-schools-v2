@@ -34,10 +34,7 @@ const DEFAULT_LOGO = require('../../assets/images/logo.jpeg');
 const resolveAssetUrl = (url) => {
   if (!url) return null;
   if (url.startsWith('http')) return url;
-  let base = SOCKET_URL || 'http://localhost:5006';
-  if (Platform.OS === 'android' && base.includes('localhost')) {
-    base = base.replace('localhost', '10.0.2.2');
-  }
+  const base = SOCKET_URL || 'https://ckrschools.online';
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
 };
 

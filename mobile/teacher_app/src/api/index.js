@@ -4,11 +4,7 @@ import { Platform } from 'react-native';
 import { API_URL } from '@env';
 
 export const getBaseUrl = () => {
-  let url = API_URL || 'http://localhost:5006/api';
-  if (Platform.OS === 'android' && url.includes('localhost')) {
-    url = url.replace('localhost', '10.0.2.2');
-  }
-  return url;
+  return API_URL || 'https://ckrschools.online/api';
 };
 
 const api = axios.create({
