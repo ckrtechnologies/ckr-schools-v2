@@ -18,14 +18,17 @@ export const store = configureStore({
 // React Native AppState foreground listener:
 // When the app returns from background, flushes dead keep-alive sockets & refetches active queries
 export const configureAppListeners = (dispatch) => {
-  return setupListeners(dispatch, (customHandler) => {
+  return setupListeners(dispatch, (dispatchFn, actions) => {
     let currentAppState = AppState.currentState;
     const subscription = AppState.addEventListener('change', (nextAppState) => {
       if (
+        currentAppState &&
         currentAppState.match(/inactive|background/) &&
         nextAppState === 'active'
       ) {
-        customHandler();
+        if (actions?.onFocus) {
+          dispatchFn(actions.onFocus());
+        }
       }
       currentAppState = nextAppState;
     });
