@@ -534,9 +534,13 @@ export class UsersRepository {
    */
   static async deleteUser(tenantId, userId) {
     const res = await pgPool.query(
-      `DELETE FROM public."user" WHERE tenant_id = $1 AND id = $2 RETURNING id`,
+      `DELETE FROM public."user" WHERE tenant_id = $1 AND id = $2 RETURNING id, avatar_url, tc_document_url, slc_document_url, character_certificate_document_url`,
       [tenantId, userId]
     );
+    if (res.rows[0]) {
+      const u = res.rows[0];
+      removeFileFromDisk([u.avatar_url, u.tc_document_url, u.slc_document_url, u.character_certificate_document_url]);
+    }
     if (res.rowCount === 0) {
       await pgPool.query(`DELETE FROM public.parents WHERE tenant_id = $1 AND id = $2`, [tenantId, userId]);
     }
@@ -548,9 +552,14 @@ export class UsersRepository {
    */
   static async bulkDeleteUsers(tenantId, userIds) {
     const res = await pgPool.query(
-      `DELETE FROM public."user" WHERE tenant_id = $1 AND id = ANY($2::uuid[])`,
+      `DELETE FROM public."user" WHERE tenant_id = $1 AND id = ANY($2::uuid[]) RETURNING id, avatar_url, tc_document_url, slc_document_url, character_certificate_document_url`,
       [tenantId, userIds]
     );
+    if (res.rows && res.rows.length > 0) {
+      for (const u of res.rows) {
+        removeFileFromDisk([u.avatar_url, u.tc_document_url, u.slc_document_url, u.character_certificate_document_url]);
+      }
+    }
     return { deletedCount: res.rowCount };
   }
 }
