@@ -90,7 +90,7 @@ export async function createMarketplaceEnquiry(tenantId, data) {
       grade, academic_year, message, is_multi_enquiry, status, monetization_fee_paise, admin_notes
     ) VALUES (
       $1, 'enquiry', $2, $3, $4, $5,
-      $6, $7, $8, FALSE, 'new', 50000, 'Direct Admission Enquiry via Marketplace'
+      $6, $7, $8, FALSE, 'transferred', 0, 'Direct Admission Enquiry via Marketplace'
     )
     RETURNING id, tenant_id, lead_type, student_name, parent_name, phone, email, grade, academic_year, status, created_at;
   `;
@@ -119,7 +119,7 @@ export async function createBrochureDownloadLead(tenantId, data) {
       grade, academic_year, message, is_multi_enquiry, status, monetization_fee_paise, admin_notes
     ) VALUES (
       $1, 'brochure_download', $2, $3, $4, $5,
-      $6, $7, 'Downloaded School Brochure / Prospectus PDF', FALSE, 'new', 35000, 'Brochure download intent'
+      $6, $7, 'Downloaded School Brochure / Prospectus PDF', FALSE, 'transferred', 0, 'Brochure download intent'
     )
     RETURNING id, tenant_id, lead_type, student_name, parent_name, phone, email, grade, status, created_at;
   `;
@@ -154,7 +154,7 @@ export async function createMultiSchoolEnquiry(tenantList, data) {
       ) VALUES (
         $1, 'multi_enquiry', $2, $3, $4, $5,
         $6, $7, $8, $9, TRUE,
-        'new', 50000, $10
+        'transferred', 0, $10
       )
       RETURNING id, tenant_id, lead_type, student_name, parent_name, phone, email, grade, status, created_at;
     `;
