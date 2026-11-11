@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { config } from '../../config/env.js';
+import { removeFileFromDisk } from '../../utils/fileCleaner.js';
 
 /**
  * Standard structured folders maintained for each school campus CDN
@@ -105,28 +106,20 @@ export const uploadFile = async (req, res) => {
 };
 
 /**
- * Deletes file
+ * Deletes file from VPS storage
  */
 export const deleteFile = async (req, res) => {
   try {
-    const { url } = req.body;
+    const url = req.body?.url || req.query?.url;
     if (!url) {
       return res.status(400).json({ success: false, message: 'File URL is required' });
     }
 
-    // Support both /uploads/ and /cdn/ paths
-    const match = url.match(/\/(?:uploads|cdn)\/(.+)$/);
-    if (match && match[1]) {
-      const relativePath = match[1];
-      const fullPath = path.join(config.cdn.uploadDir, relativePath);
-      if (fs.existsSync(fullPath)) {
-        fs.unlinkSync(fullPath);
-      }
-    }
+    const count = removeFileFromDisk(url);
 
     return res.status(200).json({
       success: true,
-      message: 'File deleted successfully'
+      message: count > 0 ? 'File deleted successfully from VPS' : 'File was already removed or not found'
     });
   } catch (err) {
     return res.status(500).json({ success: false, message: `Delete failed: ${err.message}` });
