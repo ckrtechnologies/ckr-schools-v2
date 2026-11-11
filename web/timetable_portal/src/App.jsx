@@ -1,3 +1,5 @@
+const BASE_PATH = import.meta.env.BASE_URL || "/";
+const ROUTER_BASENAME = BASE_PATH.replace(/\/$/, "") || "/";
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -25,7 +27,7 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={ROUTER_BASENAME}>
       <ToastContainer theme="colored" position="top-right" autoClose={3000} style={{ zIndex: 999999 }} />
       <Routes>
         {/* Public Login Route */}

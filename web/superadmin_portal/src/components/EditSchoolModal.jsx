@@ -381,7 +381,7 @@ export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isL
                 }}>
                   {formData.logoUrl ? (
                     <img
-                      src={formData.logoUrl.startsWith('http') ? formData.logoUrl : `http://localhost:5006${formData.logoUrl}`}
+                      src={formData.logoUrl.startsWith('http') ? formData.logoUrl : formData.logoUrl}
                       alt="Logo preview"
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       onError={(e) => { e.currentTarget.style.display = 'none'; }}

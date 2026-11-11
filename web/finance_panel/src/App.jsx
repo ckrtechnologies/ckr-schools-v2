@@ -1,3 +1,5 @@
+const BASE_PATH = import.meta.env.BASE_URL || "/";
+const ROUTER_BASENAME = BASE_PATH.replace(/\/$/, "") || "/";
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -30,7 +32,7 @@ const PrivateRoute = ({ children }) => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={ROUTER_BASENAME}>
       <ToastContainer position="top-right" autoClose={3000} theme="colored" />
       <ErrorBoundary>
         <Routes>
