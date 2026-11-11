@@ -124,26 +124,7 @@ export default function SchoolsTable({
             />
           </div>
 
-          <select
-            value={planFilter}
-            onChange={(e) => onPlanFilterChange(e.target.value)}
-            style={{
-              padding: '7px 12px',
-              border: '1px solid #cbd5e1',
-              borderRadius: '8px',
-              backgroundColor: '#f8fafc',
-              fontSize: '13px',
-              color: '#0f172a',
-              outline: 'none',
-              cursor: 'pointer'
-            }}
-          >
-            <option value="all">All Plan Tiers</option>
-            <option value="FREE_TRIAL">Free Trial</option>
-            <option value="GROWTH_CAMPUS">Growth Campus</option>
-            <option value="PRO_CAMPUS">Pro Campus</option>
-            <option value="ENTERPRISE_AI">Enterprise AI</option>
-          </select>
+          
         </div>
 
         {/* Right: Actions (Onboard + Export CSV / PDF) */}
@@ -251,15 +232,7 @@ export default function SchoolsTable({
 
               <th style={{ padding: '0 16px', whiteSpace: 'nowrap' }}>Board</th>
               
-              <th 
-                onClick={() => handleSort('plan_tier')}
-                style={{ padding: '0 16px', cursor: 'pointer', whiteSpace: 'nowrap' }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <span>Plan Tier</span>
-                  {sortBy === 'plan_tier' && (sortOrder === 'asc' ? <IconArrowUp size={12} /> : <IconArrowDown size={12} />)}
-                </div>
-              </th>
+              
 
               <th style={{ padding: '0 16px', whiteSpace: 'nowrap' }}>Location</th>
               <th style={{ padding: '0 16px', whiteSpace: 'nowrap', textAlign: 'right' }}>Students</th>

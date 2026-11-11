@@ -252,29 +252,7 @@ export default function OnboardSchoolModal({ isOpen, onClose, onSubmit, isLoadin
                 </select>
               </div>
 
-              <div>
-                <label style={{ display: 'block', fontSize: '12px', fontWeight: '600', marginBottom: '4px' }}>
-                  Subscription Plan Tier
-                </label>
-                <select
-                  name="planTier"
-                  value={formData.planTier}
-                  onChange={handleChange}
-                  style={{
-                    width: '100%',
-                    padding: '8px 10px',
-                    borderRadius: '6px',
-                    border: '1px solid #cbd5e1',
-                    fontSize: '13px',
-                    backgroundColor: '#ffffff'
-                  }}
-                >
-                  <option value="GROWTH_CAMPUS">Growth Campus (₹9,999/mo)</option>
-                  <option value="PRO_CAMPUS">Pro Campus (₹24,999/mo)</option>
-                  <option value="ENTERPRISE_AI">Enterprise AI (₹49,999/mo)</option>
-                  <option value="FREE_TRIAL">Free Trial (14 Days)</option>
-                </select>
-              </div>
+
             </div>
           </div>
 
