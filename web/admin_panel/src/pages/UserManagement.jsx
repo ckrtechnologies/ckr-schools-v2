@@ -1401,7 +1401,7 @@ const UserManagement = () => {
                         </button>
                       )}
                     </div>
-                    <span style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>Upload photo to CDN (cdn.arcschool.cloud)</span>
+                    <span style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>Upload photo to CDN </span>
                   </div>
                 </div>
                 {type === 'parent' ? (

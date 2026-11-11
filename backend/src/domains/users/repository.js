@@ -1,3 +1,4 @@
+import { removeFileFromDisk } from "../../utils/fileCleaner.js";
 import { pgPool } from '../../config/db.js';
 
 export class UsersRepository {

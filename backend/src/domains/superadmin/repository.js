@@ -345,8 +345,9 @@ export async function deleteTenantCascade(id) {
     // Cascade delete all physical asset and CDN folders for this tenant
     const uploadBase = config.cdn?.uploadDir || path.resolve(process.cwd(), './uploads');
     const targetDirs = [
-      path.join(uploadBase, `${tenant.slug}-${tenant.id}`),
-      path.join(uploadBase, tenant.slug),
+      path.join(config.cdn.uploadDir, `${tenant.slug}-${tenant.id}`),
+      path.join(config.cdn.uploadDir, tenant.slug),
+      path.join(config.cdn.uploadDir, `campus-${tenant.slug}`),
       path.join('/srv/cdn', `${tenant.slug}-${tenant.id}`),
       path.join('/srv/cdn', tenant.slug)
     ];

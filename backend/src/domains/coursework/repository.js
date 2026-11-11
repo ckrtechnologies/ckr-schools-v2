@@ -1,3 +1,4 @@
+import { removeFileFromDisk } from "../../utils/fileCleaner.js";
 import { pgPool } from '../../config/db.js';
 
 /**
@@ -237,9 +238,12 @@ export async function deleteCoursework(tenantId, courseId) {
   const query = `
     DELETE FROM course
     WHERE id = $1 AND tenant_id = $2
-    RETURNING id;
+    RETURNING id, material, others;
   `;
   const { rows } = await pgPool.query(query, [courseId, tenantId]);
+  if (rows[0]) {
+    removeFileFromDisk([rows[0].material, rows[0].others]);
+  }
   return rows[0] || null;
 }
 

@@ -1,3 +1,4 @@
+import { removeFileFromDisk } from "../../utils/fileCleaner.js";
 import { pgPool } from '../../config/db.js';
 
 export async function getAllStudentOfWeek(req, res, next) {
@@ -69,7 +70,10 @@ export async function deleteStudentOfWeek(req, res, next) {
   try {
     const tenantId = req.tenant.id;
     const { id } = req.params;
-    await pgPool.query('DELETE FROM public.student_of_the_week WHERE tenant_id = $1 AND id = $2', [tenantId, id]);
+    const { rows: deletedRows } = await pgPool.query('DELETE FROM public.student_of_the_week WHERE tenant_id = $1 AND id = $2 RETURNING photo_url', [tenantId, id]);
+    if (deletedRows[0] && deletedRows[0].photo_url) {
+      removeFileFromDisk(deletedRows[0].photo_url);
+    }
     return res.status(200).json({ success: true, message: 'Record deleted successfully' });
   } catch (err) {
     next(err);

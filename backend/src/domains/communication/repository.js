@@ -1,3 +1,4 @@
+import { removeFileFromDisk } from "../../utils/fileCleaner.js";
 import { pgPool } from '../../config/db.js';
 
 /**
@@ -62,9 +63,12 @@ export async function deleteCircular(tenantId, circularId) {
   const query = `
     DELETE FROM circulars
     WHERE id = $1 AND tenant_id = $2
-    RETURNING id;
+    RETURNING id, attachment_url;
   `;
   const { rows } = await pgPool.query(query, [circularId, tenantId]);
+  if (rows[0] && rows[0].attachment_url) {
+    removeFileFromDisk(rows[0].attachment_url);
+  }
   return rows[0] || null;
 }
 

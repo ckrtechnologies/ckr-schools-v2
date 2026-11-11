@@ -1,3 +1,4 @@
+import { removeFileFromDisk } from "../../utils/fileCleaner.js";
 import { pgPool } from '../../config/db.js';
 
 /**
@@ -107,8 +108,11 @@ export async function updateSpotlight(tenantId, id, data) {
 }
 
 export async function deleteSpotlight(tenantId, id) {
-  const query = `DELETE FROM spotlight_of_the_day WHERE tenant_id = $1 AND id = $2 RETURNING id;`;
+  const query = `DELETE FROM spotlight_of_the_day WHERE tenant_id = $1 AND id = $2 RETURNING id, image_url;`;
   const { rows } = await pgPool.query(query, [tenantId, id]);
+  if (rows[0] && rows[0].image_url) {
+    removeFileFromDisk(rows[0].image_url);
+  }
   return rows[0] || null;
 }
 
@@ -225,8 +229,11 @@ export async function createGalleryImage(tenantId, data) {
 }
 
 export async function deleteGalleryImage(tenantId, imageId) {
-  const query = `DELETE FROM school_gallery WHERE id = $1 AND tenant_id = $2 RETURNING id;`;
+  const query = `DELETE FROM school_gallery WHERE id = $1 AND tenant_id = $2 RETURNING id, image_url, media_url;`;
   const { rows } = await pgPool.query(query, [imageId, tenantId]);
+  if (rows[0]) {
+    removeFileFromDisk([rows[0].image_url, rows[0].media_url]);
+  }
   return rows[0] || null;
 }
 
