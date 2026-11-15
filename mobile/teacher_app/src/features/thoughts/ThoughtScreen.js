@@ -1,10 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, Animated, Image, StatusBar } from 'react-native';
+import { useSelector } from 'react-redux';
 import { colors } from '../../theme/colors';
 import { useGetThoughtOfDayQuery } from '../../store/apiSlice';
 
 const ThoughtScreen = ({ navigation }) => {
   const { data: response, isLoading, isError } = useGetThoughtOfDayQuery();
+  const { schoolInfo, user } = useSelector((state) => state.auth);
+  const schoolName = schoolInfo?.name || user?.schoolName || 'SchoolKarma';
   const [thought, setThought] = useState(null);
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -43,7 +46,7 @@ const ThoughtScreen = ({ navigation }) => {
             resizeMode="contain"
           />
         </View>
-        <Text style={styles.schoolName}>ARC SCHOOL</Text>
+        <Text style={styles.schoolName}>{schoolName}</Text>
         <Text style={styles.title}>Thought of the Day</Text>
         <Text style={styles.quote}>"{thought?.thought || '...'}"</Text>
         {thought?.author && <Text style={styles.author}>- {thought.author}</Text>}

@@ -53,7 +53,7 @@ const SplashScreen = ({ onFinish }) => {
 
   useEffect(() => {
     Animated.sequence([
-      // Step 1: CKR Schools Badge & Logo scales in with spring
+      // Step 1: SchoolKarma Badge & Logo scales in with spring
       Animated.parallel([
         Animated.spring(scaleAnim, {
           toValue: 1,
@@ -67,7 +67,7 @@ const SplashScreen = ({ onFinish }) => {
           useNativeDriver: true,
         })
       ]),
-      // Step 2: CKR Schools Title & Subtitle fade up
+      // Step 2: SchoolKarma Title & Subtitle fade up
       Animated.parallel([
         Animated.timing(textOpacityAnim, {
           toValue: 1,
@@ -109,7 +109,7 @@ const SplashScreen = ({ onFinish }) => {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#064e3b" />
       
-      {/* CKR Schools Brand Crest & Emblem */}
+      {/* SchoolKarma Brand Crest & Emblem */}
       <Animated.View style={[styles.emblemContainer, { opacity: opacityAnim, transform: [{ scale: scaleAnim }] }]}>
         <View style={styles.outerGlow}>
           <View style={styles.crestCircle}>
@@ -119,9 +119,9 @@ const SplashScreen = ({ onFinish }) => {
       </Animated.View>
       
       <Animated.View style={[styles.textContainer, { opacity: textOpacityAnim, transform: [{ translateY: translateYAnim }] }]}>
-        <Text style={styles.brandTitle}>CKR SCHOOLS</Text>
+        <Text style={styles.brandTitle}>SCHOOLKARMA</Text>
         <View style={styles.taglineBadge}>
-          <Text style={styles.brandTagline}>NEXT-GEN SCHOOL OPERATING SYSTEM</Text>
+          <Text style={styles.brandTagline}>FACULTY & CAMPUS OPERATING SYSTEM</Text>
         </View>
         <Text style={styles.portalLabel}>Teacher & Staff App</Text>
       </Animated.View>
@@ -132,7 +132,7 @@ const SplashScreen = ({ onFinish }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#064e3b', // Rich CKR Dark Green
+    backgroundColor: '#064e3b', // Deep Forest Green
     justifyContent: 'center',
     alignItems: 'center',
   },

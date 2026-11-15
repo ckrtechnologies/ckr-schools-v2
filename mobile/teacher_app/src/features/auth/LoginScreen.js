@@ -28,13 +28,13 @@ import Icon from 'react-native-vector-icons/Feather';
 import { colors, shadows } from '../../theme/colors';
 import { SOCKET_URL } from '@env';
 
-const CKR_DARK_GREEN = '#064e3b';
+const BRAND_DARK_GREEN = '#064e3b';
 const DEFAULT_LOGO = require('../../assets/images/logo.jpeg');
 
 const resolveAssetUrl = (url) => {
   if (!url) return null;
   if (url.startsWith('http')) return url;
-  const base = SOCKET_URL || 'https://ckrschools.online';
+  const base = SOCKET_URL || 'https://schoolkarma.com';
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
 };
 
@@ -52,7 +52,7 @@ const LoginScreen = () => {
   const [registerFcmToken] = useRegisterFcmTokenMutation();
   const { loading, error } = useSelector((state) => state.auth);
 
-  // Fetch all active school campuses on the CKR Schools platform
+  // Fetch all active school campuses on the SchoolKarma platform
   const { data: schoolsRes, isLoading: loadingSchools, isError: schoolsError, refetch: refetchSchools } = useGetPublicSchoolsQuery();
   const availableSchools = schoolsRes?.data || [];
 
@@ -85,7 +85,7 @@ const LoginScreen = () => {
     } catch (e) {}
   };
 
-  const activeBrandColor = selectedSchool ? (selectedSchool.themeColor || selectedSchool.theme_color || '#0f5c49') : CKR_DARK_GREEN;
+  const activeBrandColor = selectedSchool ? (selectedSchool.themeColor || selectedSchool.theme_color || '#0f5c49') : BRAND_DARK_GREEN;
   const brandLogoUrl = selectedSchool?.logoUrl || selectedSchool?.logo_url;
   const resolvedLogoSource = brandLogoUrl ? { uri: resolveAssetUrl(brandLogoUrl) } : DEFAULT_LOGO;
 
@@ -208,10 +208,10 @@ const LoginScreen = () => {
                 </>
               ) : (
                 <>
-                  <View style={[styles.iconCircle, { backgroundColor: CKR_DARK_GREEN + '15' }]}>
-                    <Icon name="award" size={32} color={CKR_DARK_GREEN} />
+                  <View style={[styles.iconCircle, { backgroundColor: BRAND_DARK_GREEN + '15' }]}>
+                    <Icon name="award" size={32} color={BRAND_DARK_GREEN} />
                   </View>
-                  <Text style={styles.title}>CKR Schools</Text>
+                  <Text style={styles.title}>SchoolKarma</Text>
                   <Text style={styles.subtitle}>Faculty & Teacher Portal</Text>
                 </>
               )}
@@ -230,7 +230,7 @@ const LoginScreen = () => {
                   >
                     <View style={styles.pickerLeft}>
                       <View style={styles.pickerIconWrapper}>
-                        <Icon name="home" size={20} color={CKR_DARK_GREEN} />
+                        <Icon name="home" size={20} color={BRAND_DARK_GREEN} />
                       </View>
                       <View>
                         <Text style={styles.pickerPlaceholderTitle}>Choose School Campus</Text>
@@ -317,7 +317,7 @@ const LoginScreen = () => {
             <View style={styles.modalHeader}>
               <View>
                 <Text style={styles.modalHeading}>Select School Campus</Text>
-                <Text style={styles.modalSubheading}>Choose your institution from CKR network</Text>
+                <Text style={styles.modalSubheading}>Choose your institution from SchoolKarma network</Text>
               </View>
               <TouchableOpacity 
                 style={styles.modalCloseButton} 
@@ -349,7 +349,7 @@ const LoginScreen = () => {
             {/* School List */}
             {loadingSchools ? (
               <View style={styles.loaderContainer}>
-                <ActivityIndicator size="large" color={CKR_DARK_GREEN} />
+                <ActivityIndicator size="large" color={BRAND_DARK_GREEN} />
                 <Text style={{ marginTop: 12, color: colors.textMuted }}>Loading campus directory...</Text>
               </View>
             ) : (
@@ -430,7 +430,7 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: CKR_DARK_GREEN,
+    backgroundColor: BRAND_DARK_GREEN,
   },
   keyboardContainer: {
     flex: 1,
@@ -441,7 +441,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 380,
-    backgroundColor: CKR_DARK_GREEN,
+    backgroundColor: BRAND_DARK_GREEN,
   },
   scrollContent: {
     flexGrow: 1,
@@ -526,7 +526,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: CKR_DARK_GREEN + '15',
+    backgroundColor: BRAND_DARK_GREEN + '15',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,
@@ -664,8 +664,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   schoolItemCardActive: {
-    borderColor: CKR_DARK_GREEN,
-    backgroundColor: CKR_DARK_GREEN + '08',
+    borderColor: BRAND_DARK_GREEN,
+    backgroundColor: BRAND_DARK_GREEN + '08',
   },
   schoolItemLogo: {
     width: 44,
@@ -693,7 +693,7 @@ const styles = StyleSheet.create({
     width: 26,
     height: 26,
     borderRadius: 13,
-    backgroundColor: CKR_DARK_GREEN,
+    backgroundColor: BRAND_DARK_GREEN,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -710,7 +710,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 14,
-    backgroundColor: CKR_DARK_GREEN,
+    backgroundColor: BRAND_DARK_GREEN,
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: 12,

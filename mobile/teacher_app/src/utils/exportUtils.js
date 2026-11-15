@@ -43,7 +43,7 @@ export const drawSchoolHeader = (doc, schoolInfo, documentTitle, isLandscape) =>
     doc.rect(0, 6, pageWidth, 1.5, 'F');
 
     // School Name
-    const schoolName = String(sInfo.name || sInfo.school_name || 'CKR Schools').toUpperCase();
+    const schoolName = String(sInfo.name || sInfo.school_name || 'SchoolKarma').toUpperCase();
     doc.setFont("helvetica", "bold");
     doc.setFontSize(16);
     doc.setTextColor(6, 78, 59);
@@ -352,7 +352,7 @@ export const generateReceiptPDF = async (payment, student, isShare, schoolInfo) 
         doc.setFontSize(8);
         doc.setTextColor(148, 163, 184);
         doc.text(
-            "This is an official computer-generated fee receipt verified by CKR Schools Operating System.",
+            "This is an official computer-generated fee receipt verified by SchoolKarma Operating System.",
             pageWidth / 2,
             280,
             { align: "center" }

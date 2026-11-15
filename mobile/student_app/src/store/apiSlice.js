@@ -4,7 +4,7 @@ import { Platform } from 'react-native';
 import { API_URL, DEFAULT_TENANT_SLUG } from '@env';
 
 export const getBaseUrl = () => {
-  return API_URL || 'https://ckrschools.online/api';
+  return API_URL || 'https://schoolkarma.com/api';
 };
 
 export const apiSlice = createApi({

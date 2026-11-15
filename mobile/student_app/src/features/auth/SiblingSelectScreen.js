@@ -113,7 +113,7 @@ const SiblingSelectScreen = ({ navigation, route }) => {
         <View style={styles.logoWrap}>
           <Image source={DEFAULT_AVATAR} style={styles.logo} />
         </View>
-        <Text style={styles.schoolName}>{user?.schoolName || 'CKR Schools'}</Text>
+        <Text style={styles.schoolName}>{user?.schoolName || 'SchoolKarma'}</Text>
         <Text style={styles.title}>Select Student Profile</Text>
         <Text style={styles.subtitle}>
           Choose which child's academic dashboard you wish to access

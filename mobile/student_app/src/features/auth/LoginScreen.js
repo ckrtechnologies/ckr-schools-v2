@@ -29,7 +29,7 @@ const DEFAULT_LOGO = require('../../assets/images/logo.jpeg');
 const resolveAssetUrl = (url) => {
   if (!url) return null;
   if (url.startsWith('http')) return url;
-  const base = SOCKET_URL || 'https://ckrschools.online';
+  const base = SOCKET_URL || 'https://schoolkarma.com';
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
 };
 
@@ -63,7 +63,7 @@ const LoginScreen = ({ navigation }) => {
     }
   }, [dispatch, schoolInfo]);
 
-  const schoolName = schoolInfo?.name || 'CKR Schools';
+  const schoolName = schoolInfo?.name || 'SchoolKarma';
   const schoolMotto = schoolInfo?.motto || 'Next-Gen School Operating System';
   const brandLogoUrl = schoolInfo?.logoUrl || schoolInfo?.logo_url;
   const resolvedLogoSource = brandLogoUrl ? { uri: resolveAssetUrl(brandLogoUrl) } : DEFAULT_LOGO;

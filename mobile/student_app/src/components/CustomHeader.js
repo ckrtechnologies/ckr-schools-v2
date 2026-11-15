@@ -35,7 +35,7 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
 
   const headerBgColor = colors.primaryDark; // #022C22 - Deep Forest Midnight
   const brandAccent = colors.brandAccent || '#10B981';
-  const schoolName = schoolInfo?.name || user?.schoolName || 'ARC School';
+  const schoolName = schoolInfo?.name || user?.schoolName || 'SchoolKarma';
   const hasSiblings = siblings && siblings.length > 1;
 
   // School logo resolution

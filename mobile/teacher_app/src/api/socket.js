@@ -3,7 +3,7 @@ import { Platform, AppState } from 'react-native';
 import { SOCKET_URL } from '@env';
 
 export const getSocketUrl = () => {
-  return SOCKET_URL || 'https://ckrschools.online';
+  return SOCKET_URL || 'https://schoolkarma.com';
 };
 
 // Initialize socket (URL should match backend)

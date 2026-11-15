@@ -25,7 +25,7 @@ const DEFAULT_LOGO = require('../../assets/images/logo.jpeg');
 const resolveAssetUrl = (url) => {
   if (!url) return null;
   if (url.startsWith('http')) return url;
-  const base = SOCKET_URL || 'https://ckrschools.online';
+  const base = SOCKET_URL || 'https://schoolkarma.com';
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
 };
 
@@ -116,7 +116,7 @@ const SchoolSelectScreen = ({ navigation }) => {
           <View style={styles.brandIconCircle}>
             <Icon name="book-open" size={18} color="#FFFFFF" />
           </View>
-          <Text style={styles.headerBrandText}>CKR SCHOOLS</Text>
+          <Text style={styles.headerBrandText}>SCHOOLKARMA</Text>
         </View>
         <Text style={styles.headerTitle}>Select Your School Campus</Text>
         <Text style={styles.headerSubtitle}>

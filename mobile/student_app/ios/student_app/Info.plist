@@ -9,7 +9,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>student_app</string>
+	<string>SchoolKarma Student</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -36,11 +36,11 @@
 		<true/>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The Arc School accesses your photo library only when you choose a photo or document to upload.</string>
+	<string>SchoolKarma accesses your photo library only when you choose a photo or document to upload.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>The Arc School requires access to save photos or downloaded documents to your photo library.</string>
+	<string>SchoolKarma requires access to save photos or downloaded documents to your photo library.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>The Arc School requires access to the camera to take and upload photos.</string>
+	<string>SchoolKarma requires access to the camera to take and upload photos.</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UIAppFonts</key>

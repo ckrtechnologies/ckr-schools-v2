@@ -8,7 +8,7 @@ export const getSafeImageUrl = (url) => {
   if (!trimmed) return null;
 
   if (trimmed.startsWith('/')) {
-    const host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'https://ckrschools.online');
+    const host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'https://schoolkarma.com');
     trimmed = `${host}${trimmed}`;
   }
 

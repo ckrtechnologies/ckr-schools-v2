@@ -24,7 +24,7 @@ const CustomHeader = ({ title, showBack, onMenuPress, rightComponent }) => {
   const { data: notificationsData } = useGetNotificationsQuery();
   const unreadCount = notificationsData?.data?.filter(n => !n.is_read)?.length || 0;
 
-  const activeSchoolName = title || schoolInfo?.name || user?.schoolName || 'CKR Schools';
+  const activeSchoolName = title || schoolInfo?.name || user?.schoolName || 'SchoolKarma';
   const primaryBrandColor = schoolInfo?.themeColor || user?.themeColor || colors.primary;
   const brandLogoUrl = schoolInfo?.logoUrl || user?.logoUrl;
   const safeBrandLogoUrl = getSafeImageUrl(brandLogoUrl);

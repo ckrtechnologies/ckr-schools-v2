@@ -77,7 +77,7 @@ const SplashScreen = ({ onFinish }) => {
           useNativeDriver: true,
         }),
       ]),
-      // Step 2: CKR Schools title & tagline fade up
+      // Step 2: SchoolKarma title & tagline fade up
       Animated.parallel([
         Animated.timing(textOpacityAnim, {
           toValue: 1,
@@ -135,9 +135,9 @@ const SplashScreen = ({ onFinish }) => {
       </Animated.View>
 
       <Animated.View style={[styles.textContainer, { opacity: textOpacityAnim, transform: [{ translateY: translateYAnim }] }]}>
-        <Text style={styles.brandTitle}>ARC SCHOOL</Text>
+        <Text style={styles.brandTitle}>SCHOOLKARMA</Text>
         <View style={styles.taglineBadge}>
-          <Text style={styles.brandTagline}>INSPIRING EXCELLENCE, EMPOWERING MINDS</Text>
+          <Text style={styles.brandTagline}>NEXT-GEN SCHOOL OPERATING SYSTEM</Text>
         </View>
         <Text style={styles.portalLabel}>Student & Parent Portal</Text>
       </Animated.View>
