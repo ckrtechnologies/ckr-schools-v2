@@ -1,7 +1,18 @@
+# ==============================================================================
+# CKR Schools v2 — Root Monorepo .gitignore
+# ==============================================================================
+
 # Dependencies
 node_modules/
+**/node_modules/
 .pnp
 .pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # Environment variables & secrets (CRITICAL: NEVER COMMIT SECRETS)
 .env
@@ -15,29 +26,42 @@ backend/src/config/serviceAccountKey.json
 
 # OS & Editor files
 .DS_Store
+**/.DS_Store
 Thumbs.db
 *.swp
 *.swo
 .vscode/
+**/.vscode/
 .idea/
+**/.idea/
+*.iml
+*.hprof
 
 # Logs
 logs/
+**/logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pm2.log
 
-# Build outputs & caches
+# Web Build outputs & caches
 dist/
+**/dist/
 build/
-deployment/artifacts/
+**/build/
 .next/
+**/.next/
 out/
+**/out/
 coverage/
+**/coverage/
 .turbo/
+**/.turbo/
 .cache/
+**/.cache/
+deployment/artifacts/
 
 # Uploads & Media
 uploads/
@@ -49,10 +73,42 @@ release_apks/
 *.apk
 *.aab
 *.ipa
-
-# React Native / Android / iOS build artifacts
-mobile/**/android/.gradle/
-mobile/**/android/app/build/
-mobile/**/ios/Pods/
-mobile/**/ios/build/
 *.keystore
+!debug.keystore
+
+# Android Build Artifacts & CMake (Over 10,000+ generated files)
+.gradle/
+**/.gradle/
+.cxx/
+**/.cxx/
+local.properties
+**/local.properties
+.kotlin/
+**/.kotlin/
+**/android/build/
+**/android/app/build/
+**/android/.gradle/
+**/android/app/.cxx/
+
+# iOS & Xcode Build Artifacts
+**/ios/Pods/
+**/ios/build/
+**/ios/DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.xcuserstate
+**/.xcode.env.local
+*.jsbundle
+/vendor/bundle/
+.metro-health-check*
