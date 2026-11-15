@@ -83,6 +83,12 @@
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app uses your location to provide relevant school-related features.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>SchoolKarma requires access to the camera to take and upload photos.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>SchoolKarma requires access to save photos or downloaded documents to your photo library.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SchoolKarma accesses your photo library only when you choose a photo or document to upload.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 </dict>
