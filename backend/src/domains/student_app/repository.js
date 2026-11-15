@@ -2,7 +2,10 @@ import { pgPool } from '../../config/db.js';
 
 export async function getStudentProfile(tenantId, studentId) {
   const query = `
-    SELECT id, name, admission_number, dob, avatar_url, house
+    SELECT 
+      id, name, email, phone, alternate_number, admission_number, 
+      dob, gender, avatar_url, house, address, father_name, mother_name,
+      admission_date, status, bus_fee, monthly_fee, fee_exempted
     FROM public."user"
     WHERE tenant_id = $1 AND id = $2;
   `;
@@ -173,6 +176,12 @@ export async function getLinkedSiblings(tenantId, userId) {
     SELECT DISTINCT
       u.id,
       u.name,
+      u.email,
+      u.phone,
+      u.father_name,
+      u.mother_name,
+      u.address,
+      u.house,
       u.admission_number,
       u.avatar_url,
       u.dob,

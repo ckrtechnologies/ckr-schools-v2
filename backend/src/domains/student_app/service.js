@@ -56,7 +56,12 @@ export async function getDashboard(tenantId, studentId) {
   const pendingCount = await repo.getPendingCourseCount(tenantId);
 
   return {
-    profile: student,
+    profile: {
+      ...student,
+      roll_number: classData?.roll_number || null,
+      class_name: classData?.name || null,
+      section: classData?.section || null
+    },
     classInfo: classData ? {
       id: classData.class_id,
       name: classData.name,

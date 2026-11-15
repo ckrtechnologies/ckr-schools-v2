@@ -141,10 +141,10 @@ const ProfileScreen = ({ navigation }) => {
           {/* Student Info */}
           <Card variant="elevated">
             <Text style={styles.cardTitle}>Student Information</Text>
-            <InfoRow icon="hash" label="Roll Number" value={profile.roll_number || 'N/A'} />
-            <InfoRow icon="hash" label="Admission Number" value={profile.admission_number || 'N/A'} />
-            <InfoRow icon="calendar" label="Date of Birth" value={profile.dob} />
-            <InfoRow icon="home" label="House" value={profile.house} />
+            <InfoRow icon="hash" label="Roll Number" value={profile.roll_number || classInfo?.roll_number || user?.roll_number || 'N/A'} />
+            <InfoRow icon="hash" label="Admission Number" value={profile.admission_number || user?.admission_number || 'N/A'} />
+            <InfoRow icon="calendar" label="Date of Birth" value={profile.dob || user?.dob} />
+            <InfoRow icon="home" label="House" value={profile.house || user?.house} />
             <InfoRow icon="user" label="Father's Name" value={profile.father_name || user?.father_name || 'N/A'} />
             <InfoRow icon="user" label="Mother's Name" value={profile.mother_name || user?.mother_name || 'N/A'} />
           </Card>
@@ -152,9 +152,9 @@ const ProfileScreen = ({ navigation }) => {
           {/* Contact Details */}
           <Card variant="elevated">
             <Text style={styles.cardTitle}>Contact Details</Text>
-            <InfoRow icon="mail" label="Email" value={user?.email || profile?.email} />
-            <InfoRow icon="phone" label="Phone" value={user?.phone || user?.phone_number || profile?.phone} />
-            <InfoRow icon="map-pin" label="Address" value={user?.address || profile?.address} />
+            <InfoRow icon="mail" label="Email" value={profile?.email || user?.email} />
+            <InfoRow icon="phone" label="Phone" value={profile?.phone || user?.phone || user?.phone_number || profile?.alternate_number} />
+            <InfoRow icon="map-pin" label="Address" value={profile?.address || user?.address} />
           </Card>
 
           {/* Quick Actions */}

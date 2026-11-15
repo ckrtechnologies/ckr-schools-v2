@@ -99,7 +99,15 @@ export async function login({ tenant, rawData }) {
       schoolCity: user.school_city,
       schoolState: user.school_state,
       schoolPincode: user.school_pincode,
-      schoolMotto: user.school_motto
+      schoolMotto: user.school_motto,
+      father_name: user.father_name || null,
+      mother_name: user.mother_name || null,
+      dob: user.dob || null,
+      admission_number: user.admission_number || null,
+      house: user.house || null,
+      address: user.address || null,
+      gender: user.gender || null,
+      alternate_number: user.alternate_number || null
     },
     siblings,
     activeStudent,
