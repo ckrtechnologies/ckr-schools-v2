@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, StatusBar, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Animated, StatusBar, Dimensions, Image } from 'react-native';
 import { useDispatch } from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { loginSuccess, setTenantSlug, setSchoolInfo } from '../../store/authSlice';
@@ -107,13 +107,17 @@ const SplashScreen = ({ onFinish }) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#064e3b" />
+      <StatusBar barStyle="light-content" backgroundColor="#022C22" />
       
       {/* SchoolKarma Brand Crest & Emblem */}
       <Animated.View style={[styles.emblemContainer, { opacity: opacityAnim, transform: [{ scale: scaleAnim }] }]}>
         <View style={styles.outerGlow}>
           <View style={styles.crestCircle}>
-            <Icon name="award" size={48} color="#064e3b" />
+            <Image
+              source={require('../../assets/images/logo.jpeg')}
+              style={styles.schoolLogo}
+              resizeMode="contain"
+            />
           </View>
         </View>
       </Animated.View>
@@ -132,7 +136,7 @@ const SplashScreen = ({ onFinish }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#064e3b', // Deep Forest Green
+    backgroundColor: '#022C22', // Dark Emerald Green
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -150,10 +154,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   crestCircle: {
-    width: 90,
-    height: 90,
-    borderRadius: 45,
-    backgroundColor: '#ffffff',
+    width: 96,
+    height: 96,
+    borderRadius: 24,
+    backgroundColor: '#064e3b',
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 8,
@@ -161,6 +165,14 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
     shadowRadius: 10,
+    overflow: 'hidden',
+    borderWidth: 1.5,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  schoolLogo: {
+    width: 96,
+    height: 96,
+    borderRadius: 22,
   },
   textContainer: {
     alignItems: 'center',

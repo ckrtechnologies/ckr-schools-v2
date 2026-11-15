@@ -6,7 +6,6 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 import RootNavigator from './src/navigation/RootNavigator';
-import SplashScreen from './src/features/splash/SplashScreen';
 import { colors } from './src/theme/colors';
 import notifee from '@notifee/react-native';
 import {
@@ -19,8 +18,6 @@ import {
 import { Platform } from 'react-native';
 
 const App = () => {
-  const [showSplash, setShowSplash] = useState(true);
-
   useEffect(() => {
     // 1. Set up foreground notification handlers
     const unsubscribeNotifee = notifee.onForegroundEvent(handleNotificationEvent);
@@ -49,12 +46,8 @@ const App = () => {
     <GestureHandlerRootView style={styles.container}>
       <Provider store={store}>
         <SafeAreaProvider style={styles.container}>
-          <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
-          {showSplash ? (
-            <SplashScreen onFinish={() => setShowSplash(false)} />
-          ) : (
-            <RootNavigator />
-          )}
+          <StatusBar barStyle="light-content" backgroundColor="#022C22" />
+          <RootNavigator />
         </SafeAreaProvider>
       </Provider>
     </GestureHandlerRootView>
