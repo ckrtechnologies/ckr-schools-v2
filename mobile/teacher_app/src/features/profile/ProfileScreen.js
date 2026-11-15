@@ -83,6 +83,17 @@ const ProfileScreen = ({ navigation }) => {
       console.warn("Error resetting app/api state:", e);
     }
     dispatch(logout());
+    try {
+      const { navigationRef } = require('../../navigation/navigationRef');
+      if (navigationRef && navigationRef.isReady() && navigationRef.getRootState()?.routeNames?.includes('Login')) {
+        navigationRef.reset({
+          index: 0,
+          routes: [{ name: 'Login' }],
+        });
+      }
+    } catch (navErr) {
+      // Declarative navigation in RootNavigator already transitions to AuthStack
+    }
   };
 
   const InfoCard = ({ icon, title, value, children, color }) => (

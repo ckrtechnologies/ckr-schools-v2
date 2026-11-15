@@ -144,7 +144,7 @@ const LoginScreen = () => {
         if (hasPermission) {
           const fcmToken = await getFCMToken();
           if (fcmToken) {
-            registerFcmToken({ fcm_token: fcmToken, device_type: 'android' })
+            registerFcmToken({ fcm_token: fcmToken, device_type: Platform.OS })
               .unwrap()
               .catch(err => console.log('Failed to register FCM token:', err));
           }

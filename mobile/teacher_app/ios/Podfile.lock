@@ -2690,7 +2690,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: ed18fb50634e6e85b5d3e77e628c21e2c928cc53
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUtilities: 4f2618a4a1e762a1ee134a1e2323bba9843e06da
-  hermes-engine: f6ae8381fc35f4c3c7bb8b891bfdbd5eeb505006
+  hermes-engine: edc3038cb959eecb0842319810035888510fd201
   lottie-ios: 8f959969761e9c45d70353667d00af0e5b9cadb3
   lottie-react-native: ee142214581f3bb68fbda7efcf07b835a189eeda
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
@@ -2784,6 +2784,6 @@ SPEC CHECKSUMS:
   RNWorklets: 2dd3ec21113976f9cf85f2864b9d9d27d9dedbaa
   Yoga: fe50ab299e578f397fef753cf309c6703a4db29b
 
-PODFILE CHECKSUM: 16e6952077ffd88a4e4992fe10aacfea3b5096b8
+PODFILE CHECKSUM: fdc2b458b06666215fd0941099b8ab2239ad0aa7
 
 COCOAPODS: 1.16.2
