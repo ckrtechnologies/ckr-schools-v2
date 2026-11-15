@@ -1,6 +1,7 @@
 import notifee, { EventType, AndroidImportance } from '@notifee/react-native';
 import FileViewer from 'react-native-file-viewer';
 import messaging from '@react-native-firebase/messaging';
+import { Platform } from 'react-native';
 import { navigate } from '../navigation/navigationRef';
 
 // Invalidate the RTK Query notifications cache so the in-app list auto-refreshes
@@ -104,6 +105,13 @@ export const requestUserPermission = async () => {
     authStatus === messaging.AuthorizationStatus.PROVISIONAL;
 
   if (enabled) {
+    if (Platform.OS === 'ios') {
+      try {
+        await messaging().registerDeviceForRemoteMessages();
+      } catch (e) {
+        console.warn('registerDeviceForRemoteMessages warning:', e);
+      }
+    }
     console.log('Authorization status:', authStatus);
     return true;
   }
@@ -112,6 +120,11 @@ export const requestUserPermission = async () => {
 
 export const getFCMToken = async () => {
   try {
+    if (Platform.OS === 'ios') {
+      try {
+        await messaging().registerDeviceForRemoteMessages();
+      } catch (e) {}
+    }
     const token = await messaging().getToken();
     return token;
   } catch (error) {
@@ -134,6 +147,15 @@ export const displayNotification = async (remoteMessage) => {
     title: remoteMessage.notification?.title || remoteMessage.data?.title || 'New Notification',
     body: remoteMessage.notification?.body || remoteMessage.data?.body || '',
     data: remoteMessage.data,
+    ios: {
+      sound: 'default',
+      foregroundPresentationOptions: {
+        badge: true,
+        sound: true,
+        banner: true,
+        list: true,
+      },
+    },
     android: {
       channelId,
       color: '#4f46e5',

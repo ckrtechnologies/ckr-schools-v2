@@ -60,12 +60,28 @@ export async function sendPushNotification({ tokens, title, body, data = {} }) {
     sanitizedData[key] = typeof val === 'string' ? val : JSON.stringify(val);
   }
 
+  const apnsConfig = {
+    headers: {
+      'apns-priority': '10',
+      'apns-push-type': 'alert',
+    },
+    payload: {
+      aps: {
+        alert: { title, body },
+        sound: 'default',
+        badge: 1,
+        contentAvailable: true,
+      }
+    }
+  };
+
   try {
     if (tokenList.length === 1) {
       const response = await messaging.send({
         token: tokenList[0],
         notification: { title, body },
         data: sanitizedData,
+        apns: apnsConfig,
         android: {
           priority: 'high',
           notification: {
@@ -88,6 +104,7 @@ export async function sendPushNotification({ tokens, title, body, data = {} }) {
           tokens: batch,
           notification: { title, body },
           data: sanitizedData,
+          apns: apnsConfig,
           android: {
             priority: 'high',
             notification: {
