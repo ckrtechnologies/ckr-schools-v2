@@ -78,9 +78,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.teacher_app1"
+    namespace "com.schoolkarma.teacher"
     defaultConfig {
-        applicationId "com.teacher_app1"
+        applicationId "com.schoolkarma.teacher"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 8

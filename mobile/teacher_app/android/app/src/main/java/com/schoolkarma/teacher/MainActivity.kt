@@ -1,4 +1,4 @@
-package com.teacher_app1
+package com.schoolkarma.teacher
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

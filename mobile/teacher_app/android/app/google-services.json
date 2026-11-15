@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "353667789372",
-    "project_id": "vision-international-sch-cea2a",
-    "storage_bucket": "vision-international-sch-cea2a.firebasestorage.app"
+    "project_number": "691306869122",
+    "project_id": "schoolkarma",
+    "storage_bucket": "schoolkarma.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:353667789372:android:8bada4fd434d5ebc87c939",
+        "mobilesdk_app_id": "1:691306869122:android:0d4ddc15107407b4dcdf9b",
         "android_client_info": {
-          "package_name": "com.student_app1"
+          "package_name": "com.schoolkarma.student"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDJNTz8zjIIhQ1IkLapQ1O5N0X6QS5ZVbI"
+          "current_key": "AIzaSyBlx6Z2rSg3rQ1mFCeDgYIJZu-5rEkkU54"
         }
       ],
       "services": {
@@ -26,15 +26,15 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:353667789372:android:22ad82919e6d833a87c939",
+        "mobilesdk_app_id": "1:691306869122:android:9e5a23afe8a62c21dcdf9b",
         "android_client_info": {
-          "package_name": "com.teacher_app1"
+          "package_name": "com.schoolkarma.teacher"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDJNTz8zjIIhQ1IkLapQ1O5N0X6QS5ZVbI"
+          "current_key": "AIzaSyBlx6Z2rSg3rQ1mFCeDgYIJZu-5rEkkU54"
         }
       ],
       "services": {

@@ -302,7 +302,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.teacher-app1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schoolkarma.teacher";
 				PRODUCT_NAME = teacher_app;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -332,7 +332,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.teacher-app1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.schoolkarma.teacher";
 				PRODUCT_NAME = teacher_app;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_VERSION = 5.0;

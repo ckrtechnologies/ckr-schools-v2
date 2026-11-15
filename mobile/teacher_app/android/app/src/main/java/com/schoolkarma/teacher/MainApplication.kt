@@ -1,4 +1,4 @@
-package com.teacher_app1
+package com.schoolkarma.teacher
 
 import android.app.Application
 import com.facebook.react.PackageList

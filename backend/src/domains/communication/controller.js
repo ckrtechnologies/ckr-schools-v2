@@ -297,6 +297,48 @@ export async function broadcastNotificationHandler(req, res, next) {
 
     await pgPool.query(insertQuery, queryParams);
 
+    // Dispatch native FCM push notifications to tenant devices
+    try {
+      let tokenQuery = '';
+      let tokenParams = [];
+      if (Array.isArray(targetUserIds) && targetUserIds.length > 0) {
+        tokenQuery = `SELECT DISTINCT fcm_token FROM user_device_tokens WHERE tenant_id = $1 AND user_id = ANY($2::uuid[])`;
+        tokenParams = [tenantId, targetUserIds];
+      } else if (targetAudience && targetAudience !== 'all') {
+        let roleFilter = targetAudience.toLowerCase();
+        if (roleFilter === 'teachers') roleFilter = 'teacher';
+        if (roleFilter === 'students') roleFilter = 'student';
+        if (roleFilter === 'parents') roleFilter = 'parent';
+        tokenQuery = `
+          SELECT DISTINCT dt.fcm_token 
+          FROM user_device_tokens dt
+          JOIN "user" u ON dt.user_id = u.id AND dt.tenant_id = u.tenant_id
+          WHERE dt.tenant_id = $1 AND LOWER(u.type) = $2
+        `;
+        tokenParams = [tenantId, roleFilter];
+      } else {
+        tokenQuery = `SELECT DISTINCT fcm_token FROM user_device_tokens WHERE tenant_id = $1`;
+        tokenParams = [tenantId];
+      }
+
+      const { rows: tokenRows } = await pgPool.query(tokenQuery, tokenParams);
+      const tokens = tokenRows.map(r => r.fcm_token).filter(Boolean);
+      if (tokens.length > 0) {
+        const { sendPushNotification } = await import('../../services/firebase.js');
+        await sendPushNotification({
+          tokens,
+          title: notifTitle,
+          body: notifMessage.split(' ||| ')[0],
+          data: {
+            routeScreen: routeScreen || '',
+            routeParams: routeParams ? JSON.stringify(routeParams) : ''
+          }
+        });
+      }
+    } catch (fcmErr) {
+      console.warn('⚠️ FCM push delivery warning:', fcmErr.message);
+    }
+
     // Realtime notification broadcast across tenant sockets if connected
     try {
       const { getIO } = await import('../../sockets/socketManager.js');
