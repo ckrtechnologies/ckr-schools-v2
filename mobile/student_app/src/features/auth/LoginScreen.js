@@ -23,14 +23,12 @@ import { useLoginMutation, useRegisterFcmTokenMutation } from '../../store/apiSl
 import { setCredentials, setTenantSlug, setSchoolInfo } from '../../store/authSlice';
 import { colors, shadows } from '../../theme/colors';
 import { SOCKET_URL } from '@env';
+import { getSafeImageUrl } from '../../components/UserAvatar';
 
 const DEFAULT_LOGO = require('../../assets/images/logo.jpeg');
 
 const resolveAssetUrl = (url) => {
-  if (!url) return null;
-  if (url.startsWith('http')) return url;
-  const base = SOCKET_URL || 'https://schoolkarma.com';
-  return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
+  return getSafeImageUrl(url);
 };
 
 const LoginScreen = ({ navigation }) => {

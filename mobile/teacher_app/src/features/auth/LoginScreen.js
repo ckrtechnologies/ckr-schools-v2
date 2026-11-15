@@ -27,15 +27,13 @@ import * as Keychain from 'react-native-keychain';
 import Icon from 'react-native-vector-icons/Feather';
 import { colors, shadows } from '../../theme/colors';
 import { SOCKET_URL } from '@env';
+import { getSafeImageUrl } from '../../components/UserAvatar';
 
 const BRAND_DARK_GREEN = '#064e3b';
 const DEFAULT_LOGO = require('../../assets/images/logo.jpeg');
 
 const resolveAssetUrl = (url) => {
-  if (!url) return null;
-  if (url.startsWith('http')) return url;
-  const base = SOCKET_URL || 'https://schoolkarma.com';
-  return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
+  return getSafeImageUrl(url);
 };
 
 const LoginScreen = () => {
