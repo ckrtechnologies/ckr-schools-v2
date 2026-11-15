@@ -18,7 +18,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import { setActiveStudent } from '../store/authSlice';
 import { apiSlice, useGetNotificationsQuery } from '../store/apiSlice';
 import { colors } from '../theme/colors';
-import { getSafeImageUrl } from './UserAvatar';
+import UserAvatar, { getSafeImageUrl } from './UserAvatar';
 
 const DEFAULT_LOGO = require('../assets/images/logo.jpeg');
 
@@ -69,13 +69,13 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
         onPress={() => handleSwitchChild(item)}
         activeOpacity={0.8}
       >
-        {item.avatar_url ? (
-          <Image source={{ uri: item.avatar_url }} style={styles.siblingModalAvatar} />
-        ) : (
-          <View style={[styles.siblingModalPlaceholder, { backgroundColor: brandAccent }]}>
-            <Text style={styles.siblingModalInitial}>{initial}</Text>
-          </View>
-        )}
+        <UserAvatar
+          url={item.avatar_url}
+          name={item.name}
+          size={42}
+          placeholderBg={brandAccent}
+          style={{ marginRight: 12 }}
+        />
 
         <View style={styles.siblingModalInfo}>
           <Text style={[styles.siblingModalName, isSelected && { color: brandAccent }]}>
@@ -121,15 +121,14 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
           onPress={() => hasSiblings && setShowSiblingModal(true)}
           activeOpacity={hasSiblings ? 0.75 : 1}
         >
-          <View style={styles.childAvatarSmall}>
-            {activeStudent?.avatar_url ? (
-              <Image source={{ uri: getSafeImageUrl(activeStudent.avatar_url) }} style={styles.childAvatarSmallImg} />
-            ) : (
-              <Text style={styles.childAvatarSmallText}>
-                {studentName.charAt(0).toUpperCase()}
-              </Text>
-            )}
-          </View>
+          <UserAvatar
+            url={activeStudent?.avatar_url}
+            name={studentName}
+            size={24}
+            placeholderBg="rgba(255,255,255,0.25)"
+            placeholderColor="#FFFFFF"
+            style={{ marginRight: 6 }}
+          />
           <View style={{ flexShrink: 1, marginRight: hasSiblings ? 4 : 0 }}>
             <Text style={styles.childPillName} numberOfLines={1}>
               {studentName}
@@ -168,13 +167,15 @@ const CustomHeader = ({ title, showBack, rightComponent }) => {
             onPress={() => navigation.navigate('Profile')}
             activeOpacity={0.8}
           >
-            {activeStudent?.avatar_url ? (
-              <Image source={{ uri: getSafeImageUrl(activeStudent.avatar_url) }} style={styles.headerAvatarImg} />
-            ) : (
-              <Text style={styles.headerAvatarInitial}>
-                {studentName.charAt(0).toUpperCase()}
-              </Text>
-            )}
+            <UserAvatar
+              url={activeStudent?.avatar_url}
+              name={studentName}
+              size={34}
+              borderWidth={1.5}
+              borderColor="rgba(255,255,255,0.6)"
+              placeholderBg="rgba(255,255,255,0.25)"
+              placeholderColor="#FFFFFF"
+            />
           </TouchableOpacity>
         </View>
       </View>

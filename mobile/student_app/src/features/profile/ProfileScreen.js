@@ -34,7 +34,7 @@ const InfoRow = ({ icon, label, value }) => (
 
 const ProfileScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const { user, schoolInfo } = useSelector((state) => state.auth);
+  const { user, schoolInfo, activeStudent } = useSelector((state) => state.auth);
   const { data, isFetching, refetch } = useGetDashboardQuery();
 
   const onRefresh = useCallback(async () => {
@@ -120,8 +120,8 @@ const ProfileScreen = ({ navigation }) => {
         {/* Profile Hero Card */}
         <View style={styles.heroCard}>
           <UserAvatar
-            url={profile?.avatar_url || user?.avatar_url}
-            name={profile?.name || user?.name || 'S'}
+            url={activeStudent?.avatar_url || profile?.avatar_url || user?.avatar_url}
+            name={activeStudent?.name || profile?.name || user?.name || 'S'}
             size={74}
             placeholderBg="rgba(255,255,255,0.2)"
             borderWidth={2}
@@ -129,7 +129,7 @@ const ProfileScreen = ({ navigation }) => {
             placeholderColor="#FFFFFF"
             style={{ marginBottom: 12 }}
           />
-          <Text style={styles.nameText}>{profile.name || user?.name || 'Student'}</Text>
+          <Text style={styles.nameText}>{activeStudent?.name || profile.name || user?.name || 'Student'}</Text>
           <Text style={styles.classText}>
             {user?.type === 'parent'
               ? 'Parent Account'

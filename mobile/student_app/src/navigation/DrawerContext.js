@@ -48,7 +48,7 @@ const DrawerItem = ({ icon, label, onPress, color = colors.textMuted, badgeCount
 import { useGetDashboardQuery, useGetNotificationsQuery, useGetSettingsQuery } from '../store/apiSlice';
 
 const DrawerContent = ({ close }) => {
-  const { user } = useSelector(state => state.auth);
+  const { user, activeStudent } = useSelector(state => state.auth);
   const dispatch = useDispatch();
   const insets = useSafeAreaInsets();
 
@@ -121,8 +121,8 @@ const DrawerContent = ({ close }) => {
           <Icon name="arrow-left" size={22} color="#fff" />
         </TouchableOpacity>
         <UserAvatar
-          url={profile?.avatar_url || user?.avatar_url}
-          name={profile?.name || user?.name || 'S'}
+          url={activeStudent?.avatar_url || profile?.avatar_url || user?.avatar_url}
+          name={activeStudent?.name || profile?.name || user?.name || 'S'}
           size={76}
           placeholderBg="rgba(255,255,255,0.25)"
           borderWidth={3}
@@ -130,7 +130,7 @@ const DrawerContent = ({ close }) => {
           placeholderColor="#fff"
           style={{ marginBottom: 12 }}
         />
-        <Text style={styles.userName}>{profile?.name || user?.name || 'Student'}</Text>
+        <Text style={styles.userName}>{activeStudent?.name || profile?.name || user?.name || 'Student'}</Text>
         <Text style={styles.userRole}>Roll No: {profile?.roll_number || profile?.admission_number || user?.admission_number || 'N/A'}</Text>
       </View>
 

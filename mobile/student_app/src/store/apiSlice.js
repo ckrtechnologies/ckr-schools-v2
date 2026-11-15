@@ -1,48 +1,73 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import * as Keychain from 'react-native-keychain';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import { API_URL, DEFAULT_TENANT_SLUG } from '@env';
+import { logout } from './authSlice';
 
 export const getBaseUrl = () => {
   return API_URL || 'https://schoolkarma.com/api';
+};
+
+const rawBaseQuery = fetchBaseQuery({
+  baseUrl: getBaseUrl(),
+  timeout: 10000,
+  prepareHeaders: async (headers, { getState }) => {
+    try {
+      const state = getState();
+      let token = state?.auth?.token;
+      const tenantSlug = state?.auth?.tenantSlug || DEFAULT_TENANT_SLUG || 'arc';
+
+      if (!token) {
+        const credentials = await Keychain.getGenericPassword();
+        if (credentials && credentials.password) {
+          token = credentials.password;
+        }
+      }
+      if (token) {
+        headers.set('Authorization', `Bearer ${token}`);
+      }
+      if (tenantSlug) {
+        headers.set('x-tenant-slug', tenantSlug);
+      }
+      const activeStudentId = state?.auth?.activeStudentId;
+      if (activeStudentId) {
+        headers.set('x-student-id', activeStudentId);
+      }
+    } catch (error) {
+      console.log('Error fetching token for headers:', error);
+    }
+    headers.set('Content-Type', 'application/json');
+    return headers;
+  },
+});
+
+const baseQueryWithReauth = async (args, api, extraOptions) => {
+  const result = await rawBaseQuery(args, api, extraOptions);
+
+  if (result.error) {
+    const status = result.error.status;
+    const isLoginEndpoint = typeof args === 'object' && args?.url?.includes('/user/loginUser');
+
+    // If session is expired or token is invalid on any authenticated endpoint
+    if (!isLoginEndpoint && (status === 401 || result.error?.data?.error?.code === 'TOKEN_EXPIRED')) {
+      try {
+        await AsyncStorage.multiRemove(['@auth_user', '@auth_token', '@auth_siblings', '@auth_active_student']);
+        await Keychain.resetGenericPassword();
+      } catch (e) {}
+
+      api.dispatch(logout());
+    }
+  }
+
+  return result;
 };
 
 export const apiSlice = createApi({
   reducerPath: 'api',
   refetchOnFocus: true,
   refetchOnReconnect: true,
-  baseQuery: fetchBaseQuery({
-    baseUrl: getBaseUrl(),
-    timeout: 15000,
-    prepareHeaders: async (headers, { getState }) => {
-      try {
-        const state = getState();
-        let token = state?.auth?.token;
-        const tenantSlug = state?.auth?.tenantSlug || DEFAULT_TENANT_SLUG || 'arc';
-
-        if (!token) {
-          const credentials = await Keychain.getGenericPassword();
-          if (credentials && credentials.password) {
-            token = credentials.password;
-          }
-        }
-        if (token) {
-          headers.set('Authorization', `Bearer ${token}`);
-        }
-        if (tenantSlug) {
-          headers.set('x-tenant-slug', tenantSlug);
-        }
-        const activeStudentId = state?.auth?.activeStudentId;
-        if (activeStudentId) {
-          headers.set('x-student-id', activeStudentId);
-        }
-      } catch (error) {
-        console.log('Error fetching token for headers:', error);
-      }
-      headers.set('Content-Type', 'application/json');
-      return headers;
-    },
-  }),
+  baseQuery: baseQueryWithReauth,
   tagTypes: ['Dashboard', 'Academics', 'Attendance', 'Notifications', 'Chats', 'LiveChat', 'Quote', 'Rewards', 'Timetable', 'CourseWork', 'Events', 'Fees', 'Consents', 'Circulars', 'Gallery', 'Settings', 'Newsletters', 'Siblings'],
   endpoints: (builder) => ({
     // Auth endpoints

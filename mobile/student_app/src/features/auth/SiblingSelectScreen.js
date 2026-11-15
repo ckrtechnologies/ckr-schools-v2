@@ -15,6 +15,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import { setActiveStudent, logout } from '../../store/authSlice';
 import { apiSlice } from '../../store/apiSlice';
 import { colors } from '../../theme/colors';
+import UserAvatar from '../../components/UserAvatar';
 
 const DEFAULT_AVATAR = require('../../assets/images/logo.jpeg');
 
@@ -56,17 +57,15 @@ const SiblingSelectScreen = ({ navigation, route }) => {
         activeOpacity={0.85}
       >
         <View style={styles.cardHeader}>
-          {avatarUrl ? (
-            <Image
-              source={{ uri: avatarUrl }}
-              style={styles.avatar}
-              resizeMode="cover"
-            />
-          ) : (
-            <View style={[styles.avatarPlaceholder, { backgroundColor: colors.primary }]}>
-              <Text style={styles.avatarInitial}>{initial}</Text>
-            </View>
-          )}
+          <UserAvatar
+            url={avatarUrl}
+            name={item.name}
+            size={52}
+            borderWidth={1.5}
+            borderColor={colors.primary}
+            placeholderBg={colors.primary}
+            style={{ marginRight: 12 }}
+          />
 
           <View style={styles.infoCol}>
             <View style={styles.nameRow}>

@@ -1,44 +1,69 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import * as Keychain from 'react-native-keychain';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import { API_URL } from '@env';
+import { logout } from './authSlice';
 
 export const getBaseUrl = () => {
   return API_URL || 'https://schoolkarma.com/api';
+};
+
+const rawBaseQuery = fetchBaseQuery({
+  baseUrl: getBaseUrl(),
+  timeout: 10000,
+  prepareHeaders: async (headers, { getState }) => {
+    try {
+      const state = getState();
+      let token = state?.auth?.token;
+      const tenantSlug = state?.auth?.tenantSlug || 'arc';
+
+      if (!token) {
+        const credentials = await Keychain.getGenericPassword();
+        if (credentials && credentials.password) {
+          token = credentials.password;
+        }
+      }
+      if (token) {
+        headers.set('Authorization', `Bearer ${token}`);
+      }
+      if (tenantSlug) {
+        headers.set('x-tenant-slug', tenantSlug);
+      }
+    } catch (error) {
+      console.log('Error fetching token for headers:', error);
+    }
+    headers.set('Content-Type', 'application/json');
+    return headers;
+  },
+});
+
+const baseQueryWithReauth = async (args, api, extraOptions) => {
+  const result = await rawBaseQuery(args, api, extraOptions);
+
+  if (result.error) {
+    const status = result.error.status;
+    const isPublicEndpoint = typeof args === 'string' && (args.startsWith('/public') || args.startsWith('/public-school-profile'));
+
+    // If session is expired or token is invalid on any authenticated endpoint
+    if (!isPublicEndpoint && (status === 401 || result.error?.data?.error?.code === 'TOKEN_EXPIRED')) {
+      try {
+        await AsyncStorage.multiRemove(['@auth_user', '@auth_token']);
+        await Keychain.resetGenericPassword();
+      } catch (e) {}
+
+      api.dispatch(logout());
+    }
+  }
+
+  return result;
 };
 
 export const apiSlice = createApi({
   reducerPath: 'api',
   refetchOnFocus: true,
   refetchOnReconnect: true,
-  baseQuery: fetchBaseQuery({
-    baseUrl: getBaseUrl(),
-    timeout: 15000,
-    prepareHeaders: async (headers, { getState }) => {
-      try {
-        const state = getState();
-        let token = state?.auth?.token;
-        const tenantSlug = state?.auth?.tenantSlug || 'arc';
-
-        if (!token) {
-          const credentials = await Keychain.getGenericPassword();
-          if (credentials && credentials.password) {
-            token = credentials.password;
-          }
-        }
-        if (token) {
-          headers.set('Authorization', `Bearer ${token}`);
-        }
-        if (tenantSlug) {
-          headers.set('x-tenant-slug', tenantSlug);
-        }
-      } catch (error) {
-        console.log('Error fetching token for headers:', error);
-      }
-      headers.set('Content-Type', 'application/json');
-      return headers;
-    },
-  }),
+  baseQuery: baseQueryWithReauth,
   
   tagTypes: ['Exams', 'Courses', 'Attendance', 'Timetable', 'Events', 'Students', 'Classes', 'Complaints', 'Grades', 'Notifications', 'Performance', 'Chats', 'Circulars', 'Gallery', 'Newsletters', 'StaffAttendance', 'StaffLeaves'],
   endpoints: (builder) => ({

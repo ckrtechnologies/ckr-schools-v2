@@ -5,21 +5,28 @@ import { SOCKET_URL, API_URL } from '@env';
 export const getSafeImageUrl = (url) => {
   if (!url || typeof url !== 'string') return null;
   let trimmed = url.trim();
-  if (!trimmed) return null;
+  if (!trimmed || trimmed === 'null' || trimmed === 'undefined') return null;
 
-  if (trimmed.startsWith('/')) {
-    const host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'https://schoolkarma.com');
-    trimmed = `${host}${trimmed}`;
+  // 1. Replace dead/legacy domains with schoolkarma.com
+  trimmed = trimmed
+    .replace(/https?:\/\/ckrschools\.online/gi, 'https://schoolkarma.com')
+    .replace(/https?:\/\/ckrschools\.com/gi, 'https://schoolkarma.com')
+    .replace(/https?:\/\/localhost(:\d+)?/gi, 'https://schoolkarma.com')
+    .replace(/https?:\/\/127\.0\.0\.1(:\d+)?/gi, 'https://schoolkarma.com');
+
+  // 2. Prepend host for relative URLs (/cdn/..., /uploads/..., uploads/..., cdn/...)
+  const host = SOCKET_URL || (API_URL ? API_URL.replace(/\/api\/?$/, '') : 'https://schoolkarma.com');
+
+  if (!trimmed.startsWith('http://') && !trimmed.startsWith('https://') && !trimmed.startsWith('file://') && !trimmed.startsWith('data:')) {
+    const cleanPath = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+    trimmed = `${host}${cleanPath}`;
   }
 
-  if (
-    trimmed.startsWith('http://') &&
-    !trimmed.includes('localhost') &&
-    !trimmed.includes('127.0.0.1') &&
-    !trimmed.includes('10.0.2.2')
-  ) {
-    return trimmed.replace(/^http:\/\//i, 'https://');
+  // 3. Ensure HTTPS for non-local production URLs (prevents cleartext blocks)
+  if (trimmed.startsWith('http://') && !trimmed.includes('10.0.2.2')) {
+    trimmed = trimmed.replace(/^http:\/\//i, 'https://');
   }
+
   return trimmed;
 };
 
