@@ -14,6 +14,9 @@ export const metadata = {
   icons: {
     icon: '/favicon.svg'
   },
+  verification: {
+    google: '7gswx-VcyD3MWylMmHda-JP5IlpeTCGTRUkebCq0l8c'
+  },
   openGraph: {
     title: 'SchoolKarma — India’s Premier Verified School Network',
     description: 'Find, compare, and apply directly to verified CBSE, ICSE, and International schools.',
