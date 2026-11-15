@@ -5,6 +5,7 @@ import {
   Animated, Dimensions, Image
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSelector } from 'react-redux';
 import { 
   useGetDashboardQuery, 
   useGetNotificationsQuery,
@@ -128,8 +129,10 @@ const StatChartRing = ({ percentage, valueLabel, title, subtitle, color, iconNam
 
 const DashboardScreen = ({ navigation }) => {
   const { openDrawer } = useDrawer();
+  const { activeStudentId, activeStudent, user } = useSelector((state) => state.auth);
+  const studentId = activeStudentId || activeStudent?.id || user?.id;
     
-  const { data, isLoading, isFetching, refetch: refetchDash, error } = useGetDashboardQuery();
+  const { data, isLoading, isFetching, refetch: refetchDash, error } = useGetDashboardQuery(studentId);
   const { data: notificationsData, refetch: refetchNotifs } = useGetNotificationsQuery();
   const { data: consentsData, refetch: refetchConsents } = useGetConsentsQuery();
   const { data: feesData, refetch: refetchFees } = useGetFeesQuery();
@@ -185,8 +188,11 @@ const DashboardScreen = ({ navigation }) => {
 
   useFocusEffect(
     useCallback(() => {
+      if (error) {
+        refetchDash();
+      }
       refetchNotifs();
-    }, [refetchNotifs])
+    }, [error, refetchDash, refetchNotifs])
   );
 
   const rotationInterpolate = spotlightRotation.interpolate({

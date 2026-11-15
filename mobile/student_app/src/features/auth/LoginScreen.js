@@ -100,15 +100,25 @@ const LoginScreen = ({ navigation }) => {
           await AsyncStorage.setItem('@auth_active_student', JSON.stringify(activeStudent));
         }
 
+        const effectiveSlug = response.user?.schoolSlug || tenantSlug || null;
+        const effectiveSchool = schoolInfo || (response.user?.schoolName ? {
+          name: response.user?.schoolName,
+          slug: effectiveSlug,
+          logoUrl: response.user?.logoUrl,
+        } : null);
+
+        if (effectiveSlug) {
+          await AsyncStorage.setItem('@tenant_slug', effectiveSlug);
+        }
+        if (effectiveSchool) {
+          await AsyncStorage.setItem('@school_info', JSON.stringify(effectiveSchool));
+        }
+
         dispatch(setCredentials({
           user: response.user,
           token,
-          tenantSlug: response.user?.schoolSlug || tenantSlug || 'arc',
-          schoolInfo: schoolInfo || {
-            name: response.user?.schoolName,
-            slug: response.user?.schoolSlug,
-            logoUrl: response.user?.logoUrl,
-          },
+          tenantSlug: effectiveSlug,
+          schoolInfo: effectiveSchool,
           siblings,
           activeStudent,
         }));

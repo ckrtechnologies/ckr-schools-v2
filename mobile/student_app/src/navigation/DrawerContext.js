@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import FAIcon from 'react-native-vector-icons/FontAwesome5';
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { logout } from '../store/authSlice';
+import { performFullLogout } from '../utils/authUtils';
 import { colors } from '../theme/colors';
 import { navigationRef } from './navigationRef';
 import UserAvatar from '../components/UserAvatar';
@@ -84,26 +84,7 @@ const DrawerContent = ({ close }) => {
 
   const handleLogout = async () => {
     close();
-    try {
-      await AsyncStorage.clear();
-    } catch (e) {
-      try {
-        await AsyncStorage.multiRemove(['@auth_user', '@auth_token']);
-      } catch (err) {
-        console.warn("Error clearing storage on logout:", err);
-      }
-    }
-    try {
-      await Keychain.resetGenericPassword();
-    } catch (e) {
-      console.warn("Error resetting keychain:", e);
-    }
-    try {
-      dispatch(apiSlice.util.resetApiState());
-    } catch (e) {
-      console.warn("Error resetting api state:", e);
-    }
-    dispatch(logout());
+    await performFullLogout(dispatch);
   };
 
   return (

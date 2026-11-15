@@ -4,7 +4,7 @@ const initialState = {
   user: null,
   token: null,
   isAuthenticated: false,
-  tenantSlug: 'arc',
+  tenantSlug: null,
   schoolInfo: null,
   siblings: [],
   activeStudentId: null,
@@ -70,6 +70,8 @@ const authSlice = createSlice({
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
+      state.tenantSlug = null;
+      state.schoolInfo = null;
       state.siblings = [];
       state.activeStudentId = null;
       state.activeStudent = null;

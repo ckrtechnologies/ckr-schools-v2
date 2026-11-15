@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   user: null,
   token: null,
-  tenantSlug: 'arc',
+  tenantSlug: null,
   schoolInfo: null,
   isAuthenticated: false,
   loading: false,
@@ -58,6 +58,8 @@ const authSlice = createSlice({
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
+      state.tenantSlug = null;
+      state.schoolInfo = null;
     },
   },
 });

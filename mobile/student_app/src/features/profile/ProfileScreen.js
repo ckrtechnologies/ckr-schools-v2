@@ -16,6 +16,7 @@ import * as Keychain from 'react-native-keychain';
 import Icon from 'react-native-vector-icons/Feather';
 import { apiSlice, useGetDashboardQuery } from '../../store/apiSlice';
 import { logout } from '../../store/authSlice';
+import { performFullLogout } from '../../utils/authUtils';
 import { colors } from '../../theme/colors';
 import Card from '../../components/Card';
 import UserAvatar from '../../components/UserAvatar';
@@ -34,8 +35,9 @@ const InfoRow = ({ icon, label, value }) => (
 
 const ProfileScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const { user, schoolInfo, activeStudent } = useSelector((state) => state.auth);
-  const { data, isFetching, refetch } = useGetDashboardQuery();
+  const { user, schoolInfo, activeStudent, activeStudentId } = useSelector((state) => state.auth);
+  const studentId = activeStudentId || activeStudent?.id || user?.id;
+  const { data, isFetching, refetch } = useGetDashboardQuery(studentId);
 
   const onRefresh = useCallback(async () => {
     try {
@@ -50,25 +52,7 @@ const ProfileScreen = ({ navigation }) => {
   const schoolName = schoolInfo?.name || user?.schoolName || 'Profile';
 
   const handleLogout = async () => {
-    try {
-      await AsyncStorage.multiRemove([
-        '@auth_user',
-        '@auth_token',
-        '@auth_siblings',
-        '@auth_active_student',
-      ]);
-      await Keychain.resetGenericPassword();
-    } catch (e) {
-      console.warn('Error clearing storage on logout:', e);
-    }
-
-    try {
-      dispatch(apiSlice.util.resetApiState());
-    } catch (e) {
-      console.warn('Error resetting api state:', e);
-    }
-
-    dispatch(logout());
+    await performFullLogout(dispatch);
   };
 
   const confirmLogout = () => {

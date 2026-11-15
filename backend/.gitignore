@@ -11,3 +11,4 @@ src/config/serviceAccountKey.json
 *firebase-adminsdk*.json
 *serviceAccount*.json
 .DS_Store
+

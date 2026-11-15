@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import { API_URL, DEFAULT_TENANT_SLUG } from '@env';
 import { logout } from './authSlice';
+import { performFullLogout } from '../utils/authUtils';
 
 export const getBaseUrl = () => {
   return API_URL || 'https://schoolkarma.com/api';
@@ -16,7 +17,11 @@ const rawBaseQuery = fetchBaseQuery({
     try {
       const state = getState();
       let token = state?.auth?.token;
-      const tenantSlug = state?.auth?.tenantSlug || DEFAULT_TENANT_SLUG || 'arc';
+      const tenantSlug =
+        state?.auth?.user?.schoolSlug ||
+        state?.auth?.schoolInfo?.slug ||
+        state?.auth?.tenantSlug ||
+        null;
 
       if (!token) {
         const credentials = await Keychain.getGenericPassword();
@@ -30,7 +35,10 @@ const rawBaseQuery = fetchBaseQuery({
       if (tenantSlug) {
         headers.set('x-tenant-slug', tenantSlug);
       }
-      const activeStudentId = state?.auth?.activeStudentId;
+      const activeStudentId =
+        state?.auth?.activeStudentId ||
+        state?.auth?.activeStudent?.id ||
+        state?.auth?.user?.id;
       if (activeStudentId) {
         headers.set('x-student-id', activeStudentId);
       }
@@ -51,12 +59,7 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
 
     // If session is expired or token is invalid on any authenticated endpoint
     if (!isLoginEndpoint && (status === 401 || result.error?.data?.error?.code === 'TOKEN_EXPIRED')) {
-      try {
-        await AsyncStorage.multiRemove(['@auth_user', '@auth_token', '@auth_siblings', '@auth_active_student']);
-        await Keychain.resetGenericPassword();
-      } catch (e) {}
-
-      api.dispatch(logout());
+      await performFullLogout(api.dispatch);
     }
   }
 
@@ -89,7 +92,10 @@ export const apiSlice = createApi({
     
     // Student Endpoints
     getDashboard: builder.query({
-      query: () => '/student_app/dashboard',
+      query: (studentId) => ({
+        url: '/student_app/dashboard',
+        params: studentId ? { student_id: studentId } : undefined,
+      }),
       providesTags: ['Dashboard'],
     }),
     

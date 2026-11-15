@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/Feather';
 import { setActiveStudent, logout } from '../../store/authSlice';
+import { performFullLogout } from '../../utils/authUtils';
 import { apiSlice } from '../../store/apiSlice';
 import { colors } from '../../theme/colors';
 import UserAvatar from '../../components/UserAvatar';
@@ -37,8 +38,7 @@ const SiblingSelectScreen = ({ navigation, route }) => {
   };
 
   const handleLogout = async () => {
-    dispatch(logout());
-    await AsyncStorage.clear();
+    await performFullLogout(dispatch);
     navigation.reset({
       index: 0,
       routes: [{ name: 'Login' }],

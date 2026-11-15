@@ -16,7 +16,11 @@ const rawBaseQuery = fetchBaseQuery({
     try {
       const state = getState();
       let token = state?.auth?.token;
-      const tenantSlug = state?.auth?.tenantSlug || 'arc';
+      const tenantSlug =
+        state?.auth?.user?.schoolSlug ||
+        state?.auth?.schoolInfo?.slug ||
+        state?.auth?.tenantSlug ||
+        null;
 
       if (!token) {
         const credentials = await Keychain.getGenericPassword();

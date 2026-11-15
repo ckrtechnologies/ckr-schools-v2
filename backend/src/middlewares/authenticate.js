@@ -55,10 +55,26 @@ export async function authenticate(req, res, next) {
 
     // Cross-tenant boundary check: Ensure token's school matches the requested tenant
     if (req.tenant && decoded.schoolId && decoded.schoolId !== req.tenant.id) {
-      return res.status(403).json({
-        success: false,
-        error: { code: 'FORBIDDEN', message: 'Token belongs to a different school tenant.' }
-      });
+      const forwardedHost = req.headers['x-forwarded-host'];
+      const hostHeader = (forwardedHost || req.headers.host || '').toLowerCase().split(':')[0];
+      const base = config.baseDomain;
+      const isSubdomain = hostHeader.endsWith(`.${base}`) && !hostHeader.startsWith('api.') && !hostHeader.startsWith('www.');
+
+      if (isSubdomain) {
+        return res.status(403).json({
+          success: false,
+          error: { code: 'FORBIDDEN', message: 'Token belongs to a different school tenant.' }
+        });
+      }
+
+      // On shared API gateway / mobile endpoint, self-heal req.tenant to token's actual school
+      const { rows } = await pgPool.query(
+        'SELECT id, slug, name, affiliation_board, plan_tier, theme_color, accent_color, motto, logo_url, is_active FROM public.tenants WHERE id = $1 AND is_active = TRUE LIMIT 1;',
+        [decoded.schoolId]
+      );
+      if (rows[0]) {
+        req.tenant = rows[0];
+      }
     }
 
     // Auto-populate req.tenant from user's authenticated token if not already resolved by subdomain/header

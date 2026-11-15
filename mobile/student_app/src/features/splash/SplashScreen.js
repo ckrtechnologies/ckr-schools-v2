@@ -50,7 +50,7 @@ const SplashScreen = ({ onFinish }) => {
           dispatch(setCredentials({
             user: userObj,
             token: storedToken,
-            tenantSlug: storedSlug || userObj.schoolSlug || 'arc',
+            tenantSlug: storedSlug || userObj.schoolSlug || null,
             siblings: siblingsList,
             activeStudent: active,
           }));
