@@ -52,7 +52,11 @@ const ProfileScreen = ({ navigation }) => {
   const schoolName = schoolInfo?.name || user?.schoolName || 'Profile';
 
   const handleLogout = async () => {
-    await performFullLogout(dispatch);
+    try {
+      await performFullLogout(dispatch);
+    } catch (e) {
+      console.warn('Logout error:', e);
+    }
   };
 
   const confirmLogout = () => {

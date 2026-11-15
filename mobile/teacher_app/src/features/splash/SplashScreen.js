@@ -35,13 +35,19 @@ const SplashScreen = ({ onFinish }) => {
         }
 
         if (storedUser && storedToken) {
-          const userObj = JSON.parse(storedUser);
-          dispatch(loginSuccess({ 
-            user: userObj, 
-            token: storedToken,
-            tenantSlug: storedSlug || userObj.schoolSlug || 'arc',
-            schoolInfo: storedSchool ? JSON.parse(storedSchool) : null
-          }));
+          try {
+            const userObj = JSON.parse(storedUser);
+            if (userObj && userObj.id) {
+              dispatch(loginSuccess({ 
+                user: userObj, 
+                token: storedToken,
+                tenantSlug: storedSlug || userObj.schoolSlug || 'arc',
+                schoolInfo: storedSchool ? JSON.parse(storedSchool) : null
+              }));
+            }
+          } catch (parseErr) {
+            console.warn('Invalid stored teacher user, skipping auto-login:', parseErr);
+          }
         }
       } catch (e) {
         console.error('Failed to restore login state', e);

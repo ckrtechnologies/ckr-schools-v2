@@ -84,7 +84,11 @@ const DrawerContent = ({ close }) => {
 
   const handleLogout = async () => {
     close();
-    await performFullLogout(dispatch);
+    try {
+      await performFullLogout(dispatch);
+    } catch (e) {
+      console.warn('Drawer logout error:', e);
+    }
   };
 
   return (

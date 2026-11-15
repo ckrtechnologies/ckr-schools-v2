@@ -41,19 +41,25 @@ const SplashScreen = ({ onFinish }) => {
         }
 
         if (storedUser && storedToken) {
-          isAuthenticated = true;
-          const userObj = JSON.parse(storedUser);
-          const siblingsList = storedSiblings ? JSON.parse(storedSiblings) : [];
-          const active = storedActiveStudent ? JSON.parse(storedActiveStudent) : (siblingsList[0] || null);
-          hasMultiple = siblingsList.length > 1;
+          try {
+            const userObj = JSON.parse(storedUser);
+            if (userObj && userObj.id) {
+              isAuthenticated = true;
+              const siblingsList = storedSiblings ? JSON.parse(storedSiblings) : [];
+              const active = storedActiveStudent ? JSON.parse(storedActiveStudent) : (siblingsList[0] || null);
+              hasMultiple = siblingsList.length > 1;
 
-          dispatch(setCredentials({
-            user: userObj,
-            token: storedToken,
-            tenantSlug: storedSlug || userObj.schoolSlug || null,
-            siblings: siblingsList,
-            activeStudent: active,
-          }));
+              dispatch(setCredentials({
+                user: userObj,
+                token: storedToken,
+                tenantSlug: storedSlug || userObj.schoolSlug || null,
+                siblings: siblingsList,
+                activeStudent: active,
+              }));
+            }
+          } catch (parseErr) {
+            console.log('Corrupted stored user, skipping auto-auth:', parseErr);
+          }
         }
       } catch (err) {
         console.log('Error restoring session in splash:', err);
