@@ -1,5 +1,6 @@
 import * as repo from './repository.js';
 import { createCircularSchema, sendMessageSchema, complaintSchema } from './validation.js';
+import { sendPushNotification } from '../../services/firebase.js';
 
 // Circulars
 export async function getCirculars(tenantId, audience) {
@@ -107,4 +108,31 @@ export async function getAllNotifications(tenantId, page = 1, limit = 100) {
 
 export async function markAsRead(tenantId, notificationId, userId) {
   return await repo.markNotificationAsRead(tenantId, notificationId, userId);
+}
+
+export async function dispatchNotification({ tenantId, userIds, title, message, type = 'general', data = {} }) {
+  const ids = Array.isArray(userIds) ? userIds : [userIds];
+  const createdRecords = [];
+  
+  for (const uid of ids) {
+    const record = await repo.createNotification(tenantId, uid, title, message, type);
+    createdRecords.push(record);
+  }
+
+  // Fetch registered FCM device tokens for these users
+  try {
+    const tokens = await repo.getUserDeviceTokens(tenantId, ids);
+    if (tokens && tokens.length > 0) {
+      await sendPushNotification({
+        tokens,
+        title,
+        body: message,
+        data: { ...data, type, tenantId }
+      });
+    }
+  } catch (pushErr) {
+    console.error('[Notification Service] Push dispatch error:', pushErr.message);
+  }
+
+  return createdRecords;
 }

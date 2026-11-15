@@ -3,12 +3,16 @@ import app from './app.js';
 import { config } from './config/env.js';
 import { pgPool } from './config/db.js';
 import { initSocket } from './sockets/socketManager.js';
+import { initFirebase } from './services/firebase.js';
 import { provisionSchoolDirectories } from './domains/upload/controller.js';
 
 const server = http.createServer(app);
 
 // Initialize Multi-Tenant Socket.io Engine
 initSocket(server);
+
+// Initialize Firebase Admin SDK (FCM)
+initFirebase();
 
 async function start() {
   try {

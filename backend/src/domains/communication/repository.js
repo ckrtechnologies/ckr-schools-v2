@@ -321,6 +321,28 @@ export async function registerDeviceToken(tenantId, userId, fcmToken, deviceType
   return rows[0];
 }
 
+export async function getUserDeviceTokens(tenantId, userIds) {
+  const ids = Array.isArray(userIds) ? userIds : [userIds];
+  if (ids.length === 0) return [];
+  const query = `
+    SELECT DISTINCT fcm_token
+    FROM user_device_tokens
+    WHERE tenant_id = $1 AND user_id = ANY($2::uuid[]);
+  `;
+  const { rows } = await pgPool.query(query, [tenantId, ids]);
+  return rows.map(r => r.fcm_token).filter(Boolean);
+}
+
+export async function createNotification(tenantId, userId, title, message, type = 'general') {
+  const query = `
+    INSERT INTO notifications (tenant_id, user_id, title, message, type, is_read, created_at)
+    VALUES ($1, $2, $3, $4, $5, FALSE, NOW())
+    RETURNING *;
+  `;
+  const { rows } = await pgPool.query(query, [tenantId, userId, title, message, type]);
+  return rows[0];
+}
+
 export async function getUserNotifications(tenantId, userId, limit = 50, offset = 0) {
   const query = `
     SELECT id, tenant_id, user_id, title, message, type, is_read, created_at
