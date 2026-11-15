@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { fetchSchools, fetchSchoolBySlug, fetchSchoolReviews, fetchPressReleases } from '../../../lib/api.js';
 import SchoolProfileClientView from '../../../components/SchoolProfileClientView.jsx';
 
-export const revalidate = 1800; // 30-minute ISR
+export const dynamic = 'force-dynamic';
 
 export async function generateStaticParams() {
   try {

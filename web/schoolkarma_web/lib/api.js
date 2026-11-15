@@ -31,7 +31,7 @@ export async function fetchSchools({ search = '', city = 'all', board = 'all', m
 export async function fetchSchoolBySlug(slug) {
   const url = `${getBaseUrl()}/api/marketplace/schools/${slug}`;
   const res = await fetch(url, {
-    next: { revalidate: 1800 } // ISR Cache 30 mins
+    cache: 'no-store'
   });
   if (!res.ok) return { success: false, data: null };
   return res.json();
@@ -49,7 +49,7 @@ export async function fetchFacets() {
 export async function fetchSchoolReviews(slug) {
   const url = `${getBaseUrl()}/api/marketplace/schools/${slug}/reviews`;
   const res = await fetch(url, {
-    next: { revalidate: 300 }
+    cache: 'no-store'
   });
   if (!res.ok) return { success: false, data: [] };
   return res.json();
@@ -97,7 +97,7 @@ export async function submitSchoolReview(slug, payload, token) {
 export async function fetchPressReleases(slug) {
   const url = `${getBaseUrl()}/api/marketplace/schools/${slug}/press-releases`;
   const res = await fetch(url, {
-    next: { revalidate: 3600 }
+    cache: 'no-store'
   });
   if (!res.ok) return { success: false, data: [] };
   return res.json();
