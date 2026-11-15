@@ -9,6 +9,7 @@ import EditSchoolModal from './components/EditSchoolModal.jsx';
 import DeleteSchoolModal from './components/DeleteSchoolModal.jsx';
 import SchoolDetailModal from './components/SchoolDetailModal.jsx';
 import MarketplaceLeadsView from './components/MarketplaceLeadsView.jsx';
+import ErpLeadsView from './components/ErpLeadsView.jsx';
 import MarketplaceReviewsView from './components/MarketplaceReviewsView.jsx';
 import LoginView from './components/LoginView.jsx';
 
@@ -236,6 +237,10 @@ export default function App() {
 
           {activeTab === 'Leads' && (
             <MarketplaceLeadsView />
+          )}
+
+          {activeTab === 'ERP Leads' && (
+            <ErpLeadsView />
           )}
 
           {activeTab === 'Reviews' && (

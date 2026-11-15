@@ -7,9 +7,9 @@ import { pgPool } from '../config/db.js';
  * 
  * Supports:
  * - Header: x-tenant-slug: "vision" or "dps"
- * - Subdomain: vision.ckrschools.online -> slug "vision"
+ * - Subdomain: vision.schoolkarma.com -> slug "vision"
  * - Query param: ?school=vision (for testing/dev)
- * - Base domain (ckrschools.online or localhost) -> req.isSuperAdmin = true
+ * - Base domain (schoolkarma.com or localhost) -> req.isSuperAdmin = true
  */
 export async function resolveTenant(req, res, next) {
   try {

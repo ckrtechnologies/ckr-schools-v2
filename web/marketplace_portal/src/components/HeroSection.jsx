@@ -1,32 +1,42 @@
 import React from 'react';
-import {
-  IconShieldCheck,
-  IconStarFilled,
-  IconMapPin,
-  IconCurrencyRupee,
-  IconCheck,
+import { 
+  IconShieldCheck, 
+  IconStarFilled, 
+  IconCurrencyRupee, 
   IconArrowRight,
-  IconSchool
+  IconSchool,
+  IconMapPin
 } from '@tabler/icons-react';
-import { useGetSchoolsQuery } from '../store/marketplaceApi';
-import SchoolImage from './SchoolImage.jsx';
-import { getCurrentAcademicYearShort } from '../utils/academicYear.js';
+import { useGetSchoolsQuery } from '../store/marketplaceApi.js';
+import SchoolSolarSystemHero from './SchoolSolarSystemHero.jsx';
 
 export default function HeroSection({ onExploreClick, onSelectSchool }) {
   const { data: schoolsData } = useGetSchoolsQuery({});
-  const schools = schoolsData?.data || [];
-  // Pick first two featured schools (backend already sorts is_featured DESC)
-  const previewCards = schools.slice(0, 2);
+  const allSchools = schoolsData?.data || [];
+  
+  // Strictly prioritize schools marked 'is_featured' from the Superadmin panel
+  const featuredOnly = allSchools.filter(s => s.is_featured);
+  const featuredSchools = featuredOnly.length >= 6 
+    ? featuredOnly.slice(0, 8)
+    : [...featuredOnly, ...allSchools.filter(s => !s.is_featured)].slice(0, 6);
 
   return (
-    <section className="mk-hero-section" style={{
-      background: 'linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)',
+    <section style={{
+      background: 'linear-gradient(180deg, #ecfdf5 0%, #f0fdf4 35%, #ffffff 100%)',
+      padding: '40px clamp(16px, 2.5vw, 40px) 48px',
       borderBottom: '1px solid #e2e8f0',
-      position: 'relative',
-      overflow: 'hidden'
+      width: '100%',
+      boxSizing: 'border-box'
     }}>
-      <div className="mk-hero-grid">
-        {/* Left Column: Headlines & Value Prop */}
+      {/* FULL CANVAS HERO LAYOUT: Left Headline (1fr) + Right 6-8 School Cards (1.6fr) */}
+      <div className="mk-hero-layout" style={{
+        width: '100%',
+        display: 'grid',
+        gridTemplateColumns: 'minmax(320px, 1fr) minmax(480px, 1.5fr)',
+        gap: 'clamp(24px, 3vw, 48px)',
+        alignItems: 'center'
+      }}>
+        {/* Left Column: Headlines & High-Contrast CTAs */}
         <div>
           <div style={{
             display: 'inline-flex',
@@ -37,39 +47,40 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
             padding: '6px 14px',
             borderRadius: '20px',
             fontSize: '12px',
-            fontWeight: '700',
+            fontWeight: '800',
             color: '#166534',
-            marginBottom: '20px',
+            marginBottom: '18px',
             boxShadow: '0 2px 4px rgba(0,0,0,0.03)'
           }}>
-            <span className="pulse-indicator" />
-            Explore Schools for Academic Year {getCurrentAcademicYearShort()}
+            <span className="pulse-indicator" style={{ backgroundColor: '#22c55e' }} />
+            Admissions Open For Academic Year 2027-28
           </div>
 
           <h1 style={{
-            fontSize: 'clamp(30px, 4.2vw, 44px)',
-            fontWeight: '800',
+            fontSize: 'clamp(28px, 3.2vw, 48px)',
+            fontWeight: '900',
             lineHeight: '1.15',
             color: '#0f172a',
             letterSpacing: '-1px',
             marginBottom: '18px'
           }}>
-            Find, Compare & Enrol in India's Top{' '}
+            Find, Compare &amp; Enroll in India’s Top{' '}
             <span style={{ color: '#047857', position: 'relative', display: 'inline-block' }}>
-              Schools
+              Verified Schools
             </span>
           </h1>
 
           <p style={{
-            fontSize: '17px',
+            fontSize: 'clamp(14px, 1.2vw, 16px)',
             color: '#475569',
             lineHeight: '1.6',
             marginBottom: '28px',
             maxWidth: '560px'
           }}>
-            Unbiased 5-axis parent ratings, transparent annual fee schedules, official campus photo galleries, and 1-click admission inquiries directly through CKR Marketplace.
+            Unbiased 5-axis parent ratings, transparent annual fee schedules, official campus photo galleries, and 1-click admission inquiries directly through SchoolKarma.
           </p>
 
+          {/* Solid CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
             <button
               onClick={onExploreClick}
@@ -80,268 +91,178 @@ export default function HeroSection({ onExploreClick, onSelectSchool }) {
                 borderRadius: '10px',
                 padding: '14px 28px',
                 fontSize: '15px',
-                fontWeight: '700',
+                fontWeight: '800',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
-                boxShadow: '0 4px 12px rgba(6, 78, 59, 0.25)',
-                transition: 'transform 0.15s ease'
+                gap: '10px',
+                boxShadow: '0 4px 14px rgba(6, 78, 59, 0.35)',
+                transition: 'transform 0.15s ease, background-color 0.15s ease'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.backgroundColor = '#047857';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.backgroundColor = '#064e3b';
+              }}
             >
-              Explore Schools
+              <span>Explore Featured Campuses</span>
               <IconArrowRight size={18} />
             </button>
 
-            {schools.length > 0 && (
+            {allSchools.length > 0 && (
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#64748b' }}>
                 <div style={{ display: 'flex', color: '#f59e0b' }}>
                   {[1, 2, 3, 4, 5].map(i => <IconStarFilled key={i} size={15} />)}
                 </div>
-                <span style={{ fontWeight: '700', color: '#0f172a' }}>
-                  {schools.length}+ Schools
+                <span style={{ fontWeight: '800', color: '#0f172a' }}>
+                  {allSchools.length}+ Schools
                 </span>
-                <span>listed</span>
+                <span>accredited in India</span>
               </div>
             )}
           </div>
         </div>
 
-        {/* Right Column: Floating Interactive School Preview Cards */}
-        <div className="mk-hero-cards" style={{ position: 'relative', height: '420px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {previewCards.length === 0 ? (
-            /* Loading / empty state — no fake cards */
-            <div style={{
-              width: '320px',
-              backgroundColor: '#f8fafc',
-              borderRadius: '14px',
-              padding: '40px 24px',
-              textAlign: 'center',
-              border: '1px dashed #cbd5e1',
-              color: '#94a3b8'
-            }}>
-              <IconSchool size={36} style={{ marginBottom: '12px', color: '#cbd5e1' }} />
-              <div style={{ fontSize: '14px', fontWeight: '600' }}>Schools Loading…</div>
-              <div style={{ fontSize: '12px', marginTop: '4px' }}>Fetching school profiles</div>
-            </div>
-          ) : (
-            <>
-              {/* Card 1: Featured school (Foreground Float) */}
-              {previewCards[0] && (
-                <div
-                  onClick={() => onSelectSchool(previewCards[0].slug)}
-                  className="animate-float mk-hero-card"
-                  style={{
-                    position: 'absolute',
-                    top: '20px',
-                    left: '10px',
-                    width: '320px',
-                    backgroundColor: '#ffffff',
-                    borderRadius: '14px',
-                    padding: '16px',
-                    boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.15)',
-                    border: '1px solid #e2e8f0',
-                    cursor: 'pointer',
-                    zIndex: 2,
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease'
-                  }}
-                >
-                  <div style={{
-                    height: '140px',
-                    borderRadius: '10px',
-                    overflow: 'hidden',
-                    position: 'relative',
-                    marginBottom: '12px',
-                    backgroundColor: '#ecfdf5',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <SchoolImage
-                      school={previewCards[0]}
-                      alt={previewCards[0].name}
-                      height="100%"
-                      objectFit="cover"
-                      logoPadding="30px 34px"
-                    />
-                    <span style={{
-                      position: 'absolute',
-                      top: '8px',
-                      left: '8px',
-                      backgroundColor: 'rgba(30, 41, 59, 0.9)',
-                      color: '#ffffff',
-                      fontSize: '10px',
-                      fontWeight: '700',
-                      padding: '3px 8px',
-                      borderRadius: '4px'
-                    }}>
-                      {[previewCards[0].affiliation_board || previewCards[0].board, previewCards[0].city].filter(Boolean).join(' · ')}
-                    </span>
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
-                    <div style={{ fontWeight: '700', fontSize: '15px', color: '#0f172a' }}>
-                      {previewCards[0].name}
-                    </div>
-                    {previewCards[0].avg_rating > 0 && (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '3px', backgroundColor: '#fef3c7', padding: '2px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: '700', color: '#b45309' }}>
-                        <IconStarFilled size={12} />
-                        {parseFloat(previewCards[0].avg_rating).toFixed(1)}
-                      </div>
-                    )}
-                  </div>
-
-                  {previewCards[0].city && (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', color: '#64748b', marginBottom: '8px' }}>
-                      <IconMapPin size={12} />
-                      {previewCards[0].city}{previewCards[0].state ? `, ${previewCards[0].state}` : ''}
-                    </div>
-                  )}
-
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #f1f5f9', paddingTop: '8px', marginTop: '6px' }}>
-                    {previewCards[0].fee_range_min > 0 ? (
-                      <span style={{ fontSize: '12px', fontWeight: '700', color: '#047857' }}>
-                        ₹{Math.round(previewCards[0].fee_range_min / 1000)}K
-                        {previewCards[0].fee_range_max > 0 ? ` – ₹${Math.round(previewCards[0].fee_range_max / 1000)}K / yr` : ' / yr'}
-                      </span>
-                    ) : (
-                      <span style={{ fontSize: '12px', color: '#94a3b8' }}>Fees on enquiry</span>
-                    )}
-                    <span style={{ fontSize: '11px', color: '#2563eb', fontWeight: '600' }}>View Profile →</span>
-                  </div>
-                </div>
-              )}
-
-              {/* Card 2: Second featured school (Background offset) */}
-              {previewCards[1] && (
-                <div
-                  onClick={() => onSelectSchool(previewCards[1].slug)}
-                  className="mk-hero-card"
-                  style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    right: '10px',
-                    width: '280px',
-                    backgroundColor: '#ffffff',
-                    borderRadius: '14px',
-                    padding: '16px',
-                    boxShadow: '0 20px 35px -10px rgba(0, 0, 0, 0.12)',
-                    border: '1px solid #e2e8f0',
-                    cursor: 'pointer',
-                    zIndex: 1
-                  }}
-                >
-                  <div style={{
-                    height: '120px',
-                    borderRadius: '10px',
-                    overflow: 'hidden',
-                    position: 'relative',
-                    marginBottom: '10px',
-                    backgroundColor: '#eff6ff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <SchoolImage
-                      school={previewCards[1]}
-                      alt={previewCards[1].name}
-                      height="100%"
-                      objectFit="cover"
-                      logoPadding="26px 30px"
-                    />
-                    <span style={{
-                      position: 'absolute',
-                      top: '8px',
-                      left: '8px',
-                      backgroundColor: 'rgba(30, 41, 59, 0.9)',
-                      color: '#ffffff',
-                      fontSize: '10px',
-                      fontWeight: '700',
-                      padding: '3px 8px',
-                      borderRadius: '4px'
-                    }}>
-                      {[previewCards[1].affiliation_board || previewCards[1].board, previewCards[1].city].filter(Boolean).join(' · ')}
-                    </span>
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
-                    <div style={{ fontWeight: '700', fontSize: '14px', color: '#0f172a' }}>
-                      {previewCards[1].name}
-                    </div>
-                    {previewCards[1].avg_rating > 0 && (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '3px', backgroundColor: '#fef3c7', padding: '2px 6px', borderRadius: '4px', fontSize: '11px', fontWeight: '700', color: '#b45309' }}>
-                        <IconStarFilled size={12} />
-                        {parseFloat(previewCards[1].avg_rating).toFixed(1)}
-                      </div>
-                    )}
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #f1f5f9', paddingTop: '8px', marginTop: '6px' }}>
-                    {previewCards[1].fee_range_min > 0 ? (
-                      <span style={{ fontSize: '12px', fontWeight: '700', color: '#047857' }}>
-                        ₹{Math.round(previewCards[1].fee_range_min / 1000)}K
-                        {previewCards[1].fee_range_max > 0 ? ` – ₹${Math.round(previewCards[1].fee_range_max / 1000)}K / yr` : ' / yr'}
-                      </span>
-                    ) : (
-                      <span style={{ fontSize: '12px', color: '#94a3b8' }}>Fees on enquiry</span>
-                    )}
-                    <span style={{ fontSize: '11px', color: '#2563eb', fontWeight: '600' }}>View Profile →</span>
-                  </div>
-                </div>
-              )}
-            </>
-          )}
+        {/* Right Column: Dynamic Featured Schools Solar System Planetary Orbit Animation */}
+        <div className="mk-hero-solar-wrap" style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '460px',
+          position: 'relative'
+        }}>
+          <SchoolSolarSystemHero
+            schools={featuredSchools}
+            onSelectSchool={onSelectSchool}
+          />
         </div>
       </div>
 
-      {/* Trust Stats Ribbon */}
-      <div className="mk-ribbon" style={{
-        margin: '40px auto 0',
-        paddingTop: '24px',
-        borderTop: '1px solid #e2e8f0',
+      {/* Solid Trust Metric Cards: Full Width */}
+      <div className="mk-metric-cards-grid" style={{
+        width: '100%',
+        marginTop: '36px',
         display: 'grid',
         gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '24px'
+        gap: '16px',
+        boxSizing: 'border-box'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: '#ecfdf5', color: '#064e3b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <IconShieldCheck size={22} />
+        {/* Solid Badge 1: Emerald Verified */}
+        <div style={{
+          backgroundColor: '#064e3b',
+          color: '#ffffff',
+          borderRadius: '12px',
+          padding: '16px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '14px',
+          boxShadow: '0 4px 12px rgba(6, 78, 59, 0.15)'
+        }}>
+          <div style={{
+            width: '44px',
+            height: '44px',
+            borderRadius: '10px',
+            backgroundColor: 'rgba(255, 255, 255, 0.15)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            <IconShieldCheck size={26} color="#34d399" />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>School Profiles</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>Maintained by each school</div>
+            <div style={{ fontWeight: '800', fontSize: '15px' }}>100% Verified</div>
+            <div style={{ fontSize: '12px', color: '#a7f3d0', marginTop: '2px' }}>Accredited CBSE/ICSE Campuses</div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: '#eff6ff', color: '#1d4ed8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <IconCurrencyRupee size={22} />
+        {/* Solid Badge 2: Royal Blue Zero Fee */}
+        <div style={{
+          backgroundColor: '#1e3a8a',
+          color: '#ffffff',
+          borderRadius: '12px',
+          padding: '16px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '14px',
+          boxShadow: '0 4px 12px rgba(30, 58, 138, 0.15)'
+        }}>
+          <div style={{
+            width: '44px',
+            height: '44px',
+            borderRadius: '10px',
+            backgroundColor: 'rgba(255, 255, 255, 0.15)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            <IconCurrencyRupee size={26} color="#93c5fd" />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>Free Enquiries</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>No brokerage or markup</div>
+            <div style={{ fontWeight: '800', fontSize: '15px' }}>₹0 Parent Fee</div>
+            <div style={{ fontSize: '12px', color: '#bfdbfe', marginTop: '2px' }}>Zero Brokerage or Markup</div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: '#fef3c7', color: '#b45309', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <IconStarFilled size={22} />
+        {/* Solid Badge 3: Amber 5-Axis Reviews */}
+        <div style={{
+          backgroundColor: '#b45309',
+          color: '#ffffff',
+          borderRadius: '12px',
+          padding: '16px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '14px',
+          boxShadow: '0 4px 12px rgba(180, 83, 9, 0.15)'
+        }}>
+          <div style={{
+            width: '44px',
+            height: '44px',
+            borderRadius: '10px',
+            backgroundColor: 'rgba(255, 255, 255, 0.15)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            <IconStarFilled size={24} color="#fde68a" />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>Parent Ratings</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>Tied to signed-in accounts</div>
+            <div style={{ fontWeight: '800', fontSize: '15px' }}>5-Axis Reviews</div>
+            <div style={{ fontSize: '12px', color: '#fef3c7', marginTop: '2px' }}>Real Parent UGC Testimonials</div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '10px', backgroundColor: '#f3e8ff', color: '#7e22ce', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <IconSchool size={22} />
+        {/* Solid Badge 4: Deep Purple Multi-Enquiry */}
+        <div style={{
+          backgroundColor: '#581c87',
+          color: '#ffffff',
+          borderRadius: '12px',
+          padding: '16px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '14px',
+          boxShadow: '0 4px 12px rgba(88, 28, 135, 0.15)'
+        }}>
+          <div style={{
+            width: '44px',
+            height: '44px',
+            borderRadius: '10px',
+            backgroundColor: 'rgba(255, 255, 255, 0.15)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            <IconSchool size={24} color="#d8b4fe" />
           </div>
           <div>
-            <div style={{ fontWeight: '800', fontSize: '16px', color: '#0f172a' }}>1-Click Multi-Enquiry</div>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>Apply to Multiple Schools</div>
+            <div style={{ fontWeight: '800', fontSize: '15px' }}>1-Click Enquiry</div>
+            <div style={{ fontSize: '12px', color: '#e9d5ff', marginTop: '2px' }}>Apply to Multiple Schools</div>
           </div>
         </div>
       </div>

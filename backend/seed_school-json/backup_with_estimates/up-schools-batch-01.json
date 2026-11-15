@@ -1,0 +1,570 @@
+[
+  {
+    "slug": "dps-noida-sector-30",
+    "name": "Delhi Public School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://dpsnoida.co.in",
+    "address": "Sector 30",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201303",
+    "logo_url": "https://dpsnoida.co.in/wp-content/uploads/2025/02/dpsn.png",
+    "hero_image_url": "https://dpsnoida.co.in/wp-content/uploads/slider/cache/f29e4a6510eb85845c8d062300cac7b0/DPSNOIDA-2jpg.jpg",
+    "gallery_images": [
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://dpsnoida.co.in/wp-content/uploads/2020/05/DSC_0436.jpg"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://dpsnoida.co.in/wp-content/uploads/2020/05/Picture-037.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://dpsnoida.co.in/wp-content/uploads/2020/05/DSC_0329-scaled.jpg"
+      },
+      {
+        "title": "Open Air Theatre",
+        "category": "Campus",
+        "url": "https://dpsnoida.co.in/wp-content/uploads/2020/05/OPEN-AIR-THEATRE.jpg"
+      },
+      {
+        "title": "School Transport",
+        "category": "Transport",
+        "url": "https://dpsnoida.co.in/wp-content/uploads/2020/05/TRANSPORT.jpg"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#16a34a",
+    "motto": "Service Before Self",
+    "tagline": "A core DPS Society school in Noida known for academics, sport and a wide co-curricular canvas",
+    "about": "Delhi Public School Noida is one of the core schools of the DPS Society, located in Sector 30. Its campus has two all-season swimming pools, a 400 m track, horse riding, three libraries, smart boards in every classroom from Nursery to XII, and a fleet of air-conditioned buses covering Noida and parts of East and South Delhi.",
+    "established_year": 1982,
+    "min_fee": 100000,
+    "max_fee": 180000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Swimming Pools",
+      "400 m Track",
+      "Horse Riding",
+      "Science Laboratories",
+      "Computer Labs",
+      "Three Libraries",
+      "Auditoriums",
+      "AC School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "5,000+ Students",
+    "teacher_count_badge": "300+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-noida-sector-44",
+    "name": "Amity International School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/noida/",
+    "address": "A Block, Sector 44",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201313",
+    "logo_url": "https://amityschools.in/assets/schools/noida/logo/blue-logo.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/noida/infra/Infra.webp",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/noida/infra/DSC04600.webp"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/noida/infra/DSC04593.webp"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/noida/infra/DSC00385.webp"
+      },
+      {
+        "title": "Reading Room",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/noida/infra/DSC04396.webp"
+      },
+      {
+        "title": "Mathematics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/noida/infra/DSC00176.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#eab308",
+    "motto": "Excellence in education with values",
+    "tagline": "Amity's Noida flagship pairing competitive academics with labs, libraries and global exposure",
+    "about": "Started in 1994, Amity International School Noida in Sector 44 has grown into one of the city's best-known senior secondary schools. It runs well-equipped physics, chemistry, biology, mathematics and computer labs, junior and senior libraries with a reading room, and interactive smart classrooms, alongside a broad clubs and sports programme.",
+    "established_year": 1994,
+    "min_fee": 120000,
+    "max_fee": 200000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Mathematics Lab",
+      "Computer Lab",
+      "Junior & Senior Libraries",
+      "Reading Room"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "3,000+ Students",
+    "teacher_count_badge": "200+ Faculty",
+    "student_teacher_ratio": "16:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-vasundhara-sector-6-ghaziabad",
+    "name": "Amity International School, Vasundhara Sector 6",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/vasundhara-sector-6/",
+    "address": "Sector 6, Vasundhara Yojana",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "pincode": "201012",
+    "logo_url": "https://amityschools.in/assets/schools/v6/logo/blue-logo.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/v6/about/About%20and%20Infra.webp",
+    "gallery_images": [
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/v6/infra/school-playground.webp"
+      },
+      {
+        "title": "Physics Laboratory",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/v6/infra/physics-laboratory.webp"
+      },
+      {
+        "title": "Chemistry Laboratory",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/v6/infra/chemistry-laboratory.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/v6/infra/library-facility.webp"
+      },
+      {
+        "title": "Table Tennis Room",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/v6/infra/table-tennis-room.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": "Excellence in education with values",
+    "tagline": "Amity's seventh school, serving Vasundhara and Indirapuram families with labs, sport and arts",
+    "about": "Inaugurated on 19 April 2005 as the seventh school in the Amity chain, Amity International School Vasundhara Sector 6 has twin towers and a large campus for around 2,000 students. Facilities include science laboratories, a library, a playground, and dedicated rooms for dance, chess, table tennis and taekwondo.",
+    "established_year": 2005,
+    "min_fee": 100000,
+    "max_fee": 170000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Physics Lab",
+      "Chemistry Lab",
+      "Library",
+      "Playground",
+      "Dance Studio",
+      "Chess Room",
+      "Table Tennis Room",
+      "Taekwondo Room"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,000+ Students",
+    "teacher_count_badge": "130+ Faculty",
+    "student_teacher_ratio": "16:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-vasundhara-sector-1-ghaziabad",
+    "name": "Amity International School, Vasundhara Sector 1",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/vasundhara-sector-1/",
+    "address": "Sector 1, Vasundhara",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "pincode": "201012",
+    "logo_url": "https://amityschools.in/assets/schools/v1/logo/blue-v1.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/v1/about-us/About.webp",
+    "gallery_images": [
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/v1/infra/aisv1_0009-8.webp"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/v1/infra/new-infra/phyics-lab.webp"
+      },
+      {
+        "title": "Interactive Smart Classroom",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/v1/infra/new-infra/interactive-classroom.webp"
+      },
+      {
+        "title": "Junior Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/v1/infra/aisv1_0004-15.webp"
+      },
+      {
+        "title": "Transport",
+        "category": "Transport",
+        "url": "https://amityschools.in/assets/schools/v1/infra/aisv1_013.webp"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#f97316",
+    "motto": "Excellence in education with values",
+    "tagline": "Amity's eighth school in Vasundhara, with modern labs, smart classrooms and a full sports programme",
+    "about": "Established in 2009 as the eighth school in the Amity chain, this English-medium CBSE school in Vasundhara Sector 1 offers physics, chemistry, biology and mathematics labs, interactive smart classrooms, junior and senior libraries, an infirmary, a taekwondo hall, an auditorium, a playground and a school transport fleet.",
+    "established_year": 2009,
+    "min_fee": 100000,
+    "max_fee": 165000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Interactive Smart Classrooms",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Mathematics Lab",
+      "Junior & Senior Libraries",
+      "Infirmary",
+      "Taekwondo Hall",
+      "School Transport"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,800+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "15:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-viraj-khand-lucknow",
+    "name": "Amity International School, Viraj Khand",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/virajkhand/",
+    "address": "Viraj Khand 5, Gomti Nagar",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226010",
+    "logo_url": "https://amityschools.in/assets/schools/vkc/logo/VKC_blue.png",
+    "hero_image_url": "https://amityschools.in/assets/schools/vkc/about/About.webp",
+    "gallery_images": [
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/vkc/infra/auditorium.webp"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/vkc/infra/basketball.webp"
+      },
+      {
+        "title": "IT Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/vkc/infra/it_lab.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/vkc/infra/library.webp"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://amityschools.in/assets/schools/vkc/infra/music_room.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#22c55e",
+    "motto": "Excellence in education with values",
+    "tagline": "Gomti Nagar's Amity campus combining CBSE academics with labs, sport and performing arts",
+    "about": "Established in 2010, Amity International School Viraj Khand in Gomti Nagar is an English-medium CBSE school. Its campus has an auditorium, basketball court, science, mathematics and IT labs, interactive and junior classrooms, a library, and rooms for music, karate, chess and meditation.",
+    "established_year": 2010,
+    "min_fee": 90000,
+    "max_fee": 150000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Auditorium",
+      "Basketball Court",
+      "Biology Lab",
+      "Chemistry Lab",
+      "IT Lab",
+      "Mathematics Lab",
+      "Library",
+      "Music Room",
+      "Karate Room",
+      "Meditation Room"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,800+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "15:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-vrindavan-yojna-lucknow",
+    "name": "Amity International School, Vrindavan Yojna",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/vrindavanyojna/",
+    "address": "Vrindavan Yojna",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226029",
+    "logo_url": "https://amityschools.in/assets/schools/vyc/logo/VYC-blue_logo.png",
+    "hero_image_url": "https://amityschools.in/assets/schools/vyc/about-us/About.webp",
+    "gallery_images": [
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/vyc/infra/playground.webp"
+      },
+      {
+        "title": "STEM & Robotics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/vyc/infra/stem_robotics_lab.webp"
+      },
+      {
+        "title": "Physics Laboratory",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/vyc/infra/physics_lab.webp"
+      },
+      {
+        "title": "Assembly Hall",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/vyc/infra/assembly_room.webp"
+      },
+      {
+        "title": "Reception Area",
+        "category": "Campus",
+        "url": "https://amityschools.in/assets/schools/vyc/infra/reception.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#06b6d4",
+    "motto": "Excellence in education with values",
+    "tagline": "Amity's newer Lucknow campus with STEM and robotics labs, modern classrooms and open play areas",
+    "about": "Established in 2014, Amity International School Vrindavan Yojna is a co-educational, English-medium CBSE school in south Lucknow. It has physics, chemistry and biology laboratories, a STEM and robotics lab, an IT lab, modern classrooms, an assembly hall and a playground.",
+    "established_year": 2014,
+    "min_fee": 85000,
+    "max_fee": 140000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "STEM & Robotics Lab",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "IT Lab",
+      "Smart Classrooms",
+      "Assembly Hall",
+      "Playground"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,200+ Students",
+    "teacher_count_badge": "90+ Faculty",
+    "student_teacher_ratio": "14:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "la-martiniere-college-lucknow",
+    "name": "La Martinière College, Lucknow",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "principal@lamartinierelucknow.org",
+    "official_phone": null,
+    "website": "https://www.lamartinierelucknow.org",
+    "address": "La Martinière Road, Martin Purwa",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226001",
+    "logo_url": "https://rgs-bucket.sgp1.cdn.digitaloceanspaces.com/lmc/lms/77ce87b5-b91d-4188-be03-6b6a9daf69e6",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/La_Martiniere_College%2C_Lucknow_-_by_Ahmad_Faiz_Mustafa.jpg",
+    "gallery_images": [
+      {
+        "title": "Constantia – Main College Building",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/%27Constantia%27%2C_the_main_college_building_of_La_Martinieres_college..JPG"
+      },
+      {
+        "title": "College Chapel",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/La_Martiniere_College-_Chapel.jpg"
+      },
+      {
+        "title": "Constantia Tower",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/La_Martiniere%27s_Tower.jpg"
+      },
+      {
+        "title": "Football Ground",
+        "category": "Sports",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/La_Martiniere_-_Annual_Past_vs_Present_Football.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#d97706",
+    "motto": "Labore et Constantia",
+    "tagline": "One of India's oldest schools, set in the landmark Constantia estate with a 180-year legacy",
+    "about": "Founded in 1845 from the will of Major-General Claude Martin, La Martinière College is a boys' school set around Constantia, one of Lucknow's best-known heritage buildings. Affiliated to CISCE, it combines a long tradition of academics with sport, music and a large green campus beside the Gomti.",
+    "established_year": 1845,
+    "min_fee": 100000,
+    "max_fee": 180000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Class I to XII",
+    "facilities": [
+      "Heritage Campus",
+      "Chapel",
+      "Football Grounds",
+      "Science Laboratories",
+      "Library",
+      "Boarding",
+      "Music Rooms",
+      "Sports Facilities"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "shiv-nadar-school-noida",
+    "name": "Shiv Nadar School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://shivnadarschool.edu.in/noida",
+    "address": "Sector 168",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201305",
+    "logo_url": "https://shivnadarschool.edu.in/themes/shivnadar/images/sns-logo3.png",
+    "hero_image_url": "https://d2es49wxtxuyut.cloudfront.net/s3fs-public/2026-09/noida-campus%20%281%29.webp",
+    "gallery_images": [],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0ea5e9",
+    "motto": "Joy of learning",
+    "tagline": "A progressive CBSE and IB school from the Shiv Nadar Foundation, built around inquiry and joy",
+    "about": "Shiv Nadar School Noida, opened in 2012 by the Shiv Nadar Foundation, offers CBSE and IB programmes on a modern campus in Sector 168. It is known for its inquiry-led teaching, strong sports programme and Round Square membership.",
+    "established_year": 2012,
+    "min_fee": 250000,
+    "max_fee": 400000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Nursery to XII",
+    "facilities": [
+      "Modern Campus",
+      "Swimming Pool",
+      "Sports Complex",
+      "Science Laboratories",
+      "Library",
+      "Performing Arts Studios",
+      "Smart Classrooms",
+      "School Transport"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,800+ Students",
+    "teacher_count_badge": "180+ Faculty",
+    "student_teacher_ratio": "10:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "pathways-school-noida",
+    "name": "Pathways School Noida",
+    "affiliation_board": "IB",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "school.psn@pathways.in",
+    "official_phone": "+91 120 4617000",
+    "website": "https://www.pathwaysnoida.edu.in",
+    "address": "Sector 100",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201301",
+    "logo_url": "https://www.pathwaysnoida.edu.in/assets/img/client1-noida.svg",
+    "hero_image_url": "https://www.pathwaysnoida.edu.in/assets/img/noida_infrastructure_banner.jpg",
+    "gallery_images": [],
+    "theme_color": "#0f766e",
+    "accent_color": "#84cc16",
+    "motto": "Inspiring curiosity, nurturing excellence",
+    "tagline": "IB continuum day school in Sector 100 with studios, design-tech workshops and naturally lit atriums",
+    "about": "Pathways School Noida is an IB World School in Sector 100 offering the PYP, MYP and Diploma Programme. Its campus has interactive classrooms, research-grade science laboratories, dance, music and theatre studios, a design and technology workshop, and skylit atriums in each academic building.",
+    "established_year": 2010,
+    "min_fee": 400000,
+    "max_fee": 700000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Early Years to Grade 12",
+    "facilities": [
+      "Interactive Whiteboards",
+      "Science Laboratories",
+      "Design & Technology Workshop",
+      "Dance Studio",
+      "Music Studio",
+      "Theatre Studio",
+      "Atriums",
+      "Sports Facilities"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,200+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "8:1",
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

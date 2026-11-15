@@ -6,6 +6,7 @@ import {
   IconSchool, 
   IconTarget,
   IconStar,
+  IconBriefcase,
   IconReceipt2, 
   IconShieldCheck,
   IconBuildingSkyscraper
@@ -15,6 +16,7 @@ const MENU_ITEMS = [
   { label: 'Overview', icon: IconLayoutDashboard },
   { label: 'Schools', icon: IconSchool },
   { label: 'Leads', icon: IconTarget },
+  { label: 'ERP Leads', icon: IconBriefcase },
   { label: 'Reviews', icon: IconStar }
 ];
 

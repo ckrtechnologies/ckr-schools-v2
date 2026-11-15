@@ -78,6 +78,15 @@ export const superadminApi = createApi({
       invalidatesTags: (result, error, { id }) => ['Tenants', 'Stats', { type: 'Tenant', id }]
     }),
 
+    resetTenantPassword: builder.mutation({
+      query: ({ id, password }) => ({
+        url: `/api/superadmin/tenants/${id}/reset-password`,
+        method: 'PATCH',
+        body: { password }
+      }),
+      invalidatesTags: (result, error, { id }) => [{ type: 'Tenant', id }]
+    }),
+
     deleteTenant: builder.mutation({
       query: (id) => ({
         url: `/api/superadmin/tenants/${id}`,
@@ -177,6 +186,7 @@ export const {
   useGetTenantByIdQuery,
   useCreateTenantMutation,
   useUpdateTenantMutation,
+  useResetTenantPasswordMutation,
   useToggleTenantStatusMutation,
   useDeleteTenantMutation,
   useGetMarketplaceLeadsQuery,

@@ -13,6 +13,7 @@ router.get('/tenants', controller.listTenantsHandler);
 router.get('/tenants/:id', controller.getTenantHandler);
 router.post('/tenants', controller.createTenantHandler);
 router.put('/tenants/:id', controller.updateTenantHandler);
+router.patch('/tenants/:id/reset-password', controller.resetTenantPasswordHandler);
 router.patch('/tenants/:id/status', controller.toggleStatusHandler);
 router.delete('/tenants/:id', controller.deleteTenantHandler);
 

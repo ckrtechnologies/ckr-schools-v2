@@ -339,6 +339,45 @@ export async function updateTenant(id, data) {
   return rows[0] || null;
 }
 
+export async function resetTenantAdminPassword(tenantId, newPassword, adminId = null) {
+  const salt = await bcrypt.genSalt(10);
+  const passwordHash = await bcrypt.hash(newPassword, salt);
+
+  let query;
+  let values;
+  if (adminId) {
+    query = `
+      UPDATE public."user"
+      SET password_hash = $1, updated_at = NOW()
+      WHERE tenant_id = $2 AND id = $3
+      RETURNING id, name, email, phone, type, status;
+    `;
+    values = [passwordHash, tenantId, adminId];
+  } else {
+    query = `
+      UPDATE public."user"
+      SET password_hash = $1, updated_at = NOW()
+      WHERE tenant_id = $2 AND (type = 'admin' OR type = 'spoc' OR type = 'principal')
+      RETURNING id, name, email, phone, type, status;
+    `;
+    values = [passwordHash, tenantId];
+  }
+
+  let { rows } = await pgPool.query(query, values);
+  if (rows.length === 0) {
+    // Fallback: update any active user belonging to this tenant
+    const fallbackQuery = `
+      UPDATE public."user"
+      SET password_hash = $1, updated_at = NOW()
+      WHERE tenant_id = $2 AND status = 'active'
+      RETURNING id, name, email, phone, type, status;
+    `;
+    const res = await pgPool.query(fallbackQuery, [passwordHash, tenantId]);
+    rows = res.rows;
+  }
+  return rows;
+}
+
 export async function deleteTenantCascade(id) {
   const tenant = await getTenantById(id);
   if (!tenant) return null;

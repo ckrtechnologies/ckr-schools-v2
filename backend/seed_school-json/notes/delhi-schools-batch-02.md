@@ -1,0 +1,1 @@
+Skipped VIS Dwarka Sec 10 (facility photos centred on students) and Kulachi Hansraj (no building/hero photo). Mount Abu hero is small (338px). DPS Dwarka hero is a sports-field view; its founding year and affiliation no. unknown.

@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { IconX, IconStarFilled, IconCheck, IconShieldCheck, IconUser } from '@tabler/icons-react';
+import { useSelector } from 'react-redux';
+import { IconX, IconStarFilled, IconCheck, IconUser } from '@tabler/icons-react';
 import { useSubmitSchoolReviewMutation } from '../store/marketplaceApi.js';
-import { openLogin } from '../store/authSlice.js';
 import SearchableSelect from './SearchableSelect.jsx';
 
 const RELATIONSHIP_OPTIONS = [
   { value: 'Parent', label: 'Parent' },
   { value: 'Student', label: 'Student' },
   { value: 'Alumni', label: 'Alumni' },
-  { value: 'Guardian', label: 'Guardian' }
+  { value: 'Guardian', label: 'Guardian' },
+  { value: 'Teacher', label: 'Teacher / Staff' },
+  { value: 'Visitor', label: 'Campus Visitor' }
 ];
 
 export default function ReviewModal({ school, isOpen, onClose }) {
-  const dispatch = useDispatch();
-  const { token, user } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.auth);
+  const [reviewerName, setReviewerName] = useState(user?.name || '');
   const [relationship, setRelationship] = useState('Parent');
   
   const [overallRating, setOverallRating] = useState(5);
@@ -37,25 +38,25 @@ export default function ReviewModal({ school, isOpen, onClose }) {
     e.preventDefault();
     setErrorMessage('');
 
-    if (!token) {
-      dispatch(openLogin());
-      setErrorMessage('Please log in with your phone number and password to rate this school.');
+    if (!reviewerName.trim()) {
+      setErrorMessage('Please enter your name.');
       return;
     }
 
     if (!reviewText.trim()) {
-      setErrorMessage('Please provide your review comments.');
+      setErrorMessage('Please provide your review feedback.');
       return;
     }
 
-    if (reviewText.trim().length < 10) {
-      setErrorMessage('Please write a detailed review of at least 10 characters.');
+    if (reviewText.trim().length < 6) {
+      setErrorMessage('Please write at least 6 characters in your comments.');
       return;
     }
 
     try {
       const res = await submitReview({
         slug: school.slug,
+        reviewer_name: reviewerName.trim(),
         relationship,
         overall_rating: overallRating,
         academics_rating: academicsRating,
@@ -64,16 +65,13 @@ export default function ReviewModal({ school, isOpen, onClose }) {
         safety_rating: safetyRating,
         value_for_money_rating: valueForMoneyRating,
         title: title || undefined,
-        review_text: reviewText
+        review_text: reviewText.trim()
       }).unwrap();
 
       if (res.success) {
         setIsSuccess(true);
       }
     } catch (err) {
-      if (err.status === 401) {
-        dispatch(openLogin());
-      }
       setErrorMessage(err.data?.error?.message || err.data?.message || 'Failed to submit review.');
     }
   };
@@ -103,54 +101,28 @@ export default function ReviewModal({ school, isOpen, onClose }) {
   );
 
   return (
-    <div style={{
-      position: 'fixed',
-      inset: 0,
-      backgroundColor: 'rgba(15, 23, 42, 0.65)',
-      backdropFilter: 'blur(4px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 1000,
-      padding: '20px'
-    }}>
-      <div style={{
-        backgroundColor: '#ffffff',
-        borderRadius: '14px',
-        width: '100%',
-        maxWidth: '580px',
-        maxHeight: '92vh',
-        display: 'flex',
-        flexDirection: 'column',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-        overflow: 'hidden'
-      }}>
+    <div className="mk-modal-overlay">
+      <div className="mk-modal-card" style={{ maxWidth: '580px' }}>
         {/* Header */}
-        <div style={{
-          padding: '16px 20px',
-          borderBottom: '1px solid #e2e8f0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: '#064e3b',
-          color: '#ffffff'
-        }}>
-          <div>
+        <div className="mk-modal-header">
+          <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#a7f3d0', fontWeight: '700' }}>
-              SHARE YOUR REVIEW
+              SHARE YOUR FEEDBACK
             </div>
-            <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700' }}>
+            <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700', wordBreak: 'break-word' }}>
               {school.name}
             </h2>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close"
             style={{
               background: 'transparent',
               border: 'none',
               color: '#a7f3d0',
               cursor: 'pointer',
-              padding: '4px'
+              padding: '4px',
+              flexShrink: 0
             }}
           >
             <IconX size={20} />
@@ -158,7 +130,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
         </div>
 
         {/* Content */}
-        <div style={{ padding: '24px', overflowY: 'auto', flex: 1 }}>
+        <div className="mk-modal-body">
           {isSuccess ? (
             <div style={{ textAlign: 'center', padding: '24px 0' }}>
               <div style={{
@@ -178,7 +150,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 Thank You for Your Feedback!
               </h3>
               <p style={{ fontSize: '13px', color: '#475569', lineHeight: '1.5', maxWidth: '420px', margin: '0 auto 20px' }}>
-                Your review has been posted on the public school profile. Your insights help fellow parents make informed education choices.
+                Your review has been posted on {school.name}'s profile. Your genuine feedback helps students, parents and educators make informed choices.
               </p>
               <button
                 onClick={onClose}
@@ -194,44 +166,6 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 }}
               >
                 Close
-              </button>
-            </div>
-          ) : !token ? (
-            <div style={{ textAlign: 'center', padding: '20px 0' }}>
-              <div style={{
-                width: '56px',
-                height: '56px',
-                borderRadius: '50%',
-                backgroundColor: '#f0fdf4',
-                color: '#064e3b',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 14px'
-              }}>
-                <IconShieldCheck size={28} />
-              </div>
-              <h3 style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
-                Log in to rate this school
-              </h3>
-              <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, maxWidth: '360px', margin: '0 auto 18px' }}>
-                Ratings are tied to a real account. Use the phone number and password issued by your school.
-                Admission enquiries still work without logging in.
-              </p>
-              <button
-                onClick={() => dispatch(openLogin())}
-                style={{
-                  backgroundColor: '#064e3b',
-                  color: '#ffffff',
-                  border: 'none',
-                  borderRadius: '8px',
-                  padding: '10px 22px',
-                  fontSize: '13px',
-                  fontWeight: '700',
-                  cursor: 'pointer'
-                }}
-              >
-                Log In to Continue
               </button>
             </div>
           ) : (
@@ -250,74 +184,37 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 </div>
               )}
 
-              {/* Notice that parents cannot upload photos */}
+              {/* Reviewer Name & Relationship */}
               <div style={{
-                backgroundColor: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                borderRadius: '6px',
-                padding: '8px 12px',
-                fontSize: '11px',
-                color: '#64748b',
-                marginBottom: '14px'
-              }}>
-                ℹ️ To maintain strict authenticity, reviews are limited to written ratings and feedback. Photos are curated directly by school administration.
-              </div>
-
-              {/* 5-Axis Rating Box */}
-              <div style={{
-                backgroundColor: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
-                padding: '12px 16px',
-                marginBottom: '18px'
-              }}>
-                <div style={{ fontSize: '11px', fontWeight: '700', color: '#0f172a', textTransform: 'uppercase', marginBottom: '8px' }}>
-                  RATE ACROSS 5 KEY DIMENSIONS
-                </div>
-                {renderStarPicker('Overall Experience *', overallRating, setOverallRating)}
-                {renderStarPicker('Academic Excellence', academicsRating, setAcademicsRating)}
-                {renderStarPicker('Campus & Sports Infrastructure', infrastructureRating, setInfrastructureRating)}
-                {renderStarPicker('Teaching Quality & Care', facultyRating, setFacultyRating)}
-                {renderStarPicker('Campus Safety & Transport', safetyRating, setSafetyRating)}
-                {renderStarPicker('Value for Money / Fees', valueForMoneyRating, setValueForMoneyRating)}
-              </div>
-
-              {/* Reviewer identity (from the authenticated account) */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
                 gap: '12px',
-                backgroundColor: '#f0fdf4',
-                border: '1px solid #bbf7d0',
-                borderRadius: '8px',
-                padding: '10px 12px',
                 marginBottom: '14px'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
-                  <div style={{
-                    width: '32px',
-                    height: '32px',
-                    borderRadius: '50%',
-                    backgroundColor: '#064e3b',
-                    color: '#ffffff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0
-                  }}>
-                    <IconUser size={16} />
-                  </div>
-                  <div style={{ minWidth: 0 }}>
-                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {user?.name || 'Signed-in reviewer'}
-                    </div>
-                    <div style={{ fontSize: '11px', color: '#64748b' }}>
-                      {user?.phone || user?.schoolName || 'Authenticated account'}
-                    </div>
-                  </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
+                    YOUR NAME *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Enter your name"
+                    value={reviewerName}
+                    onChange={(e) => setReviewerName(e.target.value)}
+                    style={{
+                      width: '100%',
+                      padding: '8px 12px',
+                      borderRadius: '6px',
+                      border: '1px solid #cbd5e1',
+                      fontSize: '13px',
+                      boxSizing: 'border-box'
+                    }}
+                  />
                 </div>
-                <div style={{ width: '150px', flexShrink: 0 }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
+                    YOUR ROLE / CONNECTION
+                  </label>
                   <SearchableSelect
                     value={relationship}
                     onChange={(value) => setRelationship(value)}
@@ -325,8 +222,49 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                     nullable={false}
                     compact
                     placeholder="Relationship"
-                    searchPlaceholder="Type…"
+                    searchPlaceholder="Select relationship…"
                   />
+                </div>
+              </div>
+
+              {/* Overall Rating */}
+              <div style={{
+                backgroundColor: '#f8fafc',
+                borderRadius: '8px',
+                padding: '12px 14px',
+                marginBottom: '14px',
+                border: '1px solid #e2e8f0'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '13px', fontWeight: '700', color: '#0f172a' }}>
+                    Overall Rating (1 to 5 Stars) *
+                  </span>
+                  <div style={{ display: 'flex', gap: '6px' }}>
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        type="button"
+                        onClick={() => setOverallRating(star)}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          cursor: 'pointer',
+                          padding: '2px',
+                          color: star <= overallRating ? '#f59e0b' : '#cbd5e1'
+                        }}
+                      >
+                        <IconStarFilled size={22} />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '8px' }}>
+                  {renderStarPicker('Academics & Teaching', academicsRating, setAcademicsRating)}
+                  {renderStarPicker('Infrastructure & Sports Labs', infrastructureRating, setInfrastructureRating)}
+                  {renderStarPicker('Faculty Mentorship & Care', facultyRating, setFacultyRating)}
+                  {renderStarPicker('Student Safety & Hygiene', safetyRating, setSafetyRating)}
+                  {renderStarPicker('Value for Money', valueForMoneyRating, setValueForMoneyRating)}
                 </div>
               </div>
 
@@ -337,7 +275,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                 </label>
                 <input
                   type="text"
-                  placeholder="e.g. Excellent academics and caring faculty"
+                  placeholder="e.g. Excellent academics, supportive mentors and sports facilities"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   style={{
@@ -345,7 +283,8 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                     padding: '8px 12px',
                     borderRadius: '6px',
                     border: '1px solid #cbd5e1',
-                    fontSize: '13px'
+                    fontSize: '13px',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
@@ -353,12 +292,12 @@ export default function ReviewModal({ school, isOpen, onClose }) {
               {/* Review Text */}
               <div style={{ marginBottom: '18px' }}>
                 <label style={{ display: 'block', fontSize: '11px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', marginBottom: '4px' }}>
-                  DETAILED COMMENTS / FEEDBACK *
+                  COMMENTS / FEEDBACK *
                 </label>
                 <textarea
                   required
                   rows={3}
-                  placeholder="Share details about the teaching methodology, safety, school bus, sports, or management..."
+                  placeholder="Share details about your experience, campus infrastructure, teachers, co-curriculars..."
                   value={reviewText}
                   onChange={(e) => setReviewText(e.target.value)}
                   style={{
@@ -367,13 +306,14 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                     borderRadius: '6px',
                     border: '1px solid #cbd5e1',
                     fontSize: '13px',
-                    resize: 'vertical'
+                    resize: 'vertical',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
 
               {/* Submit */}
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+              <div className="mk-modal-actions" style={{ marginTop: '14px' }}>
                 <button
                   type="button"
                   onClick={onClose}
@@ -382,7 +322,7 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                     color: '#64748b',
                     border: '1px solid #cbd5e1',
                     borderRadius: '8px',
-                    padding: '8px 16px',
+                    padding: '9px 18px',
                     fontSize: '13px',
                     fontWeight: '600',
                     cursor: 'pointer'
@@ -398,13 +338,14 @@ export default function ReviewModal({ school, isOpen, onClose }) {
                     color: '#ffffff',
                     border: 'none',
                     borderRadius: '8px',
-                    padding: '8px 20px',
+                    padding: '9px 24px',
                     fontSize: '13px',
                     fontWeight: '700',
-                    cursor: isLoading ? 'not-allowed' : 'pointer'
+                    cursor: isLoading ? 'not-allowed' : 'pointer',
+                    boxShadow: '0 2px 8px rgba(6, 78, 59, 0.25)'
                   }}
                 >
-                  {isLoading ? 'Publishing...' : 'Publish Review'}
+                  {isLoading ? 'Posting Review...' : 'Publish Review'}
                 </button>
               </div>
             </form>
@@ -414,4 +355,3 @@ export default function ReviewModal({ school, isOpen, onClose }) {
     </div>
   );
 }
-

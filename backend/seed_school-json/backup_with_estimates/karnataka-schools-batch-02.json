@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "vibgyor-high-marathahalli-bengaluru",
+    "name": "VIBGYOR High, Marathahalli",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "080 6813 7700",
+    "website": "https://www.vibgyorhigh.com",
+    "address": "58/1, Thubarahalli, Whitefield Road (Marathahalli), behind Sriram Samriddhi Apartment",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560066",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060847-Marathahalli.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342029-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library Reading Area",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342016-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342052-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342074-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CISCE school on Whitefield Road balancing academics, sports and performing arts for east Bengaluru families",
+    "about": "VIBGYOR High, Marathahalli is a CISCE-affiliated branch of the VIBGYOR Group of Schools on the Whitefield Road near Thubarahalli in east Bengaluru. The school follows a holistic programme that combines academics with sports and performing arts. Its campus offers a swimming pool, science laboratories, a well-stocked library and reading areas, smart classrooms and activity rooms, with transport covering the surrounding IT corridor.",
+    "established_year": null,
+    "min_fee": 150000,
+    "max_fee": 280000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to X",
+    "facilities": [
+      "Swimming Pool",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,500+ Students",
+    "teacher_count_badge": "100+ Faculty",
+    "student_teacher_ratio": "15:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-hsr-layout-bengaluru",
+    "name": "VIBGYOR High, HSR Layout",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "080-4685 7600",
+    "website": "https://www.vibgyorhigh.com",
+    "address": "24th Main Road, ITI Layout, Sector 2, near Hamilton Bailey Hospital, HSR Layout",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560102",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060834-HSR.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341069-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Indoor Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341075-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341085-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341094-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE campus in HSR Layout with an indoor pool, modern labs and a holistic learning programme",
+    "about": "VIBGYOR High, HSR Layout is a CBSE branch of the VIBGYOR Group of Schools located on 24th Main Road in Sector 2 of HSR Layout. It follows a holistic curriculum that blends academic learning with sports, visual and performing arts. Facilities include an indoor swimming pool, computer and science laboratories, a library, smart classrooms and activity spaces, along with school transport across south-east Bengaluru.",
+    "established_year": null,
+    "min_fee": 150000,
+    "max_fee": 280000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to X",
+    "facilities": [
+      "Swimming Pool",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,500+ Students",
+    "teacher_count_badge": "100+ Faculty",
+    "student_teacher_ratio": "15:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-yelahanka-bengaluru",
+    "name": "VIBGYOR High, Yelahanka",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "080-22143000",
+    "website": "https://www.vibgyorhigh.com",
+    "address": "Survey No. 80/81, Singanayakanahalli, off Doddaballapura Main Road, Yelahanka",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560064",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202305181520-BANNER_202304060838-Yelahanka.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342292-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342312-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Gymnastics Room",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342323-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342335-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A spacious north Bengaluru CBSE campus with a pool, gymnastics room and labs for all-round student growth",
+    "about": "VIBGYOR High, Yelahanka is a CBSE school of the VIBGYOR Group located at Singanayakanahalli off Doddaballapura Main Road in north Bengaluru. The spacious campus supports a balanced programme of academics, sports and performing arts. Facilities include a swimming pool, gymnastics room, computer and science laboratories, a library, smart classrooms and activity halls, with buses serving Yelahanka and nearby areas.",
+    "established_year": null,
+    "min_fee": 150000,
+    "max_fee": 280000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to X",
+    "facilities": [
+      "Swimming Pool",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,500+ Students",
+    "teacher_count_badge": "100+ Faculty",
+    "student_teacher_ratio": "15:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "greenwood-high-sarjapur-icse-bengaluru",
+    "name": "Greenwood High International School, Sarjapur",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://greenwoodhigh.edu.in",
+    "address": "Chikkawadayarapura, Gunjur Post, Varthur Hobli, off Sarjapur Road",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560087",
+    "logo_url": "https://greenwoodhigh.edu.in/wp-content/uploads/2021/01/GWH-logo-new.webp",
+    "hero_image_url": "https://greenwoodhigh.edu.in/wp-content/uploads/2021/03/facilities-sarja-icse-tile.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://greenwoodhigh.edu.in/wp-content/uploads/2024/10/icse-lib-cover.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://greenwoodhigh.edu.in/wp-content/uploads/2021/03/sarjapur-facilities-lab-tile.jpg"
+      },
+      {
+        "title": "Indoor Games Room",
+        "category": "Sports",
+        "url": "https://greenwoodhigh.edu.in/wp-content/uploads/2021/02/f-sports.jpg"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#65a30d",
+    "motto": null,
+    "tagline": "A green Sarjapur campus offering ICSE and ISC with boarding, strong academics and extensive sports facilities",
+    "about": "Greenwood High International School is a leading Bengaluru school group, and its main Sarjapur campus offers the ICSE and ISC programmes alongside a separate IB school. The large green campus provides a library, IT and science laboratories, indoor and outdoor sports facilities, a cafeteria, medical room, boarding for senior students and a transport network, and the school is known for consistently strong board results and an emphasis on sustainability.",
+    "established_year": 2004,
+    "min_fee": 250000,
+    "max_fee": 450000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "I to XII",
+    "facilities": [
+      "Library",
+      "IT Lab",
+      "Science Laboratories",
+      "Indoor Games",
+      "Sports Fields",
+      "Cafeteria",
+      "Medical Room",
+      "Boarding",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "200+ Faculty",
+    "student_teacher_ratio": "12:1",
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

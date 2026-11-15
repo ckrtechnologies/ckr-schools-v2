@@ -90,54 +90,28 @@ export default function EnquiryModal({ school, isOpen, onClose, onEnquirySuccess
   };
 
   return (
-    <div style={{
-      position: 'fixed',
-      inset: 0,
-      backgroundColor: 'rgba(15, 23, 42, 0.65)',
-      backdropFilter: 'blur(4px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 1000,
-      padding: '20px'
-    }}>
-      <div style={{
-        backgroundColor: '#ffffff',
-        borderRadius: '14px',
-        width: '100%',
-        maxWidth: '560px',
-        maxHeight: '90vh',
-        display: 'flex',
-        flexDirection: 'column',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-        overflow: 'hidden'
-      }}>
+    <div className="mk-modal-overlay">
+      <div className="mk-modal-card" style={{ maxWidth: '560px' }}>
         {/* Header */}
-        <div style={{
-          padding: '18px 24px',
-          borderBottom: '1px solid #e2e8f0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: '#064e3b',
-          color: '#ffffff'
-        }}>
-          <div>
+        <div className="mk-modal-header">
+          <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#a7f3d0', fontWeight: '700', letterSpacing: '0.5px' }}>
               DIRECT ADMISSION ENQUIRY · {getCurrentAcademicYearShort()}
             </div>
-            <h2 style={{ margin: '2px 0 0', fontSize: '18px', fontWeight: '700' }}>
+            <h2 style={{ margin: '2px 0 0', fontSize: '17px', fontWeight: '700', wordBreak: 'break-word' }}>
               {school.name}
             </h2>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close"
             style={{
               background: 'transparent',
               border: 'none',
               color: '#a7f3d0',
               cursor: 'pointer',
-              padding: '4px'
+              padding: '4px',
+              flexShrink: 0
             }}
           >
             <IconX size={20} />
@@ -145,7 +119,7 @@ export default function EnquiryModal({ school, isOpen, onClose, onEnquirySuccess
         </div>
 
         {/* Content */}
-        <div style={{ padding: '24px', overflowY: 'auto', flex: 1 }}>
+        <div className="mk-modal-body">
           {submittedLead ? (
             <div style={{ textAlign: 'center', padding: '24px 0' }}>
               <div style={{
@@ -252,7 +226,8 @@ export default function EnquiryModal({ school, isOpen, onClose, onEnquirySuccess
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                gap: '10px',
+                flexWrap: 'wrap',
+                gap: '8px',
                 backgroundColor: '#f8fafc',
                 border: '1px solid #e2e8f0',
                 padding: '9px 12px',
@@ -261,7 +236,9 @@ export default function EnquiryModal({ school, isOpen, onClose, onEnquirySuccess
                 fontSize: '12px',
                 color: '#475569'
               }}>
-                <span>Already have a school account? Log in to auto-fill your details.</span>
+                <span style={{ flex: '1 1 200px', minWidth: 0 }}>
+                  Already have a school account? Log in to auto-fill your details.
+                </span>
                 <button
                   type="button"
                   onClick={() => dispatch(openLogin())}
@@ -274,7 +251,8 @@ export default function EnquiryModal({ school, isOpen, onClose, onEnquirySuccess
                     fontSize: '11px',
                     fontWeight: '700',
                     cursor: 'pointer',
-                    whiteSpace: 'nowrap'
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0
                   }}
                 >
                   Log In
@@ -449,7 +427,7 @@ export default function EnquiryModal({ school, isOpen, onClose, onEnquirySuccess
               </div>
 
               {/* Submit Button */}
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+              <div className="mk-modal-actions" style={{ marginTop: '14px' }}>
                 <button
                   type="button"
                   onClick={onClose}

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { IconX, IconEdit, IconCheck, IconPhoto, IconUpload, IconLoader2 } from '@tabler/icons-react';
+import { IconX, IconEdit, IconCheck, IconPhoto, IconUpload, IconLoader2, IconLock, IconEye, IconEyeOff, IconKey } from '@tabler/icons-react';
+import { useResetTenantPasswordMutation } from '../store/superadminApi.js';
 
 export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isLoading, errorMessage }) {
+  const [resetPasswordMutation, { isLoading: isResettingPassword }] = useResetTenantPasswordMutation();
+  const [newAdminPassword, setNewAdminPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordSuccessMessage, setPasswordSuccessMessage] = useState('');
+  const [passwordErrorMessage, setPasswordErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     affiliationBoard: 'CBSE',
@@ -25,6 +31,9 @@ export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isL
 
   useEffect(() => {
     if (school) {
+      setNewAdminPassword('');
+      setPasswordSuccessMessage('');
+      setPasswordErrorMessage('');
       setFormData({
         name: school.name || '',
         affiliationBoard: school.affiliation_board || 'CBSE',
@@ -42,6 +51,9 @@ export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isL
         accentColor: school.accent_color || '#10b981',
         isActive: Boolean(school.is_active)
       });
+      setNewAdminPassword('');
+      setPasswordSuccessMessage('');
+      setPasswordErrorMessage('');
     }
   }, [school]);
 
@@ -94,11 +106,29 @@ export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isL
     }
   };
 
+  const handleDirectPasswordReset = async (e) => {
+    if (e) e.preventDefault();
+    setPasswordSuccessMessage('');
+    setPasswordErrorMessage('');
+    if (!newAdminPassword || newAdminPassword.length < 6) {
+      setPasswordErrorMessage('Password must be at least 6 characters long.');
+      return;
+    }
+    try {
+      const res = await resetPasswordMutation({ id: school.id, password: newAdminPassword }).unwrap();
+      setPasswordSuccessMessage(res.message || 'Administrator password updated successfully!');
+      setNewAdminPassword('');
+    } catch (err) {
+      setPasswordErrorMessage(err.data?.error?.message || err.data?.message || 'Failed to update password.');
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onUpdate({
       id: school.id,
-      ...formData
+      ...formData,
+      ...(newAdminPassword.trim().length >= 6 ? { adminPassword: newAdminPassword.trim() } : {})
     });
   };
 
@@ -154,7 +184,7 @@ export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isL
                 Edit School Campus: {school.name}
               </h2>
               <p style={{ fontSize: '12px', color: '#64748b' }}>
-                Slug: <strong style={{ color: '#0369a1' }}>{school.slug}</strong>.ckrschools.online
+                Slug: <strong style={{ color: '#0369a1' }}>{school.slug}</strong>.schoolkarma.com
               </p>
             </div>
           </div>
@@ -526,6 +556,130 @@ export default function EditSchoolModal({ school, isOpen, onClose, onUpdate, isL
                   }}
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Reset Administrator Password Section */}
+          <div style={{
+            backgroundColor: '#f8fafc',
+            border: '1px solid #e2e8f0',
+            borderRadius: '8px',
+            padding: '16px',
+            marginBottom: '16px'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div style={{
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: '6px',
+                  backgroundColor: '#fee2e2',
+                  color: '#dc2626',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <IconKey size={16} />
+                </div>
+                <div>
+                  <h4 style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0f172a' }}>
+                    Reset Campus Administrator Password
+                  </h4>
+                  <p style={{ margin: 0, fontSize: '11.5px', color: '#64748b' }}>
+                    Override and reset the login password for this tenant's SPOC / Admin account.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {passwordSuccessMessage && (
+              <div style={{
+                backgroundColor: '#dcfce7',
+                border: '1px solid #86efac',
+                color: '#166534',
+                padding: '8px 12px',
+                borderRadius: '6px',
+                fontSize: '12px',
+                marginBottom: '10px'
+              }}>
+                ✓ {passwordSuccessMessage}
+              </div>
+            )}
+
+            {passwordErrorMessage && (
+              <div style={{
+                backgroundColor: '#fee2e2',
+                border: '1px solid #fca5a5',
+                color: '#b91c1c',
+                padding: '8px 12px',
+                borderRadius: '6px',
+                fontSize: '12px',
+                marginBottom: '10px'
+              }}>
+                ✕ {passwordErrorMessage}
+              </div>
+            )}
+
+            <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+              <div style={{ position: 'relative', flex: 1 }}>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  placeholder="Enter new administrator password (min 6 chars)"
+                  value={newAdminPassword}
+                  onChange={(e) => setNewAdminPassword(e.target.value)}
+                  style={{
+                    width: '100%',
+                    padding: '9px 40px 9px 12px',
+                    borderRadius: '6px',
+                    border: '1px solid #cbd5e1',
+                    fontSize: '13px',
+                    backgroundColor: '#ffffff'
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(p => !p)}
+                  style={{
+                    position: 'absolute',
+                    right: '10px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'none',
+                    border: 'none',
+                    color: '#64748b',
+                    cursor: 'pointer',
+                    padding: 0,
+                    display: 'flex',
+                    alignItems: 'center'
+                  }}
+                >
+                  {showPassword ? <IconEyeOff size={16} /> : <IconEye size={16} />}
+                </button>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleDirectPasswordReset}
+                disabled={isResettingPassword || !newAdminPassword.trim()}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '9px 16px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  backgroundColor: '#dc2626',
+                  color: '#ffffff',
+                  fontSize: '12.5px',
+                  fontWeight: '700',
+                  cursor: isResettingPassword || !newAdminPassword.trim() ? 'not-allowed' : 'pointer',
+                  opacity: isResettingPassword || !newAdminPassword.trim() ? 0.6 : 1,
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                {isResettingPassword ? <IconLoader2 size={15} className="spin-animate" /> : <IconKey size={15} />}
+                <span>{isResettingPassword ? 'Updating...' : 'Update Password Now'}</span>
+              </button>
             </div>
           </div>
 

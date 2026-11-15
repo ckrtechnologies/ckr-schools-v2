@@ -49,6 +49,15 @@ export const marketplaceApi = createApi({
       invalidatesTags: ['Auth']
     }),
 
+    signup: builder.mutation({
+      query: (body) => ({
+        url: '/api/marketplace/auth/signup',
+        method: 'POST',
+        body
+      }),
+      invalidatesTags: ['Auth']
+    }),
+
     getMe: builder.query({
       query: () => '/api/marketplace/auth/me',
       providesTags: ['Auth']
@@ -112,6 +121,7 @@ export const {
   useGetSchoolBySlugQuery,
   useGetPressReleasesQuery,
   useLoginMutation,
+  useSignupMutation,
   useGetMeQuery,
   useSubmitEnquiryMutation,
   useSubmitBrochureDownloadMutation,

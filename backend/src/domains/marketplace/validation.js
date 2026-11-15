@@ -95,8 +95,32 @@ export const authenticatedReviewSchema = z.object({
 });
 
 export const marketplaceLoginSchema = z.object({
-  phone: z.string().trim().min(10, 'Phone number is required'),
-  password: z.string().min(4, 'Password is required')
+  phone: z.string().trim().min(1, 'Phone number is required'),
+  password: z.string().min(1, 'Password is required')
+});
+
+export const marketplaceSignupSchema = z.object({
+  name: z.string().trim().min(2, 'Full name is required'),
+  phone: z.string().trim().min(10, 'Valid 10-digit phone number is required'),
+  password: z.string().min(4, 'Password must be at least 4 characters'),
+  email: z.string().trim().email('Valid email is required').optional().or(z.literal('')),
+  city: z.string().trim().optional(),
+  child_grade: z.string().trim().optional()
+});
+
+export const publicReviewSchema = z.object({
+  reviewer_name: z.string().min(2, 'Name is required').default('Visitor Reviewer'),
+  reviewer_email: z.string().email().optional().or(z.literal('')),
+  reviewer_phone: z.string().optional(),
+  relationship: z.enum(['Parent', 'Student', 'Alumni', 'Teacher', 'Visitor', 'Guardian', 'Community Member']).default('Parent'),
+  overall_rating: z.number().int().min(1).max(5),
+  academics_rating: z.number().int().min(1).max(5).optional(),
+  infrastructure_rating: z.number().int().min(1).max(5).optional(),
+  faculty_rating: z.number().int().min(1).max(5).optional(),
+  safety_rating: z.number().int().min(1).max(5).optional(),
+  value_for_money_rating: z.number().int().min(1).max(5).optional(),
+  title: z.string().optional(),
+  review_text: z.string().min(6, 'Review comments must be at least 6 characters')
 });
 
 export const reviewSchema = z.object({

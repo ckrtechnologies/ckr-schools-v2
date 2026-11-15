@@ -52,6 +52,12 @@ export const updateTenantSchema = z.object({
   motto: z.string().optional().nullable(),
   logoUrl: z.string().optional().nullable(),
   planTier: z.enum(['FREE_TRIAL', 'GROWTH_CAMPUS', 'PRO_CAMPUS', 'ENTERPRISE_AI']).optional(),
-  isActive: z.boolean().optional()
+  isActive: z.boolean().optional(),
+  adminPassword: z.string().min(6, 'Password must be at least 6 characters').optional()
+});
+
+export const resetTenantPasswordSchema = z.object({
+  password: z.string().min(6, 'New password must be at least 6 characters'),
+  adminId: z.string().uuid().optional()
 });
 

@@ -91,7 +91,7 @@ export default function DeleteSchoolModal({ school, isOpen, onClose, onConfirmDe
             lineHeight: 1.5
           }}>
             <p style={{ fontWeight: '700', marginBottom: '6px' }}>
-              Warning: Deleting &ldquo;{school.name}&rdquo; ({school.slug}.ckrschools.online) will immediately:
+              Warning: Deleting &ldquo;{school.name}&rdquo; ({school.slug}.schoolkarma.com) will immediately:
             </p>
             <ul style={{ paddingLeft: '18px', margin: 0 }}>
               <li><strong>Cascade purge all database records:</strong> students, teachers, admins, classes, attendance, exams, fees, and receipts.</li>

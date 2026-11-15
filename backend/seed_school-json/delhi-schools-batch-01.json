@@ -1,0 +1,642 @@
+[
+  {
+    "slug": "dps-rk-puram-delhi",
+    "name": "Delhi Public School, R.K. Puram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730017",
+    "school_code": null,
+    "official_email": "principal@dpsrkp.net",
+    "official_phone": "011-49115500",
+    "website": "https://dpsrkp.net",
+    "address": "Sector XII, R.K. Puram",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110022",
+    "logo_url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/08/cropped-logo_round-204x198.png",
+    "hero_image_url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/09/dpsrkp1.jpg",
+    "gallery_images": [
+      {
+        "title": "A Block – Academic Building",
+        "category": "Campus",
+        "url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/08/A-Block.jpg"
+      },
+      {
+        "title": "Cricket Ground",
+        "category": "Sports",
+        "url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/09/sp_Cricket20Ground.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/09/sp_swimmingpool1.jpg"
+      },
+      {
+        "title": "Robotics Lab",
+        "category": "Academics",
+        "url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/09/Robotics-Lab.jpg"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://i0.wp.com/dpsrkp.net/v1wp_oll/wp-content/uploads/2019/10/Sr.-Library.jpg"
+      }
+    ],
+    "theme_color": "#064e3b",
+    "accent_color": "#059669",
+    "motto": "Service Before Self",
+    "tagline": "Empowering future leaders through academic excellence, sports and holistic growth since 1972",
+    "about": "Established in 1972, Delhi Public School R.K. Puram is one of India's best-known co-educational schools under the DPS Society. It is recognised for strong board results, olympiad and competitive-exam performance, and an active culture of sports, debating, music and community service.",
+    "established_year": 1972,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Swimming Pool",
+      "Sports Grounds",
+      "Auditorium",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-mathura-road-delhi",
+    "name": "Delhi Public School, Mathura Road",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://dpsmathuraroad.org",
+    "address": "Mathura Road, near Pragati Maidan",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110003",
+    "logo_url": "https://dpsmathuraroad.org/images/logo-white.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/View_of_school_from_pt_ground_2013-08-14_21-31.jpg",
+    "gallery_images": [
+      {
+        "title": "Cricket Ground",
+        "category": "Sports",
+        "url": "https://dpsmathuraroad.org/images/infrastructure/cricket.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://dpsmathuraroad.org/images/infrastructure/swimming.jpg"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://dpsmathuraroad.org/images/infrastructure/physics-lab.jpg"
+      },
+      {
+        "title": "Smart Classroom",
+        "category": "Infrastructure",
+        "url": "https://dpsmathuraroad.org/images/infrastructure/smartclass.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#3b82f6",
+    "motto": "Service Before Self",
+    "tagline": "The founding school of the DPS legacy, shaping confident and compassionate citizens for over seven decades",
+    "about": "Founded in 1949, DPS Mathura Road is the first school of the Delhi Public School Society. Located in central Delhi, it offers a broad curriculum with strong co-curricular programmes in sports, performing arts and clubs, and has a long alumni network across public life, business and the professions.",
+    "established_year": 1949,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Sports Complex",
+      "Auditorium",
+      "Music & Dance Rooms",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-mothers-international-delhi",
+    "name": "The Mother's International School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730021",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://themis.in",
+    "address": "Sri Aurobindo Marg",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110016",
+    "logo_url": "https://themis.in/assets/images/logo.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Senior_building_with_greenery%2C_Mother%27s_International_School%2C_Delhi.JPG",
+    "gallery_images": [
+      {
+        "title": "Hall of Grace",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Hall_of_Grace%2C_Mother%27s_International_School%2C_Delhi.JPG"
+      },
+      {
+        "title": "Back Field",
+        "category": "Sports",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Back_field%2C_Mother%27s_International_School%2C_Delhi.JPG"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Basketball_court_in_The_Mother%27s_International_School%2C_Delhi.JPG"
+      },
+      {
+        "title": "Senior Chemistry Lab",
+        "category": "Academics",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Senior_chemistry_lab_at_Mother%27s_International_School%2C_Delhi.JPG"
+      },
+      {
+        "title": "Computer Lab Entrance",
+        "category": "Academics",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Entrance_to_the_computer_lab_in_Mother%27s_International_School%2C_Delhi.JPG"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#ea580c",
+    "motto": null,
+    "tagline": "Integral education inspired by Sri Aurobindo and The Mother, nurturing the whole child with freedom and care",
+    "about": "Founded in 1956 within the Sri Aurobindo Ashram campus in Delhi, The Mother's International School follows the philosophy of integral education. Its green campus and emphasis on values, self-discovery, arts and physical education sit alongside a consistently strong academic record.",
+    "established_year": 1956,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Green Campus",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Sports Grounds",
+      "Art & Craft Studios",
+      "Music Rooms",
+      "Auditorium"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "modern-school-barakhamba-road-delhi",
+    "name": "Modern School, Barakhamba Road",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.modernschool.net",
+    "address": "Barakhamba Road, Connaught Place",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110001",
+    "logo_url": "https://modernschool.net/images/logo-wht.png",
+    "hero_image_url": "https://modernschool.net/images/hero-banners/school-building.jpg",
+    "gallery_images": [
+      {
+        "title": "Main Building, Barakhamba Road",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Modern_school_Barakhamba_road.jpg"
+      },
+      {
+        "title": "Campus Panorama",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/Modern_School%2C_Delhi_Panorama.jpg"
+      },
+      {
+        "title": "Sports Facilities",
+        "category": "Sports",
+        "url": "https://modernschool.net/images/sports/1.webp"
+      },
+      {
+        "title": "Campus Facilities",
+        "category": "Infrastructure",
+        "url": "https://modernschool.net/images/facilities/1.webp"
+      }
+    ],
+    "theme_color": "#991b1b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A century of excellence in the heart of Delhi, blending Indian heritage with modern learning",
+    "about": "Founded in 1920, Modern School Barakhamba Road is one of Delhi's oldest and most respected schools. Set in central New Delhi, it combines academic rigour with a deep tradition in sports, music, theatre and the arts, and counts many leaders across fields among its alumni.",
+    "established_year": 1920,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Swimming Pool",
+      "Sports Grounds",
+      "Auditorium",
+      "Music & Theatre Rooms",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sardar-patel-vidyalaya-delhi",
+    "name": "Sardar Patel Vidyalaya",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://spvdelhi.org",
+    "address": "Lodhi Estate",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110003",
+    "logo_url": "https://spvdelhi.org/images/Sardar-Patel-Vidyalaya-logo_newlog.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Sardar_Patel_Vidyalaya_1.jpg",
+    "gallery_images": [
+      {
+        "title": "School Canteen",
+        "category": "Infrastructure",
+        "url": "https://spvdelhi.org/images/canteen-img.jpg"
+      },
+      {
+        "title": "Canteen Seating",
+        "category": "Infrastructure",
+        "url": "https://spvdelhi.org/images/canteen-img1.jpg"
+      },
+      {
+        "title": "Electric School Buses",
+        "category": "Transport",
+        "url": "https://spvdelhi.org/gallery/Sardar_Patel_Vidyalaya_Pioneers_Sustainable_Mobility_with_the_Launch_of_Electric_Buses/medium/1756216936.jpg"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#84cc16",
+    "motto": null,
+    "tagline": "Rooted in Gandhian values, building independent thinkers with simplicity, discipline and a love of learning",
+    "about": "Established in 1958 by the Gujarat Education Society, Sardar Patel Vidyalaya in Lodhi Estate is known for its values-driven, low-pressure approach to schooling. It emphasises self-reliance, community work and bilingual learning while maintaining consistently strong academic outcomes.",
+    "established_year": 1958,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Sports Grounds",
+      "Art Studios",
+      "Music Rooms",
+      "Auditorium",
+      "Community Service Programmes"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sanskriti-school-chanakyapuri-delhi",
+    "name": "Sanskriti School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730295",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.sanskritischool.edu.in",
+    "address": "Dr. S. Radhakrishnan Marg, Chanakyapuri",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110021",
+    "logo_url": "https://sanskritischool.edu.in/assets/img/icons/logo.png",
+    "hero_image_url": "https://sanskritischool.edu.in/assets/img/carousel/c1.jpg",
+    "gallery_images": [
+      {
+        "title": "Administrative Block",
+        "category": "Campus",
+        "url": "https://sanskritischool.edu.in/assets/img/carousel/c2.jpg"
+      },
+      {
+        "title": "Junior School Courtyard",
+        "category": "Campus",
+        "url": "https://sanskritischool.edu.in/assets/img/carousel/c4.jpg"
+      },
+      {
+        "title": "Nursery Classroom",
+        "category": "Academics",
+        "url": "https://sanskritischool.edu.in/assets/img/carousel/c3.jpg"
+      },
+      {
+        "title": "Amphitheatre & Canteen",
+        "category": "Infrastructure",
+        "url": "https://sanskritischool.edu.in/assets/img/carousel/c5.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://sanskritischool.edu.in/assets/img/carousel/c6.jpg"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "A modern campus in Chanakyapuri combining academic excellence with Indian culture and global outlook",
+    "about": "Founded in 1998, Sanskriti School in Chanakyapuri was set up to serve families of civil and defence services as well as the wider community. Its well-equipped campus supports strong academics, sports and the arts, with a focus on inclusive education and cultural rootedness.",
+    "established_year": 1998,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Robotics Lab",
+      "Library",
+      "Swimming Pool",
+      "Sports Complex",
+      "Auditorium",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "springdales-school-pusa-road-delhi",
+    "name": "Springdales School, Pusa Road",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.springdalespusa.com",
+    "address": "Upper Ridge Road, Pusa Road",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110005",
+    "logo_url": "https://www.springdalespusa.com/images/logo.png",
+    "hero_image_url": "https://www.springdalespusa.com/images/18-1482384916.jpg",
+    "gallery_images": [
+      {
+        "title": "Sports Facilities",
+        "category": "Sports",
+        "url": "https://www.springdalespusa.com/images/18-1482384944.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.springdalespusa.com/images/computer-1.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://www.springdalespusa.com/images/14-1482376267.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.springdalespusa.com/images/15-1482376503.jpg"
+      }
+    ],
+    "theme_color": "#0f766e",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "Nurturing global citizens with a commitment to peace, inclusion and joyful learning since 1955",
+    "about": "Springdales School, Pusa Road, began in 1955 and is the flagship of the Springdales group of schools. It is known for its focus on international understanding, peace education and student exchange programmes, alongside a well-rounded academic and co-curricular curriculum.",
+    "established_year": 1955,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Sports Grounds",
+      "Auditorium",
+      "International Exchange Programmes",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vasant-valley-school-delhi",
+    "name": "Vasant Valley School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.vasantvalley.org",
+    "address": "Sector C, Vasant Kunj",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110070",
+    "logo_url": "https://upload.wikimedia.org/wikipedia/en/c/c6/Vasant_Valley_School_%28logo%29.jpg",
+    "hero_image_url": "https://static.vasantvalley.org/wp-content/uploads/2021/04/infra-banner-1.jpg",
+    "gallery_images": [
+      {
+        "title": "Learning Spaces",
+        "category": "Academics",
+        "url": "https://static.vasantvalley.org/wp-content/uploads/2021/04/valley-1.png"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#a78bfa",
+    "motto": null,
+    "tagline": "Child-centred learning in a vibrant Vasant Kunj campus, balancing academics, arts and wellbeing",
+    "about": "Vasant Valley School was established in 1990 in Vasant Kunj, South Delhi. It follows a child-centred, activity-based approach with small class sizes, and is known for its strong programmes in the arts, sports and student wellbeing alongside consistent academic results.",
+    "established_year": 1990,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Swimming Pool",
+      "Sports Grounds",
+      "Art Studios",
+      "Auditorium",
+      "Counselling Centre"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-shri-ram-school-vasant-vihar-delhi",
+    "name": "The Shri Ram School, Vasant Vihar",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.tsrs.org",
+    "address": "D-3, Vasant Vihar",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110057",
+    "logo_url": "https://www.tsrs.org/brand/logo-mark.png",
+    "hero_image_url": "https://www.tsrs.org/brand/school-campuses/hero/vasant-vihar-hero.jpg",
+    "gallery_images": [
+      {
+        "title": "Vasant Vihar Campus",
+        "category": "Campus",
+        "url": "https://www.tsrs.org/brand/school-campuses/campus-story/vasant-vihar/5.webp"
+      },
+      {
+        "title": "Campus Life",
+        "category": "Campus",
+        "url": "https://www.tsrs.org/brand/school-campuses/campus-story/vasant-vihar/3.webp"
+      },
+      {
+        "title": "Outdoor Learning",
+        "category": "Sports",
+        "url": "https://www.tsrs.org/brand/school-campuses/campus-story/vasant-vihar/4.webp"
+      },
+      {
+        "title": "Early Years Classroom",
+        "category": "Academics",
+        "url": "https://www.tsrs.org/brand/programmes/early-years/hero.webp"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#fbbf24",
+    "motto": null,
+    "tagline": "Progressive, inquiry-led education that builds sensitive, confident and capable young people",
+    "about": "The Shri Ram School was founded in 1988 by the Shri Ram family and is affiliated to CISCE. Known for its progressive, inquiry-based pedagogy and low student-teacher ratio, it places strong emphasis on values, the arts, sports and social awareness alongside academics.",
+    "established_year": 1988,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to V",
+    "facilities": [
+      "Activity Rooms",
+      "Library",
+      "Art Studios",
+      "Music Rooms",
+      "Play Areas",
+      "Sports Facilities",
+      "Counselling Centre",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-saket-delhi",
+    "name": "Amity International School, Saket",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730257",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/saket/",
+    "address": "Road No. 44, M Block, Saket",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110017",
+    "logo_url": "https://amityschools.in/assets/schools/saket/header/saket-logo-blue.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/saket/infrastructure/Infra-hero.webp",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/saket/infrastructure/DSC04295.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/saket/infrastructure/DSC07039.webp"
+      },
+      {
+        "title": "Atal Tinkering Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/saket/infrastructure/ATL%20LAB.webp"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/saket/infrastructure/DSC04255.webp"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/saket/infrastructure/Auditorium.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#eab308",
+    "motto": null,
+    "tagline": "Flagship Amity school delivering competitive academics, global exposure and all-round development in South Delhi",
+    "about": "Established in 1991, Amity International School Saket is the flagship school of the Amity Education Group. It is known for strong board and competitive-exam results, international exchange opportunities and a wide range of clubs, sports and leadership programmes.",
+    "established_year": 1991,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Robotics Lab",
+      "Library",
+      "Swimming Pool",
+      "Sports Complex",
+      "Auditorium",
+      "AC School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

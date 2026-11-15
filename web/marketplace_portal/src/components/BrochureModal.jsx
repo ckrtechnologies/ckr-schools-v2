@@ -70,51 +70,28 @@ export default function BrochureModal({ school, isOpen, onClose }) {
   };
 
   return (
-    <div style={{
-      position: 'fixed',
-      inset: 0,
-      backgroundColor: 'rgba(15, 23, 42, 0.65)',
-      backdropFilter: 'blur(4px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 1000,
-      padding: '20px'
-    }}>
-      <div style={{
-        backgroundColor: '#ffffff',
-        borderRadius: '14px',
-        width: '100%',
-        maxWidth: '480px',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-        overflow: 'hidden'
-      }}>
+    <div className="mk-modal-overlay">
+      <div className="mk-modal-card" style={{ maxWidth: '480px' }}>
         {/* Header */}
-        <div style={{
-          padding: '16px 20px',
-          borderBottom: '1px solid #e2e8f0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: '#0f172a',
-          color: '#ffffff'
-        }}>
-          <div>
+        <div className="mk-modal-header" style={{ backgroundColor: '#0f172a' }}>
+          <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#94a3b8', fontWeight: '700' }}>
               OFFICIAL SCHOOL PROSPECTUS
             </div>
-            <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700' }}>
+            <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700', wordBreak: 'break-word' }}>
               {school.name}
             </h2>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close"
             style={{
               background: 'transparent',
               border: 'none',
               color: '#94a3b8',
               cursor: 'pointer',
-              padding: '4px'
+              padding: '4px',
+              flexShrink: 0
             }}
           >
             <IconX size={20} />
@@ -122,7 +99,7 @@ export default function BrochureModal({ school, isOpen, onClose }) {
         </div>
 
         {/* Content */}
-        <div style={{ padding: '24px' }}>
+        <div className="mk-modal-body">
           {isUnlocked ? (
             <div style={{ textAlign: 'center', padding: '16px 0' }}>
               <div style={{

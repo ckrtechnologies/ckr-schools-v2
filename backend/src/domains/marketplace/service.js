@@ -4,9 +4,11 @@ import * as marketRepo from './repository.js';
 import {
   enquirySchema,
   authenticatedReviewSchema,
+  publicReviewSchema,
   brochureDownloadSchema,
   multiEnquirySchema,
-  marketplaceLoginSchema
+  marketplaceLoginSchema,
+  marketplaceSignupSchema
 } from './validation.js';
 import { pgPool } from '../../config/db.js';
 import { config } from '../../config/env.js';
@@ -99,7 +101,16 @@ export async function getReviews(slug) {
 
 export async function marketplaceLogin(rawData) {
   const { phone, password } = marketplaceLoginSchema.parse(rawData);
-  const candidates = await marketRepo.findMarketplaceAccountsByPhone(phone);
+  const digits = String(phone || '').replace(/\D/g, '').slice(-10);
+
+  if (digits.length < 10) {
+    const error = new Error('Please enter a valid 10-digit mobile number.');
+    error.status = 400;
+    error.code = 'INVALID_PHONE';
+    throw error;
+  }
+
+  const candidates = await marketRepo.findMarketplaceAccountsByPhone(digits);
 
   let account = null;
   for (const candidate of candidates) {
@@ -148,59 +159,105 @@ export async function marketplaceLogin(rawData) {
       schoolId: account.tenant_id,
       schoolSlug: account.school_slug,
       schoolName: account.school_name,
-      prefill: prefill || null
+      prefill: prefill || {
+        parentName: account.name || '',
+        parentPhone: account.phone || '',
+        parentEmail: account.email || ''
+      }
+    }
+  };
+}
+
+export async function marketplaceSignup(rawData) {
+  const data = marketplaceSignupSchema.parse(rawData);
+  const digits = String(data.phone || '').replace(/\D/g, '').slice(-10);
+
+  // Check if marketplace parent account already exists
+  const existing = await marketRepo.findMarketplaceParentOnlyByPhone(digits);
+  if (existing) {
+    const error = new Error('An account with this phone number already exists. Please sign in instead.');
+    error.status = 409;
+    error.code = 'ACCOUNT_EXISTS';
+    throw error;
+  }
+
+  const passwordHash = await bcrypt.hash(data.password, 10);
+  const newParent = await marketRepo.createMarketplaceParent({
+    name: data.name,
+    phone: digits,
+    email: data.email || null,
+    passwordHash,
+    city: data.city || null,
+    childGrade: data.child_grade || null
+  });
+
+  const tokenPayload = {
+    sub: newParent.id,
+    name: newParent.name,
+    email: newParent.email,
+    phone: newParent.phone,
+    role: 'parent',
+    type: 'parent',
+    accountType: 'parent',
+    schoolId: null,
+    schoolSlug: null,
+    isSuperAdmin: false
+  };
+
+  const token = jwt.sign(tokenPayload, config.jwt.accessSecret, {
+    expiresIn: config.jwt.accessExpiresIn
+  });
+
+  return {
+    token,
+    user: {
+      id: newParent.id,
+      name: newParent.name,
+      phone: newParent.phone,
+      email: newParent.email,
+      type: 'parent',
+      schoolId: null,
+      schoolSlug: null,
+      schoolName: 'SchoolKarma Network',
+      prefill: {
+        parentName: newParent.name,
+        parentPhone: newParent.phone,
+        parentEmail: newParent.email || '',
+        city: newParent.city || '',
+        grade: newParent.child_grade || ''
+      }
     }
   };
 }
 
 export async function submitReview(slug, rawData, reqUser) {
-  if (!reqUser?.sub) {
-    const error = new Error('Please log in with your phone number and password to rate a school.');
-    error.status = 401;
-    error.code = 'UNAUTHORIZED';
-    throw error;
-  }
-
   const school = await resolveSchool(slug);
-  const validated = authenticatedReviewSchema.parse(rawData);
-  const account = await marketRepo.getAccountIdentity(reqUser.sub);
+  const validated = publicReviewSchema.parse(rawData);
 
-  if (!account) {
-    const error = new Error('Your account could not be found. Please log in again.');
-    error.status = 401;
-    error.code = 'ACCOUNT_NOT_FOUND';
-    throw error;
+  // If reviewer is signed in, attach their account details; otherwise save public visitor review
+  let account = null;
+  if (reqUser?.sub) {
+    account = await marketRepo.getAccountIdentity(reqUser.sub);
   }
 
-  const existing = await marketRepo.findReviewByAccount(school.id, account.id);
-  if (existing) {
-    const error = new Error('You have already reviewed this school.');
-    error.status = 409;
-    error.code = 'REVIEW_ALREADY_EXISTS';
-    throw error;
-  }
-
-  const isVerified = !!account.tenant_id && String(account.tenant_id) === String(school.id);
+  const reviewerName = (account?.name) || validated.reviewer_name || 'Visitor';
+  const reviewerEmail = (account?.email) || validated.reviewer_email || null;
+  const reviewerPhone = (account?.phone) || validated.reviewer_phone || null;
+  const isVerified = account?.tenant_id ? String(account.tenant_id) === String(school.id) : false;
 
   try {
     return await marketRepo.createSchoolReview(school.id, {
       ...validated,
-      relationship: validated.relationship || (account.account_type === 'student' ? 'Student' : 'Parent'),
-      reviewer_name: account.name || 'Parent',
-      reviewer_email: account.email || null,
-      reviewer_phone: account.phone || null,
-      reviewer_account_id: account.id,
-      reviewer_account_type: account.account_type,
-      reviewer_school_id: account.tenant_id || null,
+      relationship: validated.relationship || 'Parent',
+      reviewer_name: reviewerName,
+      reviewer_email: reviewerEmail,
+      reviewer_phone: reviewerPhone,
+      reviewer_account_id: account?.id || null,
+      reviewer_account_type: account?.account_type || 'public_visitor',
+      reviewer_school_id: account?.tenant_id || null,
       is_verified: isVerified
     });
   } catch (err) {
-    if (err.code === '23505') {
-      const conflict = new Error('You have already reviewed this school.');
-      conflict.status = 409;
-      conflict.code = 'REVIEW_ALREADY_EXISTS';
-      throw conflict;
-    }
     throw err;
   }
 }

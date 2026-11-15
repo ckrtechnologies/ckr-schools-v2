@@ -87,51 +87,28 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
   };
 
   return (
-    <div style={{
-      position: 'fixed',
-      inset: 0,
-      backgroundColor: 'rgba(15, 23, 42, 0.65)',
-      backdropFilter: 'blur(4px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 1000,
-      padding: '20px'
-    }}>
-      <div style={{
-        backgroundColor: '#ffffff',
-        borderRadius: '14px',
-        width: '100%',
-        maxWidth: '560px',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-        overflow: 'visible'
-      }}>
+    <div className="mk-modal-overlay">
+      <div className="mk-modal-card" style={{ maxWidth: '560px' }}>
         {/* Header */}
-        <div style={{
-          padding: '16px 20px',
-          borderBottom: '1px solid #e2e8f0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: '#064e3b',
-          color: '#ffffff'
-        }}>
-          <div>
+        <div className="mk-modal-header">
+          <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#a7f3d0', fontWeight: '700' }}>
               1-CLICK MULTI-SCHOOL ADMISSION ENQUIRY
             </div>
-            <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700' }}>
+            <h2 style={{ margin: '2px 0 0', fontSize: '16px', fontWeight: '700', wordBreak: 'break-word' }}>
               Applying to {activeSchools.length} Selected Schools
             </h2>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close"
             style={{
               background: 'transparent',
               border: 'none',
               color: '#a7f3d0',
               cursor: 'pointer',
-              padding: '4px'
+              padding: '4px',
+              flexShrink: 0
             }}
           >
             <IconX size={20} />
@@ -139,7 +116,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
         </div>
 
         {/* Content */}
-        <div style={{ padding: '24px' }}>
+        <div className="mk-modal-body">
           {isSuccess ? (
             <div style={{ textAlign: 'center', padding: '20px 0' }}>
               <div style={{
@@ -383,7 +360,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                 </div>
               </div>
 
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '16px' }}>
+              <div className="mk-modal-actions" style={{ marginTop: '16px' }}>
                 <button
                   type="button"
                   onClick={onClose}
@@ -392,7 +369,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                     color: '#64748b',
                     border: '1px solid #cbd5e1',
                     borderRadius: '8px',
-                    padding: '9px 16px',
+                    padding: '10px 18px',
                     fontSize: '13px',
                     fontWeight: '600',
                     cursor: 'pointer'
@@ -408,7 +385,7 @@ export default function MultiEnquiryModal({ selectedSchools = [], isOpen, onClos
                     color: '#ffffff',
                     border: 'none',
                     borderRadius: '8px',
-                    padding: '9px 20px',
+                    padding: '10px 20px',
                     fontSize: '13px',
                     fontWeight: '700',
                     cursor: isLoading ? 'not-allowed' : 'pointer'

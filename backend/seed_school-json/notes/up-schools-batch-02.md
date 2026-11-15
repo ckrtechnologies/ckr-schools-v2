@@ -1,0 +1,1 @@
+UP-02: 10 schools (Noida x5, Greater Noida W, Ghaziabad, Lucknow, Kanpur, Agra). Agra Jaipuria has empty gallery. Skipped DPS Greater Noida (site unreachable), GIIS Noida (only other-campus photos), Ramagya, Ryan Sec 39 (shared group banners), SAJS Lucknow (only student close-ups).

@@ -116,7 +116,7 @@ export default function TopBar() {
                 {user?.name || 'Super Admin'}
               </span>
               <span style={{ fontSize: '11px', color: '#64748b' }}>
-                {user?.email || 'admin@ckrschools.online'}
+                {user?.email || 'admin@schoolkarma.com'}
               </span>
             </div>
           </div>

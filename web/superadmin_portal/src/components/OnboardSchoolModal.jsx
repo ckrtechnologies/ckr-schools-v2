@@ -220,7 +220,7 @@ export default function OnboardSchoolModal({ isOpen, onClose, onSubmit, isLoadin
                     fontSize: '11px',
                     color: '#64748b'
                   }}>
-                    .ckrschools.online
+                    .schoolkarma.com
                   </span>
                 </div>
               </div>

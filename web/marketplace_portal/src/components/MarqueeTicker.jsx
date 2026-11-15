@@ -2,7 +2,7 @@ import React from 'react';
 import { IconSparkles, IconAward, IconCheck, IconCalendarEvent, IconShieldCheck } from '@tabler/icons-react';
 
 const TICKER_ITEMS = [
-  { text: 'Search, compare and enquire with schools listed on CKR Marketplace', icon: IconSparkles, highlight: true },
+  { text: 'Search, compare and enquire with verified schools on SchoolKarma', icon: IconSparkles, highlight: true },
   { text: 'Compare fees, boards and facilities side by side', icon: IconAward },
   { text: 'Download the official brochure directly from the school', icon: IconCheck },
   { text: 'Submit admission enquiries without creating an account', icon: IconCalendarEvent },

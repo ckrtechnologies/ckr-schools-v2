@@ -622,7 +622,7 @@ const UserManagement = () => {
               dob: getVal("DOB", "DATEOFBIRTH", "BIRTHDATE"),
               doj: getVal("DOJ", "DATEOFJOINING", "JOININGDATE"),
               father_spouse_name: getVal("FATHERSHUSBAND", "FATHERSHUSHBAND", "FATHERSNAME", "HUSBANDSNAME", "FATHERSPOUSENAME", "FATHER", "SPOUSE"),
-              email: emailVal || (phone ? `teacher_${phone}@${tenantSlug}.ckrschools.online` : `teacher_${Math.floor(Math.random()*10000)}@${tenantSlug}.ckrschools.online`),
+              email: emailVal || (phone ? `teacher_${phone}@${tenantSlug}.schoolkarma.com` : `teacher_${Math.floor(Math.random()*10000)}@${tenantSlug}.schoolkarma.com`),
               address: getVal("ADDRESS", "RESIDENTIALADDRESS", "HOMEADDRESS"),
               password: `password@1`, 
             };
@@ -633,7 +633,7 @@ const UserManagement = () => {
               type: type,
               name: getVal("NAME", "FULLNAME"),
               phone: phone,
-              email: emailVal || (phone ? `${type}_${phone}@${tenantSlug}.ckrschools.online` : `${type}_${Math.floor(Math.random()*10000)}@${tenantSlug}.ckrschools.online`),
+              email: emailVal || (phone ? `${type}_${phone}@${tenantSlug}.schoolkarma.com` : `${type}_${Math.floor(Math.random()*10000)}@${tenantSlug}.schoolkarma.com`),
               password: `password@1`,
             };
           }
@@ -667,7 +667,7 @@ const UserManagement = () => {
             slc_date: getVal("DATE_1", "SLCDATE"),
             character_certificate_received: Boolean(getVal("CHARACTER CERTIFICATE", "CCRECEIVED")),
             character_certificate_date: getVal("DATE_2", "CCDATE"),
-            email: emailVal || (adNo ? `student_${adNo}@${tenantSlug}.ckrschools.online` : (phone ? `student_${phone}@${tenantSlug}.ckrschools.online` : `student_${Math.floor(Math.random()*10000)}@${tenantSlug}.ckrschools.online`)),
+            email: emailVal || (adNo ? `student_${adNo}@${tenantSlug}.schoolkarma.com` : (phone ? `student_${phone}@${tenantSlug}.schoolkarma.com` : `student_${Math.floor(Math.random()*10000)}@${tenantSlug}.schoolkarma.com`)),
             password: `password@1`,
           };
         });
@@ -711,7 +711,7 @@ const UserManagement = () => {
       sampleData = [{
         "AD NO": "1001",
         "NAME": "John Doe",
-        "EMAIL": `john.doe@${currentTenant}.ckrschools.online`,
+        "EMAIL": `john.doe@${currentTenant}.schoolkarma.com`,
         "CLASS": "PLAY",
         "SEC": "A",
         "HOUSE": "RED",
@@ -740,14 +740,14 @@ const UserManagement = () => {
         "MOB": "9876543210",
         "DOJ": "2022-06-15",
         "FATHERS/HUSBAND": "John Smith",
-        "EMAIL": `jane.smith@${currentTenant}.ckrschools.online`,
+        "EMAIL": `jane.smith@${currentTenant}.schoolkarma.com`,
         "ADDRESS": "123 Teacher St, City"
       }];
     } else {
       sampleData = [{
         "NAME": "John Doe",
         "MOB": "9876543210",
-        "EMAIL": `john.doe@${currentTenant}.ckrschools.online`,
+        "EMAIL": `john.doe@${currentTenant}.schoolkarma.com`,
       }];
     }
     exportToExcel(sampleData, `${type}_bulk_upload_format`);

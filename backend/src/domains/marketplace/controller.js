@@ -47,6 +47,21 @@ export async function marketplaceLoginHandler(req, res, next) {
   }
 }
 
+export async function marketplaceSignupHandler(req, res, next) {
+  try {
+    const result = await marketService.marketplaceSignup(req.body);
+    return res.status(201).json({
+      success: true,
+      message: 'Account created successfully!',
+      token: result.token,
+      accessToken: result.token,
+      user: result.user
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 export async function marketplaceMeHandler(req, res, next) {
   try {
     const account = await marketService.getMarketplaceMe(req.user);

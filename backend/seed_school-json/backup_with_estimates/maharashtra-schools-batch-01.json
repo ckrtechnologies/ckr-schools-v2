@@ -1,0 +1,698 @@
+[
+  {
+    "slug": "cathedral-john-connon-fort-mumbai",
+    "name": "The Cathedral and John Connon School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://cathedral-school.com",
+    "address": "6 Purshottamdas Thakurdas Marg, Fort",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400001",
+    "logo_url": "https://cathedral-school.com/themes/custom/cathedral/assets/images/cathedral-logo.png",
+    "hero_image_url": "https://cathedral-school.com/sites/default/files/styles/large/public/2025-04/01-Post-Restoration-Thomas-House%20%283%29.jpg",
+    "gallery_images": [
+      {
+        "title": "Pre-Primary School Building",
+        "category": "Campus",
+        "url": "https://cathedral-school.com/sites/default/files/styles/large/public/2025-04/DSC09772%20%284%29.jpg"
+      },
+      {
+        "title": "Infant School Play Area",
+        "category": "Sports",
+        "url": "https://cathedral-school.com/sites/default/files/styles/large/public/2025-02/Infant%20School.jpg"
+      },
+      {
+        "title": "Junior School Arcaded Building",
+        "category": "Campus",
+        "url": "https://cathedral-school.com/sites/default/files/styles/large/public/2025-02/Junior%20School.jpg"
+      },
+      {
+        "title": "Middle School Building",
+        "category": "Campus",
+        "url": "https://cathedral-school.com/sites/default/files/styles/large/public/2025-02/Middle%20School.jpg"
+      },
+      {
+        "title": "Senior School Building",
+        "category": "Campus",
+        "url": "https://cathedral-school.com/sites/default/files/styles/large/public/2025-02/Senior%20School_Opt1.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#b91c1c",
+    "motto": "Fide et Litteris",
+    "tagline": "Heritage South Mumbai school offering ICSE, IGCSE and IB pathways from pre-primary to senior school since 1860",
+    "about": "Founded in 1860, The Cathedral and John Connon School is one of Mumbai's oldest and most respected independent schools, housed in heritage buildings in the Fort precinct. It runs Pre-Primary, Infant, Junior, Middle and Senior sections, preparing students for ICSE, IGCSE and the IB Diploma, and is known for strong university placements in India and abroad alongside debating, music, drama and sport.",
+    "established_year": 1860,
+    "min_fee": 250000,
+    "max_fee": 600000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Heritage Campus",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Music Rooms",
+      "Auditorium",
+      "Sports Facilities",
+      "Play Area"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,000+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "13:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dhirubhai-ambani-international-bkc-mumbai",
+    "name": "Dhirubhai Ambani International School",
+    "affiliation_board": "CAMBRIDGE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.dais.edu.in",
+    "address": "Bandra Kurla Complex, Bandra (East)",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400098",
+    "logo_url": "https://www.dais.edu.in/sites/dais/themes/custom/dais_theme/images/logo.png",
+    "hero_image_url": "https://www.dais.edu.in/sites/dais/files/2026-01/dhrubhai-ambai-school.webp",
+    "gallery_images": [
+      {
+        "title": "Multipurpose Auditorium",
+        "category": "Infrastructure",
+        "url": "https://www.dais.edu.in/sites/dais/files/2026-08/School-Campus-Multipurpose%20Auditorium.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.dais.edu.in/sites/dais/files/2026-08/School-Campus-Laboratories.jpg"
+      },
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://www.dais.edu.in/sites/dais/files/2026-08/School-Campus-PlayGround.jpg"
+      },
+      {
+        "title": "Learning Centre",
+        "category": "Infrastructure",
+        "url": "https://www.dais.edu.in/sites/dais/files/2026-08/School-Campus-Learning%20Centre.jpg"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://www.dais.edu.in/sites/dais/files/2026-09/School-Transport-Bus-%20Campus-%20Facilities.jpg"
+      }
+    ],
+    "theme_color": "#1d4ed8",
+    "accent_color": "#f59e0b",
+    "motto": "Dare to Dream, Learn to Excel",
+    "tagline": "Leading Mumbai international school offering Cambridge IGCSE and IB Diploma with global exposure and service learning",
+    "about": "Dhirubhai Ambani International School in Bandra Kurla Complex, Mumbai, was founded in 2003 and is chaired by Nita Mukesh Ambani. It follows the Cambridge IGCSE and IB Diploma programmes and is known for outstanding results and university placements. Student life includes Round Square, Model UN, robotics, service learning, environmental initiatives and international exchanges, supported by modern laboratories, a learning centre, art rooms, an auditorium and playground.",
+    "established_year": 2003,
+    "min_fee": 500000,
+    "max_fee": 1200000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "LKG to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Learning Centre",
+      "Multipurpose Auditorium",
+      "Art Rooms",
+      "Yoga Room",
+      "Playground",
+      "Robotics Lab",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,000+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "8:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-cbd-belapur-navi-mumbai",
+    "name": "Amity International School, Navi Mumbai",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/navi-mumbai/",
+    "address": "Plot No. 81, Opposite Mahavir Icon Building, Sector 15, CBD Belapur",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400614",
+    "logo_url": "https://amityschools.in/assets/schools/navi-mumbai/logo/Navi_Mumbai_blue.png",
+    "hero_image_url": "https://amityschools.in/assets/schools/navi-mumbai/about/About.webp",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/navi-mumbai/infra/Phyiscs_lab.webp"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/navi-mumbai/infra/Chimestry.webp"
+      },
+      {
+        "title": "Interactive Smart Classroom",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/navi-mumbai/infra/Interactive_Smart_Classrooms.webp"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/navi-mumbai/infra/Auditorium.webp"
+      },
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/navi-mumbai/infra/Playground.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#eab308",
+    "motto": "Excellence in education with values",
+    "tagline": "Amity Education Group school in CBD Belapur blending global standards with Indian values for holistic learning",
+    "about": "Amity International School, Belapur is the Amity Education Group's school in Navi Mumbai, built on the group's three decades of experience in school education. Inspired by founder Dr Ashok K. Chauhan and chairperson Dr (Mrs) Amita Chauhan, it aims to nurture global citizens rooted in Indian values, with science labs, smart classrooms, an auditorium, karate hall, playground, infirmary and school transport supporting academics and co-curricular life.",
+    "established_year": null,
+    "min_fee": 100000,
+    "max_fee": 180000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Auditorium",
+      "Karate Hall",
+      "Playground",
+      "Infirmary",
+      "Canteen",
+      "School Transport"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,200+ Students",
+    "teacher_count_badge": "80+ Faculty",
+    "student_teacher_ratio": "15:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-goregaon-west-mumbai",
+    "name": "VIBGYOR High, Goregaon West",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.vibgyorhigh.com/school/mumbai/cisce/goregaon-west",
+    "address": "Off Link Road, Goregaon West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400104",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060918-Goregaon.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343028-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Outdoor Sports Court",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343042-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343052-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343061-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Reading and Activity Room",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343070-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#312e81",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "Flagship VIBGYOR High campus in Goregaon offering ICSE schooling with sports, clubs and student exchange",
+    "about": "VIBGYOR High, Goregaon West is the flagship CISCE school of the VIBGYOR Group of Schools in Mumbai. The school combines structured academics with clubs such as Nature's Club, Greaders Club and VIBGYOR Model United Nations, a student exchange programme and the VIBGYOR Viva showcase. Its campus offers a swimming pool, sports courts, computer labs, a well-stocked library and activity rooms, with an emphasis on self-learning and continuous assessment.",
+    "established_year": 2004,
+    "min_fee": 180000,
+    "max_fee": 300000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to X",
+    "facilities": [
+      "Smart Classrooms",
+      "Computer Lab",
+      "Science Laboratories",
+      "Library",
+      "Swimming Pool",
+      "Sports Courts",
+      "Activity Rooms",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "bishops-school-camp-pune",
+    "name": "The Bishop's School, Camp",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.thebishopsschool.org",
+    "address": "Camp",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411001",
+    "logo_url": "https://www.thebishopsschool.org/tbsweb/MenuImage/BES.png",
+    "hero_image_url": "https://www.thebishopsschool.org/tbsweb/SliderImages/Infrastructure/campimage.jpg",
+    "gallery_images": [
+      {
+        "title": "Library Reading Hall",
+        "category": "Infrastructure",
+        "url": "https://www.thebishopsschool.org/tbsweb/SliderImages/Library/Library1.jpg"
+      },
+      {
+        "title": "Library Book Stacks",
+        "category": "Infrastructure",
+        "url": "https://www.thebishopsschool.org/tbsweb/SliderImages/Library/Library2.jpg"
+      },
+      {
+        "title": "Library Study Area",
+        "category": "Infrastructure",
+        "url": "https://www.thebishopsschool.org/tbsweb/SliderImages/Library/Library3.jpg"
+      },
+      {
+        "title": "Football on the School Ground",
+        "category": "Sports",
+        "url": "https://www.thebishopsschool.org/tbsweb/SliderImages/Sports/physicaldevmain.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.thebishopsschool.org/tbsweb/Image/SportActC3.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "Historic Pune school of The Bishop's Education Society offering ICSE education, boarding and strong sporting tradition",
+    "about": "The Bishop's School, Camp is the flagship school of The Bishop's Education Society, whose crest dates the institution to 1864. Affiliated to CISCE, it offers schooling from playgroup through the ISC level along with boarding facilities. The campus includes well-stocked libraries, sports grounds and courts, and the school runs an active co-curricular and sports programme alongside its academic calendar of olympiads and inter-class competitions.",
+    "established_year": 1864,
+    "min_fee": 120000,
+    "max_fee": 250000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Playgroup to XII",
+    "facilities": [
+      "Library",
+      "Science Laboratories",
+      "Computer Labs",
+      "Sports Grounds",
+      "Basketball Court",
+      "Boarding",
+      "Auditorium",
+      "Smart Classrooms"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "3,000+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "20:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-mohammadwadi-pune",
+    "name": "Delhi Public School, Pune",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@dpspune.com",
+    "official_phone": "+91 9175952118",
+    "website": "https://www.dpspune.com",
+    "address": "Nyati County, Village Mohammadwadi",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411060",
+    "logo_url": "https://resources.edunexttechnologies.com/web-data/takshila/dpspune/images/DPS-Pune-logo1.png",
+    "hero_image_url": "https://edunext-main-storage-cf.edunexttechnologies.com/dps_pune/school___static/1753340447167_sliderI.png",
+    "gallery_images": [
+      {
+        "title": "School Building Entrance",
+        "category": "Campus",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/dps_pune/school___static/1754037197752_updatedslider.jpg"
+      },
+      {
+        "title": "Chemistry Laboratory",
+        "category": "Academics",
+        "url": "https://resources.edunexttechnologies.com/web-data/takshila/dpspune/images/labs3.png"
+      },
+      {
+        "title": "School Library",
+        "category": "Infrastructure",
+        "url": "https://resources.edunexttechnologies.com/web-data/takshila/dpspune/images/libr3.png"
+      },
+      {
+        "title": "Football Ground",
+        "category": "Sports",
+        "url": "https://resources.edunexttechnologies.com/web-data/takshila/dpspune/images/sports-img1.png"
+      },
+      {
+        "title": "Miyawaki Forest on Campus",
+        "category": "Campus",
+        "url": "https://resources.edunexttechnologies.com/web-data/takshila/dpspune/images/forest-pune.png"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": "Service Before Self",
+    "tagline": "Takshila-run DPS campus in Mohammadwadi offering CBSE education with labs, library, sports and green spaces",
+    "about": "Delhi Public School Pune, at Nyati County in Mohammadwadi, is run by the Takshila Educational Society under the aegis of the Delhi Public Schools Society, one of India's largest CBSE school networks, and has served Pune since 2003. Its campus includes science and computer laboratories, well-stocked libraries, sports fields, smart classrooms, dance and activity rooms, and a Miyawaki forest that supports environmental learning.",
+    "established_year": 2003,
+    "min_fee": 110000,
+    "max_fee": 180000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Sports Fields",
+      "Dance Studio",
+      "Activity Rooms",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "3,000+ Students",
+    "teacher_count_badge": "180+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-balewadi-pune",
+    "name": "VIBGYOR High, Balewadi",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.vibgyorhigh.com/school/pune/cbse/balewadi",
+    "address": "Balewadi, near Baner",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411045",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202312120549-Balewadi-min.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685338455-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685338466-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685338474-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Pre-Primary Classroom",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685338486-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Activity Classroom",
+        "category": "Arts",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685338495-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#312e81",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "VIBGYOR High's CBSE campus in Balewadi, Pune, blending academics, clubs and modern learning spaces",
+    "about": "VIBGYOR High, Balewadi is a CBSE school of the VIBGYOR Group in Pune's Baner-Balewadi area. It follows the group's philosophy of self-discipline, time management and self-learning, supported by ongoing assessments. Students take part in clubs, Model United Nations, student exchange and the VIBGYOR Viva programme, and the campus provides a library, computer and science labs, bright pre-primary rooms and activity classrooms.",
+    "established_year": null,
+    "min_fee": 150000,
+    "max_fee": 250000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Computer Lab",
+      "Science Laboratories",
+      "Library",
+      "Activity Rooms",
+      "Sports Facilities",
+      "Music and Dance",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,000+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "centre-point-school-wardhaman-nagar-nagpur",
+    "name": "Centre Point School, Wardhaman Nagar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "cpswn@centrepointschools.com",
+    "official_phone": "0712-2970316",
+    "website": "https://centrepointschools.com",
+    "address": "Wardhaman Nagar, Chandra Nagar, Bhandara Road, Post Kalamna",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "pincode": "440035",
+    "logo_url": "https://centrepointschools.com/images/Centre-Point-School-Logo.png",
+    "hero_image_url": "https://centrepointschools.com/images/wardhaman-nagar/wardhaman-nagar-about.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://centrepointschools.com/images/wardhaman-nagar/space/oct/space5.jpg"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://centrepointschools.com/images/wardhaman-nagar/labs/cps_biology_lab.jpg"
+      },
+      {
+        "title": "Central Courtyard and Play Court",
+        "category": "Campus",
+        "url": "https://centrepointschools.com/images/wardhaman-nagar/space/oct/space1.jpg"
+      },
+      {
+        "title": "Art Gallery Corridor",
+        "category": "Arts",
+        "url": "https://centrepointschools.com/images/wardhaman-nagar/space/oct/space2.jpg"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://centrepointschools.com/images/wardhaman-nagar/transport/cps_transport.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0ea5e9",
+    "motto": "Choose Greatness",
+    "tagline": "Centre Point campus in east Nagpur offering CBSE education with a pool, modern labs and art spaces",
+    "about": "Centre Point School, Wardhaman Nagar is one of the Centre Point group's CBSE campuses in Nagpur, located off Bhandara Road. Its distinctive castle-style building houses smart classrooms, biology and science laboratories, an art gallery corridor, library and career counselling room, while a swimming pool, open grounds and play courts support sport. The school also runs a fleet of buses and maintains infirmary, canteen and fire-safety systems for students.",
+    "established_year": null,
+    "min_fee": 80000,
+    "max_fee": 140000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Swimming Pool",
+      "Art Room",
+      "Infirmary",
+      "Canteen",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "centre-point-school-katol-road-nagpur",
+    "name": "Centre Point School, Katol Road",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "1130021",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "0712-2581742",
+    "website": "https://centrepointschools.com",
+    "address": "Near Seminary Hills, Katol Road",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "pincode": "440013",
+    "logo_url": "https://centrepointschools.com/images/Centre-Point-School-Logo.png",
+    "hero_image_url": "https://centrepointschools.com/images/about-campus.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://centrepointschools.com/images/katol-road/space/ks_Library2_jan2025.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://centrepointschools.com/images/katol-road/space/ks_BasketBallCourt_jan2025.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://centrepointschools.com/images/katol-road/space/ks_Swimming%20Pool2_jan2025.jpg"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://centrepointschools.com/images/katol-road/Labs/kr_BioLab_jan2025.JPG"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://centrepointschools.com/images/katol-road/Labs/kr_Sciencelab_jan2025.JPG"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0ea5e9",
+    "motto": "Choose Greatness",
+    "tagline": "Centre Point's Katol Road campus near Seminary Hills with strong CBSE academics, sports courts and pool",
+    "about": "Centre Point School, Katol Road sits near Seminary Hills in Nagpur and is affiliated to CBSE. The campus offers a library, ICT lab, biology, chemistry and science laboratories, an auditorium, western music, dance and art rooms, a basketball court and swimming pool. Students are supported by an infirmary, cafeteria and school bus service, and the school is known locally for achievements in academics, sport and student leadership.",
+    "established_year": null,
+    "min_fee": 80000,
+    "max_fee": 140000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "ICT Lab",
+      "Library",
+      "Auditorium",
+      "Music Room",
+      "Swimming Pool",
+      "Basketball Court",
+      "Cafeteria",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "140+ Faculty",
+    "student_teacher_ratio": "18:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "centre-point-school-amravati-road-nagpur",
+    "name": "Centre Point School, Amravati Road",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://centrepointschools.com",
+    "address": "Amravati Road",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "pincode": null,
+    "logo_url": "https://centrepointschools.com/images/Centre-Point-School-Logo.png",
+    "hero_image_url": "https://centrepointschools.com/images/amravati-road/amaravati-about-campus.jpg",
+    "gallery_images": [
+      {
+        "title": "Table Tennis Room",
+        "category": "Sports",
+        "url": "https://centrepointschools.com/images/amravati-road/space/2025/space03.jpg"
+      },
+      {
+        "title": "Sports Ground with Cricket Nets",
+        "category": "Sports",
+        "url": "https://centrepointschools.com/images/amravati-road/space/2025/space04.jpg"
+      },
+      {
+        "title": "Open Playground",
+        "category": "Sports",
+        "url": "https://centrepointschools.com/images/amravati-road/space/2025/space05.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://centrepointschools.com/images/amravati-road/Labs/2025/lab01.jpg"
+      },
+      {
+        "title": "Laboratory",
+        "category": "Academics",
+        "url": "https://centrepointschools.com/images/amravati-road/Labs/2025/lab02.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0ea5e9",
+    "motto": "Choose Greatness",
+    "tagline": "Centre Point CBSE campus on Amravati Road with spacious grounds, labs and activity-based learning spaces",
+    "about": "Centre Point School, Amravati Road is the Centre Point group's CBSE campus on the western side of Nagpur. Its large heritage-style building houses activity classrooms, dance and music rooms, a computer lab and science laboratories, while wide playing fields, cricket nets and indoor table tennis support sport. The school emphasises e-learning, hands-on projects and co-curricular activities alongside its academic programme.",
+    "established_year": null,
+    "min_fee": 75000,
+    "max_fee": 130000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Dance Room",
+      "Table Tennis",
+      "Sports Ground",
+      "Cricket Nets",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,000+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

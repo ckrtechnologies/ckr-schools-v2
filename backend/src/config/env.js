@@ -18,7 +18,7 @@ const resolvedUploadDir = path.isAbsolute(rawUploadDir)
 export const config = {
   port: parseInt(process.env.PORT || '5006', 10),
   nodeEnv: process.env.NODE_ENV || 'development',
-  baseDomain: (process.env.BASE_DOMAIN || 'ckrschools.online').toLowerCase(),
+  baseDomain: (process.env.BASE_DOMAIN || 'schoolkarma.com').toLowerCase(),
   databaseUrl: process.env.DATABASE_URL,
   directUrl: process.env.DIRECT_URL || process.env.DATABASE_URL,
   jwt: {
@@ -30,5 +30,13 @@ export const config = {
   cdn: {
     uploadDir: resolvedUploadDir,
     baseUrl: (process.env.CDN_BASE_URL || '/cdn').replace(/\/+$/, '')
+  },
+  smtp: {
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '465', 10),
+    secure: process.env.SMTP_SECURE === 'true' || true,
+    user: process.env.SMTP_USER || 'fameu333@gmail.com',
+    pass: process.env.SMTP_PASS || 'ikgwphlyhgxkufrt',
+    recipient: process.env.NOTIFICATION_RECIPIENT_EMAIL || 'hello@ckrtechnologies.onmicrosoft.com'
   }
 };

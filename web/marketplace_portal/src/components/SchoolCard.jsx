@@ -168,6 +168,7 @@ export default function SchoolCard({
             <img 
               src={school.logo_url} 
               alt="" 
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
               style={{
                 width: '38px',
                 height: '38px',
@@ -190,7 +191,7 @@ export default function SchoolCard({
               gap: '6px'
             }}>
               {school.name}
-              {school.is_verified && <IconCheck size={16} color="#047857" title="Verified by CKR" />}
+              {school.is_verified && <IconCheck size={16} color="#047857" title="Verified by SchoolKarma" />}
             </h3>
             <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
               {[school.city, school.state].filter(Boolean).join(', ')}

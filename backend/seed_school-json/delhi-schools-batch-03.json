@@ -1,0 +1,643 @@
+[
+  {
+    "slug": "amity-international-pushp-vihar-delhi",
+    "name": "Amity International School, Pushp Vihar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730612",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/pushp-vihar/",
+    "address": "Sector 7, Pushp Vihar",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110017",
+    "logo_url": "https://amityschools.in/assets/schools/pushp-vihar/logos/pushp-Vihar-blue.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/pushp-vihar/about-us/About-Us.webp",
+    "gallery_images": [
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/pushp-vihar/infra/DSC04453.webp"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/pushp-vihar/infra/DSC04500.webp"
+      },
+      {
+        "title": "Interactive Smart Classroom",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/pushp-vihar/infra/DSC04330.webp"
+      },
+      {
+        "title": "Playground and Skating Area",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/pushp-vihar/infra/DSC04593.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#eab308",
+    "motto": null,
+    "tagline": "English-medium CBSE school in South Delhi blending strong academics, modern labs and activity-rich learning since 2004",
+    "about": "Amity International School, Pushp Vihar is an English-medium, co-educational CBSE school established in 2004 as part of the Amity chain of schools run by the Ritnand Balved Education Foundation. Located in Sector 7, Pushp Vihar, it offers smart classrooms, science labs, junior and senior libraries, an auditorium, music room and playground, and combines board preparation with clubs, sports and global exposure programmes.",
+    "established_year": 2004,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Junior & Senior Libraries",
+      "Auditorium",
+      "Music Room",
+      "Playground",
+      "Computer Lab",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-mayur-vihar-phase-1-delhi",
+    "name": "Amity International School, Mayur Vihar Phase 1",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730586",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/mayur-vihar-phase-1/",
+    "address": "Mayur Vihar Phase I",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110091",
+    "logo_url": "https://amityschools.in/assets/schools/mayur-vihar/logo/9.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/mayur-vihar/about/Infra%20and%20About.webp",
+    "gallery_images": [
+      {
+        "title": "STEM Lab (Atal Tinkering Lab)",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/mayur-vihar/infra/AISMV_ATL_Stem.webp"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/mayur-vihar/infra/Biology%20Lab.webp"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/mayur-vihar/infra/Chem%20Lab-5.webp"
+      },
+      {
+        "title": "Senior Computer Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/mayur-vihar/infra/Comp-Sr-5.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#eab308",
+    "motto": null,
+    "tagline": "East Delhi's Amity campus offering CBSE academics, STEM labs, arts and sports for holistic, future-ready learning",
+    "about": "Established in 1999, Amity International School Mayur Vihar is the third school set up by the Ritnand Balved Education Foundation. The co-educational CBSE school in East Delhi offers digital classrooms, an Atal Tinkering STEM lab, biology, chemistry and computer labs, an art and craft room, dance room, auditorium and health clinic, and encourages students to balance academic rigour with creative and sporting pursuits.",
+    "established_year": 1999,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Digital Classrooms",
+      "Atal Tinkering Lab",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Auditorium",
+      "Art & Craft Room",
+      "Dance Room",
+      "Health Clinic"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-heritage-school-rohini-sector-23-delhi",
+    "name": "The Heritage School, Rohini",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730506",
+    "school_code": null,
+    "official_email": "contact@rohini.theheritageschool.in",
+    "official_phone": null,
+    "website": "https://rohini.ths.ac.in/",
+    "address": "Plot No. 8, Sector 23, Rohini",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110085",
+    "logo_url": "https://rohini.ths.ac.in/wp-content/themes/heritage-theme/assets/images/THS-Rohini-Logo-Web.png",
+    "hero_image_url": "https://rohini.ths.ac.in/wp-content/uploads/2026/09/campus.jpeg",
+    "gallery_images": [
+      {
+        "title": "Amphitheatre",
+        "category": "Campus",
+        "url": "https://rohini.ths.ac.in/wp-content/themes/heritage-theme/assets/campus/Amphitheatre%202.JPG"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://rohini.ths.ac.in/wp-content/themes/heritage-theme/assets/campus/Bio%20Lab.jpg"
+      },
+      {
+        "title": "Classroom Learning Space",
+        "category": "Infrastructure",
+        "url": "https://rohini.ths.ac.in/wp-content/themes/heritage-theme/assets/campus/Campus%20Infra%20-%20Learning%20Spaces%20II.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "Experiential learning school in Rohini where classrooms, labs, studios and fields nurture curiosity and confident self-expression",
+    "about": "The Heritage School, Rohini is a co-educational CBSE school in Sector 23 founded in 2003 and known for its experiential learning approach. The school describes every corner of its campus as a space for growing, with classrooms, laboratories, studios, an amphitheatre and playing fields designed to encourage curiosity, self-expression and each child's journey towards becoming a confident, compassionate individual.",
+    "established_year": 2003,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Experiential Classrooms",
+      "Science Laboratories",
+      "Amphitheatre",
+      "Art & Music Studios",
+      "Library",
+      "Sports Fields",
+      "Meals Facility",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-heritage-school-vasant-kunj-delhi",
+    "name": "The Heritage School, Vasant Kunj",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730315",
+    "school_code": null,
+    "official_email": "admin@theheritageschool.in",
+    "official_phone": "+91-11-26134162",
+    "website": "https://vk.ths.ac.in/",
+    "address": "D-2, Vasant Kunj",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110070",
+    "logo_url": "https://vk.ths.ac.in/wp-content/uploads/2024/08/THS-VK-Logo-Web-trans.png",
+    "hero_image_url": "https://vk.ths.ac.in/wp-content/uploads/2024/02/Heritage-VK-School.png",
+    "gallery_images": [
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://vk.ths.ac.in/wp-content/uploads/elementor/thumbs/Heritage-VK-Lab-r9tgwd3c3omxv6unhloibgos11jk7f2hsn36xfrqtg.jpg"
+      },
+      {
+        "title": "Indoor Sports Room",
+        "category": "Sports",
+        "url": "https://vk.ths.ac.in/wp-content/uploads/elementor/thumbs/Heritage-Sports-Room-r9tgwd3c3omxv6unhloibgos11jk7f2hsn36xfrqtg.jpg"
+      },
+      {
+        "title": "Tabla Room",
+        "category": "Arts",
+        "url": "https://vk.ths.ac.in/wp-content/uploads/elementor/thumbs/Tabla-room-3-r9tgwd3c3omxv6unhloibgos11jk7f2hsn36xfrqtg.jpg"
+      },
+      {
+        "title": "Craft Room",
+        "category": "Arts",
+        "url": "https://vk.ths.ac.in/wp-content/uploads/elementor/thumbs/Heritage-VK-Craft-Room-r9tgwd3c3omxv6unhloibgos11jk7f2hsn36xfrqtg.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "South Delhi experiential learning school combining inquiry-based CBSE academics with music, crafts and sport since 1999",
+    "about": "The Heritage School, Vasant Kunj, founded in 1999, is a CBSE co-educational school in South-West Delhi and part of The Heritage School group known for experiential, inquiry-led learning. Its facilities include science laboratories, an indoor sports room, dedicated tabla and music spaces, a craft room and technology-enabled classrooms, supporting a curriculum that links academics with the arts, sport and real-world projects.",
+    "established_year": 1999,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Indoor Sports Room",
+      "Music & Tabla Rooms",
+      "Craft Room",
+      "Smart Classrooms",
+      "Library",
+      "Sports Grounds",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "tagore-international-school-east-of-kailash-delhi",
+    "name": "Tagore International School, East of Kailash",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730084",
+    "school_code": null,
+    "official_email": "info.eok@tagoreint.com",
+    "official_phone": "011-45087929",
+    "website": "https://eok.tagoreint.com/",
+    "address": "E-Block, East of Kailash",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110065",
+    "logo_url": "https://eok.tagoreint.com/wp-content/uploads/2026/04/Final-Tagore-Logo-Full_-TimesRoman1-1-scaled.png",
+    "hero_image_url": "https://eok.tagoreint.com/wp-content/uploads/2024/07/Ground-2.jpg",
+    "gallery_images": [
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://eok.tagoreint.com/wp-content/uploads/2024/07/Ground-1.jpg"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://eok.tagoreint.com/wp-content/uploads/2024/07/senior-Lib.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://eok.tagoreint.com/wp-content/uploads/2024/11/audi1.jpg"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://eok.tagoreint.com/wp-content/uploads/2023/09/physics-lab-img-1.jpg"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://eok.tagoreint.com/wp-content/uploads/2023/09/IMG-1-BUS.jpg"
+      }
+    ],
+    "theme_color": "#1d4ed8",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "Tagore Education Society school in South Delhi offering CBSE academics, rich arts and a green sports ground",
+    "about": "Tagore International School, East of Kailash is a co-educational CBSE school run by the Tagore Education Society, which was established in 1964. The school is known for its inclusive ethos, global citizenship and peace education programmes and active arts culture. Its campus includes a large sports ground, junior and senior libraries, an auditorium, science laboratories, music and dance rooms, a medical room and a school transport fleet.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Junior & Senior Libraries",
+      "Auditorium",
+      "Sports Ground",
+      "Music & Dance Rooms",
+      "Medical Room",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "kr-mangalam-world-school-greater-kailash-2-delhi",
+    "name": "K.R. Mangalam World School, Greater Kailash II",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730480",
+    "school_code": null,
+    "official_email": "info@krmangalamgk2.com",
+    "official_phone": "+91-9999046046",
+    "website": "https://krmangalamgk2.com/",
+    "address": "S Block, Greater Kailash II",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110048",
+    "logo_url": "https://krmangalamgk2.com/images/KRM-WS-gk2-logo.png",
+    "hero_image_url": "https://krmangalamgk2.com/images/infra-4.jpg",
+    "gallery_images": [
+      {
+        "title": "Smart Classroom",
+        "category": "Academics",
+        "url": "https://krmangalamgk2.com/images/infra-5.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://krmangalamgk2.com/images/infra-4.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://krmangalamgk2.com/images/infra-11.jpg"
+      },
+      {
+        "title": "Outdoor Yoga Session",
+        "category": "Sports",
+        "url": "https://krmangalamgk2.com/images/infra-6.jpg"
+      }
+    ],
+    "theme_color": "#991b1b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "South Delhi CBSE and Cambridge school with smart classrooms, labs, library and an active sports and yoga programme",
+    "about": "K.R. Mangalam World School, Greater Kailash II is part of the K.R. Mangalam group of schools and was founded in 2004. The co-educational school in South Delhi offers CBSE alongside a Cambridge international pathway, with smart classrooms, science laboratories, a well-stocked library and outdoor spaces used for sports and yoga, and emphasises value-based education alongside competitive academics and co-curricular activities.",
+    "established_year": 2004,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Sports Facilities",
+      "Yoga",
+      "Art & Music",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dwarka-international-school-sector-12-delhi",
+    "name": "Dwarka International School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730596",
+    "school_code": null,
+    "official_email": "dwarkainternationalschool@ymail.com",
+    "official_phone": "011-46000000",
+    "website": "https://www.dwarkainternationalschool.com/",
+    "address": "Sector 12, Dwarka",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110078",
+    "logo_url": "https://www.dwarkainternationalschool.com/wp-content/uploads/2024/07/logo-removebg-preview.png",
+    "hero_image_url": "https://www.dwarkainternationalschool.com/wp-content/uploads/2024/11/0D3A6428-768x512.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.dwarkainternationalschool.com/wp-content/uploads/2024/11/0D3A6925-768x512.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://www.dwarkainternationalschool.com/wp-content/uploads/2024/11/0D3A7057-2-768x512.jpg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.dwarkainternationalschool.com/wp-content/uploads/2024/11/IMG_9931-768x512.jpg"
+      }
+    ],
+    "theme_color": "#0e7490",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "Dwarka CBSE school with open grounds, modern labs and music rooms building confident, well-rounded learners since 2006",
+    "about": "Dwarka International School is a co-educational CBSE senior secondary school in Sector 12, Dwarka, founded in 2006. The school aims to provide an environment that helps students realise their own potential, with classrooms, computer and science laboratories, music and activity rooms, open sports grounds and transport facilities supporting a balanced programme of academics, sports and co-curricular activities.",
+    "established_year": 2006,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Music Room",
+      "Library",
+      "Sports Ground",
+      "Activity Rooms",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "apeejay-school-saket-delhi",
+    "name": "Apeejay School, Saket",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730181",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.apeejay.edu/saket/",
+    "address": "Gurudwara Road, J-Block, Saket",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110017",
+    "logo_url": "https://www.apeejay.edu/saket/images/logo/saket.png",
+    "hero_image_url": "https://www.apeejay.edu/saket/cache/preview/f80058a491857464dafde9b4e330fca3.jpg",
+    "gallery_images": [
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.apeejay.edu/saket/cache/preview/a7dfbada047a9e67adbc7364b5d3eae2.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://www.apeejay.edu/saket/images/infrastructure/auditorium.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.apeejay.edu/saket/cache/preview/0c26285f879d6a3a860457f628ef8e6e.jpg"
+      },
+      {
+        "title": "Indoor Activity Hall",
+        "category": "Sports",
+        "url": "https://www.apeejay.edu/saket/cache/preview/b22f6c0dac8ea215b99900fc26db0225.jpg"
+      },
+      {
+        "title": "Outdoor Sports Court",
+        "category": "Sports",
+        "url": "https://www.apeejay.edu/saket/cache/preview/3be8d2641960d2c2518cd0796e2c2e80.jpg"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#1e3a8a",
+    "motto": null,
+    "tagline": "Apeejay's South Delhi CBSE school pairing well-equipped labs and auditorium with sports and value-based education",
+    "about": "Apeejay School, Saket is a co-educational CBSE school of the Apeejay Education group, founded in 1987 on Gurudwara Road in J-Block, Saket. The campus includes smart classrooms, science and computer laboratories, a library, an auditorium, an indoor activity hall and outdoor sports courts, and the school combines academic achievement with arts, sports, community service and leadership opportunities.",
+    "established_year": 1987,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Auditorium",
+      "Indoor Activity Hall",
+      "Sports Courts",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "apeejay-school-pitampura-delhi",
+    "name": "Apeejay School, Pitampura",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730259",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.apeejay.edu/pitampura/",
+    "address": "Sainik Vihar Road No. 42, Pitampura",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110034",
+    "logo_url": "https://www.apeejay.edu/pitampura/images/logo/pitampura.png",
+    "hero_image_url": "https://www.apeejay.edu/pitampura/images/infrastructure/2025/library/library-1.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.apeejay.edu/pitampura/images/infrastructure/2025/library/library-1.jpg"
+      },
+      {
+        "title": "Library Reading Area",
+        "category": "Infrastructure",
+        "url": "https://www.apeejay.edu/pitampura/images/infrastructure/2025/library/library-2.jpg"
+      },
+      {
+        "title": "General Science Lab",
+        "category": "Academics",
+        "url": "https://www.apeejay.edu/pitampura/images/infrastructure/2025/general-science-lab.jpg"
+      },
+      {
+        "title": "Home Science Lab",
+        "category": "Academics",
+        "url": "https://www.apeejay.edu/pitampura/images/infrastructure/2025/home-science-lab.jpg"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#1e3a8a",
+    "motto": null,
+    "tagline": "North-West Delhi Apeejay school offering CBSE academics, science labs and a vibrant library culture since 1990",
+    "about": "Apeejay School, Pitampura is a co-educational CBSE school of the Apeejay Education group in North-West Delhi, founded in 1990 on Sainik Vihar Road. It offers a library with collaborative reading spaces, general and home science laboratories, computer facilities and sports areas, and supports students' academic progress alongside sports, arts and community activities through the Apeejay network.",
+    "established_year": 1990,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "General Science Lab",
+      "Home Science Lab",
+      "Library",
+      "Computer Lab",
+      "Sports Facilities",
+      "Music & Dance",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-indian-school-sadiq-nagar-delhi",
+    "name": "The Indian School, Sadiq Nagar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "contactus@theindianschool.in",
+    "official_phone": "011-26265956",
+    "website": "https://www.theindianschool.in/",
+    "address": "Josip Broz Tito Marg, Sadiq Nagar",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110049",
+    "logo_url": "https://www.theindianschool.in/frontend/images/tis-logo-white.png",
+    "hero_image_url": "https://www.theindianschool.in/uploads/posts/L-16972732781107-school-main1.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://theindianschool.in/uploads/editor/17001675584201-lib.jpg"
+      },
+      {
+        "title": "Audio-Visual Room",
+        "category": "Academics",
+        "url": "https://theindianschool.in/uploads/editor/17008941755698-avlab.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://theindianschool.in/uploads/editor/17008940301539-computer-lab.jpg"
+      },
+      {
+        "title": "Athletics Track",
+        "category": "Sports",
+        "url": "https://theindianschool.in/uploads/editor/17018447138295-sports.jpg"
+      }
+    ],
+    "theme_color": "#9a3412",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "South Delhi CBSE school focused on joyful learning, leadership, international links and a strong sports culture",
+    "about": "The Indian School is a co-educational CBSE school in Sadiq Nagar, South Delhi. Its programme spans pre-primary 'magic years' through senior secondary and emphasises activity clubs, the arts, vocational guidance, leadership training, a citizenship programme and international links. Facilities include a well-used library, technology and audio-visual labs, science laboratories and sports grounds with an athletics track.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Technology Lab",
+      "Audio-Visual Room",
+      "Science Laboratories",
+      "Library",
+      "Sports Grounds",
+      "Activity Clubs",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

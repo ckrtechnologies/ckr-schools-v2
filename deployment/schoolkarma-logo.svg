@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded Squircle Background -->
+  <rect width="512" height="512" rx="112" fill="#064E3B"/>
+  
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="4" y="4" width="504" height="504" rx="108" stroke="rgba(255,255,255,0.12)" stroke-width="8"/>
+  
+  <!-- Wisdom Sun Beacon -->
+  <circle cx="256" cy="136" r="42" fill="#F59E0B"/>
+  
+  <!-- Left Wisdom Book Page (Warm Gold) -->
+  <path d="M128 384C184 358 232 358 256 384V196C232 170 184 170 128 196V384Z" fill="#F59E0B"/>
+  
+  <!-- Right Wisdom Book Page (Mint Green) -->
+  <path d="M384 384C328 358 280 358 256 384V196C280 170 328 170 384 196V384Z" fill="#34D399"/>
+  
+  <!-- Center White Spine Pillar -->
+  <line x1="256" y1="172" x2="256" y2="384" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+</svg>

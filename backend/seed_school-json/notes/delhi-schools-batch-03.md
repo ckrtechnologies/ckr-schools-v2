@@ -1,0 +1,1 @@
+Batch 03: 10 schools (Amity PV/MV, Heritage Rohini/VK, Tagore EOK, KRM GK-II, Dwarka Intl, Apeejay Saket/Pitampura, The Indian School). Images load-tested; Indian School est. year 1994 not confirmed on SARAS; Apeejay Pitampura & KRM GK-II heroes are facility (library) photos.

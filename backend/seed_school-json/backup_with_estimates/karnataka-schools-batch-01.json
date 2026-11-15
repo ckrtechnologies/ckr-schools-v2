@@ -1,0 +1,653 @@
+[
+  {
+    "slug": "bishop-cotton-boys-school-residency-road-bengaluru",
+    "name": "Bishop Cotton Boys' School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "bcbs@bishopcottonboysschool.edu.in",
+    "official_phone": "+91 80 4052 7888",
+    "website": "https://bishopcottonboysschool.edu.in",
+    "address": "15, Residency Road",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560025",
+    "logo_url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/logo.png",
+    "hero_image_url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/images/bcbs-arielview2.jpg",
+    "gallery_images": [
+      {
+        "title": "The Centenary Block",
+        "category": "Campus",
+        "url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/images/centenary-block.jpg"
+      },
+      {
+        "title": "Historic Tower Block",
+        "category": "Campus",
+        "url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/images/tower-block.jpg"
+      },
+      {
+        "title": "Administration Block",
+        "category": "Campus",
+        "url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/images/admin-block.jpg"
+      },
+      {
+        "title": "School Chapel",
+        "category": "Campus",
+        "url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/images/chapel2.jpg"
+      },
+      {
+        "title": "Cricket Ground",
+        "category": "Sports",
+        "url": "https://bishopcottonboysschool.edu.in/themes/custom/bishop_cotton_theme/images/cottonian-shield.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#b91c1c",
+    "motto": "Nec Dextrorsum, Nec Sinistrorsum",
+    "tagline": "Shaping boys of character, scholarship, faith and service on Residency Road since 1865 in Bengaluru",
+    "about": "Founded in 1865 and named after Bishop George Edward Lynn Cotton, Bishop Cotton Boys' School is one of India's oldest boys' day-cum-boarding schools. Run under the Church of South India Central Diocese, it pairs an Anglican heritage with ICSE and ISC academics. Its historic Residency Road campus includes the Tower Block, Centenary Block and chapel, and the school is known for strong board results, sport, music and an active co-curricular life.",
+    "established_year": 1865,
+    "min_fee": 150000,
+    "max_fee": 300000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "LKG to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Chapel",
+      "Cricket Ground",
+      "Boarding House",
+      "Auditorium",
+      "Sports Fields"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "3,000+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "20:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "national-public-school-indiranagar-bengaluru",
+    "name": "National Public School, Indiranagar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@npsinr.com",
+    "official_phone": "+91 80 25280611",
+    "website": "https://www.npsinr.com",
+    "address": "12 A Main, HAL II Stage, Indiranagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560008",
+    "logo_url": "https://www.npsinr.com/images/logo/nps-inr-logo.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/National_Public_School_Indiranagar_-_Main_Building.JPG",
+    "gallery_images": [
+      {
+        "title": "School Grounds",
+        "category": "Sports",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/National_Public_School_-_Grounds.JPG"
+      },
+      {
+        "title": "Computer Laboratory",
+        "category": "Academics",
+        "url": "https://www.npsinr.com/images/inner-images/facilities/computer-lab.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.npsinr.com/images/inner-images/facilities/library.webp"
+      },
+      {
+        "title": "Math Lab",
+        "category": "Academics",
+        "url": "https://www.npsinr.com/images/inner-images/facilities/math-lab.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A flagship NPS campus in Indiranagar known for academic rigour, olympiad success and well-rounded student growth",
+    "about": "National Public School, Indiranagar is the flagship school of the NPS group founded by educationist Dr. K. P. Gopalkrishna. Located on 12 A Main in HAL II Stage, the CBSE school is known for consistently strong board and competitive-exam results. Its facilities include well-equipped classrooms, a computer laboratory, maths lab, library, health centre and sports areas, supporting academics alongside co-curricular activities and community outreach.",
+    "established_year": 1982,
+    "min_fee": 180000,
+    "max_fee": 300000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "KG to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Computer Laboratory",
+      "Math Lab",
+      "Library",
+      "Health Centre",
+      "Sports Ground",
+      "Science Laboratories"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "17:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "lourdes-central-school-bejai-mangaluru",
+    "name": "Lourdes Central School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "830120",
+    "school_code": null,
+    "official_email": "principal@lourdescentralschool.com",
+    "official_phone": "0824-2223366",
+    "website": "https://lourdescentralschool.com",
+    "address": "Bejai Church Campus, Bejai Post",
+    "city": "Mangaluru",
+    "state": "Karnataka",
+    "pincode": "575004",
+    "logo_url": "https://lourdescentralschool.com/wp-content/themes/lourdes-central-school-child/images/lourdes-central-school-logo.png",
+    "hero_image_url": "https://lourdescentralschool.com/wp-content/uploads/2026/10/lourdes-central-school-highlight-image2.png",
+    "gallery_images": [
+      {
+        "title": "Playground and School Buildings",
+        "category": "Campus",
+        "url": "https://lourdescentralschool.com/wp-content/uploads/2025/11/lcs-school-playground-img.jpg"
+      },
+      {
+        "title": "Biology Laboratory",
+        "category": "Academics",
+        "url": "https://lourdescentralschool.com/wp-content/themes/lourdes-central-school-child/images/lcs-bilology-laboratory.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://lourdescentralschool.com/wp-content/uploads/2026/10/lcs-computer-lab.jpg"
+      },
+      {
+        "title": "Indoor Sports Facility",
+        "category": "Sports",
+        "url": "https://lourdescentralschool.com/wp-content/themes/lourdes-central-school-child/images/lcs-sports-facilities.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://lourdescentralschool.com/wp-content/themes/lourdes-central-school-child/images/lcs-library.jpg"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "A Catholic CBSE senior secondary school in Bejai nurturing faith, discipline and academic excellence in Mangaluru",
+    "about": "Lourdes Central School is an independent CBSE senior secondary school on the Bejai Church campus in Mangaluru, managed by the Catholic Board of Education of the Diocese of Mangalore. The school offers modern classrooms, chemistry, biology and computer laboratories, robotics, a library, music room, indoor sports facilities and a kindergarten play park, with a focus on values-based education and all-round development.",
+    "established_year": 1999,
+    "min_fee": 50000,
+    "max_fee": 90000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "LKG to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Computer Lab",
+      "Robotics Lab",
+      "Library",
+      "Music Room",
+      "Indoor Sports",
+      "Medical Room",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "21:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "excel-public-school-koorgalli-mysuru",
+    "name": "Excel Public School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "830385",
+    "school_code": null,
+    "official_email": "eps@excelpublicschool.com",
+    "official_phone": "0821-2971004",
+    "website": "https://excelpublicschool.com",
+    "address": "40-P1, Koorgalli Industrial Area, Belavadi Post",
+    "city": "Mysuru",
+    "state": "Karnataka",
+    "pincode": "570018",
+    "logo_url": "https://excelpublicschool.com/wp-content/uploads/2024/06/EPS-logo.png",
+    "hero_image_url": "https://excelpublicschool.com/wp-content/uploads/2024/10/DSC09900-scaled.jpg",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://excelpublicschool.com/wp-content/uploads/2024/10/IMG_6556-scaled.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://excelpublicschool.com/wp-content/uploads/2024/10/IMG_3054-scaled-e1728114627320.jpg"
+      },
+      {
+        "title": "Atal Tinkering Lab",
+        "category": "Academics",
+        "url": "https://excelpublicschool.com/wp-content/uploads/2024/10/Atl2-scaled-e1728115982856.jpg"
+      },
+      {
+        "title": "Astronomical Observatory",
+        "category": "Infrastructure",
+        "url": "https://excelpublicschool.com/wp-content/uploads/2024/10/IMG_2535-scaled-e1728113026890.jpg"
+      },
+      {
+        "title": "Seminar Hall",
+        "category": "Infrastructure",
+        "url": "https://excelpublicschool.com/wp-content/uploads/2024/10/IMG_2962-scaled-e1728113824933.jpg"
+      }
+    ],
+    "theme_color": "#0c4a6e",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "An innovation-led CBSE school in Mysuru with tinkering labs, an observatory and strong co-curricular programmes",
+    "about": "Excel Public School is an independent CBSE senior secondary school on the outskirts of Mysuru, run by the Excel Education and E-Learning Trust since 2009. Its campus offers an innovation centre, Atal Tinkering Lab, physics, chemistry, biology and maths labs, an astronomical observatory, amphitheatre, auditorium and seminar hall, along with indoor and outdoor sports, music and dance rooms and school transport.",
+    "established_year": 2009,
+    "min_fee": 70000,
+    "max_fee": 140000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-KG to XII",
+    "facilities": [
+      "Atal Tinkering Lab",
+      "Innovation Centre",
+      "Science Laboratories",
+      "Astronomical Observatory",
+      "Library",
+      "Auditorium",
+      "Amphitheatre",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,000+ Students",
+    "teacher_count_badge": "130+ Faculty",
+    "student_teacher_ratio": "16:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sharada-vidyalaya-kodialbail-mangaluru",
+    "name": "Sharada Vidyalaya",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "830053",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://sharadavidyalaya.in",
+    "address": "S K D B Campus, Kodialbail",
+    "city": "Mangaluru",
+    "state": "Karnataka",
+    "pincode": "575003",
+    "logo_url": "https://sharadavidyalaya.in/assets/imgs/sv-logo.png",
+    "hero_image_url": "https://sharadavidyalaya.in/assets/imgs/academic-programs/sports-arena/sports-arena2.jpg",
+    "gallery_images": [
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://sharadavidyalaya.in/assets/imgs/resources/slab/slab1.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://sharadavidyalaya.in/assets/imgs/resources/clab/clab4.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://sharadavidyalaya.in/assets/imgs/resources/lib/lib2.jpg"
+      },
+      {
+        "title": "AV and Seminar Room",
+        "category": "Infrastructure",
+        "url": "https://sharadavidyalaya.in/assets/imgs/preschool/smart-class.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#eab308",
+    "motto": null,
+    "tagline": "A value-based CBSE school in Kodialbail blending Indian tradition, modern academics and sport in Mangaluru",
+    "about": "Sharada Vidyalaya is a well-known CBSE school at the S K D B campus in Kodialbail, Mangaluru, founded in 1992. It combines rigorous academics through programmes such as SPARK with Indian cultural values, Vedic language training and a meditation hall. The school provides science and computer laboratories, a library, smart classrooms, an AV and seminar room and a sports arena for athletics and games.",
+    "established_year": 1992,
+    "min_fee": 45000,
+    "max_fee": 90000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-school to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Smart Classrooms",
+      "AV & Seminar Room",
+      "Sports Arena",
+      "Meditation Hall"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "3,000+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "20:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "mallya-aditi-international-school-yelahanka-bengaluru",
+    "name": "Mallya Aditi International School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.aditi.edu.in",
+    "address": "Yelahanka New Town",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560064",
+    "logo_url": "https://www.aditi.edu.in/wp-content/uploads/2024/12/cropped-Aditi-Logo-6.png",
+    "hero_image_url": "https://www.aditi.edu.in/wp-content/uploads/2024/07/campus-banner.png",
+    "gallery_images": [
+      {
+        "title": "Dinosaur Courtyard",
+        "category": "Campus",
+        "url": "https://www.aditi.edu.in/wp-content/uploads/2025/01/Dinosaur-Courtyard.jpeg"
+      },
+      {
+        "title": "Art Studio",
+        "category": "Arts",
+        "url": "https://www.aditi.edu.in/wp-content/uploads/2024/12/DMS08008.jpg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.aditi.edu.in/wp-content/uploads/2024/12/DMS08180.jpg"
+      },
+      {
+        "title": "Movement and Dance Hall",
+        "category": "Arts",
+        "url": "https://www.aditi.edu.in/wp-content/uploads/2024/12/DMS07215.jpg"
+      }
+    ],
+    "theme_color": "#c2410c",
+    "accent_color": "#15803d",
+    "motto": null,
+    "tagline": "A progressive Yelahanka school offering ICSE, ISC and IB with a green campus and strong arts culture",
+    "about": "Mallya Aditi International School in Yelahanka New Town is a co-educational, non-profit day school started in 1984. Known for its progressive, child-centred approach, it offers the ICSE, ISC and IB Diploma programmes. The leafy campus features open courtyards, art and music studios, carpentry and design spaces, laboratories and sports facilities, and the school is regularly ranked among India's leading day schools.",
+    "established_year": 1984,
+    "min_fee": 300000,
+    "max_fee": 600000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "KG to XII",
+    "facilities": [
+      "Art Studios",
+      "Music Rooms",
+      "Carpentry Workshop",
+      "Science Laboratories",
+      "Library",
+      "Sports Fields",
+      "Auditorium"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "800+ Students",
+    "teacher_count_badge": "100+ Faculty",
+    "student_teacher_ratio": "8:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vidyashilp-academy-jakkur-yelahanka-bengaluru",
+    "name": "Vidyashilp Academy",
+    "affiliation_board": "CAMBRIDGE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://vidyashilpacademy.edu.in",
+    "address": "Jakkur, Yelahanka",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560064",
+    "logo_url": "https://vidyashilpacademy.edu.in/wp-content/uploads/2025/11/logo-color.svg",
+    "hero_image_url": "https://vidyashilpacademy.edu.in/wp-content/uploads/2023/08/header-img.jpg",
+    "gallery_images": [
+      {
+        "title": "Junior Library",
+        "category": "Infrastructure",
+        "url": "https://vidyashilpacademy.edu.in/wp-content/uploads/2023/11/Junior-Library.jpg"
+      },
+      {
+        "title": "Lego Robotics Lab",
+        "category": "Academics",
+        "url": "https://vidyashilpacademy.edu.in/wp-content/uploads/2023/11/Lego-Robotics-Lab.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://vidyashilpacademy.edu.in/wp-content/uploads/2023/11/Sports-1.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A UNESCO-recognised happy school in north Bengaluru offering Cambridge, ICSE and IB pathways for every learner",
+    "about": "Vidyashilp Academy in north Bengaluru is a co-educational day school recognised for its joyful, inquiry-based learning culture. It offers Cambridge, ICSE and IB pathways across its phases, from the early years to the senior grades. The campus provides junior and senior libraries, a Lego robotics lab, language rooms, classrooms designed for collaboration and sports facilities, and the school has been ranked among the top day schools in Karnataka.",
+    "established_year": 2001,
+    "min_fee": 250000,
+    "max_fee": 500000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Junior Library",
+      "Senior Library",
+      "Robotics Lab",
+      "Language Lab",
+      "Science Laboratories",
+      "Sports Courts",
+      "Art Room",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "1,200+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "10:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-josephs-boys-high-school-museum-road-bengaluru",
+    "name": "St. Joseph's Boys' High School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://sjbhs.edu.in",
+    "address": "27, Museum Road",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560025",
+    "logo_url": "https://sjbhs.edu.in/assets/logo.webp",
+    "hero_image_url": "https://sjbhs.edu.in/assets/about/overview/hero_campus_1.jpg",
+    "gallery_images": [
+      {
+        "title": "Main School Building",
+        "category": "Campus",
+        "url": "https://sjbhs.edu.in/assets/I56A2369.JPG"
+      },
+      {
+        "title": "Heritage Campus",
+        "category": "Campus",
+        "url": "https://sjbhs.edu.in/assets/home/sjbhs_heritage.jpg"
+      },
+      {
+        "title": "Indoor Basketball Court",
+        "category": "Sports",
+        "url": "https://sjbhs.edu.in/assets/sports/basketball.jpg"
+      },
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://sjbhs.edu.in/assets/home/sjbhs_sports.jpg"
+      },
+      {
+        "title": "Historic School Building",
+        "category": "Campus",
+        "url": "https://sjbhs.edu.in/assets/about/overview/historical.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#ca8a04",
+    "motto": "Fide et Labore",
+    "tagline": "A Jesuit boys' school on Museum Road nurturing character, intellect and sport in Bengaluru since 1858",
+    "about": "St. Joseph's Boys' High School is one of Bengaluru's oldest schools, founded in 1858 by the Fathers of the Paris Foreign Missions and now run by the Karnataka Jesuits. Located on Museum Road in the heart of the city, it offers ICSE and ISC programmes. Its heritage campus includes historic buildings, an indoor basketball court and a large sports ground, and the school is known for academics, sport and numerous inter-school fests.",
+    "established_year": 1858,
+    "min_fee": 90000,
+    "max_fee": 180000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "LKG to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Indoor Basketball Court",
+      "Sports Ground",
+      "Chapel",
+      "Auditorium"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "3,000+ Students",
+    "teacher_count_badge": "140+ Faculty",
+    "student_teacher_ratio": "21:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-international-school-bangalore-whitefield-bengaluru",
+    "name": "The International School Bangalore (TISB)",
+    "affiliation_board": "IB",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission@tisb.ac.in",
+    "official_phone": "+91 80 6723 5900",
+    "website": "https://www.tisb.org",
+    "address": "NAFL Valley, Whitefield-Sarjapur Road, near Dommasandra Circle",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "562125",
+    "logo_url": "https://www.tisb.org/assets/img/logo/logo.png",
+    "hero_image_url": "https://www.tisb.org/assets/img/inner/header-map-of-tisb-campus.webp",
+    "gallery_images": [
+      {
+        "title": "Reception Building",
+        "category": "Campus",
+        "url": "https://www.tisb.org/assets/img/gallery/reception/reception-01.webp"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.tisb.org/assets/img/gallery/swimming/swimming-01.webp"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://www.tisb.org/assets/img/gallery/auditorium/auditorium-01.webp"
+      },
+      {
+        "title": "Soccer Turf",
+        "category": "Sports",
+        "url": "https://www.tisb.org/assets/img/gallery/soccer-turf/soccer-turf-01.webp"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://www.tisb.org/assets/img/gallery/bus/bus-01.webp"
+      }
+    ],
+    "theme_color": "#0f172a",
+    "accent_color": "#0284c7",
+    "motto": null,
+    "tagline": "A leading IB and IGCSE day and boarding school on a landscaped campus off Sarjapur Road",
+    "about": "The International School Bangalore is a co-educational day and boarding school set in NAFL Valley off the Whitefield-Sarjapur Road. It offers a primary years programme, IGCSE in grades 9 and 10 and the IB Diploma in grades 11 and 12. The landscaped campus includes boarding houses, an auditorium, swimming pool, athletics track, soccer turf, cafeteria and medical centre, and the school is consistently ranked among India's top international schools.",
+    "established_year": 2000,
+    "min_fee": 700000,
+    "max_fee": 1500000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "KG to XII",
+    "facilities": [
+      "Boarding Houses",
+      "Swimming Pool",
+      "Auditorium",
+      "Athletics Track",
+      "Soccer Turf",
+      "Cafeteria",
+      "Medical Centre",
+      "School Buses"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "900+ Students",
+    "teacher_count_badge": "150+ Faculty",
+    "student_teacher_ratio": "7:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "baldwin-boys-high-school-richmond-town-bengaluru",
+    "name": "Baldwin Boys' High School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "080-49363866",
+    "website": "https://baldwinboyshighschool.edu.in",
+    "address": "Hosur Road, Richmond Town",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560025",
+    "logo_url": "https://baldwinboyshighschool.edu.in/396125.png",
+    "hero_image_url": "https://baldwinboyshighschool.edu.in/images/campus3.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://baldwinboyshighschool.edu.in/images/swimming.jpg"
+      },
+      {
+        "title": "School Auditorium",
+        "category": "Infrastructure",
+        "url": "https://baldwinboyshighschool.edu.in/images/campus-life/Indoor/auditorium.avif"
+      },
+      {
+        "title": "Boarding Dormitory",
+        "category": "Infrastructure",
+        "url": "https://baldwinboyshighschool.edu.in/images/boarding.jpg"
+      }
+    ],
+    "theme_color": "#991b1b",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A historic Methodist boys' school in Richmond Town building scholars, sportsmen and leaders since 1880",
+    "about": "Baldwin Boys' High School, founded in 1880 and named after John Baldwin, is one of Bengaluru's best-known Methodist boys' schools. It offers the ICSE and ISC curricula with day and boarding options. The heritage campus includes a school auditorium, swimming pool, science laboratories and boarding facilities, and the school has a strong tradition of field hockey, football, cricket, NCC and many notable alumni.",
+    "established_year": 1880,
+    "min_fee": 80000,
+    "max_fee": 200000,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Swimming Pool",
+      "Auditorium",
+      "Science Laboratories",
+      "Boarding House",
+      "Hockey Field",
+      "Football Ground",
+      "NCC",
+      "Library"
+    ],
+    "admission_status": "Admissions Open 2026-27",
+    "student_count_badge": "2,500+ Students",
+    "teacher_count_badge": "120+ Faculty",
+    "student_teacher_ratio": "21:1",
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

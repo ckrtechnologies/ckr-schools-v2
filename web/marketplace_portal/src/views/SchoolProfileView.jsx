@@ -185,7 +185,7 @@ export default function SchoolProfileView({ slug, onBack, onOpenComparison }) {
                   {school.is_verified && (
                     <span className="profile-hero-chip" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                       <IconShieldCheck size={13} />
-                      CKR Verified
+                      Verified Campus
                     </span>
                   )}
                 </div>

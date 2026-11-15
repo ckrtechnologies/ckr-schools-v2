@@ -1,5 +1,5 @@
 import * as repo from './repository.js';
-import { listTenantsQuerySchema, createTenantSchema, updateTenantSchema } from './validation.js';
+import { listTenantsQuerySchema, createTenantSchema, updateTenantSchema, resetTenantPasswordSchema } from './validation.js';
 
 export async function getStats() {
   return await repo.getPlatformStats();
@@ -35,7 +35,34 @@ export async function updateTenant(id, rawBody) {
     err.code = 'NOT_FOUND';
     throw err;
   }
-  return await repo.updateTenant(id, data);
+  const updatedTenant = await repo.updateTenant(id, data);
+  if (data.adminPassword) {
+    await repo.resetTenantAdminPassword(id, data.adminPassword);
+  }
+  return updatedTenant;
+}
+
+export async function resetTenantAdminPassword(tenantId, rawBody) {
+  const { password, adminId } = resetTenantPasswordSchema.parse(rawBody);
+  const existing = await repo.getTenantById(tenantId);
+  if (!existing) {
+    const err = new Error(`School tenant with id '${tenantId}' not found.`);
+    err.status = 404;
+    err.code = 'NOT_FOUND';
+    throw err;
+  }
+  const updatedAdmins = await repo.resetTenantAdminPassword(tenantId, password, adminId);
+  if (!updatedAdmins || updatedAdmins.length === 0) {
+    const err = new Error(`No administrator account found for school tenant '${tenantId}'.`);
+    err.status = 404;
+    err.code = 'USER_NOT_FOUND';
+    throw err;
+  }
+  return {
+    tenantId,
+    schoolName: existing.name,
+    affectedUsers: updatedAdmins.map(u => ({ id: u.id, name: u.name, email: u.email, type: u.type }))
+  };
 }
 
 export async function toggleStatus(id, isActive) {

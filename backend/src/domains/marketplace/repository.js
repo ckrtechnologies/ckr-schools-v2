@@ -430,6 +430,22 @@ export async function getMarketplaceFacets() {
 }
 
 /**
+ * Finds a direct marketplace parent by phone only (isolated from school staff).
+ */
+export async function findMarketplaceParentOnlyByPhone(phone) {
+  const digits = String(phone || '').replace(/\D/g, '').slice(-10);
+  if (digits.length < 10) return null;
+  const query = `
+    SELECT id, name, phone, email, password_hash, 'parent' AS account_type, city, child_grade
+    FROM public.marketplace_parents
+    WHERE RIGHT(REGEXP_REPLACE(COALESCE(phone, ''), '\\D', '', 'g'), 10) = $1
+    LIMIT 1;
+  `;
+  const { rows } = await pgPool.query(query, [digits]);
+  return rows[0] || null;
+}
+
+/**
  * Finds every active account (parent or user) owned by the supplied phone number
  * across all tenants. Password verification happens in the service layer.
  */
@@ -438,8 +454,16 @@ export async function findMarketplaceAccountsByPhone(phone) {
   if (digits.length < 10) return [];
 
   const query = `
+    SELECT mp.id, NULL::uuid AS tenant_id, NULL::text AS school_slug, 'SchoolKarma Network' AS school_name,
+           mp.name, mp.phone, mp.email, mp.password_hash, 'parent' AS account_type,
+           mp.city, mp.child_grade
+    FROM public.marketplace_parents mp
+    WHERE RIGHT(REGEXP_REPLACE(COALESCE(mp.phone, ''), '\\D', '', 'g'), 10) = $1
+       OR (LOWER(COALESCE(mp.email, '')) = LOWER($2) AND mp.email IS NOT NULL AND mp.email <> '')
+    UNION ALL
     SELECT u.id, u.tenant_id, t.slug AS school_slug, t.name AS school_name,
-           u.name, u.phone, u.email, u.password_hash, u.type AS account_type
+           u.name, u.phone, u.email, u.password_hash, u.type AS account_type,
+           NULL::text AS city, NULL::text AS child_grade
     FROM public."user" u
     JOIN public.tenants t ON t.id = u.tenant_id
     WHERE t.is_active = TRUE
@@ -460,7 +484,8 @@ export async function findMarketplaceAccountsByPhone(phone) {
               WHERE sp.parent_id = p.id AND sp.tenant_id = p.tenant_id AND su.status = 'active'
               LIMIT 1)
            ) AS password_hash,
-           'parent' AS account_type
+           'parent' AS account_type,
+           NULL::text AS city, NULL::text AS child_grade
     FROM public.parents p
     JOIN public.tenants t ON t.id = p.tenant_id
     WHERE t.is_active = TRUE
@@ -471,6 +496,24 @@ export async function findMarketplaceAccountsByPhone(phone) {
 
   const { rows } = await pgPool.query(query, [digits, String(phone || '').trim()]);
   return rows.filter(r => !!r.password_hash);
+}
+
+export async function createMarketplaceParent({ name, phone, email, passwordHash, city, childGrade }) {
+  const digits = String(phone || '').replace(/\D/g, '').slice(-10);
+  const query = `
+    INSERT INTO public.marketplace_parents (name, phone, email, password_hash, city, child_grade)
+    VALUES ($1, $2, $3, $4, $5, $6)
+    RETURNING id, name, phone, email, city, child_grade, created_at;
+  `;
+  const { rows } = await pgPool.query(query, [
+    name,
+    digits,
+    email ? email.trim().toLowerCase() : null,
+    passwordHash,
+    city || null,
+    childGrade || null
+  ]);
+  return rows[0];
 }
 
 /**

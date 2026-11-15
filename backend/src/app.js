@@ -42,10 +42,13 @@ app.use(morgan('dev'));
 
 // Serve uploaded assets across both /uploads and /cdn paths using config.cdn.uploadDir
 const fallbackUploadsDir = path.resolve(process.cwd(), 'uploads');
+const rootUploadsDir = path.resolve(process.cwd(), '../uploads');
 app.use('/uploads', express.static(config.cdn.uploadDir));
 app.use('/uploads', express.static(fallbackUploadsDir));
+app.use('/uploads', express.static(rootUploadsDir));
 app.use('/cdn', express.static(config.cdn.uploadDir));
 app.use('/cdn', express.static(fallbackUploadsDir));
+app.use('/cdn', express.static(rootUploadsDir));
 
 // Multi-tenant resolver on all requests
 app.use(resolveTenant);

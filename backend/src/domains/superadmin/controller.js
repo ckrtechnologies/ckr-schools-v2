@@ -63,6 +63,19 @@ export async function updateTenantHandler(req, res, next) {
   }
 }
 
+export async function resetTenantPasswordHandler(req, res, next) {
+  try {
+    const result = await service.resetTenantAdminPassword(req.params.id, req.body);
+    res.status(200).json({
+      success: true,
+      message: `Password successfully updated for ${result.affectedUsers.length} administrator(s) of ${result.schoolName}.`,
+      data: result
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 export async function toggleStatusHandler(req, res, next) {
   try {
     const { isActive } = req.body;

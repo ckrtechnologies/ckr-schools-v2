@@ -4,7 +4,7 @@
 
 export function getSchoolPortalUrl(slug) {
   if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-    return `https://${slug}.ckrschools.online/login`;
+    return `https://${slug}.schoolkarma.com/login`;
   }
   return `http://localhost:5174/login?tenant=${encodeURIComponent(slug)}`;
 }

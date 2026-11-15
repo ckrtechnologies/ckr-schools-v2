@@ -596,7 +596,7 @@ const AdminLayout = () => {
                 return `http://localhost:${localPort}/login?tenant=${encodeURIComponent(currentSlug)}`;
               }
               const slug = currentSlug || 'vision';
-              return `https://${slug}.ckrschools.online/${surfacePath}`;
+              return `https://${slug}.schoolkarma.com/${surfacePath}`;
             };
 
             return (

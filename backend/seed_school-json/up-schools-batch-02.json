@@ -1,0 +1,650 @@
+[
+  {
+    "slug": "lotus-valley-international-noida-sector-126",
+    "name": "Lotus Valley International School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130732",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.lotusvalley.com",
+    "address": "2, Sector 126, Noida Expressway",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201303",
+    "logo_url": "https://resources.edunexttechnologies.com/web-data/lotus-valley/img/logocbse.png",
+    "hero_image_url": "https://edunext-main-storage-cf.edunexttechnologies.com/lvisnd/school___static/1780047947544_slider3.jpg",
+    "gallery_images": [
+      {
+        "title": "Reception Lobby",
+        "category": "Infrastructure",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/lvisnd/school___static/1780047918976_slider2.jpg"
+      },
+      {
+        "title": "Campus Front Garden",
+        "category": "Campus",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/lvisnd/school___static/1780047990928_slider5.jpg"
+      },
+      {
+        "title": "Landscaped Lawns",
+        "category": "Campus",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/lvisnd/school___static/1780047968393_slider4.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE and IB school on the Noida Expressway known for holistic learning, sport and strong academic results",
+    "about": "Lotus Valley International School, Noida is run by the Lotus Valley Education Society under the patronage of Dr. (Mrs.) Shayama Chona. The Sector 126 campus on the Noida Expressway offers the CBSE curriculum alongside an IB stream, with a focus on holistic development, clubs, sports such as golf and skating, and community activities. The school is a Microsoft Showcase School and publishes regular newsletters and CBSE topper results.",
+    "established_year": 2004,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Sports Grounds",
+      "Golf Programme",
+      "Auditorium",
+      "School Buses",
+      "GPS-tracked Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "step-by-step-school-noida-sector-132",
+    "name": "Step by Step School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://stepbystep.school",
+    "address": "Block A, Sector 132",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201304",
+    "logo_url": "https://stepbystep.school/wp-content/themes/sbs/assets/images/logo.png",
+    "hero_image_url": "https://stepbystep.school/wp-content/uploads/2024/03/campus-banner-min.png",
+    "gallery_images": [
+      {
+        "title": "Covered Swimming Pool",
+        "category": "Sports",
+        "url": "https://stepbystep.school/wp-content/uploads/2024/03/SBS-teams.jpg"
+      },
+      {
+        "title": "Sports Field",
+        "category": "Sports",
+        "url": "https://stepbystep.school/wp-content/uploads/2024/03/015A4824.jpg"
+      },
+      {
+        "title": "Indoor Sports Hall",
+        "category": "Sports",
+        "url": "https://stepbystep.school/wp-content/uploads/2024/03/physical-education-fitness-for-all.jpg"
+      },
+      {
+        "title": "Athletics High Jump Pit",
+        "category": "Sports",
+        "url": "https://stepbystep.school/wp-content/uploads/2024/03/PE_04.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "An inclusive CBSE, IGCSE and IB World School in Noida with outstanding sports, arts and seva programmes",
+    "about": "Step by Step School, Noida opened in 2008 with pre-school to grade VI and has grown into a K-12 school offering CBSE, Cambridge IGCSE and the IB Diploma. A Round Square member, it is known for its inclusive special-education programme, mindfulness practice, the Sahyog seva programme and a strong physical-education culture with a covered pool, sports fields and indoor halls.",
+    "established_year": 2008,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-school to XII",
+    "facilities": [
+      "Swimming Pool",
+      "Indoor Sports Hall",
+      "Sports Fields",
+      "Amphitheatre",
+      "Science Laboratories",
+      "Library",
+      "Special Education Centre",
+      "Performing Arts Studios",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "genesis-global-school-noida-sector-132",
+    "name": "Genesis Global School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91 9711000626",
+    "website": "https://www.genesisglobalschool.edu.in",
+    "address": "A-12, Sector 132, Noida Expressway",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201304",
+    "logo_url": "https://www.genesisglobalschool.edu.in/cbse/wp-content/uploads/sites/2/2024/09/logo.png",
+    "hero_image_url": "https://www.genesisglobalschool.edu.in/cbse/wp-content/uploads/sites/2/2024/10/TRANSPORTATION.png",
+    "gallery_images": [
+      {
+        "title": "Indoor Sports Hall",
+        "category": "Sports",
+        "url": "https://www.genesisglobalschool.edu.in/cbse/wp-content/uploads/sites/2/2025/01/Athletic-Center-4.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.genesisglobalschool.edu.in/cbse/wp-content/uploads/sites/2/2025/01/Library-scaled.jpg"
+      },
+      {
+        "title": "Performing Arts Centre",
+        "category": "Arts",
+        "url": "https://www.genesisglobalschool.edu.in/cbse/wp-content/uploads/sites/2/2025/01/Performing-Arts-center-1-scaled.jpg"
+      },
+      {
+        "title": "Fencing Hall",
+        "category": "Sports",
+        "url": "https://www.genesisglobalschool.edu.in/cbse/wp-content/uploads/sites/2/2025/01/Athletic-Center-3.jpg"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#16a34a",
+    "motto": null,
+    "tagline": "A day and boarding school in Noida offering CBSE and IB programmes with a dedicated athletic centre",
+    "about": "Genesis Global School is a day-cum-boarding school on the Noida Expressway offering the CBSE curriculum and International Baccalaureate programmes. Its campus includes an athletic centre with indoor courts and a fencing hall, a performing arts centre, laboratories, a central dining hall, an infirmary and boarding houses. The school emphasises clubs and societies, individual learning needs, languages and university placement support.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Nursery to XII",
+    "facilities": [
+      "Boarding",
+      "Athletic Centre",
+      "Fencing Hall",
+      "Performing Arts Centre",
+      "Science Laboratories",
+      "Library",
+      "Central Dining Hall",
+      "Infirmary",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "apeejay-school-noida-sector-16a",
+    "name": "Apeejay School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91-8527570570",
+    "website": "https://www.apeejay.edu/noida/",
+    "address": "Sector 16-A",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201301",
+    "logo_url": "https://www.apeejay.edu/noida/wp-content/uploads/2024/08/Apeejay-Education-Logo.webp",
+    "hero_image_url": "https://www.apeejay.edu/noida/wp-content/uploads/senior-block-11.jpg",
+    "gallery_images": [
+      {
+        "title": "Administrative Block Reception",
+        "category": "Infrastructure",
+        "url": "https://www.apeejay.edu/noida/wp-content/uploads/Administrative_Block-Image_21.jpg"
+      },
+      {
+        "title": "Tennis Court",
+        "category": "Sports",
+        "url": "https://www.apeejay.edu/noida/wp-content/uploads/2026/06/Tennis-Court-768x512.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.apeejay.edu/noida/wp-content/uploads/library-2.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.apeejay.edu/noida/wp-content/uploads/computer-labs-2.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://www.apeejay.edu/noida/wp-content/uploads/chemistry-lab-1.jpg"
+      }
+    ],
+    "theme_color": "#1d4ed8",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "A CBSE school of the Apeejay Education group serving Noida since 1983 with four senior streams",
+    "about": "Apeejay School, Noida began in 1981 with 186 students and has been affiliated to CBSE since 1983. Part of Apeejay Education, founded by Dr Stya Paul, it offers Engineering, Medical, Commerce and Humanities streams at the plus-two level. The campus includes senior and administrative blocks, science and computer labs, an Atal Tinkering Lab, library, auditorium, tennis courts, a swimming pool and hostel facilities.",
+    "established_year": 1981,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Atal Tinkering Lab",
+      "Computer Labs",
+      "Library",
+      "Auditorium",
+      "Swimming Pool",
+      "Tennis Court",
+      "Hostel",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "kothari-international-school-noida-sector-50",
+    "name": "Kothari International School, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.kotharischool.edu.in",
+    "address": "B-279, Sector 50",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201301",
+    "logo_url": "https://kotharischool.edu.in/wp-content/uploads/2023/04/logo-kothari-school-noida.png",
+    "hero_image_url": "https://kotharischool.edu.in/wp-content/uploads/2020/10/football-1-1-768x576.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.kotharischool.edu.in/wp-content/uploads/2019/03/computer-lab.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.kotharischool.edu.in/wp-content/uploads/2019/03/about-school.jpg"
+      },
+      {
+        "title": "Art and Craft Centre",
+        "category": "Arts",
+        "url": "https://www.kotharischool.edu.in/wp-content/uploads/2019/03/Arts-and-craft-centre.jpg"
+      },
+      {
+        "title": "Open Amphitheatre",
+        "category": "Arts",
+        "url": "https://www.kotharischool.edu.in/wp-content/uploads/2020/10/OPEN-AMPHITHERTRE-300x199.jpg"
+      },
+      {
+        "title": "Multipurpose Hall",
+        "category": "Sports",
+        "url": "https://www.kotharischool.edu.in/wp-content/uploads/2020/10/multipurpose-hall-300x169.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "A Noida school offering CBSE, Cambridge and IB pathways with strong arts, sports and leadership programmes",
+    "about": "Kothari International School in Sector 50, Noida offers the CBSE curriculum alongside Cambridge and IB programmes. Its Wi-Fi enabled campus has computer and science labs, an Atal Tinkering Lab, a library, an art and craft centre, an open amphitheatre, a concert hall and a multipurpose sports hall. Students take part in NCC, Scouts and Guides and TEDx events, and the school also runs a sports academy.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Atal Tinkering Lab",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Art and Craft Centre",
+      "Open Amphitheatre",
+      "Concert Hall",
+      "Multipurpose Hall",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "city-montessori-school-gomti-nagar-lucknow",
+    "name": "City Montessori School, Gomti Nagar Campus I, Lucknow",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://cmseducation.org",
+    "address": "Gomti Nagar",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226010",
+    "logo_url": "https://cmseducation.org/wp-content/uploads/2026/06/New-CMS-Logo-300x261.png",
+    "hero_image_url": "https://cmseducation.org/wp-content/uploads/2025/01/school-lobby-5.webp",
+    "gallery_images": [
+      {
+        "title": "Multi-sport Court",
+        "category": "Sports",
+        "url": "https://cmseducation.org/wp-content/uploads/2025/01/playgrounds-at-cms-3.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://cmseducation.org/wp-content/uploads/2025/01/library-at-city-montessori-school-10.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://cmseducation.org/wp-content/uploads/2025/01/science-lab-at-city-montessori-school-1.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://cmseducation.org/wp-content/uploads/2025/01/computer-labs-at-city-montessori-school-2.webp"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#0ea5e9",
+    "motto": null,
+    "tagline": "Lucknow's City Montessori School blends ICSE academics with values, peace education and global citizenship",
+    "about": "City Montessori School (CMS) was founded in Lucknow in 1959 by Dr. Jagdish Gandhi and Dr. Bharti Gandhi and has grown into one of the world's largest city schools across many Lucknow campuses. CMS follows the ICSE/ISC curriculum, with Cambridge options, and stresses human, divine and material education. Gomti Nagar Campus I offers modern libraries, science and computer labs, music rooms, interactive classrooms and sports facilities.",
+    "established_year": 1959,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Interactive Flat Panels",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Music Rooms",
+      "Sports Courts",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "seth-anandram-jaipuria-school-vasundhara-ghaziabad",
+    "name": "Seth Anandram Jaipuria School, Vasundhara, Ghaziabad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130741",
+    "school_code": null,
+    "official_email": "ghaziabad@jaipuria.edu.in",
+    "official_phone": "0120-4179300",
+    "website": "https://jaipuriaghaziabad.edu.in",
+    "address": "Sector 14-C, Vasundhara",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "pincode": "201012",
+    "logo_url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2024/01/Logo-onLoad-1.png",
+    "hero_image_url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2024/02/jaipuriaschoolghaziabad_cover1-min.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2025/11/lib1.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Arts",
+        "url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2024/02/audi_1.jpg"
+      },
+      {
+        "title": "Atrium",
+        "category": "Campus",
+        "url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2024/02/atrium_1.jpg"
+      },
+      {
+        "title": "Indoor Games Room",
+        "category": "Sports",
+        "url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2024/02/sports_02.jpg"
+      },
+      {
+        "title": "ICT Lab",
+        "category": "Academics",
+        "url": "https://jaipuriaghaziabad.edu.in/wp-content/uploads/2024/02/ict_lab_1.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#ea580c",
+    "motto": null,
+    "tagline": "A Jaipuria Group CBSE school in Vasundhara blending Cambridge-inspired learning with eco-friendly, technology-rich facilities",
+    "about": "Seth Anandram Jaipuria School, Vasundhara is part of the Jaipuria Group of Educational Institutions and first opened its doors in 1997. Affiliated to CBSE and also offering a Cambridge programme, the school has well-equipped science, mathematics, social studies and ICT labs, an Atal Tinkering Lab, a library, an auditorium, an atrium, an eco-zone, a splash pool and its own student radio, Radio Spark.",
+    "established_year": 1997,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Atal Tinkering Lab",
+      "Science Laboratories",
+      "Maths Lab",
+      "ICT Lab",
+      "Library",
+      "Auditorium",
+      "Splash Pool",
+      "Eco Zone",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "seth-anandram-jaipuria-school-cantt-kanpur",
+    "name": "Seth Anandram Jaipuria School, Kanpur",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "kanpur@jaipuria.edu.in",
+    "official_phone": "9794523141",
+    "website": "https://jaipuriakanpur.edu.in",
+    "address": "70, Cantonment",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "pincode": "208004",
+    "logo_url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/SAJS-Kanpur-Logo.png",
+    "hero_image_url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/Jaipuria-Group-min.jpg",
+    "gallery_images": [
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/chemistry_lab_new-min-600x401.jpg"
+      },
+      {
+        "title": "Senior Computer Lab",
+        "category": "Academics",
+        "url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/sr_computer_lab_new-min-300x200.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/library_new-min-300x201.jpg"
+      },
+      {
+        "title": "Botanical Garden",
+        "category": "Campus",
+        "url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/botanical_garden_new-min-300x201.jpg"
+      },
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://jaipuriakanpur.edu.in/wp-content/uploads/2024/08/sports1_new-min-300x201.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#d97706",
+    "motto": null,
+    "tagline": "A heritage ICSE school in Kanpur Cantonment combining a green campus with modern labs and sports",
+    "about": "Seth Anandram Jaipuria School, Kanpur realises the vision of philanthropist Seth Anandram Jaipuria. Its foundation stone was laid by Smt. Indira Gandhi in 1966 and the school became fully operational after its inauguration by President Fakhruddin Ali Ahmed in 1974. The Cantonment campus follows the ICSE/ISC curriculum and has science and computer labs, a library, a botanical garden, sports grounds, play areas and a splash pool.",
+    "established_year": 1974,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Botanical Garden",
+      "Sports Grounds",
+      "Splash Pool",
+      "Infirmary",
+      "Canteen"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-knowledge-park-v-greater-noida-west",
+    "name": "Delhi Public School, Knowledge Park V, Greater Noida West",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admin@dpskpv.com",
+    "official_phone": "0120-3567600",
+    "website": "https://www.dpskpv.com",
+    "address": "Plot No. 224 & 228, Knowledge Park-V, opp. Major Rohit Chowk",
+    "city": "Greater Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201306",
+    "logo_url": "https://c9.shauryasoft.com/media/bny-wlg-2601171305-0382967221-1.png",
+    "hero_image_url": "https://c9.shauryasoft.com/media/bny-wlg-2308041437-0398760877-6.jpg",
+    "gallery_images": [
+      {
+        "title": "Clock Tower Block",
+        "category": "Campus",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2308081735-1883360982-11.jpg"
+      },
+      {
+        "title": "Academic Block",
+        "category": "Campus",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2308081735-1883360982-2.jpg"
+      },
+      {
+        "title": "School Corridor",
+        "category": "Infrastructure",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2308081735-1883360982-3.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2307271455-1943943416-1.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2308081735-1883360982-9.jpg"
+      }
+    ],
+    "theme_color": "#064e3b",
+    "accent_color": "#059669",
+    "motto": "Service Before Self",
+    "tagline": "A DPS Society core school in Greater Noida West with a red-brick campus, pool and modern labs",
+    "about": "Delhi Public School, Knowledge Park V is one of the core schools of the DPS Society, located opposite Major Rohit Chowk in Greater Noida West. Its red-brick campus with a clock tower houses spacious academic blocks, computer and science labs, a swimming pool and landscaped grounds. The school follows the CBSE curriculum with a structured assessment system and a focus on values-based, all-round education.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Swimming Pool",
+      "Sports Grounds",
+      "Auditorium",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "seth-mr-jaipuria-school-etmadpur-road-agra",
+    "name": "Seth M.R. Jaipuria School, Etmadpur Road, Agra",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91 9997650810",
+    "website": "https://www.jaipuriaschoolagra.in",
+    "address": "Etmadpur Road",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "pincode": null,
+    "logo_url": "https://www.jaipuriaschoolagra.in/wp-content/uploads/2024/10/Agra-ETmadpur.png",
+    "hero_image_url": "https://www.jaipuriaschoolagra.in/wp-content/uploads/2025/02/JAIPURIA-SCHOOL-BUILDING-AGRA-FINAL-1.jpg",
+    "gallery_images": [],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A Seth M.R. Jaipuria network school in Agra shaping lifelong learners with a balanced, values-led education",
+    "about": "Seth M.R. Jaipuria School, Etmadpur Road is the Agra campus of the Seth M.R. Jaipuria Schools network, which draws on a family education legacy of over 80 years. The school aims to shape future leaders, compassionate citizens and innovative thinkers through a balanced approach that blends tradition with modern pedagogy, skill-centric learning, value-based education and regular teacher upskilling.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Activity Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

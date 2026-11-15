@@ -8,7 +8,7 @@ export default function LoginView() {
   const dispatch = useDispatch();
   const [login, { isLoading }] = useLoginMutation();
 
-  const [email, setEmail] = useState('superadmin@ckrschools.online');
+  const [email, setEmail] = useState('superadmin@schoolkarma.com');
   const [password, setPassword] = useState('Admin@123');
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -106,7 +106,7 @@ export default function LoginView() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="superadmin@ckrschools.online"
+                placeholder="superadmin@schoolkarma.com"
                 style={{
                   border: 'none',
                   outline: 'none',

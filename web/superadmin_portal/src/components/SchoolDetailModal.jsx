@@ -81,7 +81,7 @@ export default function SchoolDetailModal({ school, isOpen, onClose, onToggleSta
                 {school.name}
               </h2>
               <p style={{ fontSize: '12px', color: '#a7f3d0' }}>
-                Subdomain: {school.slug}.ckrschools.online
+                Subdomain: {school.slug}.schoolkarma.com
               </p>
             </div>
           </div>

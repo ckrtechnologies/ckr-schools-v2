@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CKR Student</string>
+    <string name="app_name">Student</string>
     <string name="google_app_id" translatable="false">1:349267453118:android:5d0ef8f866f43c5d1feaef</string>
     <string name="gcm_defaultSenderId" translatable="false">349267453118</string>
     <string name="default_web_client_id" translatable="false"></string>

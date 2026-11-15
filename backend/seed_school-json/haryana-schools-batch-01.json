@@ -1,0 +1,677 @@
+[
+  {
+    "slug": "amity-international-school-sector-46-gurugram",
+    "name": "Amity International School, Sector 46, Gurugram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/gurugram-46",
+    "address": "Sector 46",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122002",
+    "logo_url": "https://amityschools.in/assets/schools/gurugram-46/logo/Gurugram-Sector-46-blue.png",
+    "hero_image_url": "https://amityschools.in/assets/schools/gurugram-46/infra/Infra.webp",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/gurugram-46/infra/Physics%201.webp"
+      },
+      {
+        "title": "STEM & Robotics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/gurugram-46/infra/Robotic.webp"
+      },
+      {
+        "title": "Junior Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/gurugram-46/infra/Library%201.webp"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/gurugram-46/infra/Swimming%20pool%204.webp"
+      },
+      {
+        "title": "Taekwondo Hall",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/gurugram-46/infra/Taekwondo%202.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A co-educational CBSE day boarding school nurturing confident, value-driven global citizens in Gurugram since 2004",
+    "about": "Founded by Dr. Ashok K. Chauhan in 2004, Amity International School, Sector 46, Gurugram is a co-educational, English-medium CBSE day boarding school teaching Grades I to XII. With around 3,500 students, it is part of the Amity International Schools chain guided by Dr. (Mrs.) Amita Chauhan and RBEF, and is known for innovative teaching methods, well-equipped science, IT and robotics labs, an Atal Tinkering Lab, libraries, a swimming pool and GPS-tracked school buses.",
+    "established_year": 2004,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "I to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Physics, Chemistry & Biology Labs",
+      "IT Lab",
+      "STEM & Robotics Lab",
+      "Atal Tinkering Lab",
+      "Junior & Senior Libraries",
+      "Swimming Pool",
+      "Taekwondo Hall",
+      "GPS-tracked School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "amity-international-school-sector-43-gurugram",
+    "name": "Amity International School, Sector 43, Gurugram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://amityschools.in/gurugram-43",
+    "address": "Power Grid Township, Sector 43",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122002",
+    "logo_url": "https://amityschools.in/assets/schools/g-43/logo/blue-g-43.webp",
+    "hero_image_url": "https://amityschools.in/assets/schools/g-43/Infrastructure/School%20building%20pic.webp",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/g-43/Infrastructure/Physics%20lab.webp"
+      },
+      {
+        "title": "ATL / STEM & Robotics Lab",
+        "category": "Academics",
+        "url": "https://amityschools.in/assets/schools/g-43/Infrastructure/ATL-STEM-Roboti-LAB-5.webp"
+      },
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://amityschools.in/assets/schools/g-43/Infrastructure/sen-Library.webp"
+      },
+      {
+        "title": "Football Playground",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/g-43/Infrastructure/Football.webp"
+      },
+      {
+        "title": "Skating Hall",
+        "category": "Sports",
+        "url": "https://amityschools.in/assets/schools/g-43/Infrastructure/skating.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "Value-based education with a global perspective in a child-centred, stress-free learning environment at Sector 43",
+    "about": "Located in the Power Grid Complex, Sector 43, Gurugram, this co-educational English-medium school is the fourth in the chain of Amity Group of Schools established by the Ritnand Balved Education Foundation and founded by Dr. Ashok K. Chauhan. Guided by RBEF Chairperson Dr. (Mrs.) Amita Chauhan, it focuses on value-based education with a global outlook, aiming to realise each child's physical, mental and spiritual potential through child-centred learning, labs, libraries, a skating hall and sports grounds.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "IT Lab",
+      "ATL & Robotics Lab",
+      "Junior & Senior Libraries",
+      "Learning Centre",
+      "Skating Hall",
+      "Football & Cricket Grounds"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "modern-vidya-niketan-sector-17-faridabad",
+    "name": "Modern Vidya Niketan Sr. Sec. School, Sector 17, Faridabad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "mvnsec17@mvneducation.com",
+    "official_phone": null,
+    "website": "https://www.mvneducation.com/sector-17/",
+    "address": "Sector 17",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "pincode": "121002",
+    "logo_url": "https://www.mvneducation.com/sector-17/assets/images/logo.png",
+    "hero_image_url": "https://www.mvneducation.com/sector-17/assets/images/new04sec17.jpeg",
+    "gallery_images": [
+      {
+        "title": "Table Tennis Hall",
+        "category": "Sports",
+        "url": "https://www.mvneducation.com/sector-17/assets/images/sports-feb26-th6.jpg"
+      },
+      {
+        "title": "Outdoor Sports Ground",
+        "category": "Sports",
+        "url": "https://www.mvneducation.com/sector-17/assets/images/sports-feb26-th7.jpg"
+      },
+      {
+        "title": "Indoor Gymnastics Hall",
+        "category": "Sports",
+        "url": "https://www.mvneducation.com/sector-17/assets/images/sports-feb26-th5.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "The flagship MVN school in Faridabad, a centre of excellence building future-ready learners since 1983",
+    "about": "Modern Vidya Niketan, Sector 17, Faridabad is the first school of the Modern Vidya Niketan Education Society, founded in 1983 by Smt. Kanta Sharma as a centre of excellence. The group later grew to include MVN Aravali Hills (2000) and MVN Palwal (2009). The CBSE senior secondary school combines academics with a strong beyond-academia programme, including a student-led podcast, indoor games, gymnastics, table tennis and outdoor sports, and close parent engagement.",
+    "established_year": 1983,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Computer Labs",
+      "Library",
+      "Indoor Games Hall",
+      "Gymnastics Hall",
+      "Sports Ground",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-knowledge-habitat-hdfc-school-sector-57-gurugram",
+    "name": "The Knowledge Habitat (formerly The HDFC School), Gurugram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admissions@thehdfcschool.com",
+    "official_phone": "0124-4903700",
+    "website": "https://www.thehdfcschool.com/gurgaon/",
+    "address": "Sector 57",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122003",
+    "logo_url": "https://www.thehdfcschool.com/gurgaon/src/habitat-logo.png",
+    "hero_image_url": "https://www.thehdfcschool.com/gurgaon/images/aboutus_img1.jpg",
+    "gallery_images": [
+      {
+        "title": "Integrated Science Lab",
+        "category": "Academics",
+        "url": "https://www.thehdfcschool.com/resources/images/gurgaonfacilities/2.jpg"
+      },
+      {
+        "title": "Football Ground",
+        "category": "Sports",
+        "url": "https://www.thehdfcschool.com/resources/images/gurgaonfacilities/4.jpg"
+      },
+      {
+        "title": "Primary Wing Library",
+        "category": "Infrastructure",
+        "url": "https://www.thehdfcschool.com/resources/images/gurgaonfacilities/10.jpg"
+      },
+      {
+        "title": "Amphitheatre",
+        "category": "Arts",
+        "url": "https://www.thehdfcschool.com/resources/images/gurgaonfacilities/13.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.thehdfcschool.com/resources/images/gurgaonfacilities/17.jpg"
+      }
+    ],
+    "theme_color": "#0f3b6e",
+    "accent_color": "#e11d48",
+    "motto": null,
+    "tagline": "Nurturing inquisitive, intellectual and innovative minds through collaboration, life skills and strong values in Gurugram",
+    "about": "The Knowledge Habitat, formerly The HDFC School, is a CBSE school in Sector 57, Gurugram. Its approach cultivates inquisitive, intellectual and innovative minds while nurturing a love for learning through cooperation and collaboration, alongside life skills, emotional intelligence and a strong moral compass. Led by Education Leader & Principal Mrs. Anita Makkar, the school runs separate junior and senior wings with integrated labs, ICT labs, libraries, an amphitheatre, dance room, football ground and basketball court, and emphasises parent-school partnership.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Integrated Science Labs",
+      "ICT Lab",
+      "Primary & Senior Libraries",
+      "Amphitheatre",
+      "Dance Room",
+      "Indoor Sports Room",
+      "Football Ground",
+      "Basketball Court",
+      "Infirmary"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-greater-faridabad-sector-81",
+    "name": "Delhi Public School, Greater Faridabad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "531178",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://dpsgfaridabad.com",
+    "address": "Sector 81, Greater Faridabad",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "pincode": "121001",
+    "logo_url": "https://dpsgfaridabad.com/wp-content/uploads/2026/04/DPSGF-logo-2-660x138.png",
+    "hero_image_url": "https://dpsgfaridabad.com/wp-content/uploads/2026/09/School-Building.jpg",
+    "gallery_images": [
+      {
+        "title": "Main Campus View",
+        "category": "Campus",
+        "url": "https://dpsgfaridabad.com/wp-content/uploads/2024/09/DPSGF-MAIN-View-570x370.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://dpsgfaridabad.com/wp-content/uploads/2024/09/Computer-Lab.jpeg"
+      },
+      {
+        "title": "School Library",
+        "category": "Infrastructure",
+        "url": "https://dpsgfaridabad.com/wp-content/uploads/elementor/thumbs/Libraray-qtnj1bayx7ovkphi1vh9yn4bdhsxjtz0y116hfq5f8.jpg"
+      },
+      {
+        "title": "Sports Field",
+        "category": "Sports",
+        "url": "https://dpsgfaridabad.com/wp-content/uploads/elementor/thumbs/2O2A0376-scaled-r0y5ofeu9elzh59g5xjzkoprrxmduotm2tvkfs0hkk.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#16a34a",
+    "motto": "Service Before Self",
+    "tagline": "An independent CBSE senior secondary school in Sector 81 offering personalised learning, labs and sports since 2013",
+    "about": "Delhi Public School, Greater Faridabad opened on 22 April 2013 in Sector 81 and is an independent CBSE senior secondary school (affiliation 531178) run by the Hanumant Foundation under the DPS banner. The school highlights tailored pedagogy for individual growth, special educators, and a commitment to sustainable living, supported by computer and science laboratories, a well-stocked library, sports fields and a school transport network serving Greater Faridabad.",
+    "established_year": 2013,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Sports Field",
+      "Special Educators",
+      "School Buses",
+      "Activity Rooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "tagore-baal-niketan-urban-estate-karnal",
+    "name": "Tagore Baal Niketan Senior Secondary School, Karnal",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://tagorebaalniketan.com",
+    "address": "Sector 6, Market Road, Urban Estate",
+    "city": "Karnal",
+    "state": "Haryana",
+    "pincode": "132001",
+    "logo_url": "https://tagorebaalniketan.com/wp-content/uploads/2022/11/tagore-school_logo-2.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Tagore_Baal_Niketan_School%2C_Karnal_-_building.jpg",
+    "gallery_images": [
+      {
+        "title": "School Building",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tagore_Baal_Niketan_School%2C_Karnal_-_building_2.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://tagorebaalniketan.com/wp-content/uploads/2022/11/Chemistry-lab.png"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://tagorebaalniketan.com/wp-content/uploads/2022/11/Physics-lab.png"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://tagorebaalniketan.com/wp-content/uploads/2022/11/computer-lab.png"
+      },
+      {
+        "title": "Math Lab",
+        "category": "Academics",
+        "url": "https://tagorebaalniketan.com/wp-content/uploads/2022/11/Math-lab.png"
+      }
+    ],
+    "theme_color": "#92400e",
+    "accent_color": "#2563eb",
+    "motto": null,
+    "tagline": "A Karnal institution since 1963, named after Gurudev Tagore and offering CBSE education from Nursery to XII",
+    "about": "Tagore Baal Niketan Senior Secondary School is a private CBSE school in Urban Estate, Karnal, founded on 1 August 1963 by educationist Ms. Vimla Raheja and named in honour of Gurudev Rabindranath Tagore, India's first Nobel laureate. Starting on small premises with a handful of students, it now teaches from Nursery to Class XII and is recognised by the Haryana Department of Education. The campus offers physics, chemistry, biology, maths and computer laboratories and a beyond-curriculum programme.",
+    "established_year": 1963,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Math Lab",
+      "Computer Lab",
+      "Library",
+      "Sports Ground"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "matrikiran-school-sector-83-gurugram",
+    "name": "MatriKiran School, Gurugram",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.matrikiran.in",
+    "address": "Senior School: Vatika India Next, Sector 83; Junior School: Sohna Road",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122004",
+    "logo_url": "https://c9.shauryasoft.com/media/bny-logo_149.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/MatriKiran_School_Gurgaon.jpg",
+    "gallery_images": [
+      {
+        "title": "Fish Pond",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/MatriKiran_School_Fish_Pond_ICSE_School.jpg"
+      },
+      {
+        "title": "Water Garden Courtyard",
+        "category": "Campus",
+        "url": "https://c9.shauryasoft.com/media/bny-slide_149_4.jpg"
+      },
+      {
+        "title": "Open Lawn for Yoga and Assembly",
+        "category": "Sports",
+        "url": "https://c9.shauryasoft.com/media/bny-slide_149_6.jpg"
+      },
+      {
+        "title": "Multipurpose Hall",
+        "category": "Infrastructure",
+        "url": "https://c9.shauryasoft.com/media/bny-wlg-2511181053-1884792429_356.jpg"
+      }
+    ],
+    "theme_color": "#065f46",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "Integral education for the physical, mental, emotional, psychic and spiritual growth of every child in Gurugram",
+    "about": "MatriKiran is a Gurugram school whose philosophy of integral education addresses the physical, mental, emotional, psychic and spiritual dimensions of each child. Its campus is spread across two locations: the Junior School on Sohna Road (Pre-Nursery to Grade 5), which began its first session on 4 April 2011, and the High School at Vatika India Next, Sector 83, which opened on 4 April 2016. Green courtyards, water gardens, open lawns and multipurpose halls support experiential, child-centred learning.",
+    "established_year": 2011,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Nursery to XII",
+    "facilities": [
+      "Experiential Classrooms",
+      "Science Labs",
+      "Library",
+      "Multipurpose Hall",
+      "Open Lawns",
+      "Water Gardens",
+      "Art & Music Rooms",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-sushant-lok-sector-27-gurugram",
+    "name": "Delhi Public School, Sushant Lok, Gurugram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://dpssl.net",
+    "address": "Block B, Sushant Lok Phase I, Sector 27",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122009",
+    "logo_url": "https://resources.edunexttechnologies.com/web-data/Delhi-Public-School/DPS-Sushant-Lok-Logo.svg",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Delhi_Public_School%2C_Sushant_Lok%2C_Gurgaon.JPG",
+    "gallery_images": [
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/dpssl/school___static/1746770728354_BiologyLab.png"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/dpssl/school___static/1746770789285_library.png"
+      },
+      {
+        "title": "School Auditorium",
+        "category": "Arts",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/dpssl/school___static/1746770850917_SchoolAuditorium.png"
+      },
+      {
+        "title": "Yoga Room",
+        "category": "Sports",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/dpssl/school___static/1746770974838_yogaroom.png"
+      },
+      {
+        "title": "Sports Facility",
+        "category": "Sports",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/dpssl/school___static/1746771678484_sportsfacility.png"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#ca8a04",
+    "motto": "Service Before Self",
+    "tagline": "A DPS Society school on a 5-acre Gurugram campus known for academics, technology integration and holistic development",
+    "about": "Established in April 2005 under the aegis of the Delhi Public School Society, DPS Sushant Lok is set on a five-acre campus in the heart of Gurugram. The school is known for academic excellence, holistic 360-degree development and innovative, technology-integrated teaching. Facilities include biology and other science labs, a library, auditorium, yoga room, activity rooms, a nursery gym, a sensory park and sports facilities, supported by a strong safety and security setup.",
+    "established_year": 2005,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Library",
+      "Auditorium",
+      "Yoga Room",
+      "Activity Rooms",
+      "Nursery Gym",
+      "Sensory Park",
+      "Sports Facilities",
+      "CCTV Security"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "bhavan-vidyalaya-sector-15-panchkula",
+    "name": "Bhavan Vidyalaya, Panchkula",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "530219",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.bhavanpanchkula.in",
+    "address": "Sector 15",
+    "city": "Panchkula",
+    "state": "Haryana",
+    "pincode": "134113",
+    "logo_url": "https://www.bhavanpanchkula.in//assets/frontend/img/logo/logomenu.png",
+    "hero_image_url": "https://www.bhavanpanchkula.in//assets/frontend/img/games-and-sports--04.jpg",
+    "gallery_images": [
+      {
+        "title": "Indoor Table Tennis Hall",
+        "category": "Sports",
+        "url": "https://www.bhavanpanchkula.in//assets/frontend/img/games-and-sports--01.jpg"
+      },
+      {
+        "title": "Skating Rink",
+        "category": "Sports",
+        "url": "https://www.bhavanpanchkula.in//assets/frontend/img/games-and-sports--02.jpg"
+      },
+      {
+        "title": "Synthetic Multi-sport Court",
+        "category": "Sports",
+        "url": "https://www.bhavanpanchkula.in//assets/frontend/img/games-and-sports--06.jpg"
+      },
+      {
+        "title": "Campus Garden",
+        "category": "Campus",
+        "url": "https://www.bhavanpanchkula.in//assets/frontend/img/gallery---01a.jpg"
+      },
+      {
+        "title": "Green Campus Walkway",
+        "category": "Campus",
+        "url": "https://www.bhavanpanchkula.in//assets/frontend/img/gallery---01c.jpg"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#eab308",
+    "motto": null,
+    "tagline": "A Bharatiya Vidya Bhavan school in Panchkula blending strong academics, Indian values, green spaces and sport",
+    "about": "Bhavan Vidyalaya, Sector 15, Panchkula is an independent CBSE senior secondary school (affiliation 530219) of the Bharatiya Vidya Bhavan family. The society behind it was founded in 1994 and the school first opened on 26 November 2001. Its leafy campus has landscaped gardens and extensive sports infrastructure, including an indoor table tennis hall, a skating rink used for roller hockey, synthetic multi-sport courts and large playing fields, alongside a recognised green-school programme.",
+    "established_year": 2001,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Computer Labs",
+      "Library",
+      "Indoor Table Tennis Hall",
+      "Skating Rink",
+      "Synthetic Courts",
+      "Playing Fields",
+      "Landscaped Gardens"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "heritage-xperiential-learning-school-sector-64-gurugram",
+    "name": "Heritage Xperiential Learning School, Sector 64, Gurugram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.heritagexperiential.org/hxls-sector-64-campus/",
+    "address": "Sector 64",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122102",
+    "logo_url": "https://www.heritagexperiential.org/wp-content/themes/heritage/images/logo.png",
+    "hero_image_url": "https://www.heritagexperiential.org/wp-content/uploads/2026/06/HXLS64-Campus.png",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.heritagexperiential.org/wp-content/uploads/2026/04/HXLS64-Library.jpeg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://www.heritagexperiential.org/wp-content/uploads/2026/04/HXLS64-ClassRoom.jpg"
+      },
+      {
+        "title": "Maker Space",
+        "category": "Academics",
+        "url": "https://www.heritagexperiential.org/wp-content/uploads/2026/04/HXLS64-MakerSapce.jpg"
+      },
+      {
+        "title": "Arts Room",
+        "category": "Arts",
+        "url": "https://www.heritagexperiential.org/wp-content/uploads/2026/04/HXLS64-ArtsRoom.jpg"
+      },
+      {
+        "title": "Outdoor Play Area",
+        "category": "Sports",
+        "url": "https://www.heritagexperiential.org/wp-content/uploads/2026/04/HXLS64-PlayArea-1.jpg"
+      }
+    ],
+    "theme_color": "#1d4ed8",
+    "accent_color": "#84cc16",
+    "motto": null,
+    "tagline": "A new experiential CBSE campus in Gurugram designed for curious young minds, rooted in inquiry and creativity",
+    "about": "HXLS Sector 64 is the newest campus of the Heritage Xperiential Learning School in Gurugram. It currently offers an experiential CBSE learning environment from Pre-Nursery to Grade 8 and is growing into a full K-12 school by adding a grade each year. Rooted in inquiry, creativity, emotional intelligence and future-ready learning, the campus features bright classrooms, a library, maker space, arts rooms and a colourful outdoor play area, with safe transport support for families.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Nursery to VIII",
+    "facilities": [
+      "Experiential Classrooms",
+      "Library",
+      "Maker Space",
+      "Arts Room",
+      "Outdoor Play Area",
+      "Transport",
+      "Activity Rooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

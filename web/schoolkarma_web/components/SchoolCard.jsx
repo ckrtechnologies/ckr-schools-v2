@@ -1,0 +1,369 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useSelector, useDispatch } from 'react-redux';
+import { 
+  IconStarFilled, 
+  IconMapPin, 
+  IconCertificate, 
+  IconCheck, 
+  IconArrowsDiff,
+  IconArrowRight,
+  IconDownload,
+  IconUsers,
+  IconSchool
+} from '@tabler/icons-react';
+import { addSchoolToCompare, removeSchoolFromCompare } from '../lib/store/comparisonSlice.js';
+import SchoolImage from './SchoolImage.jsx';
+
+function formatFee(num) {
+  if (num === null || num === undefined || num === '' || Number(num) <= 0) return null;
+  return `₹${Number(num).toLocaleString('en-IN')}`;
+}
+
+export default function SchoolCard({ 
+  school, 
+  onSelectSchool, 
+  onOpenEnquiry,
+  onOpenBrochure
+}) {
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const comparedSchools = useSelector((state) => state.comparison.comparedSchools);
+  const isCompared = comparedSchools.some(s => s.slug === school.slug);
+
+  const handleCardClick = () => {
+    if (onSelectSchool) {
+      onSelectSchool(school.slug);
+    } else {
+      router.push(`/schools/${school.slug}`);
+    }
+  };
+
+  const handleToggleCompare = (e) => {
+    e.stopPropagation();
+    if (isCompared) {
+      dispatch(removeSchoolFromCompare(school.slug));
+    } else {
+      dispatch(addSchoolToCompare(school));
+    }
+  };
+
+  const facilities = typeof school.facilities === 'string' ? JSON.parse(school.facilities || '[]') : (school.facilities || []);
+
+  return (
+    <div 
+      onClick={handleCardClick}
+      style={{
+        backgroundColor: '#ffffff',
+        borderRadius: '14px',
+        border: '1px solid #e2e8f0',
+        overflow: 'hidden',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
+        cursor: 'pointer',
+        transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 12px 24px -4px rgba(0, 0, 0, 0.12)';
+        e.currentTarget.style.borderColor = '#cbd5e1';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
+        e.currentTarget.style.borderColor = '#e2e8f0';
+      }}
+    >
+      {/* Hero Image Section */}
+      <div style={{ position: 'relative', height: '180px', overflow: 'hidden' }}>
+        <SchoolImage school={school} alt={school.name} height="100%" logoPadding="26px 30px 58px" />
+
+        {/* Live Admission Status Badge */}
+        {school.admission_status && (
+          <div style={{
+            position: 'absolute',
+            top: '12px',
+            left: '12px',
+            backgroundColor: '#064e3b',
+            color: '#f0fdf4',
+            fontSize: '11px',
+            fontWeight: '700',
+            padding: '4px 10px',
+            borderRadius: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+          }}>
+            <span className="pulse-indicator" />
+            {school.admission_status}
+          </div>
+        )}
+
+        {/* Featured Partner Badge */}
+        {school.is_featured && (
+          <div style={{
+            position: 'absolute',
+            top: '44px',
+            left: '12px',
+            backgroundColor: '#fbbf24',
+            color: '#78350f',
+            fontSize: '10px',
+            fontWeight: '800',
+            padding: '2px 8px',
+            borderRadius: '10px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
+            letterSpacing: '0.03em',
+            textTransform: 'uppercase'
+          }}>
+            ★ Featured
+          </div>
+        )}
+
+        {/* Board & City Pill */}
+        {(school.affiliation_board || school.city) && (
+          <div style={{
+            position: 'absolute',
+            bottom: '12px',
+            left: '12px',
+            backgroundColor: 'rgba(15, 23, 42, 0.85)',
+            color: '#ffffff',
+            fontSize: '11px',
+            fontWeight: '600',
+            padding: '3px 8px',
+            borderRadius: '4px',
+            backdropFilter: 'blur(4px)'
+          }}>
+            {[school.affiliation_board, school.city].filter(Boolean).join(' · ')}
+          </div>
+        )}
+
+        {/* Compare Checkbox Button */}
+        <button
+          onClick={handleToggleCompare}
+          title={isCompared ? 'Remove from Comparison' : 'Add to Compare'}
+          style={{
+            position: 'absolute',
+            top: '12px',
+            right: '12px',
+            backgroundColor: isCompared ? '#064e3b' : 'rgba(255, 255, 255, 0.95)',
+            color: isCompared ? '#ffffff' : '#334155',
+            border: isCompared ? '1px solid #064e3b' : '1px solid #cbd5e1',
+            borderRadius: '20px',
+            padding: '5px 12px',
+            fontSize: '11px',
+            fontWeight: '700',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '5px',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+            transition: 'all 0.15s ease'
+          }}
+        >
+          <IconArrowsDiff size={13} />
+          {isCompared ? 'Comparing' : 'Compare'}
+        </button>
+      </div>
+
+      {/* Body Details */}
+      <div style={{ padding: '18px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+        {/* Title & Logo */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '8px' }}>
+          {school.logo_url && (
+            <img 
+              src={school.logo_url} 
+              alt="" 
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+              style={{
+                width: '38px',
+                height: '38px',
+                borderRadius: '8px',
+                objectFit: 'contain',
+                border: '1px solid #e2e8f0',
+                backgroundColor: '#ffffff'
+              }} 
+            />
+          )}
+          <div style={{ flex: 1 }}>
+            <h3 style={{
+              fontSize: '17px',
+              fontWeight: '800',
+              color: '#0f172a',
+              letterSpacing: '-0.3px',
+              lineHeight: '1.25',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px'
+            }}>
+              <Link 
+                href={`/schools/${school.slug}`}
+                onClick={(e) => {
+                  if (onSelectSchool) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onSelectSchool(school.slug);
+                  }
+                }}
+                style={{
+                  color: 'inherit',
+                  textDecoration: 'none'
+                }}
+              >
+                {school.name}
+              </Link>
+              {school.is_verified && <IconCheck size={16} color="#047857" title="Verified by SchoolKarma" />}
+            </h3>
+            <div style={{ fontSize: '12px', color: '#64748b', marginTop: '2px' }}>
+              {[school.city, school.state].filter(Boolean).join(', ')}
+              {school.established_year ? ` · Est. ${school.established_year}` : ''}
+            </div>
+          </div>
+        </div>
+
+        {/* Tagline */}
+        <p style={{
+          fontSize: '13px',
+          color: '#475569',
+          lineHeight: '1.45',
+          marginBottom: '14px',
+          display: '-webkit-box',
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden'
+        }}>
+          {school.tagline || school.about || 'The school has not published an overview yet.'}
+        </p>
+
+        {/* Stats Grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '8px',
+          marginBottom: '14px',
+          backgroundColor: '#f8fafc',
+          padding: '10px 12px',
+          borderRadius: '8px',
+          border: '1px solid #f1f5f9'
+        }}>
+          <div>
+            <div style={{ fontSize: '10px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>TUITION FEE</div>
+            <div style={{ fontSize: '13px', fontWeight: '800', color: '#047857' }}>
+              {formatFee(school.min_fee) && formatFee(school.max_fee)
+                ? `${formatFee(school.min_fee)} – ${formatFee(school.max_fee)}`
+                : 'Fees on enquiry'}
+            </div>
+          </div>
+
+          <div>
+            <div style={{ fontSize: '10px', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>PARENT RATING</div>
+            {Number(school.review_count) > 0 && Number(school.avg_rating) > 0 ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', fontWeight: '800', color: '#0f172a' }}>
+                <IconStarFilled size={14} color="#f59e0b" />
+                <span>{Number(school.avg_rating).toFixed(1)}</span>
+                <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '500' }}>({school.review_count} reviews)</span>
+              </div>
+            ) : (
+              <div style={{ fontSize: '12px', color: '#64748b', fontWeight: '500' }}>No reviews yet</div>
+            )}
+          </div>
+        </div>
+
+        {/* Facilities Pills */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px', flex: 1 }}>
+          {facilities.length === 0 && (
+            <span style={{ fontSize: '11px', color: '#94a3b8' }}>Facilities not listed yet</span>
+          )}
+          {facilities.slice(0, 3).map((f, i) => (
+            <span
+              key={i}
+              style={{
+                fontSize: '11px',
+                fontWeight: '600',
+                color: '#334155',
+                backgroundColor: '#f1f5f9',
+                padding: '3px 8px',
+                borderRadius: '4px'
+              }}
+            >
+              {f}
+            </span>
+          ))}
+          {facilities.length > 3 && (
+            <span style={{ fontSize: '11px', color: '#64748b', padding: '3px 4px' }}>
+              +{facilities.length - 3} more
+            </span>
+          )}
+        </div>
+
+        {/* Action Buttons */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '10px',
+          borderTop: '1px solid #f1f5f9',
+          paddingTop: '14px'
+        }}>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onOpenEnquiry(school);
+            }}
+            style={{
+              gridColumn: school.brochure_url ? 'auto' : '1 / -1',
+              backgroundColor: '#064e3b',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '9px 12px',
+              fontSize: '13px',
+              fontWeight: '700',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px',
+              boxShadow: '0 2px 4px rgba(6, 78, 59, 0.15)'
+            }}
+          >
+            Enquire Now
+          </button>
+
+          {school.brochure_url && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onOpenBrochure(school);
+              }}
+              style={{
+                backgroundColor: '#ffffff',
+                color: '#064e3b',
+                border: '1px solid #064e3b',
+                borderRadius: '8px',
+                padding: '9px 12px',
+                fontSize: '13px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
+              }}
+            >
+              <IconDownload size={14} />
+              Brochure
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+

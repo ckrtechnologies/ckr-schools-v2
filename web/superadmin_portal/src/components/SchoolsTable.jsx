@@ -318,7 +318,7 @@ export default function SchoolsTable({
                         onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'}
                         onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}
                       >
-                        <span>{school.slug}.ckrschools.online</span>
+                        <span>{school.slug}.schoolkarma.com</span>
                         <IconExternalLink size={12} color="#0284c7" />
                       </a>
                     </td>

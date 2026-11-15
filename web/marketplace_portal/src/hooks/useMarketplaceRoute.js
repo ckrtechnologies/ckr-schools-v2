@@ -15,6 +15,7 @@ export function parseRoute(pathname = '/') {
 
   if (path === '/schools' || path === '/catalog') return { view: 'catalog', slug: null };
   if (path === '/compare') return { view: 'compare', slug: null };
+  if (path === '/services-for-schools' || path === '/for-schools') return { view: 'services-for-schools', slug: null };
 
   const school = path.match(/^\/schools\/([^/]+)$/);
   if (school) return { view: 'school-profile', slug: decodeURIComponent(school[1]) };
@@ -26,6 +27,7 @@ export function pathFor(view, slug) {
   if (view === 'school-profile' && slug) return `${BASE}/schools/${encodeURIComponent(slug)}`;
   if (view === 'catalog') return `${BASE}/schools` || '/schools';
   if (view === 'compare') return `${BASE}/compare` || '/compare';
+  if (view === 'services-for-schools') return `${BASE}/services-for-schools` || '/services-for-schools';
   return `${BASE}/` || '/';
 }
 

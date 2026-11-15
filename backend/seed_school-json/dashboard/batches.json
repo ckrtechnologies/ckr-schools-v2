@@ -1,0 +1,102 @@
+[
+ {
+  "batch": "DL-01",
+  "state": "Delhi",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 9,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Vasant Valley gallery has 1 image; white logos for DPS Mathura Road and Modern School"
+ },
+ {
+  "batch": "DL-02",
+  "state": "Delhi",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Skipped VIS Dwarka Sec 10 (facility photos centred on students) and Kulachi Hansraj (no building/hero photo). Mount Abu hero is small (338px). DPS Dwarka hero is a sports-field view; its founding year and affiliation no. unknown."
+ },
+ {
+  "batch": "DL-03",
+  "state": "Delhi",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Batch 03: 10 schools (Amity PV/MV, Heritage Rohini/VK, Tagore EOK, KRM GK-II, Dwarka Intl, Apeejay Saket/Pitampura, The Indian School). Images load-tested; Indian School est. year 1994 not confirmed on SARAS; Apeejay Pitampura & KRM GK-II heroes are facility (library) photos."
+ },
+ {
+  "batch": "HR-01",
+  "state": "Haryana",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Gurugram x6, Faridabad x2, Karnal, Panchkula; all 66 image URLs load-tested; all galleries 3-5."
+ },
+ {
+  "batch": "HR-02",
+  "state": "Haryana",
+  "schools": 2,
+  "urls_verified": 2,
+  "gallery_complete": 2,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Partial batch (2 schools: Apeejay Faridabad, VIBGYOR Gurugram) saved early as helper ran low on context; all 12 image URLs load-tested."
+ },
+ {
+  "batch": "KA-01",
+  "state": "Karnataka",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": ""
+ },
+ {
+  "batch": "KA-02",
+  "state": "Karnataka",
+  "schools": 4,
+  "urls_verified": 4,
+  "gallery_complete": 4,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "karnataka batch 01: 10 schools (Bengaluru 7, Mangaluru 2, Mysuru 1). batch 02: 4 schools (partial batch; helper stopped on context) — VIBGYOR x3, Greenwood Sarjapur. Hubballi not yet covered."
+ },
+ {
+  "batch": "MH-01",
+  "state": "Maharashtra",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Batch 01: Mumbai 3, Navi Mumbai 1, Pune 3, Nagpur 3. Amity Navi Mumbai/VIBGYOR Balewadi/Centre Point Wardhaman Nagar & Amravati Road founding year unknown (null)."
+ },
+ {
+  "batch": "UP-01",
+  "state": "Uttar Pradesh",
+  "schools": 9,
+  "urls_verified": 9,
+  "gallery_complete": 7,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Lotus Valley moved to UP-02; Shiv Nadar and Pathways have no gallery"
+ },
+ {
+  "batch": "UP-02",
+  "state": "Uttar Pradesh",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 9,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "UP-02: 10 schools (Noida x5, Greater Noida W, Ghaziabad, Lucknow, Kanpur, Agra). Agra Jaipuria has empty gallery. Skipped DPS Greater Noida (site unreachable), GIIS Noida (only other-campus photos), Ramagya, Ryan Sec 39 (shared group banners), SAJS Lucknow (only student close-ups)."
+ }
+]

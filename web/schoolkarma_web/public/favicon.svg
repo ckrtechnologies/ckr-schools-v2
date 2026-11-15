@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean Light Squircle Background with subtle border for high-visibility tab headers -->
+  <rect width="512" height="512" rx="112" fill="#F0FDF4"/>
+  <rect x="6" y="6" width="500" height="500" rx="106" stroke="#BBF7D0" stroke-width="12"/>
+  
+  <!-- Wisdom Sun Beacon -->
+  <circle cx="256" cy="130" r="44" fill="#F59E0B"/>
+  
+  <!-- Left Wisdom Book Page (Warm Gold / Amber) -->
+  <path d="M124 388C182 360 232 360 256 388V192C232 164 182 164 124 192V388Z" fill="#F59E0B"/>
+  
+  <!-- Right Wisdom Book Page (Deep Forest Emerald) -->
+  <path d="M388 388C330 360 280 360 256 388V192C280 164 330 164 388 192V388Z" fill="#047857"/>
+  
+  <!-- Center Crisp Spine Pillar -->
+  <line x1="256" y1="168" x2="256" y2="390" stroke="#064E3B" stroke-width="14" stroke-linecap="round"/>
+</svg>

@@ -78,7 +78,7 @@ export default function BillingView({ stats }) {
             'Timetable & Proxy Automation Desk',
             'Teacher Manager & Scoring Desk',
             'Student & Teacher Mobile Apps (Android/iOS)',
-            'Dedicated School Subdomain (e.g. <school>.ckrschools.online)',
+            'Dedicated School Subdomain (e.g. <school>.schoolkarma.com)',
             'Automated SMS, WhatsApp & Email Alerts',
             'Self-hosted Private Cloud CDN & Unlimited Storage'
           ].map((feature, i) => (

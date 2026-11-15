@@ -49,34 +49,20 @@ export default function CompareView({ onSelectSchool, onOpenMultiEnquiry, onBack
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
             <button
-              onClick={onOpenCatalog}
+              onClick={onOpenCatalog || onBack}
               style={{
                 backgroundColor: '#064e3b',
                 color: '#ffffff',
                 border: 'none',
                 borderRadius: '8px',
-                padding: '11px 24px',
+                padding: '12px 28px',
                 fontSize: '14px',
                 fontWeight: '700',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(6, 78, 59, 0.2)'
               }}
             >
               Open Campus Catalog
-            </button>
-            <button
-              onClick={onBack}
-              style={{
-                backgroundColor: '#ffffff',
-                color: '#064e3b',
-                border: '1px solid #cbd5e1',
-                borderRadius: '8px',
-                padding: '11px 24px',
-                fontSize: '14px',
-                fontWeight: '700',
-                cursor: 'pointer'
-              }}
-            >
-              Browse Schools
             </button>
           </div>
         </div>

@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "apeejay-school-sector-15-faridabad",
+    "name": "Apeejay School, Faridabad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.apeejay.edu/faridabad/",
+    "address": "Sector 15",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "pincode": "121007",
+    "logo_url": "https://www.apeejay.edu/faridabad/wp-content/uploads/Apeejay-Education-Logo.webp",
+    "hero_image_url": "https://www.apeejay.edu/faridabad/wp-content/uploads/Auditorium-768x512.webp",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.apeejay.edu/faridabad/wp-content/uploads/Sports-Facilities.webp"
+      },
+      {
+        "title": "Library & Resource Centre",
+        "category": "Infrastructure",
+        "url": "https://www.apeejay.edu/faridabad/wp-content/uploads/Library-School-Resource-Centre-768x432.webp"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.apeejay.edu/faridabad/wp-content/uploads/Music-Room-768x512.webp"
+      },
+      {
+        "title": "Herbal Garden",
+        "category": "Campus",
+        "url": "https://www.apeejay.edu/faridabad/wp-content/uploads/Herbal-Garden-Picture.webp"
+      }
+    ],
+    "theme_color": "#9a3412",
+    "accent_color": "#0369a1",
+    "motto": null,
+    "tagline": "One of Faridabad's longest-standing CBSE schools, offering holistic growth on a green campus since 1972",
+    "about": "Apeejay School, Faridabad was established in 1972 under the aegis of Apeejay Education by the visionary educationist Dr. Stya Paul. Spread across a green campus of over 42,000 square yards, it has completed more than 54 years. Its first Class X batch appeared for board exams in 1977 and Class XII followed in 1979. The school introduced computer-aided learning in the 1990s and today offers science and composite labs, a library and resource centre, auditorium, music, dance and fine-art rooms, a swimming pool and herbal garden.",
+    "established_year": 1972,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Physics, Chemistry & Biology Labs",
+      "Computer Lab",
+      "Library & Resource Centre",
+      "Auditorium",
+      "Music & Dance Rooms",
+      "Fine Art Room",
+      "Swimming Pool",
+      "Herbal Garden",
+      "Infirmary"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-sector-67-gurugram",
+    "name": "VIBGYOR High, Sector 67, Gurugram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91-6003000700",
+    "website": "https://www.vibgyorhigh.com/school/gurugram/cbse/sector-67",
+    "address": "Sector 67",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122102",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060921-Gurugram.webp",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685353097-GALLERY_IMG.webp"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685353105-GALLERY_IMG.webp"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685353116-GALLERY_IMG.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685353126-GALLERY_IMG.webp"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A VIBGYOR Group CBSE school in Sector 67 combining academics, sport and the arts for all-round development",
+    "about": "VIBGYOR High, Sector 67 is the Gurugram CBSE campus of the VIBGYOR Group of Schools, which runs schools across several Indian states. The school follows VIBGYOR's approach of balancing strong academics with sports, performing and visual arts and life skills. Its purpose-built campus includes bright classrooms, science and computer laboratories, a library and a swimming pool, and the school offers structured admission enquiries for each academic year through the group's central admissions team.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Computer Lab",
+      "Library",
+      "Swimming Pool",
+      "Sports Grounds",
+      "Art & Music Rooms",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

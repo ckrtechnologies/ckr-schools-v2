@@ -1,0 +1,641 @@
+[
+ {
+  "slug": "bal-bharati-public-school-pitampura-delhi",
+  "name": "Bal Bharati Public School, Pitampura",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730162",
+  "school_code": null,
+  "official_email": "balbharati@pp.balbharati.org",
+  "official_phone": "011-27028600",
+  "website": "https://bbpspp.balbharati.org",
+  "address": "Parwana Road, Pitampura",
+  "city": "Delhi",
+  "state": "Delhi",
+  "pincode": "110034",
+  "logo_url": "https://apibbpspp.balbharati.org//sites/default/files/2026-06/pitampura%20logo%20%282%29_0.png",
+  "hero_image_url": "https://apibbpspp.balbharati.org//sites/default/files/2026-07/about-us-banner%201_5.jpg",
+  "gallery_images": [
+   {
+    "title": "Shooting Range",
+    "category": "Sports",
+    "url": "https://apibbpspp.balbharati.org//sites/default/files/2026-07/shooting.jpg"
+   },
+   {
+    "title": "Basketball Court",
+    "category": "Sports",
+    "url": "https://apibbpspp.balbharati.org//sites/default/files/2026-07/basketball.jpg"
+   },
+   {
+    "title": "Volleyball Court",
+    "category": "Sports",
+    "url": "https://apibbpspp.balbharati.org//sites/default/files/2026-07/vollyball.jpg"
+   },
+   {
+    "title": "CCTV Control Room",
+    "category": "Infrastructure",
+    "url": "https://apibbpspp.balbharati.org//sites/default/files/2026-07/control-room_0.jpg"
+   },
+   {
+    "title": "Maulana Campus Pre-Primary Classroom",
+    "category": "Campus",
+    "url": "https://apibbpspp.balbharati.org//sites/default/files/2026-07/maulana-campus.jpg"
+   }
+  ],
+  "theme_color": "#0f766e",
+  "accent_color": "#14b8a6",
+  "motto": null,
+  "tagline": "A Child Education Society school in Pitampura with tech-enabled classrooms, wide labs and an in-house shooting range",
+  "about": "Bal Bharati Public School, Pitampura is run by the Child Education Society and is affiliated to CBSE. Its campus has technology-enabled classrooms with interactive panels, laboratories for science, mathematics, computer science, geography, psychology and home science, three computerised libraries, ATL and AI labs, an amphitheatre, a shooting range, and courts for basketball and volleyball.",
+  "established_year": 1984,
+  "min_fee": 90000,
+  "max_fee": 150000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classrooms",
+   "Science Laboratories",
+   "Atal Tinkering Lab",
+   "AI Lab",
+   "Three Libraries",
+   "Shooting Range",
+   "Amphitheatre",
+   "Basketball Court",
+   "Volleyball Court",
+   "CCTV Surveillance"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "4,000+ Students",
+  "teacher_count_badge": "200+ Faculty",
+  "student_teacher_ratio": "20:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "dps-vasant-kunj-delhi",
+  "name": "Delhi Public School, Vasant Kunj",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730237",
+  "school_code": null,
+  "official_email": "principal@dpsvasantkunj.com",
+  "official_phone": "011-43261200",
+  "website": "https://www.dpsvasantkunj.com",
+  "address": "Sector C, Pocket 5, Vasant Kunj",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": "110070",
+  "logo_url": "https://www.dpsvasantkunj.com/assets/images/dpsvk.png",
+  "hero_image_url": "https://www.dpsvasantkunj.com/Facility/8.jpg",
+  "gallery_images": [
+   {
+    "title": "Music Room with Instrument Displays",
+    "category": "Arts",
+    "url": "https://www.dpsvasantkunj.com/Facility/4.JPG"
+   },
+   {
+    "title": "Computer Lab",
+    "category": "Academics",
+    "url": "https://www.dpsvasantkunj.com/Facility/1.jpg"
+   },
+   {
+    "title": "Residential Rooms and Dining Hall",
+    "category": "Infrastructure",
+    "url": "https://www.dpsvasantkunj.com/Facility/7.jpg"
+   }
+  ],
+  "theme_color": "#14532d",
+  "accent_color": "#22c55e",
+  "motto": "Service Before Self",
+  "tagline": "A DPS Society school in South Delhi offering a broad CBSE curriculum with strong arts and co-curricular programmes",
+  "about": "Delhi Public School, Vasant Kunj is a CBSE senior secondary school of the DPS Society, located in Sector C of Vasant Kunj, South West Delhi. The school runs clubs, a dedicated music room, computer labs and transport across south Delhi, and publishes notices, results and gallery updates through its website.",
+  "established_year": 1994,
+  "min_fee": 100000,
+  "max_fee": 170000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classrooms",
+   "Science Laboratories",
+   "Computer Labs",
+   "Music Room",
+   "Library",
+   "Sports Grounds",
+   "Clubs",
+   "School Buses"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "3,500+ Students",
+  "teacher_count_badge": "200+ Faculty",
+  "student_teacher_ratio": "18:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "mount-abu-public-school-rohini-sector-5-delhi",
+  "name": "Mount Abu Public School, Rohini",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730397",
+  "school_code": null,
+  "official_email": "info@mountabuschool.com",
+  "official_phone": "011-27041516",
+  "website": "https://www.mountabuschool.com",
+  "address": "Sector 5, Pocket B-8, Rohini",
+  "city": "Delhi",
+  "state": "Delhi",
+  "pincode": "110085",
+  "logo_url": "https://www.mountabuschool.com/wp-content/uploads/xlogo1.png.pagespeed.ic.U7a6IbJ1An.png",
+  "hero_image_url": "https://www.mountabuschool.com/wp-content/uploads/xHome-About-Us.jpg.pagespeed.ic.zFS05QLyv9.jpg",
+  "gallery_images": [
+   {
+    "title": "Physics Lab",
+    "category": "Academics",
+    "url": "https://www.mountabuschool.com/wp-content/uploads/physics.jpg"
+   },
+   {
+    "title": "Chemistry Lab",
+    "category": "Academics",
+    "url": "https://www.mountabuschool.com/wp-content/uploads/chemistry-2.jpg"
+   },
+   {
+    "title": "Computer Lab",
+    "category": "Academics",
+    "url": "https://www.mountabuschool.com/wp-content/uploads/computerlab.jpg"
+   },
+   {
+    "title": "Hi-Tech Campus Views",
+    "category": "Campus",
+    "url": "https://www.mountabuschool.com/wp-content/uploads/hitech-school.jpg"
+   }
+  ],
+  "theme_color": "#1e3a8a",
+  "accent_color": "#f59e0b",
+  "motto": null,
+  "tagline": "A Rohini school with a hi-tech campus, well-equipped science and ATL labs, and an IB PYP junior wing",
+  "about": "Mount Abu Public School in Sector 5, Rohini is a CBSE senior secondary school whose junior wing follows the IB Primary Years Programme. The campus has physics, chemistry, biology and computer labs, an Atal Tinkering Lab and an astronomy lab, a library, transport services and an active sports programme across inter-school and CBSE tournaments.",
+  "established_year": 1998,
+  "min_fee": 80000,
+  "max_fee": 140000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classrooms",
+   "Physics Lab",
+   "Chemistry Lab",
+   "Biology Lab",
+   "Computer Labs",
+   "Atal Tinkering Lab",
+   "Astronomy Lab",
+   "Library",
+   "Sports Facilities",
+   "School Transport"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "3,000+ Students",
+  "teacher_count_badge": "180+ Faculty",
+  "student_teacher_ratio": "17:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "sri-venkateshwar-international-school-dwarka-sector-18-delhi",
+  "name": "Sri Venkateshwar International School, Dwarka",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730642",
+  "school_code": null,
+  "official_email": "info@svis.org.in",
+  "official_phone": "011-42815336",
+  "website": "https://www.svis.org.in",
+  "address": "Sector 18, Dwarka",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": "110075",
+  "logo_url": "https://c9.shauryasoft.com/media/bny-logo_7.png",
+  "hero_image_url": "https://c9.shauryasoft.com/media/bny-slide_7_1.jpg",
+  "gallery_images": [
+   {
+    "title": "Campus and Sports Facilities",
+    "category": "Campus",
+    "url": "https://c9.shauryasoft.com/media/bny-slide_7_8.jpg"
+   },
+   {
+    "title": "Gymnastics and Fitness",
+    "category": "Sports",
+    "url": "https://c9.shauryasoft.com/media/bny-slide_7_11.jpg"
+   },
+   {
+    "title": "Swimming Pool",
+    "category": "Sports",
+    "url": "https://c9.shauryasoft.com/media/bny-slide_7_12.jpg"
+   }
+  ],
+  "theme_color": "#7f1d1d",
+  "accent_color": "#dc2626",
+  "motto": null,
+  "tagline": "The second Venkateshwar Group school in Dwarka, focused on integrated, project-based learning and co-creation of knowledge",
+  "about": "Established in 2006, Sri Venkateshwar International School in Sector 18, Dwarka is the second branch of the Venkateshwar Group of Schools. It follows a structured curriculum for integrated, project-based learning, with 3D Designmate labs for science and maths, smart classes for all grades, theatre and speech programmes for juniors, and online maths support.",
+  "established_year": 2006,
+  "min_fee": 110000,
+  "max_fee": 180000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classes",
+   "3D Designmate Labs",
+   "Science Laboratories",
+   "Library",
+   "Swimming Pool",
+   "Sports Facilities",
+   "Theatre Programme",
+   "School Transport"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "2,500+ Students",
+  "teacher_count_badge": "150+ Faculty",
+  "student_teacher_ratio": "17:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "tagore-international-school-vasant-vihar-delhi",
+  "name": "Tagore International School, Vasant Vihar",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730034",
+  "school_code": null,
+  "official_email": "info.vv@tagoreint.com",
+  "official_phone": "011-26142270",
+  "website": "https://www.vv.tagoreint.com",
+  "address": "B-Block, Paschimi Marg, Vasant Vihar",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": "110057",
+  "logo_url": "https://www.vv.tagoreint.com/wp-content/uploads/2026/03/New_Logo__1_-removebg-preview.png",
+  "hero_image_url": "https://www.vv.tagoreint.com/wp-content/uploads/2025/08/banner-for-inner-pages.png",
+  "gallery_images": [
+   {
+    "title": "BALA Learning Staircase",
+    "category": "Campus",
+    "url": "https://www.vv.tagoreint.com/wp-content/uploads/2025/08/Copy-of-Untitled-Design-7.png"
+   },
+   {
+    "title": "BALA Painted Learning Pathway",
+    "category": "Campus",
+    "url": "https://www.vv.tagoreint.com/wp-content/uploads/2025/08/Copy-of-Untitled-Design-8.png"
+   },
+   {
+    "title": "School Infirmary",
+    "category": "Infrastructure",
+    "url": "https://www.vv.tagoreint.com/wp-content/uploads/2025/08/Untitled-design-4.png"
+   }
+  ],
+  "theme_color": "#1d4ed8",
+  "accent_color": "#f59e0b",
+  "motto": null,
+  "tagline": "A Vasant Vihar school known for inclusive education, sustainability and Building-as-a-Learning-Aid spaces across campus",
+  "about": "Tagore International School, Vasant Vihar is a CBSE school in South West Delhi. Its infrastructure includes Building as a Learning Aid (BALA) walls, floors and stairways, laboratories, computer labs, a library, an elevator, an infirmary, a sports room and CCTV surveillance, with a strong focus on sustainability and special education.",
+  "established_year": 1972,
+  "min_fee": 120000,
+  "max_fee": 200000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "BALA Learning Spaces",
+   "Laboratories",
+   "Computer Labs",
+   "Library",
+   "Elevator",
+   "Infirmary",
+   "Sports Room",
+   "CCTV Surveillance",
+   "School Transport"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "2,500+ Students",
+  "teacher_count_badge": "180+ Faculty",
+  "student_teacher_ratio": "14:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "salwan-public-school-rajendra-nagar-delhi",
+  "name": "Salwan Public School, Rajendra Nagar",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": null,
+  "school_code": null,
+  "official_email": "info@salwanpublicschool.com",
+  "official_phone": "011-49254500",
+  "website": "https://salwanpublicschool.edu.in",
+  "address": "Rajendra Nagar",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": null,
+  "logo_url": "https://salwanpublicschool.edu.in/brand/sps-logo.svg",
+  "hero_image_url": "https://cdn.sanity.io/images/0z82ht1d/production/907828d0921dcff37ed2909c7886eb49a8bf82de-1920x1080.webp",
+  "gallery_images": [
+   {
+    "title": "Playground",
+    "category": "Sports",
+    "url": "https://cdn.sanity.io/images/0z82ht1d/production/bccaaa54499e3618103400f0b98e7c29403785a4-1920x1280.webp"
+   },
+   {
+    "title": "Open Gym",
+    "category": "Sports",
+    "url": "https://cdn.sanity.io/images/0z82ht1d/production/649758add894394e35131a6720c7b8a0a1492ed0-1920x1280.webp"
+   },
+   {
+    "title": "Amphitheatre",
+    "category": "Arts",
+    "url": "https://cdn.sanity.io/images/0z82ht1d/production/4daf97b94af18b8c8fbcd9832b471a3363a670c1-1200x716.webp"
+   },
+   {
+    "title": "Conference Room",
+    "category": "Infrastructure",
+    "url": "https://cdn.sanity.io/images/0z82ht1d/production/591e31b3f12dc4fc551758d50b7cf8197beb8b28-1920x1280.webp"
+   },
+   {
+    "title": "School Buses",
+    "category": "Transport",
+    "url": "https://cdn.sanity.io/images/0z82ht1d/production/e9b082ec99af69ecf22017dc078e5fe4492cb5c9-1200x800.webp"
+   }
+  ],
+  "theme_color": "#1e40af",
+  "accent_color": "#facc15",
+  "motto": null,
+  "tagline": "A long-established central Delhi school with labs, performing and visual arts spaces, an amphitheatre and an open gym",
+  "about": "Salwan Public School in Rajendra Nagar is a CBSE school in central Delhi run by the Salwan Education Trust. Its facilities include a library, science laboratories, an IT resource centre, performing and visual arts rooms, an amphitheatre, an activity room, a playground, an open gym, a conference room and a school bus fleet.",
+  "established_year": 1953,
+  "min_fee": 70000,
+  "max_fee": 130000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Library",
+   "Laboratories",
+   "IT Resource Centre",
+   "Performing Arts Room",
+   "Visual Arts Room",
+   "Amphitheatre",
+   "Playground",
+   "Open Gym",
+   "School Buses"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "3,000+ Students",
+  "teacher_count_badge": "150+ Faculty",
+  "student_teacher_ratio": "20:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "bluebells-school-international-kailash-delhi",
+  "name": "Bluebells School International",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730027",
+  "school_code": null,
+  "official_email": "contactus@bluebellsinternational.com",
+  "official_phone": "011-47297766",
+  "website": "https://www.bluebellsinternational.com",
+  "address": "Opposite LSR College, Kailash Colony",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": "110048",
+  "logo_url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/efa7e312-2b8c-4b10-b072-e89d2baab463/Logo.jpg",
+  "hero_image_url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/2d90ba60-e58c-46b4-8aaa-04a476429a4c/Screenshot+2025-08-10+125019.png",
+  "gallery_images": [
+   {
+    "title": "Senior Library",
+    "category": "Infrastructure",
+    "url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746162-FBFGVH2TIULYM9SEK2Y2/image_2021-01-05_190141+Cropped.png"
+   },
+   {
+    "title": "Art Gallery",
+    "category": "Arts",
+    "url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746155-KJB5NVFT37UP1HMQAH5Q/image_2021-01-05_190024+Cropped.png"
+   },
+   {
+    "title": "Multipurpose Auditorium",
+    "category": "Arts",
+    "url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746113-F9KL4AW73O4XN20L9UY6/image_2021-01-05_184615+Cropped.png"
+   },
+   {
+    "title": "Cricket Practice Pitch",
+    "category": "Sports",
+    "url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746201-CJ70WMOGZ75HC4SQ7YXN/image_2021-01-05_233711.png"
+   },
+   {
+    "title": "Herbal Garden",
+    "category": "Campus",
+    "url": "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746233-ZWCPSL8D664TD4LPNXTZ/image_2021-01-05_210443.png"
+   }
+  ],
+  "theme_color": "#7a1f2b",
+  "accent_color": "#c9a24b",
+  "motto": null,
+  "tagline": "A Kailash school offering CBSE and Cambridge pathways, with dedicated arts studios, sports courts and a herbal garden",
+  "about": "Bluebells School International in Kailash, South Delhi is a CBSE-affiliated school that is also a Cambridge International School. Its campus directory lists computer labs, language and maths studios, junior and senior libraries, art and clay rooms, music rooms and a recording studio, a multipurpose auditorium, courts for basketball, volleyball and tennis, a skating rink, an infirmary and a herbal garden.",
+  "established_year": 1957,
+  "min_fee": 120000,
+  "max_fee": 220000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Computer Labs",
+   "Language Studio",
+   "Math Studio",
+   "Libraries",
+   "Art & Clay Rooms",
+   "Music Rooms",
+   "Recording Studio",
+   "Auditorium",
+   "Sports Courts",
+   "Herbal Garden"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "2,500+ Students",
+  "teacher_count_badge": "200+ Faculty",
+  "student_teacher_ratio": "13:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "apeejay-school-panchsheel-park-sheikh-sarai-delhi",
+  "name": "Apeejay School, Panchsheel Park",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730029",
+  "school_code": null,
+  "official_email": "skool.ss.del@apj.edu",
+  "official_phone": "+91-9211788133",
+  "website": "https://www.apeejay.edu/panchsheel/",
+  "address": "Panchsheel Park, Sheikh Sarai Phase I",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": "110017",
+  "logo_url": "https://www.apeejay.edu/panchsheel/wp-content/uploads/2026/03/Apeejay-Education-Logo.webp",
+  "hero_image_url": "https://www.apeejay.edu/panchsheel/wp-content/uploads/2026/06/apeejay-panchsheel-chool-campus--768x615.webp",
+  "gallery_images": [
+   {
+    "title": "Swimming Pool",
+    "category": "Sports",
+    "url": "https://www.apeejay.edu/panchsheel/wp-content/uploads/2026/06/apeejay-panchsheel-school-Swimming-pool-768x576.webp"
+   },
+   {
+    "title": "Tennis Court",
+    "category": "Sports",
+    "url": "https://www.apeejay.edu/panchsheel/wp-content/uploads/2026/06/apeejay-panchsheel-school-Tennis-Court-768x539.webp"
+   },
+   {
+    "title": "Basketball Court",
+    "category": "Sports",
+    "url": "https://www.apeejay.edu/panchsheel/wp-content/uploads/2026/06/apeejay-panchsheel-school-Basketball-1-768x576.webp"
+   }
+  ],
+  "theme_color": "#9a3412",
+  "accent_color": "#f97316",
+  "motto": null,
+  "tagline": "An Apeejay Education school in South Delhi marking fifty years, with a swimming pool, tennis and basketball courts",
+  "about": "Apeejay School, Panchsheel Park is a CBSE senior secondary school of Apeejay Education in South Delhi, founded in 1975. The campus combines classroom blocks with sports facilities including a swimming pool, a floodlit tennis court, basketball courts and open playing fields, alongside laboratories and a sports and well-being programme.",
+  "established_year": 1975,
+  "min_fee": 100000,
+  "max_fee": 180000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classrooms",
+   "Science Laboratories",
+   "Computer Labs",
+   "Library",
+   "Swimming Pool",
+   "Tennis Court",
+   "Basketball Courts",
+   "Playing Fields"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "3,000+ Students",
+  "teacher_count_badge": "180+ Faculty",
+  "student_teacher_ratio": "17:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "itl-public-school-dwarka-sector-9-delhi",
+  "name": "ITL Public School, Dwarka",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": "2730412",
+  "school_code": null,
+  "official_email": "admin@itlpublicschool.com",
+  "official_phone": "011-40540333",
+  "website": "https://www.itlpublicschool.net",
+  "address": "Sector 9, Dwarka",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": "110075",
+  "logo_url": "https://c9.shauryasoft.com/media/bny-logo_2_center.png",
+  "hero_image_url": "https://c9.shauryasoft.com/media/bny-wlg-2309271530-0311220306-1.jpg",
+  "gallery_images": [
+   {
+    "title": "Sports Ground",
+    "category": "Sports",
+    "url": "https://c9.shauryasoft.com/media/bny-wlg-2309271530-0311220306-2.jpg"
+   },
+   {
+    "title": "Football Turf",
+    "category": "Sports",
+    "url": "https://cloud9.shauryasoft.com/media/contentpage_2_28_10.jpg"
+   },
+   {
+    "title": "Outdoor Courts",
+    "category": "Sports",
+    "url": "https://cloud9.shauryasoft.com/media/contentpage_2_28_11.jpg"
+   },
+   {
+    "title": "School Buses",
+    "category": "Transport",
+    "url": "https://cloud9.shauryasoft.com/media/contentpage_2_8_26.jpg"
+   }
+  ],
+  "theme_color": "#166534",
+  "accent_color": "#0ea5e9",
+  "motto": null,
+  "tagline": "A Dwarka CBSE school with a large sports ground, turf and courts, labs and its own bus fleet",
+  "about": "ITL Public School in Sector 9, Dwarka is a CBSE senior secondary school founded in 2001. The campus has a large sports ground with an athletics track, a football turf and outdoor courts, science and language labs, and a school transport fleet serving Dwarka and nearby areas, with an active calendar of cultural and academic events.",
+  "established_year": 2001,
+  "min_fee": 90000,
+  "max_fee": 150000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classrooms",
+   "Science Laboratories",
+   "Language Lab",
+   "Library",
+   "Sports Ground",
+   "Football Turf",
+   "Outdoor Courts",
+   "School Buses"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "3,000+ Students",
+  "teacher_count_badge": "180+ Faculty",
+  "student_teacher_ratio": "17:1",
+  "avg_rating": null,
+  "review_count": 0
+ },
+ {
+  "slug": "dps-dwarka-delhi",
+  "name": "Delhi Public School, Dwarka",
+  "affiliation_board": "CBSE",
+  "board_affiliation_number": null,
+  "school_code": null,
+  "official_email": "mail@dpsdwarka.com",
+  "official_phone": "011-35045111",
+  "website": "https://www.dpsdwarka.com",
+  "address": "Dwarka",
+  "city": "New Delhi",
+  "state": "Delhi",
+  "pincode": null,
+  "logo_url": "https://c9.shauryasoft.com/media/bny-wcp-2601140956-1407750389-1.png",
+  "hero_image_url": "https://c9.shauryasoft.com/media/bny-wcp-2505130906-0946523911-1.jpg",
+  "gallery_images": [
+   {
+    "title": "Cricket Field",
+    "category": "Sports",
+    "url": "https://c9.shauryasoft.com/media/bny-wcp-2505130923-1742340213-2.jpg"
+   },
+   {
+    "title": "Tennis Courts",
+    "category": "Sports",
+    "url": "https://c9.shauryasoft.com/media/bny-wcp-2506231053-0161920829-1.jpg"
+   },
+   {
+    "title": "Table Tennis Hall",
+    "category": "Sports",
+    "url": "https://c9.shauryasoft.com/media/bny-wcp-2505130908-0684754290-2.jpg"
+   }
+  ],
+  "theme_color": "#14532d",
+  "accent_color": "#16a34a",
+  "motto": "Service Before Self",
+  "tagline": "A DPS Society school in Dwarka with extensive sports fields for cricket, football, tennis and table tennis",
+  "about": "Delhi Public School, Dwarka is a CBSE school of the DPS Society in South West Delhi. Its sports fields support football, cricket, tennis, basketball, table tennis and skating, and the school has science and computer laboratories, a library and a programme of inter-school competitions and sports achievements.",
+  "established_year": null,
+  "min_fee": 100000,
+  "max_fee": 170000,
+  "fee_period": "ANNUAL",
+  "grades_offered": "Nursery to XII",
+  "facilities": [
+   "Smart Classrooms",
+   "Science Laboratories",
+   "Computer Labs",
+   "Library",
+   "Football Field",
+   "Cricket Field",
+   "Tennis Courts",
+   "Table Tennis",
+   "Skating"
+  ],
+  "admission_status": "Admissions Open 2026-27",
+  "student_count_badge": "3,000+ Students",
+  "teacher_count_badge": "180+ Faculty",
+  "student_teacher_ratio": "17:1",
+  "avg_rating": null,
+  "review_count": 0
+ }
+]

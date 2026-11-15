@@ -6,11 +6,13 @@ import HomeView from './views/HomeView.jsx';
 import SchoolProfileView from './views/SchoolProfileView.jsx';
 import CompareView from './views/CompareView.jsx';
 import CatalogView from './views/CatalogView.jsx';
+import ServicesForSchoolsView from './views/ServicesForSchoolsView.jsx';
 import ComparisonTray from './components/ComparisonTray.jsx';
 import EnquiryModal from './components/EnquiryModal.jsx';
 import BrochureModal from './components/BrochureModal.jsx';
 import MultiEnquiryModal from './components/MultiEnquiryModal.jsx';
 import LoginModal from './components/LoginModal.jsx';
+import ErpLeadModal from './components/ErpLeadModal.jsx';
 import { useGetMeQuery } from './store/marketplaceApi.js';
 import { setCredentials } from './store/authSlice.js';
 import { useMarketplaceRoute } from './hooks/useMarketplaceRoute.js';
@@ -23,6 +25,7 @@ export default function App() {
   const [enquirySchool, setEnquirySchool] = useState(null);
   const [brochureSchool, setBrochureSchool] = useState(null);
   const [multiEnquiryOpen, setMultiEnquiryOpen] = useState(false);
+  const [erpLeadOpen, setErpLeadOpen] = useState(false);
 
   // Redux comparison state
   const dispatch = useDispatch();
@@ -54,6 +57,10 @@ export default function App() {
     navigate('home');
   };
 
+  const handleNavigateServices = () => {
+    navigate('services-for-schools');
+  };
+
   return (
     <div className="app-root">
       {/* Always-visible ticker at top */}
@@ -65,6 +72,8 @@ export default function App() {
         onNavigateHome={handleBackToHome}
         onNavigateCatalog={handleOpenCatalog}
         onOpenComparison={handleOpenComparison}
+        onNavigateServices={handleNavigateServices}
+        onOpenErpModal={() => setErpLeadOpen(true)}
         onOpenEnquiry={() => setEnquirySchool({ name: 'General Inquiry', slug: null })}
       />
 
@@ -76,6 +85,15 @@ export default function App() {
             onOpenEnquiry={setEnquirySchool}
             onOpenBrochure={setBrochureSchool}
             onOpenComparison={handleOpenComparison}
+            onOpenCatalog={handleOpenCatalog}
+            onOpenErpModal={() => setErpLeadOpen(true)}
+          />
+        )}
+
+        {currentView === 'services-for-schools' && (
+          <ServicesForSchoolsView
+            onOpenErpModal={() => setErpLeadOpen(true)}
+            onNavigateHome={handleBackToHome}
             onOpenCatalog={handleOpenCatalog}
           />
         )}
@@ -141,6 +159,12 @@ export default function App() {
           onClose={() => setMultiEnquiryOpen(false)}
         />
       )}
+
+      {/* Institutional ERP Demo / Purchase Lead Modal */}
+      <ErpLeadModal
+        isOpen={erpLeadOpen}
+        onClose={() => setErpLeadOpen(false)}
+      />
     </div>
   );
 }
