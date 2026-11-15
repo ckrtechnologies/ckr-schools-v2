@@ -1,4 +1,5 @@
 import './globals.css';
+import { GoogleTagManager } from '@next/third-parties/google';
 import Providers from './providers.jsx';
 import Navbar from '../components/Navbar.jsx';
 import MarqueeTicker from '../components/MarqueeTicker.jsx';
@@ -28,8 +29,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html lang="en">
+      {gtmId && gtmId !== 'GTM-XXXXXXX' && <GoogleTagManager gtmId={gtmId} />}
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

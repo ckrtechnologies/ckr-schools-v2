@@ -9,6 +9,7 @@
     "start": "next start -p 3000"
   },
   "dependencies": {
+    "@next/third-parties": "^16.4.6",
     "@reduxjs/toolkit": "^2.6.1",
     "@tabler/icons-react": "^3.30.0",
     "next": "^15.1.0",
@@ -17,4 +18,3 @@
     "react-redux": "^9.2.0"
   }
 }
-
