@@ -1,0 +1,1 @@
+UP-03: 10 schools (Noida x2, Varanasi x2, Prayagraj, Meerut, Kanpur, Agra x2, Ghaziabad). Short galleries (3): SPSEC Kanpur, DPSG Meerut Road. Skipped: DPS Indirapuram (still only 1 building photo), DPSG Vasundhara (1 usable photo), SAJS Lucknow (dup of earlier skip), Study Hall Lucknow and Ursuline Greater Noida (sites failed), DPS Greater Noida (404). No fees/counts filled.

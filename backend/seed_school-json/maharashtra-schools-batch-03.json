@@ -1,0 +1,546 @@
+[
+  {
+    "slug": "st-josephs-high-school-khanda-colony-new-panvel-navi-mumbai",
+    "name": "St. Joseph's High School, Panvel",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "022-27462273",
+    "website": "https://www.ryangroup.org/ryaninternational/cbse/navi-mumbai/st-josephs-high-school-panvel",
+    "address": "Sector 11, Khanda Colony, New Panvel (West)",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "pincode": "410206",
+    "logo_url": "https://www.ryangroup.org/public/images/front_end/SiteSetting/st-joseph-high-school-panvel-logo_1697779223.png",
+    "hero_image_url": "https://www.ryangroup.org/public/images/front_end/ryan-images/building_1620886312.jpg",
+    "gallery_images": [
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/panvel4_1771579838.jpg"
+      },
+      {
+        "title": "Pre-Primary Play Area",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/3_1620886312.jpg"
+      },
+      {
+        "title": "School Hall",
+        "category": "Infrastructure",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/1_1620886312.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "Ryan Group co-educational CBSE school in New Panvel offering Montessori to Class XII since 2005",
+    "about": "St. Joseph's High School, Panvel West is a co-educational CBSE school for Montessori to Class XII, established in 2005 by the Ryan International Group of Institutions to make quality education accessible in the Navi Mumbai region. The school aims to provide a philosophically inspired education that promotes excellence and strength of character, and to build a culture of excellence through holistic education, life skills and values. Facilities shown by the school include a basketball court, a play area and a school hall.",
+    "established_year": 2005,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Montessori to XII",
+    "facilities": [
+      "Basketball Court",
+      "Play Area",
+      "School Hall",
+      "Montessori Section",
+      "Classrooms",
+      "Sports Ground"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-ic-colony-borivali-west-mumbai",
+    "name": "VIBGYOR High, Borivali",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "022-35056900",
+    "website": "https://www.vibgyorhigh.com/school/mumbai/cbse/borivali",
+    "address": "Holy Cross Road, I.C. Colony, Borivali West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400103",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060918-Borivali.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342600-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342610-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342620-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685342691-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "VIBGYOR Group CBSE school in I.C. Colony, Borivali West, with a swimming pool, library and computer lab",
+    "about": "VIBGYOR High, Borivali is a CBSE school of the VIBGYOR Group in I.C. Colony, Borivali West, Mumbai. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus offers a library, a computer lab and a swimming pool, and students take part in clubs and programmes such as VIBGYOR Model United Nations, Student Exchange and VIBGYOR Viva. The group's philosophy encourages self-discipline, time management, cooperation and self-learning, supported by ongoing assessments.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Library",
+      "Computer Lab",
+      "Classrooms",
+      "Activity Clubs",
+      "Model United Nations"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-sector-8a-airoli-navi-mumbai",
+    "name": "VIBGYOR High, Airoli",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "022-62635400",
+    "website": "https://www.vibgyorhigh.com/school/navi-mumbai/cbse/airoli",
+    "address": "Plot No. 114, Sector 8A, Opp. Newa Height, Airoli",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400708",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060853-Airoli.jpg",
+    "gallery_images": [
+      {
+        "title": "Indoor Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/202305020746-_GSP8817.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/202305020750-_GSP8998.jpg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685105542-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685105597-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "VIBGYOR Group CBSE school in Sector 8A, Airoli, with an indoor pool, computer lab and library",
+    "about": "VIBGYOR High, Airoli is a CBSE school of the VIBGYOR Group in Sector 8A, Airoli, Navi Mumbai. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus offers an indoor swimming pool, a computer lab and a library, and students take part in clubs and programmes such as VIBGYOR Model United Nations, Student Exchange and VIBGYOR Viva. The group's philosophy encourages self-discipline, time management, cooperation and self-learning, supported by ongoing assessments.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Indoor Swimming Pool",
+      "Computer Lab",
+      "Library",
+      "Classrooms",
+      "Activity Clubs",
+      "Model United Nations"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-magarpatta-city-hadapsar-pune",
+    "name": "VIBGYOR High, Magarpatta",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "020-6748 4600",
+    "website": "https://www.vibgyorhigh.com/school/pune/cbse/magarpatta",
+    "address": "Survey No. 130, Plot No. MP4, Opp. Megameals, Near West Gate, Magarpatta City, Hadapsar",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411013",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344157-GALLERY_IMG.jpg",
+    "gallery_images": [
+      {
+        "title": "Library and Activity Room",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344129-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344139-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344169-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "VIBGYOR Group CBSE school in Magarpatta City, Pune, with a swimming pool, playground and library",
+    "about": "VIBGYOR High, Magarpatta is a CBSE school of the VIBGYOR Group in Magarpatta City, Hadapsar, Pune. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus offers a library, a playground and a swimming pool, and students take part in clubs and programmes such as VIBGYOR Model United Nations, Student Exchange and VIBGYOR Viva. The group's philosophy encourages self-discipline, time management, cooperation and self-learning, supported by ongoing assessments.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Playground",
+      "Library",
+      "Classrooms",
+      "Activity Clubs",
+      "Model United Nations"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "hiranandani-foundation-school-hiranandani-gardens-powai-mumbai",
+    "name": "Hiranandani Foundation School, Powai",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "hifopowai@hiranandanischools.edu.in",
+    "official_phone": "+91-22-4966 6900",
+    "website": "https://hiranandanifoundationschoolpowai.com",
+    "address": "Orchard Avenue, Hiranandani Gardens, Powai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400076",
+    "logo_url": "https://hiranandanifoundationschoolpowai.com/img/logo.png",
+    "hero_image_url": "https://hiranandanifoundationschoolpowai.com/img/about.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://hiranandanifoundationschoolpowai.com/img/about-sound-infrastructure.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://hiranandanifoundationschoolpowai.com/img/about-well-equipped-laboratories.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://hiranandanifoundationschoolpowai.com/img/about-wide-open-spaces.jpg"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#475569",
+    "motto": "Mens Sana in Corpore Sano",
+    "tagline": "Co-educational ICSE and ISC school in Hiranandani Gardens, Powai, run by the Hiranandani Foundation since 1990",
+    "about": "The Hiranandani Foundation School, Powai is a co-educational, English-medium ICSE school founded in 1990 by the Hiranandani Foundation, a registered charitable trust, and also offers ISC classes. The school aims to form critical minds that verify rather than accept everything, and focuses on all-round character formation and proper attitudes. Students are encouraged to take part in activities that broaden their interests, discover latent talents and build team spirit. Facilities include laboratories, open spaces and a range of sports.",
+    "established_year": 1990,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Science Laboratories",
+      "Basketball Court",
+      "Open Play Spaces",
+      "Sports Facilities",
+      "Recreational Activities"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-kalyani-school-manjari-budruk-pune",
+    "name": "The Kalyani School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@thekalyanischool.edu.in",
+    "official_phone": "+91-8149117666",
+    "website": "https://www.thekalyanischool.com",
+    "address": "Manjari (Budruk), Near Hadapsar",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "412307",
+    "logo_url": "https://www.thekalyanischool.com/web-assets/images/logo-new2.webp",
+    "hero_image_url": "https://www.thekalyanischool.com/web-assets/images/about/facilities/0V2A3272.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.thekalyanischool.com/web-assets/images/about/facilities/0V2A3129%20(1).webp"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.thekalyanischool.com/web-assets/images/about/facilities/_DSC7547.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.thekalyanischool.com/web-assets/images/about/facilities/0V2A3248.webp"
+      },
+      {
+        "title": "Sound Studio",
+        "category": "Arts",
+        "url": "https://www.thekalyanischool.com/web-assets/images/about/facilities/_DSC7541.webp"
+      }
+    ],
+    "theme_color": "#0f766e",
+    "accent_color": "#84cc16",
+    "motto": null,
+    "tagline": "CBSE school in Manjari near Hadapsar, Pune, putting happiness at the heart of learning with green-campus credentials",
+    "about": "The Kalyani School is a CBSE school at Manjari (Budruk) near Hadapsar, Pune, that places happiness at the heart of learning, aiming for an environment where every child feels valued, every parent feels heard and every teacher feels inspired. The school reports a Diamond+ QS I-GAUGE rating and the Platinum category of the Climate Project Foundation's Green Campus Programme Award in 2025. Its facilities include an indoor sports hall, a library, a music room, science laboratories and a sound studio.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Indoor Sports Hall",
+      "Library",
+      "Music Room",
+      "Science Laboratories",
+      "Sound Studio",
+      "Pre-Primary Section"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "billabong-high-jankalyan-nagar-malad-west-mumbai",
+    "name": "Billabong High International School, Malad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "7038444444",
+    "website": "https://www.billabonghighschool.com/cbse-igcse-school-malad-mumbai/",
+    "address": "Jankalyan Nagar, Next to Bhoomi Park, Near Malvani Fire Brigade, Malad West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400095",
+    "logo_url": "https://www.billabonghighschool.com/wp-content/uploads/2025/01/Logo.svg",
+    "hero_image_url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/Sport.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/Library.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/Science-Lab.jpg"
+      },
+      {
+        "title": "Art Studio",
+        "category": "Arts",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/Art-Studio.jpg"
+      },
+      {
+        "title": "Dance Studio",
+        "category": "Arts",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/Dance-Studio.jpg"
+      },
+      {
+        "title": "Digitally Enabled Classroom",
+        "category": "Academics",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/Digitally-enabled-classroom.jpg"
+      }
+    ],
+    "theme_color": "#5b21b6",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "Billabong High campus in Malad West offering CBSE and Cambridge pathways from pre-school to high school",
+    "about": "Billabong High International School, Malad is a campus of the Billabong High group in Jankalyan Nagar, Malad West, Mumbai, run by Lighthouse Learning. It offers both CBSE and Cambridge (CIE) programmes across pre-school, primary, middle and high school. The school highlights critical thinking, learner agency, collaborative learning and guidance and counselling, and its facilities include a library, science lab, art studio, dance studio, digitally enabled classrooms and an outdoor sports court.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-School to High School",
+    "facilities": [
+      "Library",
+      "Science Lab",
+      "Art Studio",
+      "Dance Studio",
+      "Digitally Enabled Classrooms",
+      "Sports Court",
+      "Guidance and Counselling"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "billabong-high-amanora-hadapsar-pune",
+    "name": "Billabong High International School, Amanora",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "7038444444",
+    "website": "https://www.billabonghighschool.com/cbse-school-amanora-hadapsar-pune/",
+    "address": "Behind Amanora Mall, Survey No. 169/170, Near Kumar Picasso, Keshav Chowk, Malwadi, Amanora, Hadapsar",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411028",
+    "logo_url": "https://www.billabonghighschool.com/wp-content/uploads/2025/01/Logo.svg",
+    "hero_image_url": "https://www.billabonghighschool.com/wp-content/uploads/2025/05/New-Project-5.jpg",
+    "gallery_images": [
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/04/27-01-25-Billabong-Pune-0261-3-1.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/04/Library.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/04/27-01-25-Billabong-Pune-0475.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.billabonghighschool.com/wp-content/uploads/2025/04/Sports.jpg"
+      }
+    ],
+    "theme_color": "#5b21b6",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "Billabong High campus behind Amanora Mall, Hadapsar, offering CBSE and Cambridge programmes with music, library and sports",
+    "about": "Billabong High International School, Amanora is a Billabong High campus behind Amanora Mall in Hadapsar, Pune. It offers both CBSE and Cambridge (CIE) programmes, and the school reports that the Amanora campus recorded 100% results in the CBSE Grade X board examinations. Facilities shown by the school include a music room, a library, a computer lab, a basketball court, a football ground and a skating area.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Music Room",
+      "Library",
+      "Computer Lab",
+      "Basketball Court",
+      "Football Ground",
+      "Skating Area"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "symbiosis-international-school-viman-nagar-pune",
+    "name": "Symbiosis International School",
+    "affiliation_board": "IB",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "020-26522100",
+    "website": "https://www.symbiosisinternationalschool.net",
+    "address": "Ishanya Campus, off Symbiosis Road, Viman Nagar",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411014",
+    "logo_url": "https://www.symbiosisinternationalschool.net/assets/images/logo/SIS-logo.webp",
+    "hero_image_url": "https://www.symbiosisinternationalschool.net/assets/images/sis-campus.webp",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.symbiosisinternationalschool.net/assets/images/facilities/Comp_Lab%20(2).webp"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://www.symbiosisinternationalschool.net/assets/images/facilities/Phy_Lab%20(1).webp"
+      },
+      {
+        "title": "Football Turf",
+        "category": "Sports",
+        "url": "https://www.symbiosisinternationalschool.net/assets/images/facilities/sports%20(3).JPG"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#1e3a8a",
+    "motto": null,
+    "tagline": "IB World School in Viman Nagar, Pune, offering PYP, MYP, IGCSE and Diploma pathways for global learners",
+    "about": "Symbiosis International School in Viman Nagar, Pune is an International Baccalaureate (IB) World School that aims to provide a holistic education beyond textbooks, encouraging students to become lifelong learners, critical thinkers and compassionate global citizens. Its learning environment is rooted in the principles of the IB curriculum, with programmes including the IB Primary Years, Middle Years and Diploma Programmes alongside Cambridge IGCSE. Facilities include computer, science, mathematics and language labs, sports facilities and school transport.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Science Labs",
+      "Math Lab",
+      "Language Lab",
+      "Football Turf",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

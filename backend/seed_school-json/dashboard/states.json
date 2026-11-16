@@ -7,11 +7,11 @@
   "focus_cities": "New Delhi / Dwarka / Rohini / South Delhi",
   "feasibility": "High",
   "target": 100,
-  "collected": 30,
-  "urls_verified": 30,
-  "gallery_complete": 29,
+  "collected": 46,
+  "urls_verified": 46,
+  "gallery_complete": 45,
   "imported": 0,
-  "batches_done": 3,
+  "batches_done": 5,
   "status": "In progress"
  },
  {
@@ -22,11 +22,11 @@
   "focus_cities": "Noida / Greater Noida / Ghaziabad / Lucknow",
   "feasibility": "High",
   "target": 100,
-  "collected": 19,
-  "urls_verified": 19,
-  "gallery_complete": 16,
+  "collected": 33,
+  "urls_verified": 33,
+  "gallery_complete": 30,
   "imported": 0,
-  "batches_done": 2,
+  "batches_done": 4,
   "status": "In progress"
  },
  {
@@ -37,11 +37,11 @@
   "focus_cities": "Gurugram / Faridabad / Sonipat / Panchkula",
   "feasibility": "High",
   "target": 100,
-  "collected": 12,
-  "urls_verified": 12,
-  "gallery_complete": 12,
+  "collected": 24,
+  "urls_verified": 24,
+  "gallery_complete": 23,
   "imported": 0,
-  "batches_done": 2,
+  "batches_done": 4,
   "status": "In progress"
  },
  {
@@ -52,11 +52,11 @@
   "focus_cities": "Mumbai / Pune / Thane / Nagpur",
   "feasibility": "High",
   "target": 100,
-  "collected": 10,
-  "urls_verified": 10,
-  "gallery_complete": 10,
+  "collected": 29,
+  "urls_verified": 29,
+  "gallery_complete": 29,
   "imported": 0,
-  "batches_done": 1,
+  "batches_done": 3,
   "status": "In progress"
  },
  {
@@ -67,11 +67,11 @@
   "focus_cities": "Bengaluru / Mysuru / Mangaluru",
   "feasibility": "High",
   "target": 100,
-  "collected": 14,
-  "urls_verified": 14,
-  "gallery_complete": 14,
+  "collected": 30,
+  "urls_verified": 30,
+  "gallery_complete": 30,
   "imported": 0,
-  "batches_done": 2,
+  "batches_done": 4,
   "status": "In progress"
  },
  {
@@ -82,12 +82,12 @@
   "focus_cities": "Hyderabad / Secunderabad",
   "feasibility": "High",
   "target": 100,
-  "collected": 0,
-  "urls_verified": 0,
-  "gallery_complete": 0,
+  "collected": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
   "imported": 0,
-  "batches_done": 0,
-  "status": "Not started"
+  "batches_done": 1,
+  "status": "In progress"
  },
  {
   "order": 7,
@@ -97,12 +97,12 @@
   "focus_cities": "Chennai / Coimbatore / Madurai",
   "feasibility": "High",
   "target": 100,
-  "collected": 0,
-  "urls_verified": 0,
-  "gallery_complete": 0,
+  "collected": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
   "imported": 0,
-  "batches_done": 0,
-  "status": "Not started"
+  "batches_done": 1,
+  "status": "In progress"
  },
  {
   "order": 8,

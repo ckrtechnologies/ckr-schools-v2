@@ -1,0 +1,656 @@
+[
+  {
+    "slug": "krm-world-school-sector-88-faridabad",
+    "name": "K.R. Mangalam World School, Faridabad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "531773",
+    "school_code": null,
+    "official_email": "faridabad@krmangalam.com",
+    "official_phone": "+91 8743800014",
+    "website": "https://krmwsfaridabad.com",
+    "address": "RPS City, Kheri Road, Next to Asian Fidelis, Sector 88",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "pincode": "121002",
+    "logo_url": "https://krmwsfaridabad.com/wp-content/uploads/2024/11/logo-faridabad-1.png",
+    "hero_image_url": "https://krmwsfaridabad.com/wp-content/uploads/2025/02/about-us.jpg",
+    "gallery_images": [
+      {
+        "title": "Simulation Centre",
+        "category": "Academics",
+        "url": "https://krmwsfaridabad.com/wp-content/uploads/2025/04/Simulation-Centre.png"
+      },
+      {
+        "title": "Art Room",
+        "category": "Arts",
+        "url": "https://krmwsfaridabad.com/wp-content/uploads/2025/02/art-room-1.jpg"
+      },
+      {
+        "title": "Dance Room",
+        "category": "Arts",
+        "url": "https://krmwsfaridabad.com/wp-content/uploads/2025/02/Dance-room-2.jpg"
+      },
+      {
+        "title": "Activity Room",
+        "category": "Infrastructure",
+        "url": "https://krmwsfaridabad.com/wp-content/uploads/2025/02/activity-room-1.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A CBSE school in Sector 88 Faridabad blending rigorous academics, coding, sports and creative learning spaces",
+    "about": "K.R. Mangalam World School, Faridabad is a CBSE school at RPS City, Sector 88, part of the K.R. Mangalam group of schools. It runs Foundation, Primary, Middle and Senior programmes and describes a holistic approach that balances academics with co-curricular activities. The school offers the ICT 360 computer curriculum covering coding and game development, a Privilege Club for enrichment, a structured sports programme, and learning spaces including art, dance and music rooms, an activity room and a simulation centre.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Simulation Centre",
+      "Computer Lab",
+      "Library",
+      "Art Room",
+      "Dance & Music Rooms",
+      "Activity Room",
+      "Sports Facilities",
+      "Kids Play Zone"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": "60 Teachers",
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-xaviers-high-school-sector-81-gurugram",
+    "name": "St. Xavier's High School, Sector 81",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info81@stxaviershighschoolgurgaon.com",
+    "official_phone": "+91 9599286490",
+    "website": "https://81.stxaviershighschoolgurgaon.com",
+    "address": "Sector 81, Next to Bestech Park View Grand Spa",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": null,
+    "logo_url": "https://c9.shauryasoft.com/media/bny-logo_193.png",
+    "hero_image_url": "https://c9.shauryasoft.com/media/bny-wlg-2401191607-1232393394-6.jpg",
+    "gallery_images": [
+      {
+        "title": "Indoor Swimming Pool",
+        "category": "Sports",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2401181052-2077572922-1.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2401181539-0994552514-1.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2402091246-0862586046-1.jpg"
+      },
+      {
+        "title": "Outdoor Play Area",
+        "category": "Campus",
+        "url": "https://cloud9.shauryasoft.com/media/wcp-2401181152-0213986475-1.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#b91c1c",
+    "motto": null,
+    "tagline": "A caring CBSE school in Sector 81 Gurugram offering a happy, disciplined environment for lifelong learning",
+    "about": "St. Xavier's High School, Sector 81 Gurugram describes itself as a caring school with a team of dedicated professionals committed to providing children with a happy, well-disciplined environment. It aims to inspire children to see learning as a lifelong experience and promotes academic, cultural and moral values in a secular environment, where all children, regardless of background, culture, religious belief or ability, are equally valued, supported and challenged. Its campus includes an indoor swimming pool, auditorium, computer lab and outdoor play areas.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Computer Lab",
+      "Library",
+      "Indoor Swimming Pool",
+      "Auditorium",
+      "Outdoor Play Area",
+      "Music, Dance & Theatre",
+      "Sports Clubs"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-xaviers-high-school-sector-89-gurugram",
+    "name": "St. Xavier's High School, Sector 89",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info89@stxaviershighschoolgurgaon.com",
+    "official_phone": "+91 9717066499",
+    "website": "https://89.stxaviershighschoolgurgaon.com",
+    "address": "Sector 89, Orris Township",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122506",
+    "logo_url": "https://c9.shauryasoft.com/media/bny-wlg-2410291606-1095479791-1.png",
+    "hero_image_url": "https://c9.shauryasoft.com/media/bny-wcp-2505281036-1216228196-1.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://c9.shauryasoft.com/media/bny-wcp-2408130947-1742552434.jpg"
+      },
+      {
+        "title": "Reception Lobby",
+        "category": "Campus",
+        "url": "https://c9.shauryasoft.com/media/bny-wlg-2408131645-2068558754-6.jpg"
+      },
+      {
+        "title": "Indoor Sports Hall",
+        "category": "Sports",
+        "url": "https://c9.shauryasoft.com/media/bny-wcp-2408130947-1908887615.jpg"
+      },
+      {
+        "title": "Cricket Practice Nets",
+        "category": "Sports",
+        "url": "https://c9.shauryasoft.com/media/bny-wcp-2408130947-1662989579.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A CBSE school in Orris Township, Sector 89 Gurugram with modern library, indoor sports hall and cricket nets",
+    "about": "St. Xavier's High School, Sector 89 is a CBSE school in Orris Township, Gurugram, and a branch of the St. Xavier's High School group in the city. Its infrastructure page shows a modern library, an indoor sports hall, cricket practice nets, an outdoor turf and activity rooms. The school's programme runs across foundational, preparatory, middle and secondary stages and includes sports, clubs, houses, music, dance and theatre alongside academics, with a focus on a happy, disciplined learning environment.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Library",
+      "Indoor Sports Hall",
+      "Cricket Nets",
+      "Sports Turf",
+      "Activity Rooms",
+      "Music, Dance & Theatre",
+      "Science Labs"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "shalom-presidency-school-sushant-lok-2-sector-56-gurugram",
+    "name": "Shalom Presidency School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission@shalompresidency.com",
+    "official_phone": "+91 9818560293",
+    "website": "https://shalompresidency.com",
+    "address": "Golf Course Extension Road, Sector 56, Sushant Lok - II",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122011",
+    "logo_url": "https://shalompresidency.com//public/uploads/all/1654/Logo-SPS.png",
+    "hero_image_url": "https://shalompresidency.com//public/uploads/all/1076/conversions/Image-Jan-17,-2026,-02_07_28-PM-full.webp",
+    "gallery_images": [
+      {
+        "title": "Central Atrium",
+        "category": "Infrastructure",
+        "url": "https://shalompresidency.com//public/uploads/all/1036/conversions/infrabanner-full.webp"
+      },
+      {
+        "title": "Sports Field",
+        "category": "Sports",
+        "url": "https://shalompresidency.com//public/uploads/all/1090/conversions/Image-Jan-17,-2026,-02_38_36-PM-full.webp"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://shalompresidency.com//public/uploads/all/846/conversions/Untitled-design---2025-08-08T132029.594-full.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://shalompresidency.com//public/uploads/all/1172/conversions/Untitled-design---2025-08-08T152641.490-full-(1)-full.webp"
+      }
+    ],
+    "theme_color": "#0c4a6e",
+    "accent_color": "#f59e0b",
+    "motto": "Aspire Achieve Ascend",
+    "tagline": "A co-educational CBSE school on Golf Course Extension Road nurturing curiosity, creativity and character in every student",
+    "about": "Shalom Presidency School is a co-educational CBSE school on Golf Course Extension Road, Sector 56, Sushant Lok II, Gurugram. The school says it blends academic excellence with holistic development, nurturing curiosity, creativity and character through personalised learning, innovative teaching practices and a focus on values. It aims to provide a supportive and inclusive environment where students are encouraged to explore, question and lead. Its campus includes an auditorium, gardens, sports fields, computer and science labs and a transport fleet.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Auditorium",
+      "Computer Lab",
+      "Science Labs",
+      "Library",
+      "Sports Fields",
+      "Gardens",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vidya-devi-jindal-school-delhi-road-hisar",
+    "name": "Vidya Devi Jindal School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@vdjs.edu.in",
+    "official_phone": "+91 1662 281000",
+    "website": "https://www.vdjs.edu.in",
+    "address": "Delhi Road",
+    "city": "Hisar",
+    "state": "Haryana",
+    "pincode": "125044",
+    "logo_url": "https://www.vdjs.edu.in/wp-content/uploads/2020/09/logo-footer_1-1.png",
+    "hero_image_url": "https://www.vdjs.edu.in/wp-content/uploads/2023/08/building-for-web.jpg.webp",
+    "gallery_images": [
+      {
+        "title": "Sports Facilities",
+        "category": "Sports",
+        "url": "https://www.vdjs.edu.in/wp-content/uploads/2020/11/sports-facility-pic.jpg"
+      },
+      {
+        "title": "Dining Hall",
+        "category": "Infrastructure",
+        "url": "https://www.vdjs.edu.in/wp-content/uploads/2025/07/dining-hall-e1751592420500.jpeg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#c8a24a",
+    "motto": null,
+    "tagline": "An all-girls residential school on a 47-acre Hisar campus offering academics, co-curriculars and sport with round-the-clock care",
+    "about": "Vidya Devi Jindal School is an all-girls' residential school on Delhi Road, Hisar, imparting inclusive and progressive education since its inception in 1984. The school is set in a 47-acre campus about 150 km from New Delhi, with rambling paths, trees, flowers and birds. Resident staff provide 24x7 personalised care, and the school offers academics, varied co-curricular activities and sporting facilities. It describes education as a journey to personhood anchored in mental wellness, universal ethics and curiosity to explore.",
+    "established_year": 1984,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Academic Block",
+      "Boarding Houses",
+      "Dining Hall",
+      "Sports Facilities",
+      "Academic Support Centre",
+      "Library",
+      "Science Labs",
+      "Career Counselling"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "gd-goenka-public-school-sector-48-gurugram",
+    "name": "G.D. Goenka Public School, Sector 48",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "531180",
+    "school_code": null,
+    "official_email": "school@gdgoenka-gurgaon.com",
+    "official_phone": "+91 9818800801",
+    "website": "https://www.gdgoenka-gurgaon.com",
+    "address": "Block A, Sector 48",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122018",
+    "logo_url": "https://www.gdgoenka-gurgaon.com/home/images/logo.avif",
+    "hero_image_url": "https://www.gdgoenka-gurgaon.com/home/images/schoolbuildingnew1.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.gdgoenka-gurgaon.com/home/images/tour-3.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.gdgoenka-gurgaon.com/home/images/tour-14.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://www.gdgoenka-gurgaon.com/home/images/tour-15.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.gdgoenka-gurgaon.com/home/images/tour-16.jpg"
+      },
+      {
+        "title": "School Bus",
+        "category": "Transport",
+        "url": "https://www.gdgoenka-gurgaon.com/home/images/tour-6.jpg"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#e11d48",
+    "motto": null,
+    "tagline": "A CBSE senior secondary school in Sector 48 Gurugram built on authenticity, connectivity, productivity and possibility",
+    "about": "G.D. Goenka Public School, Sector 48 is an independent CBSE senior secondary school in Gurugram, run by the Nav Vidya Society for Education Research and Training and first opened in April 2013. The school says it pairs academic excellence with holistic well-being, and its teaching approach rests on four tenets: authenticity, connectivity, productivity and possibility. Its campus tour shows computer and science labs, a library, an auditorium, a swimming pool, activity rooms and a school bus fleet.",
+    "established_year": 2013,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Computer Lab",
+      "Library",
+      "Auditorium",
+      "Swimming Pool",
+      "Activity Rooms",
+      "Medical Room",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "gd-goenka-public-school-sector-10a-gurugram",
+    "name": "G.D. Goenka Public School, Sector 10-A",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "530208",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91 8800537222",
+    "website": "https://www.gdgoenkagurgaon.org",
+    "address": "Sector 10-A",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122001",
+    "logo_url": "https://www.gdgoenkagurgaon.org/Content/public/upload/logo/gdgoenkalogo.png",
+    "hero_image_url": "https://www.gdgoenkagurgaon.org/Content/public/upload//home/image/inner-banner.png",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.gdgoenkagurgaon.org/Content/public/upload/home/image/glimpse2.png"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.gdgoenkagurgaon.org/Content/public/upload/home/image/Library1.png"
+      },
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://www.gdgoenkagurgaon.org/Content/public/upload/home/image/glimpse3.png"
+      },
+      {
+        "title": "Children's Play Area",
+        "category": "Campus",
+        "url": "https://www.gdgoenkagurgaon.org/Content/public/upload/home/image/glimpse4.png"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://www.gdgoenkagurgaon.org/Content/public/upload/home/image/glimpse9.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A co-educational English-medium CBSE school on a six-acre green campus in Sector 10-A Gurugram",
+    "about": "G.D. Goenka Public School, Sector 10-A is a co-educational, English-medium CBSE school in Gurugram. The school is set on a six-acre green campus with a specially designed building, well laid-out play fields and up-to-date facilities. It says it designs new approaches each year that bring creative teachers and students together in interactive learning activities customised to students' interests and needs. Its learning is organised into pre-primary, primary, middle and senior wings, supported by smart classes, computer and science labs, a library and a counselling cell.",
+    "established_year": 1991,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classes",
+      "Computer Lab",
+      "Science Labs",
+      "Library",
+      "Sports Ground",
+      "Play Area",
+      "Counselling Cell",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "gd-goenka-international-school-kundli-sonipat",
+    "name": "G.D. Goenka International School, Sonipat",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "531123",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91 9910344700",
+    "website": "https://gdgoenkasonepat.com",
+    "address": "Kundli",
+    "city": "Sonipat",
+    "state": "Haryana",
+    "pincode": "131001",
+    "logo_url": "https://gdgoenkasonepat.com/wp-content/uploads/2023/08/GDG-SONEPAT-LOGO-2026.png",
+    "hero_image_url": "https://gdgoenkasonepat.com/wp-content/uploads/2022/02/g-d-goenka-international-school-bahalgarh-sonepat-schools-ueuqdn6.jpg",
+    "gallery_images": [
+      {
+        "title": "Horse Riding",
+        "category": "Sports",
+        "url": "https://gdgoenkasonepat.com/wp-content/uploads/2023/12/IMG_1701-1.jpg"
+      },
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://gdgoenkasonepat.com/wp-content/uploads/2023/12/2X5A0014-2-3.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://gdgoenkasonepat.com/wp-content/uploads/2023/12/PICK7951-2.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://gdgoenkasonepat.com/wp-content/uploads/2023/12/2X5A0109.jpg"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://gdgoenkasonepat.com/wp-content/uploads/2023/12/2X5A0554.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A day-cum-boarding CBSE school in Kundli, Sonipat blending Indian and international, traditional and innovative learning",
+    "about": "G.D. Goenka International School, Sonipat is a day-cum-boarding CBSE school for boys and girls at Kundli, Sonipat in the Delhi NCR. Holistic education is its theme, aiming for a synthesis of ancient and modern, Indian and international, and traditional and innovative. The school says it trains students to be knowledgeable, skilled, confident and articulate, and seeks to create an environment where children are happy and eager learners. Facilities include boarding, computer labs, a library, music and yoga rooms, indoor and outdoor games, horse riding and a cafeteria.",
+    "established_year": 2012,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Boarding",
+      "Computer Labs",
+      "Library",
+      "Music Room",
+      "Yoga",
+      "Indoor Games",
+      "Outdoor Sports Ground",
+      "Horse Riding",
+      "Cafeteria",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dyal-singh-public-school-dyal-singh-colony-karnal",
+    "name": "Dyal Singh Public School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "dspsdscknl2@gmail.com",
+    "official_phone": "0184-4046616",
+    "website": "https://www.dspskarnal.com",
+    "address": "Dyal Singh Colony",
+    "city": "Karnal",
+    "state": "Haryana",
+    "pincode": "132001",
+    "logo_url": "https://www.dspskarnal.com/wp-content/uploads/2020/12/final_logo.png",
+    "hero_image_url": "https://www.dspskarnal.com/wp-content/uploads/2018/01/n3.jpg",
+    "gallery_images": [
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://www.dspskarnal.com/wp-content/uploads/2018/02/biology-lab.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://www.dspskarnal.com/wp-content/uploads/2018/02/chemistry-lab.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.dspskarnal.com/wp-content/uploads/2018/02/computer-lab-1.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.dspskarnal.com/wp-content/uploads/2018/02/library-1.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0ea5e9",
+    "motto": null,
+    "tagline": "A Karnal school of the Dyal Singh trusts with well-equipped labs, a library and a three-acre campus",
+    "about": "Dyal Singh Public School is located in Dyal Singh Colony, Karnal, and traces its roots to the trusts set up by Sardar Dyal Singh Majithia, who bequeathed his property to promote modern liberal education. The school is spread over about three acres, with a three-storey U-shaped building and a playground for volleyball, kho-kho, basketball, badminton and cricket. It has well-equipped laboratories for biology, chemistry, physics, computers, mathematics, geography and psychology, a library and an NCC unit, placing practical knowledge on par with theory.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Biology Lab",
+      "Chemistry Lab",
+      "Physics Lab",
+      "Computer Lab",
+      "Math Lab",
+      "Geography Lab",
+      "Psychology Lab",
+      "Library",
+      "Playground",
+      "NCC"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "convent-of-jesus-and-mary-staff-road-ambala-cantt",
+    "name": "Convent of Jesus and Mary, Ambala Cantt",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "530005",
+    "school_code": "40001",
+    "official_email": "jmambala@gmail.com",
+    "official_phone": "0171-2642637",
+    "website": "https://cjmambala.co.in",
+    "address": "121 Staff Road, Ambala Cantt",
+    "city": "Ambala",
+    "state": "Haryana",
+    "pincode": "133001",
+    "logo_url": "https://cjmambala.co.in/public/cjm-assets/head/logo-top.png",
+    "hero_image_url": "https://cjmambala.co.in/public/cjm-assets/cjm-images/cjmFull.png",
+    "gallery_images": [
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://cjmambala.co.in/public/cjm-assets/cjm-images/infra/playground.jpeg"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://cjmambala.co.in/public/cjm-assets/cjm-images/infra/physics-lab.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://cjmambala.co.in/public/cjm-assets/cjm-images/infra/computer_lab.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://cjmambala.co.in/public/cjm-assets/cjm-images/infra/library.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Jesus and Mary congregation school in Ambala Cantt promoting holistic, experiential learning rooted in love and kindness",
+    "about": "Convent of Jesus and Mary, Ambala Cantt is a CBSE school on Staff Road run under the Congregation of Jesus and Mary, whose sisters first came to India in 1842. The school describes a well-developed, progressive resource base and infrastructure that promotes holistic learning reinforced by Christian ideals of love, peace, joy and kindness, with a focus on experiential learning. Its facilities include digital and smart classes, physics, chemistry, biology and computer labs, a library, an auditorium, dance and music rooms, a playground, a medical infirmary and counselling.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Digital & Smart Classes",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Computer Lab",
+      "Library",
+      "Auditorium",
+      "Dance & Music Rooms",
+      "Playground",
+      "Medical Infirmary"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

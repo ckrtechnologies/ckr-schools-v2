@@ -1,0 +1,669 @@
+[
+  {
+    "slug": "dps-noida-sector-122",
+    "name": "Delhi Public School, Sector 122, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2134100",
+    "school_code": null,
+    "official_email": "mail@dps122noida.com",
+    "official_phone": "0120-4669100",
+    "website": "https://dps122noida.com",
+    "address": "Plot No. SS02, Block C, Sector 122",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201316",
+    "logo_url": "https://dps122noida.com/logo/header-logo.png",
+    "hero_image_url": "https://art-294-dps-s3-public.s3.ap-south-1.amazonaws.com/dps-294/17861227831170.08175715842484466.jpeg",
+    "gallery_images": [
+      {
+        "title": "School Building",
+        "category": "Campus",
+        "url": "https://art-294-dps-s3-public.s3.ap-south-1.amazonaws.com/dps-294/17861227704940.4693351781842212.jpeg"
+      },
+      {
+        "title": "Playing Field",
+        "category": "Sports",
+        "url": "https://art-294-dps-s3-public.s3.ap-south-1.amazonaws.com/dps-294/17861229405800.6763154078577907.jpeg"
+      },
+      {
+        "title": "Welcome & Reception",
+        "category": "Infrastructure",
+        "url": "https://art-294-dps-s3-public.s3.ap-south-1.amazonaws.com/dps-294/17861232040310.03415901985958736.jpeg"
+      },
+      {
+        "title": "Courtyard Amphitheatre Steps",
+        "category": "Campus",
+        "url": "https://art-294-dps-s3-public.s3.ap-south-1.amazonaws.com/dps-294/17861233056140.1751863807518772.jpeg"
+      }
+    ],
+    "theme_color": "#065f46",
+    "accent_color": "#16a34a",
+    "motto": "Service Before Self",
+    "tagline": "A green, co-educational DPS campus in Noida with modern labs, sports courts and an all-weather pool",
+    "about": "Delhi Public School Sector 122, Noida is a co-educational school of the DPS Society, affiliated to CBSE and founded in 2022. Its campus has modern classrooms, science, computer and robotics labs, a library, an auditorium and multipurpose hall, basketball and pickleball courts, football and cricket grounds, a skating rink and an all-weather swimming pool. The school runs rainwater harvesting, solar panels and a composting machine, and engages students with the sustainable development goals.",
+    "established_year": 2022,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Robotics Lab",
+      "Library",
+      "All-Weather Swimming Pool",
+      "Skating Rink",
+      "Cricket Ground",
+      "Auditorium",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sunbeam-school-lahartara-varanasi",
+    "name": "Sunbeam School, Lahartara, Varanasi",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130454",
+    "school_code": "71309",
+    "official_email": "lht@sunbeamschools.com",
+    "official_phone": "9721452500",
+    "website": "https://www.sunbeamschools.com/school/lahartara",
+    "address": "Sunbeam School Annapurna, Lahartara",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "pincode": "221002",
+    "logo_url": "https://resources.edunexttechnologies.com/web-data/sunbeam/images/lahartara-ft.png",
+    "hero_image_url": "https://edunext-main-storage-cf.edunexttechnologies.com/ssl/school___static/1762246130577_bannerLahartaraHostel.jpg",
+    "gallery_images": [
+      {
+        "title": "Hostel Building",
+        "category": "Campus",
+        "url": "https://resources.edunexttechnologies.com/web-data/sunbeam/images/lht-hostel.JPG"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/ssl/school___static/1761808493457_facilities6.JPG"
+      },
+      {
+        "title": "Fitness Gym",
+        "category": "Sports",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/ssl/school___static/1761808596596_facilities9.jpeg"
+      },
+      {
+        "title": "Hostel Dormitory",
+        "category": "Infrastructure",
+        "url": "https://edunext-main-storage-cf.edunexttechnologies.com/ssl/school___static/1761807468896_facilities1.jpeg"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A Sunbeam Group CBSE school in Lahartara, Varanasi, with boarding facilities and a strong link to Banarasi heritage",
+    "about": "Sunbeam School Lahartara in Varanasi opened in 2002 as part of the Sunbeam Group of Educational Institutions, which Dr. Amrit Lal 'Ishrat' Madhok and Mrs. Deesh 'Ishrat' Madhok founded in 1972. The CBSE-affiliated school at Annapurna, Lahartara runs its own hostel for boarding students. Through its Tana-Bana initiative, the school introduces students and staff to the heritage of Banarasi handloom weaving, a GI-tagged craft of the city. The Sunbeam schools together enrol over 34,900 students.",
+    "established_year": 2002,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Hostel",
+      "Dormitories",
+      "Computer Lab",
+      "Gym",
+      "Basketball Court",
+      "Medical Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "girls-high-school-college-elgin-road-prayagraj",
+    "name": "Girls' High School & College, Prayagraj",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "girlshighschoolandcollegealld@gmail.com",
+    "official_phone": "+91-532-2623340",
+    "website": "https://www.ghsallahabad.org",
+    "address": "25, Elgin Road",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "pincode": null,
+    "logo_url": "https://www.ghsallahabad.org/wp-content/uploads/2019/05/cropped-cropped-cropped-logo-2.png",
+    "hero_image_url": "https://www.ghsallahabad.org/wp-content/uploads/2019/04/our-school.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.ghsallahabad.org/wp-content/uploads/2019/05/swimming.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.ghsallahabad.org/wp-content/uploads/2019/05/sports.jpg"
+      },
+      {
+        "title": "Playground",
+        "category": "Campus",
+        "url": "https://www.ghsallahabad.org/wp-content/uploads/2019/05/playground.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://www.ghsallahabad.org/wp-content/uploads/2019/05/auditorium.jpg"
+      },
+      {
+        "title": "Boarding Hostel",
+        "category": "Infrastructure",
+        "url": "https://www.ghsallahabad.org/wp-content/uploads/2019/05/hostel.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": "Mentem Frontem Que",
+    "tagline": "A historic ICSE/ISC girls' day and boarding school in Prayagraj, educating the girl child since 1861",
+    "about": "Girls' High School & College on Elgin Road, Prayagraj is a girls' day and residential institution affiliated to the CISCE for ICSE and ISC, continuing a tradition of girls' education that began in 1861. It has an air-conditioned hostel for 120 outstation boarders, physics, chemistry and biology laboratories, three computer labs, a library, smart classes and two auditoriums. Sports facilities include a swimming pool and a basketball court with coaches, and the school runs free remedial classes and an all-girls school band.",
+    "established_year": 1861,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Hostel",
+      "Swimming Pool",
+      "Basketball Court",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Smart Classes",
+      "Auditorium",
+      "Chapel",
+      "Medical Facilities"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dayawati-modi-academy-modipuram-meerut",
+    "name": "Dayawati Modi Academy, Modipuram, Meerut",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130024",
+    "school_code": "60009",
+    "official_email": "principal@dma1.in",
+    "official_phone": "0121-2575572",
+    "website": "https://dma1.in",
+    "address": "Modipuram",
+    "city": "Meerut",
+    "state": "Uttar Pradesh",
+    "pincode": "250110",
+    "logo_url": "https://dma1.in/wp-content/uploads/2024/10/logo-dma.webp",
+    "hero_image_url": "https://dma1.in/wp-content/uploads/2024/11/1-13.jpg",
+    "gallery_images": [
+      {
+        "title": "Canteen",
+        "category": "Infrastructure",
+        "url": "https://dma1.in/wp-content/uploads/2024/11/2-11.jpg"
+      },
+      {
+        "title": "Digital Classroom",
+        "category": "Academics",
+        "url": "https://dma1.in/wp-content/uploads/2024/11/1-2.jpg"
+      },
+      {
+        "title": "Shooting Range",
+        "category": "Sports",
+        "url": "https://dma1.in/wp-content/uploads/2024/11/2-5.jpg"
+      },
+      {
+        "title": "Cricket Academy Nets",
+        "category": "Sports",
+        "url": "https://dma1.in/wp-content/uploads/2024/11/1-3.jpg"
+      },
+      {
+        "title": "School Bus Boarding Area",
+        "category": "Transport",
+        "url": "https://dma1.in/wp-content/uploads/2024/11/2-12.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#d97706",
+    "motto": null,
+    "tagline": "A CBSE school in Modipuram, Meerut, rooted in Indian culture, on a 7-acre campus since 1981",
+    "about": "Dayawati Modi Academy in Modipuram, Meerut is a CBSE-affiliated school that began in 1981. Its 7-acre campus has air-conditioned smart classrooms, digital classrooms, a library, an infirmary, a canteen and covered pathways. Sports facilities include a shooting range, a cricket academy, an equestrian academy, billiards and yoga. The school's mission is to impart quality education and a spirit of excellence while keeping students conscious of India's cultural heritage, giving them roots in Indian culture and wings to explore learning.",
+    "established_year": 1981,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Library",
+      "Infirmary",
+      "Canteen",
+      "Shooting Range",
+      "Cricket Academy",
+      "Equestrian Academy",
+      "Billiards",
+      "Yoga",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sir-padampat-singhania-education-centre-kamla-nagar-kanpur",
+    "name": "Sir Padampat Singhania Education Centre, Kamla Nagar, Kanpur",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130075",
+    "school_code": null,
+    "official_email": "school@spsec.co.in",
+    "official_phone": "+91-9235444858",
+    "website": "https://www.spsec.co.in",
+    "address": "Kamla Nagar",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "pincode": "208005",
+    "logo_url": "https://www.spsec.co.in/__l5e/assets-v1/c90f5642-5bc7-446e-8c67-3d5af87ba78c/spsec-logo.webp",
+    "hero_image_url": "https://www.spsec.co.in/__l5e/assets-v1/d06e187d-bcea-4eec-b983-2baa300eb3af/20.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.spsec.co.in/__l5e/assets-v1/8df39b57-67ec-4537-8add-2c6790bacf43/Library-2.jpg"
+      },
+      {
+        "title": "Yoga on the Sports Ground",
+        "category": "Sports",
+        "url": "https://www.spsec.co.in/__l5e/assets-v1/0737d761-b213-4f98-8a28-d3adbfda20f0/11.jpg"
+      },
+      {
+        "title": "School Bus Fleet",
+        "category": "Transport",
+        "url": "https://www.spsec.co.in/__l5e/assets-v1/a1641cf2-467d-450f-84c8-805c9c92471e/BUSES.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "A J.K. Organisation day school on a green eleven-acre campus in the heart of Kanpur since 1982",
+    "about": "Sir Padampat Singhania Education Centre in Kamla Nagar, Kanpur is a CBSE-affiliated day school whose foundation stone was laid in 1982 by Lady Anusuiya Singhania in memory of Sir Padampat Singhania of the J.K. Organisation. The campus covers about eleven acres, more than eight of them under plantation, and its classrooms use green building design. Facilities listed by the school include information and communication technology, physics, chemistry, biology and computer labs, a library, a tennis court, the Buddh Vatika and school transport.",
+    "established_year": 1982,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Computer Lab",
+      "ICT",
+      "Library",
+      "Tennis Court",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-varanasi-vishokhar-mohansarai",
+    "name": "Delhi Public School, Varanasi",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130637",
+    "school_code": "71320",
+    "official_email": "info@dpsvaranasi.com",
+    "official_phone": "7311180095",
+    "website": "https://dpsvaranasi.com",
+    "address": "Village Vishokhar, Near Amra Chauraha, Mohansarai Bypass Road, NH-2",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "pincode": "221011",
+    "logo_url": "https://dpsvaranasi.com/uploads/settings/DPS-Varanasi-LOGO-03_sc61717401753.png",
+    "hero_image_url": "https://dpsvaranasi.com/uploads/homepage/slider/12_hoo1786501523.jpg",
+    "gallery_images": [
+      {
+        "title": "Campus and Playing Field",
+        "category": "Campus",
+        "url": "https://dpsvaranasi.com/uploads/homepage/ready_banner_FzS1703575810.jpg"
+      },
+      {
+        "title": "Children's Play Area",
+        "category": "Campus",
+        "url": "https://dpsvaranasi.com/uploads/facilitiedetail/img_i_4_MZg1701521874.png"
+      },
+      {
+        "title": "Skating Rink",
+        "category": "Sports",
+        "url": "https://dpsvaranasi.com/uploads/facilitiedetail/sp2_MrE1701522138.png"
+      },
+      {
+        "title": "Table Tennis Hall",
+        "category": "Sports",
+        "url": "https://dpsvaranasi.com/uploads/facilitiedetail/sp7_eR41701522870.png"
+      },
+      {
+        "title": "School Bus Fleet",
+        "category": "Transport",
+        "url": "https://dpsvaranasi.com/uploads/facilitie/slider_art_img5_Jxj1701777361.png"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#16a34a",
+    "motto": null,
+    "tagline": "A DPS Society school on the Mohansarai bypass, Varanasi, offering holistic education with strong sports facilities",
+    "about": "Delhi Public School Varanasi, run by the Kush Education Society under the aegis of the DPS Society, New Delhi, is a CBSE-affiliated school at Village Vishokhar on the Mohansarai Bypass Road. SARAS records its foundation in 2003. The school says it aims for holistic development across social, emotional, spiritual, cognitive and physical areas, using a designed curriculum, interactive teaching and personalised learning. Its facilities include smart classrooms, labs, a library, a skating rink, a swimming pool, cricket and table tennis, a play area and a bus fleet.",
+    "established_year": 2003,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Swimming Pool",
+      "Skating Rink",
+      "Cricket Ground",
+      "Table Tennis",
+      "Play Area",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-agra-shastripuram",
+    "name": "Delhi Public School, Shastripuram, Agra",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "office@dps.ac.in",
+    "official_phone": "+91-9837699999",
+    "website": "https://www.dps.ac.in",
+    "address": "E1-2, Block F, Shastripuram",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "pincode": "282007",
+    "logo_url": "https://www.dps.ac.in/img/dps-logo-combine.png",
+    "hero_image_url": "https://www.dps.ac.in/img/main/1.JPG",
+    "gallery_images": [
+      {
+        "title": "Bus Bay",
+        "category": "Transport",
+        "url": "https://www.dps.ac.in/img/infra/Bus%20%20Bay.jpg"
+      },
+      {
+        "title": "Play Arena",
+        "category": "Sports",
+        "url": "https://www.dps.ac.in/img/infra/8.JPG"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.dps.ac.in/img/infra/swimming%20pool%202.jpg"
+      },
+      {
+        "title": "Tennis Court",
+        "category": "Sports",
+        "url": "https://www.dps.ac.in/img/infra/tennis%202.JPG"
+      },
+      {
+        "title": "Rooftop Solar Power System",
+        "category": "Infrastructure",
+        "url": "https://www.dps.ac.in/img/infra/Solar%20Panel%201.jpg"
+      }
+    ],
+    "theme_color": "#166534",
+    "accent_color": "#f59e0b",
+    "motto": "Service Before Self",
+    "tagline": "A DPS Society East of Kailash school in Shastripuram, Agra, blending Indian values with modern skills since 2002",
+    "about": "Delhi Public School Agra in Shastripuram opened in April 2002 under the aegis of the Delhi Public School Society, East of Kailash, New Delhi, and is affiliated to CBSE. It began with 40 teachers and 540 students. The school lists a sports complex, yoga hall, recording studio, science labs, an i-MAC lab, a language lab, an advanced Celestron telescope, a library, an in-house infirmary, an auditorium, a swimming pool, a tennis court and a solar power system. Its focus is on 21st-century skills of creativity, critical thinking, communication and collaboration.",
+    "established_year": 2002,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Science Laboratories",
+      "i-MAC Lab",
+      "Language Lab",
+      "Library",
+      "Swimming Pool",
+      "Tennis Court",
+      "Yoga Hall",
+      "Recording Studio",
+      "Auditorium",
+      "Infirmary"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-peters-college-wazirpura-road-agra",
+    "name": "St. Peter's College, Agra",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": "UP002",
+    "official_email": "contact@stpetersagra.org",
+    "official_phone": null,
+    "website": "https://stpetersagra.org",
+    "address": "Wazirpura Road",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "pincode": "282003",
+    "logo_url": "https://stpetersagra.org/public/assets/images/St-Peters-Logo.svg",
+    "hero_image_url": "https://stpetersagra.org/public/uploads/accordion_images/17661262287064.jpg",
+    "gallery_images": [
+      {
+        "title": "Main College Building",
+        "category": "Campus",
+        "url": "https://stpetersagra.org/public/uploads/accordion_images/17661262283370.jpg"
+      },
+      {
+        "title": "Campus Quadrangle",
+        "category": "Campus",
+        "url": "https://stpetersagra.org/public/uploads/accordion_images/17661262288685.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://stpetersagra.org/public/uploads/accordion_images/17661306435516.jpg"
+      },
+      {
+        "title": "Hockey Playground",
+        "category": "Sports",
+        "url": "https://stpetersagra.org/public/uploads/accordion_images/17661309749460.jpg"
+      },
+      {
+        "title": "Skating Rink",
+        "category": "Sports",
+        "url": "https://stpetersagra.org/public/uploads/accordion_images/17661313531020.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#b45309",
+    "motto": null,
+    "tagline": "One of India's oldest schools, a CISCE institution on Wazirpura Road, Agra, with heritage buildings since 1846",
+    "about": "St. Peter's College on Wazirpura Road, Agra is an unaided Christian minority institution owned by the Roman Catholic Diocese of Agra education society and affiliated to the CISCE, New Delhi. It began as a boarding school in 1841 and moved to its present building in 1846, which it takes as its founding year. Its campus facilities include a computer lab, a chemistry lab and other science labs, a library, a music room, a swimming pool, a tennis court, a hockey playground and a skating rink.",
+    "established_year": 1846,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Chemistry Lab",
+      "Science Laboratories",
+      "Library",
+      "Music Room",
+      "Swimming Pool",
+      "Tennis Court",
+      "Hockey Ground",
+      "Skating Rink"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dpsg-meerut-road-ghaziabad",
+    "name": "DPSG Meerut Road, Ghaziabad",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admns1.mr@dpsgs.org",
+    "official_phone": "8595225225",
+    "website": "https://www.dpsgs.org/ghaziabad",
+    "address": "Site #3, Meerut Road Industrial Area",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "pincode": null,
+    "logo_url": "https://www.dpsgs.org/ghaziabad/images/logo-1.svg",
+    "hero_image_url": "https://www.dpsgs.org/dpsg-cms/imagedir/DPSGM/1760434413.jpeg",
+    "gallery_images": [
+      {
+        "title": "Cricket Ground",
+        "category": "Sports",
+        "url": "https://www.dpsgs.org/dpsg-cms/imagedir/DPSGM/2025/infra/4.jpg"
+      },
+      {
+        "title": "Outdoor Yoga on the Lawns",
+        "category": "Sports",
+        "url": "https://www.dpsgs.org/dpsg-cms/imagedir/DPSGM/1699878857.jpeg"
+      },
+      {
+        "title": "Dance Performance in the Courtyard",
+        "category": "Arts",
+        "url": "https://www.dpsgs.org/dpsg-cms/imagedir/DPSGM/2025/infra/9.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#0f766e",
+    "motto": null,
+    "tagline": "The flagship DPSG Society campus on Meerut Road, Ghaziabad, offering CBSE and IB programmes on 16 acres",
+    "about": "DPSG Meerut Road is the flagship school of the DPSG Society in Ghaziabad, educating students since 1980. Spread across 16 acres, it follows the CBSE curriculum and the IB Primary Years and Diploma Programmes. The school promotes holistic growth through a health programme, sports and what it describes as Ghaziabad's largest art gallery, and its students have featured among All-India CBSE toppers and in JEE, NEET and NDA results.",
+    "established_year": 1980,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Cricket Ground",
+      "Sports Fields",
+      "Art Gallery",
+      "Yoga",
+      "Dance",
+      "Health Programme"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "somerville-school-noida-sector-22",
+    "name": "Somerville School, Sector 22, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130099",
+    "school_code": null,
+    "official_email": "ssn@somervillenoida.in",
+    "official_phone": "0120-2415050",
+    "website": "https://www.somervillenoida.in",
+    "address": "D-89, Sector 22",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201301",
+    "logo_url": "https://www.somervillenoida.in/images/logo-new42025.png",
+    "hero_image_url": "https://www.somervillenoida.in/images/sch-building.png",
+    "gallery_images": [
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.somervillenoida.in/Infra/small1/0Q5A2886.JPG"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.somervillenoida.in/Infra/small1/0Q5A3185.JPG"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.somervillenoida.in/Infra/small1/IMG_7727.JPG"
+      },
+      {
+        "title": "Junior Library",
+        "category": "Infrastructure",
+        "url": "https://www.somervillenoida.in/Infra/small1/IMG_7706.JPG"
+      },
+      {
+        "title": "Conference Room",
+        "category": "Infrastructure",
+        "url": "https://www.somervillenoida.in/Infra/small1/IMG_8264.JPG"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": "Love One Another",
+    "tagline": "A Lott Carey Baptist Mission school in Noida Sector 22, guided by its motto Love One Another since 1987",
+    "about": "Somerville School in Sector 22, Noida was established in 1987 by the Lott Carey Baptist Mission in India, which still administers it. It is an unaided Christian minority school open to children of all communities, affiliated to CBSE under the 10+2 scheme, with English as the medium of instruction. The school has classes I to XII and a separate Preparatory School, and celebrated its Silver Jubilee in 2012. Its motto, Love One Another, is the cornerstone of its approach to character building.",
+    "established_year": 1987,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Preparatory to Class XII",
+    "facilities": [
+      "Science Laboratories",
+      "Computer Lab",
+      "Mathematics Lab",
+      "Psychology Lab",
+      "Library",
+      "Junior Library",
+      "Conference Room",
+      "Sports Facilities"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

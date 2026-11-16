@@ -1,0 +1,386 @@
+[
+  {
+    "slug": "vibgyor-high-electronic-city-bengaluru",
+    "name": "VIBGYOR High, Electronic City",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "080 2441 0400",
+    "website": "https://www.vibgyorhigh.com",
+    "address": "Village Vittasandra, Begur Hobli, Bengaluru South Taluk",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560114",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202308090720-E%20City%20(2)-min.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685339258-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685339234-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685339275-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Gymnastics and Activity Room",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685339266-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE branch of the VIBGYOR Group in Electronic City, Bengaluru combining academics, sports and performing arts",
+    "about": "VIBGYOR High, Electronic City is a CBSE-affiliated branch of the VIBGYOR Group of Schools in Bengaluru. The school describes a curriculum that draws on Gardner's multiple intelligences theory, Bloom's taxonomy and Kolb's experiential learning, with the aim of nurturing each child's skills through academics, sports and performing arts. Its campus gallery shows a swimming pool, a library, science laboratories and an activity room with gymnastics mats, and the school provides transport for students from the surrounding neighbourhoods.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Library",
+      "Science Laboratories",
+      "Computer Lab",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-hennur-bengaluru",
+    "name": "VIBGYOR High, Hennur",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "080 6102 3900",
+    "website": "https://www.vibgyorhigh.com",
+    "address": "Survey No. 60/1-60/2, Byrathi Village, Blessing Garden Layout, near Cratis Hospital, Gedhalahalli, Hennur Main Road",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560077",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060846-Hennur.jpg",
+    "gallery_images": [
+      {
+        "title": "Indoor Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685340150-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685340166-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685340173-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685340184-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE branch of the VIBGYOR Group in Hennur, Bengaluru combining academics, sports and performing arts",
+    "about": "VIBGYOR High, Hennur is a CBSE-affiliated branch of the VIBGYOR Group of Schools in Bengaluru. The school describes a curriculum that draws on Gardner's multiple intelligences theory, Bloom's taxonomy and Kolb's experiential learning, with the aim of nurturing each child's skills through academics, sports and performing arts. Its campus gallery shows an indoor swimming pool, a computer lab, a library and an outdoor basketball court, and the school provides transport for students from the surrounding neighbourhoods.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Library",
+      "Science Laboratories",
+      "Computer Lab",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-jakkur-bengaluru",
+    "name": "VIBGYOR High, Jakkur",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.vibgyorhigh.com",
+    "address": "Survey No. 55/6, 80 Ft Road, Arkavathy Layout, Jakkur, Bengaluru North Taluk",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560064",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060834-Jakkur.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341307-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341315-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341323-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341332-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE branch of the VIBGYOR Group in Jakkur, Bengaluru combining academics, sports and performing arts",
+    "about": "VIBGYOR High, Jakkur is a CBSE-affiliated branch of the VIBGYOR Group of Schools in Bengaluru. The school describes a curriculum that draws on Gardner's multiple intelligences theory, Bloom's taxonomy and Kolb's experiential learning, with the aim of nurturing each child's skills through academics, sports and performing arts. Its campus gallery shows a swimming pool, a library, a music room with keyboards and a computer lab, and the school provides transport for students from the surrounding neighbourhoods.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Library",
+      "Science Laboratories",
+      "Computer Lab",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "presidency-school-vamanjoor-mangaluru",
+    "name": "Presidency School Mangalore",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "mng1@presidency.edu.in",
+    "official_phone": "+91 82771 46044",
+    "website": "https://presidencyschools.org/",
+    "address": "Vamanjoor",
+    "city": "Mangaluru",
+    "state": "Karnataka",
+    "pincode": "575028",
+    "logo_url": "https://presidencyschools.org/wp-content/uploads/2022/10/Presidency-Logo-V2.png",
+    "hero_image_url": "https://presidencyschools.org/wp-content/uploads/2025/03/PSMNG-BUILDING.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/MNG-Library.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/computer-lab-mangalore.jpg"
+      },
+      {
+        "title": "Medical Room",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/03/Medical.webp"
+      },
+      {
+        "title": "School Transport",
+        "category": "Transport",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/MNG-Transportation.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Presidency Group CBSE school in Vamanjoor, Mangaluru offering holistic education with labs, library and transport",
+    "about": "Presidency School Mangalore is part of the Presidency Group of Schools and describes itself as the group's fourth school, established in 2001. It is affiliated to CBSE and follows the group's aim of providing holistic education to help students excel in life. The school's page outlines its kindergarten, primary, middle and high school sections and lists facilities including classrooms, science laboratories, a library, a medical room and school transport, supported by CCTV surveillance and sanitation measures across the campus.",
+    "established_year": 2001,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre KG to Grade 12",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Medical Room",
+      "GPS-enabled Transport",
+      "CCTV Surveillance",
+      "Sports"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "presidency-school-bangalore-east-kasturi-nagar-bengaluru",
+    "name": "Presidency School Bangalore East",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission-psbe@presidency.edu.in",
+    "official_phone": null,
+    "website": "https://presidencyschools.org/",
+    "address": "CA Site 7P1A, 2nd A Main, 3rd A Cross Road, East of NGEF Layout, Kasturi Nagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560043",
+    "logo_url": "https://presidencyschools.org/wp-content/uploads/2022/10/Presidency-Logo-V2.png",
+    "hero_image_url": "https://presidencyschools.org/wp-content/uploads/2025/03/PSBE-Building.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/PSBE-Library.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/lab-kasturi.jpg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/music-room-kasturi.jpg"
+      },
+      {
+        "title": "Sports Facilities",
+        "category": "Sports",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/PSBE-Sports.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Presidency Group CBSE school in Kasturi Nagar, Bengaluru offering holistic education with labs, library and transport",
+    "about": "Presidency School Bangalore East is part of the Presidency Group of Schools and is the group's Kasturi Nagar campus, established in 2008. It is affiliated to CBSE and follows the group's aim of providing holistic education to help students excel in life. The school's page outlines its kindergarten, primary, middle and high school sections and lists facilities including classrooms, science laboratories, a library, a medical room and school transport, supported by CCTV surveillance and sanitation measures across the campus.",
+    "established_year": 2008,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre KG to Grade 12",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Medical Room",
+      "GPS-enabled Transport",
+      "CCTV Surveillance",
+      "Sports"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "presidency-school-rt-nagar-bengaluru",
+    "name": "Presidency School R.T. Nagar",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission-rtn@presidency.edu.in",
+    "official_phone": "+91 95133 88504",
+    "website": "https://presidencyschools.org/",
+    "address": "8th Cross Road, Dinnur Main Road, near HMT Layout, R.T. Nagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560032",
+    "logo_url": "https://presidencyschools.org/wp-content/uploads/2022/10/Presidency-Logo-V2.png",
+    "hero_image_url": "https://presidencyschools.org/wp-content/uploads/2025/03/PSRTN-Building.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2023/06/RT-Nagar-LIBRARY-001.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/RTN-lab.webp"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/RTN-Classroom.webp"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/TRANSPORT-FACILITIES01.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Presidency Group ICSE school in R.T. Nagar, Bengaluru offering holistic education with labs, library and transport",
+    "about": "Presidency School R.T. Nagar is part of the Presidency Group of Schools and describes itself as the group's second school, established in 1980. It is affiliated to ICSE and follows the group's aim of providing holistic education to help students excel in life. The school's page outlines its kindergarten, primary, middle and high school sections and lists facilities including classrooms, science laboratories, a library, a medical room and school transport, supported by CCTV surveillance and sanitation measures across the campus.",
+    "established_year": 1980,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre KG to High School",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Medical Room",
+      "GPS-enabled Transport",
+      "CCTV Surveillance",
+      "Sports"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

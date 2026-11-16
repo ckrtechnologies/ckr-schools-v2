@@ -1,0 +1,667 @@
+[
+  {
+    "slug": "bal-bharati-public-school-dwarka-sector-12-delhi",
+    "name": "Bal Bharati Public School, Dwarka",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730559",
+    "school_code": null,
+    "official_email": "bbpsdw@balbharati.org",
+    "official_phone": "011-42427855",
+    "website": "https://bbpsdwarka.balbharati.org",
+    "address": "Sector-12, Phase-I, Dwarka",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110075",
+    "logo_url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-05/headerLogo.png",
+    "hero_image_url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-06/main-banner_5.webp",
+    "gallery_images": [
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-06/infrastructure1.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-06/infrastructure4.webp"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-06/infrastructure6.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-06/infrastructure8.webp"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://apibbpsdwarka.balbharati.org//sites/default/files/2026-06/infrastructure9.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A Dwarka senior secondary school blending labs, library and sports courts for well-rounded learning every day",
+    "about": "Bal Bharati Public School, Dwarka is an independent CBSE senior secondary school run by the Child Education Society, which opened on 1 April 1997 in Sector 12, Phase I, Dwarka. The school admits children from Bal Vatika to Class XII. Its campus and facilities pages list a basketball court, a library with VR and audiobook resources, separate biology, chemistry and physics laboratories, computer labs, activity areas, classrooms and a central control room.",
+    "established_year": 1997,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Bal Vatika 1 to XII",
+    "facilities": [
+      "Smart Classrooms",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Computer Lab",
+      "Library",
+      "Basketball Court",
+      "Activity Rooms",
+      "CCTV Control Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "gd-goenka-public-school-vasant-kunj-delhi",
+    "name": "G.D. Goenka Public School, Vasant Kunj",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730246",
+    "school_code": "25082",
+    "official_email": "school@gdgoenka.com",
+    "official_phone": "+91-11-26122723",
+    "website": "https://gdgps.gdgoenka.com",
+    "address": "Sector B, Pocket 8 & 9, Vasant Kunj",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110070",
+    "logo_url": "https://gdgps.gdgoenka.com/public/frontend/assets/images/logo1.png",
+    "hero_image_url": "https://gdgps.gdgoenka.com/public/upload/bannerimage/20260519114754.webp",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://gdgps.gdgoenka.com/public/upload/bannerimage/20260519114957.webp"
+      },
+      {
+        "title": "Central Atrium",
+        "category": "Campus",
+        "url": "https://gdgps.gdgoenka.com/public/upload/bannerimage/20260519114858.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://gdgps.gdgoenka.com/public/frontend/assets/images/science-labs-slide.webp"
+      },
+      {
+        "title": "Robotics Lab",
+        "category": "Academics",
+        "url": "https://gdgps.gdgoenka.com/public/frontend/assets/images/robotics-lab-new.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "The GD Goenka flagship campus in Vasant Kunj with science, robotics and maths labs plus a swimming pool",
+    "about": "G.D. Goenka Public School, Vasant Kunj is an independent CBSE school that describes itself as the flagship school of the GD Goenka group. CBSE records give 1994 as its year of foundation, and its campus is at Sector B, Pocket 8 & 9, Vasant Kunj. The school's Inspired Spaces pages show classrooms for primary and middle years, libraries, science laboratories, tablet and robotics labs, maths labs and ICT learning spaces, alongside a swimming pool, dance and art rooms.",
+    "established_year": 1994,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Robotics Lab",
+      "Maths Lab",
+      "ICT Lab",
+      "Library",
+      "Swimming Pool",
+      "Dance Studio",
+      "Art Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "bal-bharati-public-school-rohini-sector-14-delhi",
+    "name": "Bal Bharati Public School, Rohini",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "bbpsrh@balbharati.org",
+    "official_phone": "011-27554561",
+    "website": "https://bbpsrohini.balbharati.org",
+    "address": "Sector-14, Rohini",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110085",
+    "logo_url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/headerLogo_1.png",
+    "hero_image_url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/main-banner_5.webp",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/pool.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/library.webp"
+      },
+      {
+        "title": "ATL Lab",
+        "category": "Academics",
+        "url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/atl_lab.webp"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/chemistry.webp"
+      },
+      {
+        "title": "Play Area",
+        "category": "Sports",
+        "url": "https://apibbpsrohini.balbharati.org//sites/default/files/2026-07/playarea.webp"
+      }
+    ],
+    "theme_color": "#0f766e",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A Rohini senior secondary school with a swimming pool, ATL lab, science labs and a dedicated Balvatika wing",
+    "about": "Bal Bharati Public School, Rohini is a CBSE-affiliated co-educational senior secondary school run by the Child Education Society, Delhi. It began in August 1989 in a residential building in Harsh Vihar and later moved to its campus in Sector 14, Rohini, with a separate pre-school campus in Sector 25. The school's facilities pages list a swimming pool, multi-utility complex, library, ATL, biology, chemistry, physics and computer labs, a Balvatika wing and a play area.",
+    "established_year": 1989,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Multi Utility Complex",
+      "Library",
+      "ATL Lab",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Computer Lab",
+      "Play Area",
+      "CCTV Control Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "ryan-international-school-vasant-kunj-c8-delhi",
+    "name": "Ryan International School, Vasant Kunj",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730239",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.ryangroup.org/ryaninternational/cbse/delhi/ryan-international-school-vasant-kunj",
+    "address": "C-8, Vasant Kunj",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110070",
+    "logo_url": "https://www.ryangroup.org/public/images/front_end/SiteSetting/vasant-kunj-delhi-master-logo_1632972772.png",
+    "hero_image_url": "https://www.ryangroup.org/public/images/front_end/ryan-images/building_1644902706.jpg",
+    "gallery_images": [
+      {
+        "title": "Football Turf",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/vk3_1771579069.jpg"
+      },
+      {
+        "title": "Outdoor Sports Courts",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/vst2_1771478482.jpg"
+      },
+      {
+        "title": "Synthetic Tennis Court",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/vst3_1771478482.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/swim_1771578395.jpg"
+      },
+      {
+        "title": "Hydroponics Garden Activity",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/gallery-2_1719557416.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#ec6607",
+    "motto": null,
+    "tagline": "A Vasant Kunj Ryan campus pairing an Atal Tinkering Lab with a pool, football turf and tennis courts",
+    "about": "Ryan International School, Vasant Kunj is an independent CBSE school at C-8 Vasant Kunj, part of the Ryan Group of Institutions; CBSE records list 1991 as its year of foundation. The school says its lessons draw on Howard Gardner's Multiple Intelligences theory. Students take part in INMUN, the International Children's Festival of Performing Arts and Olympiads, and the school offers Cambridge English assessments from Grade 2 to Grade 12, an Atal Tinkering Lab and the National Cadet Corps.",
+    "established_year": 1991,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Atal Tinkering Lab",
+      "Swimming Pool",
+      "Football Turf",
+      "Tennis Court",
+      "Sports Courts",
+      "NCC",
+      "Smart Classrooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "bal-bhavan-international-school-dwarka-sector-12-delhi",
+    "name": "Bal Bhavan International School, Dwarka",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730630",
+    "school_code": "25297",
+    "official_email": "info@bbisdw.com",
+    "official_phone": "011-49997999",
+    "website": "https://bbisdw.com",
+    "address": "Sector-12, Dwarka",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110078",
+    "logo_url": "https://bbisdw.com/wp-content/uploads/2024/04/cropped-logo_white-updated.png",
+    "hero_image_url": "https://bbisdw.com/wp-content/uploads/2024/04/Library.jpg",
+    "gallery_images": [
+      {
+        "title": "Senior Computer Lab",
+        "category": "Academics",
+        "url": "https://bbisdw.com/wp-content/uploads/2024/04/Sr-Comp-Lab-c.jpg"
+      },
+      {
+        "title": "Atal Tinkering Lab",
+        "category": "Academics",
+        "url": "https://bbisdw.com/wp-content/uploads/2024/11/ATLLAB.jpg"
+      },
+      {
+        "title": "Chemistry Laboratory",
+        "category": "Academics",
+        "url": "https://bbisdw.com/wp-content/uploads/2024/04/Chemistry-Lab.jpg"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://bbisdw.com/wp-content/uploads/2024/04/Physics-Lab.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "A Dwarka CBSE school with dedicated science, maths, geography and computer labs plus an Atal Tinkering Lab",
+    "about": "Bal Bhavan International School is an independent CBSE school in Sector 12, Dwarka, run by the Lagan Kala Upvan Society; CBSE records list 2004 as its year of foundation. The school holds Delhi Directorate of Education recognition up to Class XII. Its website describes separate chemistry, physics, biology, maths and geography laboratories, junior and senior computer labs, a library and an Atal Tinkering Lab, alongside a sports programme led by a director of sports.",
+    "established_year": 2004,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Chemistry Lab",
+      "Physics Lab",
+      "Biology Lab",
+      "Maths Lab",
+      "Geography Lab",
+      "Computer Labs",
+      "Library",
+      "Atal Tinkering Lab",
+      "Sports Facilities"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "salwan-public-school-mayur-vihar-phase-3-delhi",
+    "name": "Salwan Public School, Mayur Vihar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730401",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.spsmayurvihar.edu.in",
+    "address": "Kondli Gharoli Complex, Mayur Vihar Phase III",
+    "city": "East Delhi",
+    "state": "Delhi",
+    "pincode": "110096",
+    "logo_url": "https://www.spsmayurvihar.edu.in/brand/sps-logo.svg",
+    "hero_image_url": "https://www.spsmayurvihar.edu.in/infra/base.webp",
+    "gallery_images": [
+      {
+        "title": "Biology Laboratory",
+        "category": "Academics",
+        "url": "https://www.spsmayurvihar.edu.in/infra/biolab1.webp"
+      },
+      {
+        "title": "Chemistry Laboratory",
+        "category": "Academics",
+        "url": "https://www.spsmayurvihar.edu.in/infra/chemlab.webp"
+      },
+      {
+        "title": "STEM Laboratory",
+        "category": "Academics",
+        "url": "https://www.spsmayurvihar.edu.in/infra/stem.webp"
+      },
+      {
+        "title": "Computer Laboratory",
+        "category": "Academics",
+        "url": "https://www.spsmayurvihar.edu.in/infra/ict.webp"
+      },
+      {
+        "title": "Main Sports Ground",
+        "category": "Sports",
+        "url": "https://www.spsmayurvihar.edu.in/infra/ground2.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "An East Delhi senior secondary school with STEM, science and ICT labs, music rooms and a full sports ground",
+    "about": "Salwan Public School, Mayur Vihar is a CBSE-affiliated co-educational senior secondary school in East Delhi, established in 1996 under the Salwan Education Trust, which was founded in Peshawar in 1941. The school describes a holistic, experiential and student-centred approach. Its facilities pages show interactive-display classrooms, biology, chemistry, physics, STEM and computer laboratories, a music room, an outdoor gymnasium, a main sports ground and open play areas for younger children.",
+    "established_year": 1996,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Interactive Classrooms",
+      "Biology Lab",
+      "Chemistry Lab",
+      "Physics Lab",
+      "STEM Lab",
+      "Computer Lab",
+      "Music Room",
+      "Outdoor Gym",
+      "Sports Ground",
+      "Playground"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "maxfort-school-rohini-sector-23-delhi",
+    "name": "Maxfort School, Rohini",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730678",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://maxfortrohini.in",
+    "address": "HS-2, Sector 23, Rohini",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110085",
+    "logo_url": "https://maxfortrohini.in/wp-content/uploads/2021/08/Maxfort-logo-HB-v2.1229x60.png",
+    "hero_image_url": "https://maxfortrohini.in/wp-content/uploads/2022/11/IMG_0008-1536x1024.jpg",
+    "gallery_images": [
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://maxfortrohini.in/wp-content/uploads/2022/11/IMG_0521-copy-e1669909853560-700x400.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://maxfortrohini.in/wp-content/uploads/2022/11/IMG_0456-e1669909894111-700x450.jpg"
+      },
+      {
+        "title": "Roller Skating",
+        "category": "Sports",
+        "url": "https://maxfortrohini.in/wp-content/uploads/2022/11/5-720x480.jpg"
+      }
+    ],
+    "theme_color": "#1e3a5f",
+    "accent_color": "#c9a227",
+    "motto": null,
+    "tagline": "A Rohini Sector 23 school offering child-friendly classrooms, science labs, a library and skating for young learners",
+    "about": "Maxfort School, Rohini is an independent CBSE-affiliated school at HS-2, Sector 23, Rohini. The school says children should be nurtured in an environment conducive to learning, with teachers able to give individual attention to each child. Its infrastructure page describes a child-friendly building with spacious, technology-aided classrooms, along with science laboratories, a library and activities such as roller skating, theatre and art.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Roller Skating",
+      "Theatre",
+      "Art Room",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "modern-school-vasant-vihar-delhi",
+    "name": "Modern School, Vasant Vihar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730041",
+    "school_code": null,
+    "official_email": "school@modernschoolvasantvihar.org",
+    "official_phone": "011-26144388",
+    "website": "https://www.modernschoolvasantvihar.org",
+    "address": "Poorvi Marg, Vasant Vihar",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110057",
+    "logo_url": "https://www.modernschoolvasantvihar.org/images/centenary-2020.png",
+    "hero_image_url": "https://www.modernschoolvasantvihar.org/images/campus/27.jpg",
+    "gallery_images": [
+      {
+        "title": "Injury-Free Multi Sports Field",
+        "category": "Sports",
+        "url": "https://www.modernschoolvasantvihar.org/images/campus/29.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.modernschoolvasantvihar.org/images/campus/17.jpg"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://www.modernschoolvasantvihar.org/images/campus/30.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.modernschoolvasantvihar.org/images/campus/33.jpg"
+      },
+      {
+        "title": "Senior AI Lab",
+        "category": "Academics",
+        "url": "https://www.modernschoolvasantvihar.org/images/campus/37.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#d4a017",
+    "motto": null,
+    "tagline": "A brick-built Vasant Vihar campus with AI labs, a swimming pool, multi-sports field and solar power",
+    "about": "Modern School, Vasant Vihar is an independent CBSE school on Poorvi Marg, Vasant Vihar; CBSE records list 1975 as its year of foundation. The school describes its campus of exposed brickwork, arched openings, circular windows and long green corridors, with natural light and open spaces keeping classrooms ventilated. Its campus page lists an injury-free multi-sports field, swimming pool, auditorium, biology, chemistry, physics and computer labs, junior and senior AI labs, a library, a clinic, water harvesting and a solar energy plant.",
+    "established_year": 1975,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Multi Sports Field",
+      "Swimming Pool",
+      "Auditorium",
+      "Biology Lab",
+      "Chemistry Lab",
+      "Physics Lab",
+      "Computer Lab",
+      "AI Labs",
+      "Library",
+      "Clinic"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "ganga-international-school-hiran-kudna-west-delhi",
+    "name": "Ganga International School, Hiran Kudna",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730296",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91-9899975350",
+    "website": "https://www.gangainternationalschool.com",
+    "address": "Village Hiran Kudna, Rohtak Road",
+    "city": "West Delhi",
+    "state": "Delhi",
+    "pincode": "110041",
+    "logo_url": "https://www.gangainternationalschool.com/wp-content/uploads/elementor/thumbs/HK-LOGO-01-qg2g786w4bco8t185oxvz5mum4tm2ienluk1ci5mm0.png",
+    "hero_image_url": "https://www.gangainternationalschool.com/wp-content/uploads/2023/12/GISASD_007.jpg",
+    "gallery_images": [
+      {
+        "title": "Football on the School Ground",
+        "category": "Sports",
+        "url": "https://www.gangainternationalschool.com/wp-content/uploads/2024/02/MWS2908-scaled.jpg"
+      },
+      {
+        "title": "Playground Athletics",
+        "category": "Sports",
+        "url": "https://www.gangainternationalschool.com/wp-content/uploads/2023/11/football-3.jpg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://www.gangainternationalschool.com/wp-content/uploads/2024/02/Classroom-2-1.jpg"
+      },
+      {
+        "title": "Cricket Practice",
+        "category": "Sports",
+        "url": "https://www.gangainternationalschool.com/wp-content/uploads/2024/02/cricket-2-1.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "A 20-acre day and boarding campus on Rohtak Road with wide green playgrounds and hostel care",
+    "about": "Ganga International School in Hiran Kudna, West Delhi is a day and boarding school on Rohtak Road. The school says it was established in 1989, is recognised by the Directorate of Education, Government of Delhi, and has been affiliated with CBSE since 1992. Its campus is spread over 20 acres with vast playgrounds, and the school offers pre-primary, day schooling and boarding, with hostel care and meals for boarders.",
+    "established_year": 1989,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Boarding Hostel",
+      "Playgrounds",
+      "Football Ground",
+      "Cricket",
+      "Smart Classrooms",
+      "School Transport",
+      "Dining Hall"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "laxman-public-school-hauz-khas-enclave-delhi",
+    "name": "Laxman Public School, Hauz Khas",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730038",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://laxmanpublicschool.com",
+    "address": "Hauz Khas Enclave",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110016",
+    "logo_url": "https://laxmanpublicschool.com/wp-content/uploads/2025/03/cropped-SCHOOL-LOGO-BLUE.png",
+    "hero_image_url": "https://show.laxmanpublicschool.com/wp-content/uploads/2025/05/Web_Img26.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://show.laxmanpublicschool.com/wp-content/uploads/2025/05/Web_Img59.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://show.laxmanpublicschool.com/wp-content/uploads/2025/05/Web_Img64-Copy.jpg"
+      },
+      {
+        "title": "Cricket Nets",
+        "category": "Sports",
+        "url": "https://show.laxmanpublicschool.com/wp-content/uploads/2025/05/Web_Img18.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://laxmanpublicschool.com/wp-content/uploads/2025/05/S3.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#b91c1c",
+    "motto": "Be Yourself",
+    "tagline": "A Hauz Khas Enclave school with open playing fields, cricket nets, science and IT labs guided by 'Be Yourself'",
+    "about": "Laxman Public School is an independent CBSE school in Hauz Khas Enclave, South Delhi; CBSE records list 1978 as its year of foundation. The school describes itself as the dream of its founders, management, parents and students, with a focus on academics from its early years, and its motto is 'Be Yourself'. Its infrastructure pages cover a library, IT infrastructure, science laboratories, games and sports facilities including playing fields and cricket nets, an infirmary and school transport.",
+    "established_year": 1978,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Computer Lab",
+      "Science Lab",
+      "Sports Ground",
+      "Cricket Nets",
+      "Infirmary",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

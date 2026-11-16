@@ -30,6 +30,26 @@
   "notes": "Batch 03: 10 schools (Amity PV/MV, Heritage Rohini/VK, Tagore EOK, KRM GK-II, Dwarka Intl, Apeejay Saket/Pitampura, The Indian School). Images load-tested; Indian School est. year 1994 not confirmed on SARAS; Apeejay Pitampura & KRM GK-II heroes are facility (library) photos."
  },
  {
+  "batch": "DL-04",
+  "state": "Delhi",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "delhi-schools-batch-04: 10 schools (BBPS Dwarka, GD Goenka Vasant Kunj, BBPS Rohini, Ryan Vasant Kunj, Bal Bhavan Intl Dwarka, Salwan Mayur Vihar, Maxfort Rohini, Modern School Vasant Vihar, Ganga Intl Hiran Kudna, Laxman Public School). All images load-tested. Fees/counts null (no figures taken). Maxfort gallery 3."
+ },
+ {
+  "batch": "DL-05",
+  "state": "Delhi",
+  "schools": 6,
+  "urls_verified": 6,
+  "gallery_complete": 6,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "delhi-schools-batch-05: 6 schools (partial batch): BBPS Ganga Ram Hospital Marg, Venkateshwar Global Rohini, Mother Mary's Mayur Vihar, St. Columba's, Shri Ram Global Delhi West, Rukmini Devi Pitampura. All images load-tested. Fees/counts null. Short galleries (3): BBPS GRH Marg."
+ },
+ {
   "batch": "HR-01",
   "state": "Haryana",
   "schools": 10,
@@ -50,6 +70,26 @@
   "notes": "Partial batch (2 schools: Apeejay Faridabad, VIBGYOR Gurugram) saved early as helper ran low on context; all 12 image URLs load-tested."
  },
  {
+  "batch": "HR-03",
+  "state": "Haryana",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 9,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Batch 03: 10 Haryana schools (Gurugram 5, Faridabad, Sonipat, Hisar, Karnal, Ambala); all 61 image URLs load-tested. teacher_count_badge for KRM Faridabad from https://krmwsfaridabad.com/cbse-mandatory-disclosure/ ; VDJS Hisar gallery short (2)."
+ },
+ {
+  "batch": "HR-04",
+  "state": "Haryana",
+  "schools": 2,
+  "urls_verified": 2,
+  "gallery_complete": 2,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Batch 04 (partial, 2 schools: DPS Sector 45 Gurugram, KRM Sonipat) saved early as helper ran low on context; all 11 image URLs load-tested. KRM Sonipat hero from Wikimedia Commons; gallery 3."
+ },
+ {
   "batch": "KA-01",
   "state": "Karnataka",
   "schools": 10,
@@ -62,12 +102,32 @@
  {
   "batch": "KA-02",
   "state": "Karnataka",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "karnataka batch 01: 10 schools (Bengaluru 7, Mangaluru 2, Mysuru 1). batch 02: 4 schools (partial batch; helper stopped on context) — VIBGYOR x3, Greenwood Sarjapur. Hubballi not yet covered.\nkarnataka batch 02 top-up (+6): EuroSchool Whitefield, DPS Bangalore North, DPS Bangalore South, NPS Koramangala, NPS HSR, The Yenepoya School (Mangaluru). No fee/count data used."
+ },
+ {
+  "batch": "KA-03",
+  "state": "Karnataka",
+  "schools": 6,
+  "urls_verified": 6,
+  "gallery_complete": 6,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "karnataka batch 03: VIBGYOR E City/Hennur/Jakkur + Presidency Mangalore, Bangalore East (Kasturi Nagar), RT Nagar (6, partial). No fee/count data used."
+ },
+ {
+  "batch": "KA-04",
+  "state": "Karnataka",
   "schools": 4,
   "urls_verified": 4,
   "gallery_complete": 4,
   "date": "2026-11-15",
   "status": "Delivered",
-  "notes": "karnataka batch 01: 10 schools (Bengaluru 7, Mangaluru 2, Mysuru 1). batch 02: 4 schools (partial batch; helper stopped on context) — VIBGYOR x3, Greenwood Sarjapur. Hubballi not yet covered."
+  "notes": "karnataka batch 04: VIBGYOR Kadugodi + Presidency Nandini Layout, Bangalore North (Yelahanka), St. Pauls English School JP Nagar (4, partial). No fee/count data used."
  },
  {
   "batch": "MH-01",
@@ -78,6 +138,46 @@
   "date": "2026-11-15",
   "status": "Delivered",
   "notes": "Batch 01: Mumbai 3, Navi Mumbai 1, Pune 3, Nagpur 3. Amity Navi Mumbai/VIBGYOR Balewadi/Centre Point Wardhaman Nagar & Amravati Road founding year unknown (null)."
+ },
+ {
+  "batch": "MH-02",
+  "state": "Maharashtra",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Batch 02: Mumbai 2, Navi Mumbai 1, Pune 2, Nagpur 1, Nashik 2, Aurangabad 2. Groups: VIBGYOR 3, Ryan 3. No fee/count fields filled. Established null for VIBGYOR x3, Vidya Valley (year not explicit). Vidya Valley pincode null."
+ },
+ {
+  "batch": "MH-03",
+  "state": "Maharashtra",
+  "schools": 9,
+  "urls_verified": 9,
+  "gallery_complete": 9,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Batch 03 (9 schools, partial): Mumbai 3, Navi Mumbai 2, Pune 4. Groups: VIBGYOR 3, Billabong 2, Ryan 1. No fee/count fields filled. Motto for Hiranandani Powai taken from its logo (Mens Sana in Corpore Sano)."
+ },
+ {
+  "batch": "TN-01",
+  "state": "Tamil Nadu",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Tamil Nadu batch 01 (10 schools). student_count_badge for Chettinad Vidyashram (\"9500+\") from the school about page: https://www.chettinadvidyashram.org/about-us/ . No fees taken. Yuvabharathi and SSVM School of Excellence heroes are interior/playground shots (no building photo published). Lakshmi School pincode not on site (null)."
+ },
+ {
+  "batch": "TG-01",
+  "state": "Telangana",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "Telangana batch 01 (10 schools). All 62 image URLs load-tested in Chrome on example.com (naturalWidth>0). Fees/counts null everywhere (no published fee docs used). student_teacher_ratio for HPS Begumpet \"32:1\" from the school's own About page (https://hpsbegumpet.org.in/about-school/). Established years from SARAS (CHIREC 130148 first opening 1989; DPS Warangal 130376 first opening 2006; Silver Oaks 130199 first opening 2001) or the schools' own history pages. Mottos: HPS Begumpet, St. Paul's and Little Flower from Wikipedia/school site. EuroSchool Hitec City gallery images are from its campus infrastructure page (some may be chain-wide photos)."
  },
  {
   "batch": "UP-01",
@@ -98,5 +198,25 @@
   "date": "2026-11-15",
   "status": "Delivered",
   "notes": "UP-02: 10 schools (Noida x5, Greater Noida W, Ghaziabad, Lucknow, Kanpur, Agra). Agra Jaipuria has empty gallery. Skipped DPS Greater Noida (site unreachable), GIIS Noida (only other-campus photos), Ramagya, Ryan Sec 39 (shared group banners), SAJS Lucknow (only student close-ups)."
+ },
+ {
+  "batch": "UP-03",
+  "state": "Uttar Pradesh",
+  "schools": 10,
+  "urls_verified": 10,
+  "gallery_complete": 10,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "UP-03: 10 schools (Noida x2, Varanasi x2, Prayagraj, Meerut, Kanpur, Agra x2, Ghaziabad). Short galleries (3): SPSEC Kanpur, DPSG Meerut Road. Skipped: DPS Indirapuram (still only 1 building photo), DPSG Vasundhara (1 usable photo), SAJS Lucknow (dup of earlier skip), Study Hall Lucknow and Ursuline Greater Noida (sites failed), DPS Greater Noida (404). No fees/counts filled."
+ },
+ {
+  "batch": "UP-04",
+  "state": "Uttar Pradesh",
+  "schools": 4,
+  "urls_verified": 4,
+  "gallery_complete": 4,
+  "date": "2026-11-15",
+  "status": "Delivered",
+  "notes": "UP-04 (partial, 4 schools): BBPS Noida Sec 21, VIBGYOR High Gomti Nagar Lucknow, Chintels Kalyanpur Kanpur, Bal Bharti Prayagraj. Skipped: St. Joseph's College Prayagraj (no facility photos), Narayana Meerut (stock images), DPS Kalyanpur Kanpur (no website found), Somerville Vasundhara Enclave (in Delhi, aff. 2730013), DPSG Vasundhara (1 usable photo). No fees/counts filled."
  }
 ]

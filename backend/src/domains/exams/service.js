@@ -60,7 +60,9 @@ export async function getAggregatedResults(tenantId) {
     item.subjects.push({
       subject: r.subject,
       marks,
+      marksObtained: marks,
       max_marks: maxMarks,
+      maxMarks: maxMarks,
       component_scores: r.component_scores || null
     });
   }

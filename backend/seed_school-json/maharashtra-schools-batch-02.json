@@ -1,0 +1,659 @@
+[
+  {
+    "slug": "nath-valley-school-satara-village-aurangabad",
+    "name": "Nath Valley School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "1130030",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://nathvalleyschool.com",
+    "address": "Satara Village, P.B. No. 567, Cantonment PO",
+    "city": "Aurangabad",
+    "state": "Maharashtra",
+    "pincode": "431002",
+    "logo_url": "https://nathvalleyschool.com/NVS_Website/images/NVS-Logo.png",
+    "hero_image_url": "https://nathvalleyschool.com/NVS_Website/images/School-Top-View.png",
+    "gallery_images": [
+      {
+        "title": "Corridor with Ramp",
+        "category": "Infrastructure",
+        "url": "https://nathvalleyschool.com/NVS_Website/images/corridor-with-ramp-Large-p-500.jpeg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://nathvalleyschool.com/NVS_Website/images/Computer-lab2-Large-p-500.jpeg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://nathvalleyschool.com/NVS_Website/images/Music-Room-Large-p-500.jpeg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://nathvalleyschool.com/NVS_Website/images/Basketball.png"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "CBSE senior secondary school on a scenic 20-acre Aurangabad campus blending traditional values with modern learning",
+    "about": "Nath Valley School sits on a 20-acre campus about five kilometres from Aurangabad railway station, set against the city's historic hills, a lake and a mountain to the south. The school describes its architecture as designed to create a home-like atmosphere. It follows a holistic approach with extended school hours, is a linguistic minority institution, and is affiliated to CBSE for Secondary and Senior Secondary examinations, offering Classes I to XII. It is run by Aurangabad Vidya Mandir.",
+    "established_year": 1992,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "I to XII",
+    "facilities": [
+      "20-Acre Campus",
+      "Computer Lab",
+      "Science Laboratories",
+      "Music Room",
+      "Basketball Court",
+      "Playground",
+      "Ramped Corridors",
+      "Boarding Hostel"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "fravashi-academy-trimbak-road-nashik",
+    "name": "Fravashi Academy",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91-253-2570900",
+    "website": "https://fravashiacademy.com",
+    "address": "Opp. Maharashtra Police Academy, Trimbak Road",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "pincode": "422002",
+    "logo_url": "https://fravashiacademy.com/wp-content/uploads/2025/05/fravashi-academy-logo.jpg",
+    "hero_image_url": "https://fravashiacademy.com/wp-content/uploads/2025/05/Campus-new.jpg",
+    "gallery_images": [
+      {
+        "title": "Campus Building",
+        "category": "Campus",
+        "url": "https://fravashiacademy.com/wp-content/uploads/2025/06/campus-in-2.jpg"
+      },
+      {
+        "title": "School Hall",
+        "category": "Infrastructure",
+        "url": "https://fravashiacademy.com/wp-content/uploads/2025/05/icse-hall.jpg"
+      },
+      {
+        "title": "Skating Rink",
+        "category": "Sports",
+        "url": "https://fravashiacademy.com/wp-content/uploads/2025/05/skating-rrink.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://fravashiacademy.com/wp-content/uploads/2025/05/comp-lab.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "Nashik ICSE school on Trimbak Road offering pre-primary to secondary education across a four-block campus since 1982",
+    "about": "Fravashi Academy, an ICSE school on Trimbak Road in Nashik, came into existence in 1982 and has grown from 80 students at its inception. Its campus comprises four main blocks: an administrative building, an institutional building housing the pre-primary, primary and secondary sections, a multipurpose hall and an activity space. Facilities described by the school include a computer lab, a playground and a structured skating rink for students pursuing skating.",
+    "established_year": 1982,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre-Primary to Secondary",
+    "facilities": [
+      "Computer Lab",
+      "Multipurpose Hall",
+      "Activity Space",
+      "Playground",
+      "Skating Rink",
+      "Administrative Block"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-paris-city-umred-road-nagpur",
+    "name": "VIBGYOR High, Paris City",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "+91-6003000700",
+    "website": "https://www.vibgyorhigh.com/school/nagpur/cbse/paris-city",
+    "address": "Paris City, Mauza Harpur, Middle Ring Road, Near Gurudeo Nagar, Near Umred Road",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "pincode": "440024",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202605251127-1920X812%20banner_01.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1779708644-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1779708657-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Outdoor Sports Court",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1779708633-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1779708675-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1779708595-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "VIBGYOR Group CBSE school on Nagpur's Middle Ring Road with labs, library, pool and clubs for every learner",
+    "about": "VIBGYOR High, Paris City is a CBSE school of the VIBGYOR Group near Umred Road in Nagpur. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus has computer and science labs and an extensive library, and students join clubs and programmes such as Nature's Club, Greaders Club, VIBGYOR Model United Nations, Student Exchange and VIBGYOR Viva. The group's philosophy stresses self-discipline, time management, cooperation and self-learning, with ongoing assessments.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Science Laboratories",
+      "Library",
+      "Swimming Pool",
+      "Sports Court",
+      "Music Room",
+      "Football Turf",
+      "Activity Clubs"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-sector-15-kharghar-navi-mumbai",
+    "name": "VIBGYOR High, Kharghar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "vh-kharghar.support@vgos.org",
+    "official_phone": "022-6822 2700",
+    "website": "https://www.vibgyorhigh.com/school/navi-mumbai/cbse/kharghar",
+    "address": "Plot No. 35, Sector 15, Kharghar",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "pincode": "410210",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343719-GALLERY_IMG.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343753-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343805-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343815-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685343888-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "VIBGYOR Group CBSE school in Kharghar, Navi Mumbai, with a pool, labs, library and clubs beyond the classroom",
+    "about": "VIBGYOR High, Kharghar is a CBSE school of the VIBGYOR Group in Sector 15, Kharghar, Navi Mumbai. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus offers computer and science labs and a library, and students take part in clubs and programmes such as VIBGYOR Model United Nations, Student Exchange and VIBGYOR Viva. The group's philosophy encourages self-discipline, time management, cooperation and self-learning, supported by ongoing assessments.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Computer Lab",
+      "Science Laboratories",
+      "Library",
+      "Classrooms",
+      "Activity Clubs"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "ryan-international-thakur-complex-kandivali-east-mumbai",
+    "name": "Ryan International School, Kandivali East",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.ryangroup.org/ryaninternational/cbse/mumbai/ryan-international-school-kandivali-east",
+    "address": "90 Feet Road, Opposite Kanakia Sanskruti, Asha Nagar, Thakur Complex, Kandivali East",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400101",
+    "logo_url": "https://www.ryangroup.org/public/images/front_end/SiteSetting/kandivali-logo_1615360855.png",
+    "hero_image_url": "https://www.ryangroup.org/public/images/front_end/ryan-images/kandivali-east_1708924108.jpg",
+    "gallery_images": [
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/chemistry-lab-3_1647353637.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/computer-lab-1_1647353637.jpg"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Physics-Lab-1_1647353637.jpg"
+      },
+      {
+        "title": "School Library",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/School-Library-2_1647353637.jpg"
+      },
+      {
+        "title": "Athletics Track",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/IMG_2007_1647353637.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "Ryan Group CBSE school in Kandivali East offering Montessori to Class XII on an 8,800 sq m campus",
+    "about": "Ryan International School, Kandivali East was established in 2006 and follows the CBSE curriculum, hosting students from Montessori to Class XII. The school has a campus of over 8,800 square metres in the Thakur Complex area of Mumbai. Its facilities include biology, chemistry and physics labs, a computer lab and a school library, and the school aims to encourage positive attitudes towards lifelong learning both in and outside school.",
+    "established_year": 2006,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Montessori to XII",
+    "facilities": [
+      "Biology Lab",
+      "Chemistry Lab",
+      "Physics Lab",
+      "Computer Lab",
+      "Library",
+      "Sports Ground",
+      "Athletics Track"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "ryan-international-tagore-nagar-nashik",
+    "name": "Ryan International School, Tagore Nagar",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "0253-2416131",
+    "website": "https://www.ryangroup.org/ryaninternational/icse/nashik/ryan-international-school-tagore-nagar",
+    "address": "D.G.P. Nagar 1, Tagore Nagar",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "pincode": "422006",
+    "logo_url": "https://www.ryangroup.org/public/images/front_end/SiteSetting/14_1628847762.png",
+    "hero_image_url": "https://www.ryangroup.org/public/images/front_end/ryan-images/School_Building_4_607x557_1624622066.jpg",
+    "gallery_images": [
+      {
+        "title": "Hockey",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Hockey_1631620040.jpg"
+      },
+      {
+        "title": "Table Tennis",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Table-Tennis_1631620040.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Computer-Lab-2_1631620040.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "Ryan Group ICSE school in Tagore Nagar, Nashik, focused on interactive classrooms and holistic development since 2006",
+    "about": "Ryan International School, Tagore Nagar is an ICSE school of the Ryan Group in Nashik, operating since its commencement in 2006. The school says it instils hard work, dedication to achievement, personal responsibility and a sense of community. Students explore their passions in interactive classrooms and learn to become problem solvers, with the school focusing on holistic development through academics and mentoring. Facilities shown by the school include a computer lab, hockey and table tennis.",
+    "established_year": 2006,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Hockey",
+      "Table Tennis",
+      "Interactive Classrooms",
+      "Mentoring Programme",
+      "Sports Ground"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-nibm-road-mohammedwadi-pune",
+    "name": "VIBGYOR High, NIBM",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "vh-nibm.support@vgos.org",
+    "official_phone": "020-2673 1082",
+    "website": "https://www.vibgyorhigh.com/school/pune/cbse/nibm",
+    "address": "Dorabjee Paradise, Off Corinthian Club Road, Extn NIBM Road, Mohammedwadi, Hadapsar",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": "411060",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304071541-NIBM.jpg",
+    "gallery_images": [
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344781-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344824-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Infirmary",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344837-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Playground",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344957-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685344942-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "VIBGYOR Group CBSE school off NIBM Road, Pune, with science and computer labs, music and open playgrounds",
+    "about": "VIBGYOR High, NIBM is a CBSE school of the VIBGYOR Group at Dorabjee Paradise off NIBM Road in Mohammedwadi, Pune. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus offers science and computer labs, a music room, an infirmary and a playground, and students join clubs and programmes such as VIBGYOR Model United Nations, Student Exchange and VIBGYOR Viva. The group's philosophy encourages self-discipline, time management and self-learning.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Science Laboratories",
+      "Computer Lab",
+      "Music Room",
+      "Infirmary",
+      "Playground",
+      "Library",
+      "Activity Clubs"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "ryan-international-cbse-evershine-nagar-malad-west-mumbai",
+    "name": "Ryan International School (CBSE), Malad West",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "022-28824216",
+    "website": "https://www.ryangroup.org/ryaninternational/cbse/mumbai/ryan-international-school-malad-west",
+    "address": "Next to Vastu Park, Evershine Nagar Road, Malad West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400064",
+    "logo_url": "https://www.ryangroup.org/public/images/front_end/SiteSetting/RIS-CBSE-malad-west-mumbai-logo_1627906339.png",
+    "hero_image_url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Building_1618580630.jpg",
+    "gallery_images": [
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Physics_1618580630.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Chemistry3_1618580630.jpg"
+      },
+      {
+        "title": "Montessori Play Room",
+        "category": "Infrastructure",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/Mont-Play-Room_1618580630.jpg"
+      },
+      {
+        "title": "Multi-Sport Court",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/ma1_1771478140.jpg"
+      },
+      {
+        "title": "Floodlit Football Turf",
+        "category": "Sports",
+        "url": "https://www.ryangroup.org/public/images/front_end/ryan-images/ma2_1771478140.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "Ryan Group CBSE school in Evershine Nagar, Malad West, with science labs, Montessori play room and sports turf",
+    "about": "Ryan International School, Malad West was incorporated in 2010 as a Ryan Group school in Mumbai and follows the CBSE curriculum. The school describes well-equipped classrooms and two kinds of learning, in the classroom and outside it, and promotes the Ryan Group's core values with personal attention to each student's interpersonal growth. Facilities shown by the school include physics and chemistry labs, a Montessori play room, a multi-sport court and a floodlit football turf.",
+    "established_year": 2010,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Physics Lab",
+      "Chemistry Lab",
+      "Montessori Play Room",
+      "Multi-Sport Court",
+      "Football Turf",
+      "Classrooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "stepping-stones-high-school-harsul-jalgaon-road-aurangabad",
+    "name": "Stepping Stones High School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "1130106",
+    "school_code": "30086",
+    "official_email": "info@steppingstoneshighschool.org",
+    "official_phone": "7410032251",
+    "website": "https://www.steppingstoneshighschool.org",
+    "address": "Gut No. 48/8, Harsul Jalgaon Road, Sawangi",
+    "city": "Aurangabad",
+    "state": "Maharashtra",
+    "pincode": "431008",
+    "logo_url": "https://www.steppingstoneshighschool.org/assets/frontend/assets/images/sshs.png",
+    "hero_image_url": "https://www.steppingstoneshighschool.org/upload/homepages/1651494209Xcv2SikmP2.jpg",
+    "gallery_images": [
+      {
+        "title": "AIML Lab",
+        "category": "Academics",
+        "url": "https://www.steppingstoneshighschool.org/upload/facility_image/1651489533QYSlYyWoYV.JPG"
+      },
+      {
+        "title": "Art Room",
+        "category": "Arts",
+        "url": "https://www.steppingstoneshighschool.org/upload/facility_image/1651489573uae7sVMtI9.JPG"
+      },
+      {
+        "title": "Technology-Enabled Classroom",
+        "category": "Academics",
+        "url": "https://www.steppingstoneshighschool.org/upload/facility_image/16514897048WmIYxEyxq.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.steppingstoneshighschool.org/upload/facility_image/16514897308uCiNUYFrY.jpg"
+      },
+      {
+        "title": "School Bus Fleet",
+        "category": "Transport",
+        "url": "https://www.steppingstoneshighschool.org/upload/facility_image/1651489756YZeExftLTU.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#d4a017",
+    "motto": null,
+    "tagline": "Aurangabad school on Harsul Jalgaon Road offering CBSE and IGCSE pathways with AIML, robotics and art facilities",
+    "about": "Stepping Stones High School on Harsul Jalgaon Road in Chhatrapati Sambhajinagar (Aurangabad) has run the CBSE curriculum for more than two decades and also offers the Cambridge IGCSE curriculum. The school says it focuses on holistic development alongside academics, on a campus set in calm surroundings. Its academic facilities include an AIML lab with a robotics curriculum from Class I, laboratories, technology-enabled classrooms, an art room, cinematography, counselling, a canteen and bus services.",
+    "established_year": 2003,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "AIML and Robotics Lab",
+      "Science Laboratories",
+      "Technology-Enabled Classrooms",
+      "Art Room",
+      "Cinematography Studio",
+      "Counselling",
+      "Canteen",
+      "Bus Services"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vidya-valley-school-sus-pune",
+    "name": "Vidya Valley School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "020-35061880",
+    "website": "https://vidyavalley.com",
+    "address": "Sus",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "pincode": null,
+    "logo_url": "https://vidyavalley.com/wp-content/uploads/2020/01/vidya-valley-logo-264x99.png",
+    "hero_image_url": "https://vidyavalley.com/wp-content/uploads/2020/12/academic_blocks-1024x768.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Academics",
+        "url": "https://vidyavalley.com/wp-content/uploads/2020/11/infra-library2-768x1024.jpg"
+      },
+      {
+        "title": "Air-Conditioned Auditorium",
+        "category": "Arts",
+        "url": "https://vidyavalley.com/wp-content/uploads/2020/12/Auditorium-min.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://vidyavalley.com/wp-content/uploads/2020/11/infra-basketball-court-1024x768.jpg"
+      },
+      {
+        "title": "Sports Field",
+        "category": "Sports",
+        "url": "https://vidyavalley.com/wp-content/uploads/2020/12/Infra-sports-facilities.jpg"
+      },
+      {
+        "title": "Sport Climbing Wall",
+        "category": "Sports",
+        "url": "https://vidyavalley.com/wp-content/uploads/2020/05/sportclimbing-min.jpg"
+      }
+    ],
+    "theme_color": "#166534",
+    "accent_color": "#ea580c",
+    "motto": null,
+    "tagline": "CISCE-affiliated Pune school on a 12-acre wooded valley campus in Sus with turf, climbing walls and studios",
+    "about": "Vidya Valley School was started by Nalini Sengupta in a small bungalow in Aundh, Pune, and later moved to apartments in the Sus area before shifting to a 12-acre valley campus surrounded by wooded hills. The school is affiliated to the CISCE. Its infrastructure includes pre-primary, main and academic blocks with smart boards, physics, chemistry, biology and mathematics laboratories, two computer labs, performing and visual arts studios, senior and junior libraries, a 150-seat auditorium, an 800-seat amphitheatre, an artificial turf field and sports climbing walls.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Science Laboratories",
+      "Two Computer Labs",
+      "Performing Arts Studios",
+      "Visual Arts Studio",
+      "Senior and Junior Libraries",
+      "Auditorium",
+      "Amphitheatre",
+      "Artificial Turf Field",
+      "Climbing Walls",
+      "Medical Centre"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "slug": "vibgyor-high-kadugodi-bengaluru",
+    "name": "VIBGYOR High, Kadugodi",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.vibgyorhigh.com",
+    "address": "Survey No. 9/2, Konadasapura Village, Bidarahalli Hobli, Kadugodi Main Road, Bengaluru East Taluk",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560067",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060835-Kadugodi.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341695-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Sports Ground",
+        "category": "Sports",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341705-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341717-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685341664-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#1e1b4b",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE branch of the VIBGYOR Group in Kadugodi, Bengaluru combining academics, sports and performing arts",
+    "about": "VIBGYOR High, Kadugodi is a CBSE-affiliated branch of the VIBGYOR Group of Schools in Bengaluru. The school describes a curriculum that draws on Gardner's multiple intelligences theory, Bloom's taxonomy and Kolb's experiential learning, with the aim of nurturing each child's skills through academics, sports and performing arts. Its campus gallery shows a library, an open sports ground, science laboratories and a computer lab, and the school provides transport for students from the surrounding neighbourhoods.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Library",
+      "Science Laboratories",
+      "Computer Lab",
+      "Smart Classrooms",
+      "Performing Arts Rooms",
+      "Sports Facilities",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "presidency-school-nandini-layout-bengaluru",
+    "name": "Presidency School Nandini Layout",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission-nlo@presidency.edu.in",
+    "official_phone": "+91 95133 88505",
+    "website": "https://presidencyschools.org/",
+    "address": "Nandini Layout",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560096",
+    "logo_url": "https://presidencyschools.org/wp-content/uploads/2022/10/Presidency-Logo-V2.png",
+    "hero_image_url": "https://presidencyschools.org/wp-content/uploads/2025/03/NLO.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/library-nandini.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/psnlo-lab.webp"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/psnlo-classroom1.webp"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/transport-nandini.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Presidency Group ICSE school in Nandini Layout, Bengaluru offering holistic education with labs, library and transport",
+    "about": "Presidency School Nandini Layout is part of the Presidency Group of Schools and describes itself as the group's first school, established in 1976. It is affiliated to ICSE and follows the group's aim of providing holistic education to help students excel in life. The school's page outlines its kindergarten, primary, middle and high school sections and lists facilities including classrooms, science laboratories, a library, a medical room and school transport, supported by CCTV surveillance and sanitation measures across the campus.",
+    "established_year": 1976,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Pre KG to High School",
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Medical Room",
+      "GPS-enabled Transport",
+      "CCTV Surveillance",
+      "Sports"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "presidency-school-bangalore-north-yelahanka-bengaluru",
+    "name": "Presidency School Bangalore North",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission-psbn@presidency.edu.in",
+    "official_phone": "+91 87929 53189",
+    "website": "https://presidencyschools.org/",
+    "address": "Off Doddaballapur Road, behind BMSIT Engineering College, Avalahalli, Yelahanka",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560064",
+    "logo_url": "https://presidencyschools.org/wp-content/uploads/2022/10/Presidency-Logo-V2.png",
+    "hero_image_url": "https://presidencyschools.org/wp-content/uploads/2023/05/About-school-image-1.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/PSBN-Library.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/PSBN-Lab.webp"
+      },
+      {
+        "title": "Music Room",
+        "category": "Arts",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/PSBN-Music.webp"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/PSBN-Classroom.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Presidency Group CBSE school in Yelahanka, Bengaluru offering holistic education with labs, library and transport",
+    "about": "Presidency School Bangalore North is part of the Presidency Group of Schools and is the group's Yelahanka campus, established in 2012. It is affiliated to CBSE and follows the group's aim of providing holistic education to help students excel in life. The school's page outlines its kindergarten, primary, middle and high school sections and lists facilities including classrooms, science laboratories, a library, a medical room and school transport, supported by CCTV surveillance and sanitation measures across the campus.",
+    "established_year": 2012,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Medical Room",
+      "GPS-enabled Transport",
+      "CCTV Surveillance",
+      "Sports"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-pauls-english-school-jp-nagar-bengaluru",
+    "name": "St. Paul's English School, J.P. Nagar",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admission-spes@presidency.edu.in",
+    "official_phone": "+91 87929 53188",
+    "website": "https://presidencyschools.org/",
+    "address": "No. 121, 3rd Cross Road, 3rd Phase, J. P. Nagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560078",
+    "logo_url": "https://presidencyschools.org/wp-content/uploads/2022/10/Presidency-Logo-V2.png",
+    "hero_image_url": "https://presidencyschools.org/wp-content/uploads/2025/03/SPES-Bulinding.webp",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/SPES-library.webp"
+      },
+      {
+        "title": "Laboratory",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/SPES-lab.webp"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://presidencyschools.org/wp-content/uploads/2025/02/SPES-classroom.webp"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://presidencyschools.org/wp-content/uploads/2022/11/transport-jpnagar.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#1d4ed8",
+    "motto": null,
+    "tagline": "A Presidency Group ICSE school in J.P. Nagar, Bengaluru offering holistic education with labs, library and transport",
+    "about": "St. Paul's English School, J.P. Nagar is part of the Presidency Group of Schools and describes itself as the group's third school, established in 1983. It is affiliated to ICSE and follows the group's aim of providing holistic education to help students excel in life. The school's page outlines its kindergarten, primary, middle and high school sections and lists facilities including classrooms, science laboratories, a library, a medical room and school transport, supported by CCTV surveillance and sanitation measures across the campus.",
+    "established_year": 1983,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Library",
+      "Computer Lab",
+      "Medical Room",
+      "GPS-enabled Transport",
+      "CCTV Surveillance",
+      "Sports"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

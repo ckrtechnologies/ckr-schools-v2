@@ -8,6 +8,7 @@ import {
 import SchoolImage from './SchoolImage.jsx';
 
 export default function SchoolSolarSystemHero({ schools = [], onSelectSchool }) {
+  const totalCampuses = schools.length || 91;
   // Take 6 to 8 featured campuses to orbit in 2 concentric elliptical planetary tracks
   const campuses = schools.slice(0, 6);
 
@@ -181,7 +182,7 @@ export default function SchoolSolarSystemHero({ schools = [], onSelectSchool }) 
           boxSizing: 'border-box',
           textAlign: 'center'
         }}
-        title="SchoolKarma — 90+ Partner Campuses. Click to explore catalog."
+        title={`SchoolKarma — ${totalCampuses}+ Partner Campuses. Click to explore catalog.`}
       >
         <span style={{ fontSize: '18px', lineHeight: '1', marginBottom: '2px' }}>🏫</span>
         <span style={{ 
@@ -201,7 +202,7 @@ export default function SchoolSolarSystemHero({ schools = [], onSelectSchool }) 
           textTransform: 'uppercase',
           marginTop: '2px'
         }}>
-          90+ Campuses
+          {totalCampuses}+ Campuses
         </span>
       </div>
 

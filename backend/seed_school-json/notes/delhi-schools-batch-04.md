@@ -1,0 +1,1 @@
+delhi-schools-batch-04: 10 schools (BBPS Dwarka, GD Goenka Vasant Kunj, BBPS Rohini, Ryan Vasant Kunj, Bal Bhavan Intl Dwarka, Salwan Mayur Vihar, Maxfort Rohini, Modern School Vasant Vihar, Ganga Intl Hiran Kudna, Laxman Public School). All images load-tested. Fees/counts null (no figures taken). Maxfort gallery 3.

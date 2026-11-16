@@ -1,0 +1,1 @@
+delhi-schools-batch-05: 6 schools (partial batch): BBPS Ganga Ram Hospital Marg, Venkateshwar Global Rohini, Mother Mary's Mayur Vihar, St. Columba's, Shri Ram Global Delhi West, Rukmini Devi Pitampura. All images load-tested. Fees/counts null. Short galleries (3): BBPS GRH Marg.

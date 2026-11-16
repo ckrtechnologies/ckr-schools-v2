@@ -1,0 +1,276 @@
+[
+  {
+    "slug": "bal-bharati-public-school-noida-sector-21",
+    "name": "Bal Bharati Public School, Sector 21, Noida",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "bbpsnd@balbharati.org",
+    "official_phone": "0120-2440162",
+    "website": "https://bbpsnoida.balbharati.org",
+    "address": "Sector 21, Gautam Budh Nagar",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "pincode": "201301",
+    "logo_url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-07/noida.png",
+    "hero_image_url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-08/ground.jpeg",
+    "gallery_images": [
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-08/basket.png"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-08/swim.jpeg"
+      },
+      {
+        "title": "Lawn Tennis Court",
+        "category": "Sports",
+        "url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-08/tennis.jpeg"
+      },
+      {
+        "title": "Table Tennis Hall",
+        "category": "Sports",
+        "url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-08/tt.jpeg"
+      },
+      {
+        "title": "Cricket Nets",
+        "category": "Sports",
+        "url": "https://apibbpsnoida.balbharati.org//sites/default/files/2026-08/cricket.jpeg"
+      }
+    ],
+    "theme_color": "#0f766e",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "A Child Education Society school in Noida Sector 21 with modern classrooms and extensive sports facilities since 1992",
+    "about": "Bal Bharati Public School, Noida was established in 1992 as one of the flagship institutions of the Child Education Society (Regd.), New Delhi. The school aims to provide quality education rooted in academic excellence, co-scholastic enrichment and strong moral values. Its campus has organised academic blocks with naturally lit, well-ventilated classrooms, a library and a control room, along with a swimming pool, basketball, badminton, lawn tennis and pickleball courts, a table tennis hall, a football ground and cricket nets.",
+    "established_year": 1992,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Swimming Pool",
+      "Basketball Court",
+      "Badminton Court",
+      "Lawn Tennis Court",
+      "Table Tennis Hall",
+      "Pickleball Court",
+      "Football Ground",
+      "Cricket Nets",
+      "CCTV Control Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "vibgyor-high-gomti-nagar-lucknow",
+    "name": "VIBGYOR High, Gomti Nagar, Lucknow",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2132023",
+    "school_code": null,
+    "official_email": "vh-lucknow.support@vgos.org",
+    "official_phone": null,
+    "website": "https://www.vibgyorhigh.com/school/lucknow/cbse/gomti-nagar",
+    "address": "Viram Khand-2, Near Patrakarpuram Chauraha, Gomti Nagar",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "pincode": "226010",
+    "logo_url": "https://www.vibgyorhigh.com/public/assets/frontend/images/vibgyor-high-logo.svg",
+    "hero_image_url": "https://www.vibgyorhigh.com/public/uploads/schools-slider/BANNER_202304060924-Lucknow.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685354183-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Biology Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685354213-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685354411-GALLERY_IMG.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.vibgyorhigh.com/public/uploads/galleries/1685354435-GALLERY_IMG.jpg"
+      }
+    ],
+    "theme_color": "#4c1d95",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A VIBGYOR Group CBSE school in Gomti Nagar, Lucknow, with modern labs, sports and a wide range of clubs",
+    "about": "VIBGYOR High in Gomti Nagar, Lucknow is a CBSE-affiliated school of the VIBGYOR Group of Schools, founded in 2011 according to SARAS. Its curriculum draws on Gardner's multiple intelligences, Bloom's taxonomy and Kolb's experiential learning. The campus has computer and science labs, a library, cafeterias, a gymnasium, a kids' play area, a football pitch, a skating rink, a music room and a sick bay with trained medical staff. Students take part in clubs such as Nature's Club, Greaders Club and VIBGYORMUN, and a student exchange programme.",
+    "established_year": 2011,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Science Laboratories",
+      "Library",
+      "Cafeteria",
+      "Gymnasium",
+      "Play Area",
+      "Football Pitch",
+      "Skating Rink",
+      "Music Room",
+      "Sick Bay"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-chintels-school-kalyanpur-kanpur",
+    "name": "The Chintels School, Kalyanpur, Kanpur",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2133080",
+    "school_code": null,
+    "official_email": "chintelskalyanpur@gmail.com",
+    "official_phone": "+91-9839340044",
+    "website": "https://www.chintelskalyanpur.com",
+    "address": "Singhpur Kalyanpur Road, Adjacent to Rudra Greens",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "pincode": "208017",
+    "logo_url": "https://www.chintelskalyanpur.com/images/logo-kalyanpur.webp",
+    "hero_image_url": "https://www.chintelskalyanpur.com/upload/Header/HDR45.webp",
+    "gallery_images": [
+      {
+        "title": "Pre-Primary Classroom",
+        "category": "Academics",
+        "url": "https://www.chintelskalyanpur.com/images/infra-kn-5.webp"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://www.chintelskalyanpur.com/images/infra-kn-6.webp"
+      },
+      {
+        "title": "Outdoor Play Area",
+        "category": "Campus",
+        "url": "https://www.chintelskalyanpur.com/images/infra-kn-3.webp"
+      },
+      {
+        "title": "Entrance Foyer",
+        "category": "Infrastructure",
+        "url": "https://www.chintelskalyanpur.com/images/infra-kn-1.webp"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.chintelskalyanpur.com/images/infra-kn-4.webp"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "A green, air-conditioned CBSE campus in Kalyanpur, Kanpur, designed as a temple for learning since 2016",
+    "about": "The Chintels School, Kalyanpur in Kanpur is a CBSE-affiliated school founded in 2016. It describes its campus as a temple for learning, with fully air-conditioned, well-ventilated classrooms and balconies used for circle time, group interactions and project work. Sports facilities include a football field, basketball and volleyball courts, table tennis and floor space for gymnastics, with a swimming pool in the making. A butterfly garden, vegetable garden and varied trees and plants create green spaces across the campus.",
+    "established_year": 2016,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Air-Conditioned Classrooms",
+      "Computer Lab",
+      "Football Field",
+      "Basketball Court",
+      "Volleyball Court",
+      "Table Tennis",
+      "Gymnastics Area",
+      "Butterfly Garden",
+      "Vegetable Garden"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "bal-bharti-school-kamla-nehru-road-prayagraj",
+    "name": "Bal Bharti School, Kamla Nehru Road, Prayagraj",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2130366",
+    "school_code": "70009",
+    "official_email": "bal70009bharti@gmail.com",
+    "official_phone": "+91-8004169419",
+    "website": "https://balbhartischool.edu.in",
+    "address": "13, Kamla Nehru Road",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "pincode": null,
+    "logo_url": "https://balbhartischool.edu.in/uploads/school_content/logo/1690288745-90911871164bfc269d2ce2!1689748712-80085122564b784e82fc08!logo-img.png",
+    "hero_image_url": "https://balbhartischool.edu.in/uploads/gallery/media/1690348130-5982979464c0aa622569a!generalinformation.jpg",
+    "gallery_images": [
+      {
+        "title": "School Building Wing",
+        "category": "Campus",
+        "url": "https://balbhartischool.edu.in/uploads/gallery/media/1690346573-75797466964c0a44dae6a7!infrastructure_3.jpg"
+      },
+      {
+        "title": "Campus Garden and Courtyard",
+        "category": "Campus",
+        "url": "https://balbhartischool.edu.in/uploads/gallery/media/1690346579-167504942864c0a45362912!infrastructure_4.jpg"
+      },
+      {
+        "title": "Multipurpose Hall",
+        "category": "Infrastructure",
+        "url": "https://balbhartischool.edu.in/uploads/gallery/media/1690346598-90544430664c0a466c9827!infrastructure_8.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://balbhartischool.edu.in/uploads/gallery/media/1690346609-24732780864c0a471c9d21!infrastructure_10.jpg"
+      },
+      {
+        "title": "Laboratory Work Benches",
+        "category": "Academics",
+        "url": "https://balbhartischool.edu.in/uploads/gallery/media/1690346623-73465688764c0a47f5c37c!infrastructure_11.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "A co-educational, English-medium CBSE school on Kamla Nehru Road, Prayagraj, growing from a nursery school since 1968",
+    "about": "Bal Bharti School on Kamla Nehru Road, Prayagraj is a co-educational, English-medium school affiliated to CBSE. It was founded in 1968 by Mrs. R. W. Bakht, the wife of a retired ICS officer, and began as a small nursery school before being registered as a society. The school expects all children to take part in co-curricular activities, and its site describes sports, Spic Macay events, excursions and tours, annual day and sports day, and an environment programme alongside its academic programme.",
+    "established_year": 1968,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Science Laboratories",
+      "Computer Lab",
+      "Multipurpose Hall",
+      "Audio-Visual Room",
+      "Sports Facilities",
+      "Campus Garden"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

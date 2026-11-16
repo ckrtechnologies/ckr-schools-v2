@@ -1,0 +1,1 @@
+Batch 03: 10 Haryana schools (Gurugram 5, Faridabad, Sonipat, Hisar, Karnal, Ambala); all 61 image URLs load-tested. teacher_count_badge for KRM Faridabad from https://krmwsfaridabad.com/cbse-mandatory-disclosure/ ; VDJS Hisar gallery short (2).

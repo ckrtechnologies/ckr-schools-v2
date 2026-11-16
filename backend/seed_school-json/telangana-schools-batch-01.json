@@ -1,0 +1,653 @@
+[
+  {
+    "slug": "hps-begumpet-hyderabad",
+    "name": "The Hyderabad Public School, Begumpet",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.hpsbegumpet.org.in",
+    "address": "Begumpet",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500016",
+    "logo_url": "https://www.hpsbegumpet.org.in/wp-content/uploads/2023/08/logo2.png",
+    "hero_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Hyderabad_Public_School%2C_Begumpet.jpg/1280px-Hyderabad_Public_School%2C_Begumpet.jpg",
+    "gallery_images": [
+      {
+        "title": "Main Building with Domes",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Hyd_Public_School.jpg"
+      },
+      {
+        "title": "Cricket Match in front of the Main Building",
+        "category": "Sports",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/A_cricket_match_being_played_with_the_main_building_of_the_Hyderabad_Public_School_in_the_background.png"
+      },
+      {
+        "title": "Main Building Facade",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Hyderabad_Public_School_1.jpg"
+      },
+      {
+        "title": "School Entrance Gate",
+        "category": "Campus",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Hyderabad_Public_school2.jpg/1280px-Hyderabad_Public_school2.jpg"
+      }
+    ],
+    "theme_color": "#1e3a5f",
+    "accent_color": "#c9a227",
+    "motto": "Be Vigilant",
+    "tagline": "A century-old day and residential school in Begumpet blending heritage, values, academics and sport on a sprawling campus",
+    "about": "The Hyderabad Public School, Begumpet is a co-educational day and residential school. It traces its origin to the Jagirdar's College, which opened in 1923 with five students and six teachers under founder-principal H.W. Shawcross, on land largely given from the Begumpet estate. Rooted in its heritage and values, the school aims to provide holistic education, help students reach their potential, and build moral values, academic, creative and social skills, tolerance and a passion for continuous learning.",
+    "established_year": 1923,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Boarding",
+      "Sports Grounds",
+      "Cricket Ground",
+      "Multiple Sports Courts",
+      "Library",
+      "Science Laboratories",
+      "Computer Labs",
+      "Auditorium"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": "32:1",
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "chirec-international-kondapur-hyderabad",
+    "name": "CHIREC International School, Kondapur",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "130148",
+    "school_code": null,
+    "official_email": "office.kp@chirec.ac.in",
+    "official_phone": null,
+    "website": "https://www.chirec.ac.in",
+    "address": "1-55/12, Kondapur, Kothaguda",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500084",
+    "logo_url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2023/11/CHIREC-est1989-logo-201922.png",
+    "hero_image_url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2024/01/DJI_0176.jpg",
+    "gallery_images": [
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2024/01/D4A9738.jpg"
+      },
+      {
+        "title": "Athletics Running Track",
+        "category": "Sports",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2024/01/D4A9789.jpg"
+      },
+      {
+        "title": "Table Tennis Room",
+        "category": "Sports",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2024/01/D4A9501.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2024/01/D8A2174.jpg"
+      },
+      {
+        "title": "Rooftop Solar Panels",
+        "category": "Infrastructure",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2024/01/Solar.jpg"
+      }
+    ],
+    "theme_color": "#7a1f2b",
+    "accent_color": "#f2a900",
+    "motto": null,
+    "tagline": "A 5-acre Kondapur campus near the Botanical Gardens with modern labs, sports and sustainable learning spaces",
+    "about": "CHIREC's Kondapur campus is a 5-acre campus located near the Botanical Gardens in the IT hub of Hyderabad. It has separate facilities for Daycare, Primary, Secondary and Senior Secondary classes, designed to suit the needs of each age group. The campus offers smart classrooms with interactive boards, physics, chemistry, biology, biotechnology and mathematics labs, computer, robotics and 3D printing labs, and aims to create a sustainable learning environment for future-ready citizens.",
+    "established_year": 1989,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Laboratories",
+      "Biotechnology Lab",
+      "Robotics Lab",
+      "3D Printing Lab",
+      "Computer Labs",
+      "Basketball Court",
+      "Athletics Track",
+      "Table Tennis",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "dps-warangal-pedda-pendyal-warangal",
+    "name": "Delhi Public School, Warangal",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "130376",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://dpswarangal.in",
+    "address": "Sy. No. 357, 361, 362, Pedda Pendyal (V), Dharmasagar (M)",
+    "city": "Warangal",
+    "state": "Telangana",
+    "pincode": "506151",
+    "logo_url": "https://dpswarangal.in/wp-content/uploads/2024/12/dps-logo.webp",
+    "hero_image_url": "https://dpswarangal.in/wp-content/uploads/2022/10/DPS-WGL-INFRA.webp",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://dpswarangal.in/wp-content/uploads/2022/09/DJI_0883-1024x683.webp"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://dpswarangal.in/wp-content/uploads/2024/12/DSC08309-copy.webp"
+      },
+      {
+        "title": "Robotics Lab",
+        "category": "Academics",
+        "url": "https://dpswarangal.in/wp-content/uploads/2024/12/DSC08163.webp"
+      },
+      {
+        "title": "School Bus Fleet",
+        "category": "Transport",
+        "url": "https://dpswarangal.in/wp-content/uploads/2024/12/DSC08317-scaled-1.webp"
+      }
+    ],
+    "theme_color": "#0b5d3b",
+    "accent_color": "#f5c518",
+    "motto": null,
+    "tagline": "A 12-acre CBSE residential and day school near Warangal with pool, labs, skating rink and lush green lawns",
+    "about": "Delhi Public School, Warangal is a co-educational CBSE residential and day school spread over 12 acres of lush green lawns with modern infrastructure, in a peaceful setting suited to uninterrupted learning. It runs under the aegis of the Delhi Public School Society, New Delhi, and follows the CBSE curriculum. Facilities described by the school include a swimming pool, skating rink, team sports areas, science, robotics and computer labs, residential and mess facilities, medical care and transportation.",
+    "established_year": 2006,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Boarding",
+      "Swimming Pool",
+      "Skating Rink",
+      "Sports Grounds",
+      "Science Laboratories",
+      "Robotics Lab",
+      "Computer Labs",
+      "Medical Room",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-pauls-high-school-hyderguda-hyderabad",
+    "name": "St. Paul's High School, Hyderguda",
+    "affiliation_board": "STATE_BOARD",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://stpaulshyd.edu.in",
+    "address": "3-6-166, Hyderguda",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500029",
+    "logo_url": "https://stpaulshyd.edu.in/wp-content/uploads/2023/07/1-2.png",
+    "hero_image_url": "https://stpaulshyd.edu.in/wp-content/uploads/2020/02/1.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://stpaulshyd.edu.in/wp-content/uploads/elementor/thumbs/DSC_1323-scaled-qurvpniy63ht2a9inlpe10bfson4h8cnctrpn3lxhs.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://stpaulshyd.edu.in/wp-content/uploads/elementor/thumbs/20180116_091801-scaled-qurvqijmfmou60cqyjsjcebns8uft4qz2kski6uwu0.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://stpaulshyd.edu.in/wp-content/uploads/elementor/thumbs/20180116_091859-1-scaled-qurvqkfataret8a0nklshdukz0l68iyfqu3jgqs4hk.jpg"
+      },
+      {
+        "title": "Indoor Badminton Court",
+        "category": "Sports",
+        "url": "https://stpaulshyd.edu.in/wp-content/uploads/elementor/thumbs/DSC_0120-1-qurvqwn7a58505s9o7vxvsrkp0wy0lay4ikupca08o.jpg"
+      },
+      {
+        "title": "Table Tennis Hall",
+        "category": "Sports",
+        "url": "https://stpaulshyd.edu.in/wp-content/uploads/elementor/thumbs/DSC_0121-qurvqxl1gz9fbrqwiqakgaj1aesb8aeogn8c6m8m2g.jpg"
+      }
+    ],
+    "theme_color": "#1f6b3a",
+    "accent_color": "#f2c200",
+    "motto": "Truth is Light",
+    "tagline": "A Montfort Brothers school in Hyderguda offering sound academics, sport and well-equipped labs to students since 1954",
+    "about": "St. Paul's High School was started in 1954 by Rev. Bro. John of God, Rector of All Saints' High School, in a hired building on King Koti Road as a branch middle school. It moved to its present premises a year later and became an independent institution in 1958, sending its first class 10 batch for Board examinations in 1959. The school is run by the Montfort Brothers of St. Gabriel and has a library, two air-conditioned computer labs, science laboratories and indoor sports facilities.",
+    "established_year": 1954,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Computer Labs",
+      "Science Laboratories",
+      "Indoor Badminton Court",
+      "Table Tennis",
+      "Music Room",
+      "Playground"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "little-flower-high-school-abids-hyderabad",
+    "name": "Little Flower High School, Abids",
+    "affiliation_board": "STATE_BOARD",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@lfhshyd.edu.in",
+    "official_phone": "040-23202675",
+    "website": "https://lfhshyd.edu.in",
+    "address": "Chirag Ali Lane, Abids",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500001",
+    "logo_url": "https://lfhshyd.edu.in/images/logo.png",
+    "hero_image_url": "https://www.lfhshyd.edu.in/newsimages/ame/Slide1.jpg",
+    "gallery_images": [
+      {
+        "title": "High School Computer Lab",
+        "category": "Academics",
+        "url": "https://www.lfhshyd.edu.in/newsimages/ame/Slide4.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://www.lfhshyd.edu.in/newsimages/ame/Slide9.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.lfhshyd.edu.in/newsimages/ame/Slide12.jpg"
+      },
+      {
+        "title": "Gabriel Hall",
+        "category": "Infrastructure",
+        "url": "https://www.lfhshyd.edu.in/newsimages/ame/Slide16.jpg"
+      },
+      {
+        "title": "Rooftop Solar Panels",
+        "category": "Infrastructure",
+        "url": "https://www.lfhshyd.edu.in/newsimages/ame/solar.jpg"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#f59e0b",
+    "motto": "Let Your Light Shine",
+    "tagline": "A Montfort Brothers school at Abids, Hyderabad, letting young minds shine through learning, values and activities since 1953",
+    "about": "Little Flower High School was established in July 1953 by the Montfort Brothers of St. Gabriel under Rev. Bro. John of God, with Rev. Bro. Britto as its first Principal. It was set up across the main street from All Saints' High School, Gunfoundry, to meet the demand for admissions and mark All Saints' centenary. Located at Chirag Ali Lane, Abids, the school prepares students for the SSC examinations and offers computer and science labs, libraries, a hall, smart classrooms and transport.",
+    "established_year": 1953,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Computer Labs",
+      "Science Laboratories",
+      "Mathematics Lab",
+      "Library",
+      "Auditorium",
+      "Chapel",
+      "Sports Facilities",
+      "Solar Power",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "silver-oaks-international-bachupally-hyderabad",
+    "name": "Silver Oaks International School, Bachupally",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "130199",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.silveroaks.co.in",
+    "address": "Bachupally, Quthbullapur Mandal",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500072",
+    "logo_url": "https://cdn.prod.website-files.com/68da2cddb010df995f887130/6a71c9140c39534a6bbc958f_silver-jubilee-log.png",
+    "hero_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Tennis_court_Silver_Oaks_Intl_school_Hyderabad.jpg/1280px-Tennis_court_Silver_Oaks_Intl_school_Hyderabad.jpg",
+    "gallery_images": [
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/BIOLOGY_LAB_Silver_Oaks_School_Hyderabad.jpg/1280px-BIOLOGY_LAB_Silver_Oaks_School_Hyderabad.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Chemistry_Lab_Silver_Oaks_Intl_School_Hyderabad.jpg/1280px-Chemistry_Lab_Silver_Oaks_Intl_School_Hyderabad.jpg"
+      },
+      {
+        "title": "Physics Lab",
+        "category": "Academics",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Physics_Lab_Silver_Oaks_Intl_School_Hyderabad.jpg/1280px-Physics_Lab_Silver_Oaks_Intl_School_Hyderabad.jpg"
+      },
+      {
+        "title": "Atal Tinkering Lab Building",
+        "category": "Infrastructure",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Atal_Tinkering_Lab_at_Silver_Oaks_Intl_School_Hyderabad.jpg/1280px-Atal_Tinkering_Lab_at_Silver_Oaks_Intl_School_Hyderabad.jpg"
+      }
+    ],
+    "theme_color": "#14532d",
+    "accent_color": "#a3a3a3",
+    "motto": null,
+    "tagline": "An IB-PYP and CBSE campus in Bachupally nurturing character, competence and service through inquiry-led learning",
+    "about": "Silver Oaks International School has for over two decades described itself as an ecosystem for inspired learning, with character at its core, competence as its edge and service in its spirit. Guided by an inside-out approach, its research-led indigenous curriculum aims to nurture competent learners who lead with empathy and awareness. The Bachupally campus in Hyderabad offers the IB Primary Years Programme and CBSE, with grades from PP1 to Grade 12.",
+    "established_year": 2001,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "PP1 to Grade 12",
+    "facilities": [
+      "Science Laboratories",
+      "Atal Tinkering Lab",
+      "Tennis Court",
+      "Football Ground",
+      "Swimming Pool",
+      "Skating Rink",
+      "Badminton",
+      "Library"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "gitanjali-senior-school-begumpet-hyderabad",
+    "name": "Gitanjali Senior School, Begumpet",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.gitanjalischools.com/schools/gitanjali-senior-school",
+    "address": "58, Mayur Marg, Begumpet",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500016",
+    "logo_url": "https://www.gitanjalischools.com/images/logo22.png",
+    "hero_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Main_School_Building.jpg/1280px-Main_School_Building.jpg",
+    "gallery_images": [
+      {
+        "title": "School Building and Courtyard",
+        "category": "Campus",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/GSSchool.JPG"
+      },
+      {
+        "title": "School Ground",
+        "category": "Sports",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Ground_GSS.jpg/1280px-Ground_GSS.jpg"
+      },
+      {
+        "title": "Building Wing and Parking Area",
+        "category": "Campus",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Parking_lot.jpg/1280px-Parking_lot.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Chemistry_Lab_GSS.jpg/1280px-Chemistry_Lab_GSS.jpg"
+      }
+    ],
+    "theme_color": "#1d3557",
+    "accent_color": "#e63946",
+    "motto": null,
+    "tagline": "Begumpet's ICSE, ISC and Cambridge senior school building leadership, life skills and values for Classes VII to XII",
+    "about": "Gitanjali Senior School at Begumpet opened in June 1990 for Classes VII to XII, following Gitanjali Primary School founded in 1985. The Gitanjali system aims to maximise each child's all-round potential through complete academic support while building critical thinking, communication, collaboration and physical skills in a values-based environment. The school offers ICSE for Classes VII to X, ISC for Classes XI and XII, and Cambridge International up to AS and A Level.",
+    "established_year": 1990,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Classes VII to XII",
+    "facilities": [
+      "Science Laboratories",
+      "Chemistry Lab",
+      "Computer Labs",
+      "Library",
+      "Playground",
+      "Parking"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sancta-maria-international-serilingampally-hyderabad",
+    "name": "Sancta Maria International School",
+    "affiliation_board": "CAMBRIDGE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "enquiry@sanctamaria.in",
+    "official_phone": "+91 40 29706844",
+    "website": "https://www.sanctamaria.in",
+    "address": "Survey No. 106/107, Serilingampalle",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500019",
+    "logo_url": "https://www.sanctamaria.in/IN%20-%20Sancta%20Maria%20International%20School/Sancta%20maria%20international%20school%20-%20ISP%20emerging%20next%20to%20it.png",
+    "hero_image_url": "https://www.sanctamaria.in/IN%20-%20Sancta%20Maria%20International%20School/Facilities/12822/image-thumb__12822__w1920/Sancta%20Maria%20%281%29@2x.c574df6a.webp",
+    "gallery_images": [
+      {
+        "title": "Campus Buildings and Lawns",
+        "category": "Campus",
+        "url": "https://www.sanctamaria.in/IN%20-%20Sancta%20Maria%20International%20School/Facilities/12823/image-thumb__12823__w1920/IMG_3417%20%281%29@2x.98a568a0.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.sanctamaria.in/IN%20-%20Sancta%20Maria%20International%20School/Facilities/new%20facilities/16330/image-thumb__16330__w1920/WhatsApp%20Image%202025-06-05%20at%207.50.39%20PM@2x.90b31f47.webp"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Arts",
+        "url": "https://www.sanctamaria.in/IN%20-%20Sancta%20Maria%20International%20School/Facilities/new%20facilities/16332/image-thumb__16332__w1920/WhatsApp%20Image%202025-06-05%20at%208.02.23%20PM@2x.44a594a7.webp"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.sanctamaria.in/IN%20-%20Sancta%20Maria%20International%20School/Facilities/12816/image-thumb__12816__w1920/VIS02278@2x.1eacefe5.webp"
+      }
+    ],
+    "theme_color": "#8b1d2c",
+    "accent_color": "#d4a017",
+    "motto": null,
+    "tagline": "A Cambridge curriculum school in Serilingampally where curiosity, confidence and a lifelong love for learning grow",
+    "about": "Sancta Maria International School is a Cambridge curriculum school in Hyderabad and part of International Schools Partnership (ISP), a global community of schools. It describes a student-centred learning approach that emphasises curiosity and confidence, alongside diverse extracurricular activities and close family partnerships, so that every child discovers their potential and develops a lifelong love for learning. The school serves learners aged 1.6 to 18 at its Serilingampalle campus, which includes a library, auditorium and sports courts.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Auditorium",
+      "Basketball Court",
+      "Sports Courts",
+      "Landscaped Lawns",
+      "Classrooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "chirec-international-serilingampally-hyderabad",
+    "name": "CHIREC International School, Serilingampally Campus",
+    "affiliation_board": "CAMBRIDGE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.chirec.ac.in/serilingampally-campus/",
+    "address": "Serilingampally",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": null,
+    "logo_url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2023/11/CHIREC-est1989-logo-201922.png",
+    "hero_image_url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2025/02/DSC00014.jpg",
+    "gallery_images": [
+      {
+        "title": "Elevated Sports Deck",
+        "category": "Sports",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2025/02/DSC00026.jpg"
+      },
+      {
+        "title": "Classroom",
+        "category": "Academics",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2025/02/DSC09767.jpg"
+      },
+      {
+        "title": "Multipurpose Hall",
+        "category": "Infrastructure",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2025/02/DSC09877.jpg"
+      },
+      {
+        "title": "Academic Block Aerial View",
+        "category": "Campus",
+        "url": "https://www.chirec.ac.in/wp-content/uploads/sites/27/2025/02/DJI_0320.jpg"
+      }
+    ],
+    "theme_color": "#7a1f2b",
+    "accent_color": "#f2a900",
+    "motto": null,
+    "tagline": "CHIREC's largest campus with two academic blocks and an elevated sports deck for Cambridge and IB learners",
+    "about": "CHIREC's Serilingampally campus is the group's newest and biggest campus, built over 9.5 acres in one of Hyderabad's business districts. It includes two academic blocks and an elevated sports deck of 120,000 square feet. The campus is designed for Cambridge and IB Diploma Programme learners from Preschool to Senior Secondary, and the school has received authorisation as an IB World School for the Career-related Programme, combining academic rigour with career-related learning.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Preschool to Senior Secondary",
+    "facilities": [
+      "Elevated Sports Deck",
+      "Sports Field",
+      "Smart Classrooms",
+      "Multipurpose Hall",
+      "Two Academic Blocks",
+      "Preschool Facilities"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "euroschool-hitec-city-gachibowli-hyderabad",
+    "name": "EuroSchool Hitec City, Gachibowli",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "connect@euroschoolindia.com",
+    "official_phone": null,
+    "website": "https://www.euroschoolindia.com/best-schools-in-hyderabad/cbse-gachibowli-hitech-city/",
+    "address": "Survey No. 54, Hi-Tech City–Gachibowli Link Road, Gachibowli",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500032",
+    "logo_url": "https://www.euroschoolindia.com/wp-content/uploads/2024/12/euro-logo.webp",
+    "hero_image_url": "https://www.euroschoolindia.com/wp-content/uploads/2025/02/Hitechcity.webp",
+    "gallery_images": [
+      {
+        "title": "Multipurpose Hall",
+        "category": "Infrastructure",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/02/Multipurpose-Hall.webp"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/01/Basketball-Court.webp"
+      },
+      {
+        "title": "Skating Rink",
+        "category": "Sports",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/01/Skating-RIng.webp"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/01/Library.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "A CBSE school near Hitec City balancing academics, life skills and inclusive education from Nursery to Grade 10",
+    "about": "EuroSchool Hitec City is a CBSE school near Gachibowli, Hyderabad, offering classes from Nursery to Grade 10 on a well-designed campus. The school imparts education and life skills through balanced schooling and advocates inclusive education so that no child is left behind. Each child gets opportunities to take part in school programmes and build confidence, public speaking and presentation skills, with faculty guiding and motivating students to contribute to society.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to Grade 10",
+    "facilities": [
+      "Basketball Court",
+      "Skating Rink",
+      "Multipurpose Hall",
+      "Science Laboratory",
+      "Library",
+      "Smart Classrooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

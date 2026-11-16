@@ -359,27 +359,43 @@ export async function saveBulkGradesAny(tenantId, gradesList) {
   return rows;
 }
 
-export async function getDateSheetGrades(tenantId, title, classId) {
+export async function getDateSheetGrades(tenantId, title, classIdOrName) {
   const decodedTitle = decodeURIComponent(title);
+  const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(String(classIdOrName).trim());
+
+  let targetClassIds = [];
+  if (isUuid) {
+    targetClassIds = [classIdOrName];
+  } else {
+    const classStr = String(classIdOrName).trim();
+    const { rows: matchedClasses } = await pgPool.query(
+      `SELECT id FROM class WHERE tenant_id = $1 AND (name = $2 OR CONCAT('Class ', name) = $2 OR name = REPLACE($2, 'Class ', ''));`,
+      [tenantId, classStr]
+    );
+    targetClassIds = matchedClasses.map(r => r.id);
+  }
+
+  if (targetClassIds.length === 0) return { subjects: [], results: [] };
+
   const examsRes = await pgPool.query(
-    `SELECT id, subject, marks, class_id FROM exams WHERE tenant_id = $1 AND LOWER(TRIM(title)) = LOWER(TRIM($2)) AND class_id = $3;`,
-    [tenantId, decodedTitle, classId]
+    `SELECT id, subject, marks, class_id FROM exams WHERE tenant_id = $1 AND LOWER(TRIM(title)) = LOWER(TRIM($2)) AND class_id = ANY($3::uuid[]);`,
+    [tenantId, decodedTitle, targetClassIds]
   );
   const exams = examsRes.rows;
   if (exams.length === 0) return { subjects: [], results: [] };
 
   const examIds = exams.map(e => e.id);
 
-  const classInfoRes = await pgPool.query(`SELECT id, section FROM class WHERE tenant_id = $1 AND id = $2;`, [tenantId, classId]);
-  const section = classInfoRes.rows[0]?.section || '';
+  const classInfoRes = await pgPool.query(`SELECT id, section FROM class WHERE tenant_id = $1 AND id = ANY($2::uuid[]);`, [tenantId, targetClassIds]);
+  const sectionMap = new Map(classInfoRes.rows.map(r => [r.id, r.section || '']));
 
   const studentsRes = await pgPool.query(
-    `SELECT u.id, u.name, u.admission_number, cs.roll_number
+    `SELECT u.id, u.name, u.admission_number, cs.roll_number, cs.class_id
      FROM class_students cs
      JOIN public."user" u ON cs.student_id = u.id AND u.tenant_id = cs.tenant_id
-     WHERE cs.tenant_id = $1 AND cs.class_id = $2
+     WHERE cs.tenant_id = $1 AND cs.class_id = ANY($2::uuid[])
      ORDER BY cs.roll_number ASC NULLS LAST, u.name ASC;`,
-    [tenantId, classId]
+    [tenantId, targetClassIds]
   );
   const students = studentsRes.rows;
 
@@ -413,7 +429,7 @@ export async function getDateSheetGrades(tenantId, title, classId) {
       student_id: st.id,
       name: st.name,
       admission_number: st.admission_number,
-      section,
+      section: sectionMap.get(st.class_id) || '',
       grades: studentGrades
     };
   });

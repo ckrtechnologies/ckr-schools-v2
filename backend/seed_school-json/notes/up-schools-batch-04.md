@@ -1,0 +1,1 @@
+UP-04 (partial, 4 schools): BBPS Noida Sec 21, VIBGYOR High Gomti Nagar Lucknow, Chintels Kalyanpur Kanpur, Bal Bharti Prayagraj. Skipped: St. Joseph's College Prayagraj (no facility photos), Narayana Meerut (stock images), DPS Kalyanpur Kanpur (no website found), Somerville Vasundhara Enclave (in Delhi, aff. 2730013), DPSG Vasundhara (1 usable photo). No fees/counts filled.

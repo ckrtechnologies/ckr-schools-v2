@@ -1,0 +1,126 @@
+[
+  {
+    "slug": "dps-sector-45-urban-estate-gurugram",
+    "name": "Delhi Public School, Sector 45 Gurgaon",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "530405",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "0124-4125800",
+    "website": "https://www.dpsgurgaon.org",
+    "address": "Site No. I, Sector 45, Urban Estate",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122003",
+    "logo_url": "https://www.dpsgurgaon.org/images/logo1.jpg",
+    "hero_image_url": "https://www.dpsgurgaon.org/images/inside-banner/about-us-banner.jpg",
+    "gallery_images": [
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://www.dpsgurgaon.org/images/inside-page/infrastructure/science-labs-2.jpg"
+      },
+      {
+        "title": "IT Lab",
+        "category": "Academics",
+        "url": "https://www.dpsgurgaon.org/images/infra-it-lab/3.webp"
+      },
+      {
+        "title": "Fitness Room",
+        "category": "Sports",
+        "url": "https://www.dpsgurgaon.org/images/facilities/1.jpg"
+      },
+      {
+        "title": "Visual Arts Department",
+        "category": "Arts",
+        "url": "https://www.dpsgurgaon.org/images/the-visual-art-department/th-1.jpg"
+      }
+    ],
+    "theme_color": "#064e3b",
+    "accent_color": "#059669",
+    "motto": "Service Before Self",
+    "tagline": "A DPS school in Sector 45 Gurugram offering value-added education with labs, arts and tinkering spaces",
+    "about": "Delhi Public School, Sector 45 Gurgaon is a CBSE school at Site No. I, Sector 45 Urban Estate, run by the Champa Devi Jaipuria Charitable Trust; it was established in 2002 and affiliated to CBSE since 2004. The school says the DPS motto 'Service before Self' reflects its ethos and its belief that every child has the right to education. Its mission is to give equal opportunities for personal growth through value-added education. Facilities include science, IT, language, math, fine art, discovery and Atal Tinkering labs, smart classes and a library.",
+    "established_year": 2002,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classes",
+      "Science Labs",
+      "IT Lab",
+      "Language Lab",
+      "Math Lab",
+      "Fine Art Lab",
+      "Atal Tinkering Lab",
+      "Fashion Technology Lab",
+      "Library",
+      "Art & Music Department"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "krm-world-school-tdi-city-kundli-sonipat",
+    "name": "K.R. Mangalam World School, Sonipat",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "sonipat@krmangalam.com",
+    "official_phone": "+91 9990902126",
+    "website": "https://krmangalamsonipat.com",
+    "address": "E-Block, TDI City, Kundli",
+    "city": "Sonipat",
+    "state": "Haryana",
+    "pincode": null,
+    "logo_url": "https://krmangalamsonipat.com/wp-content/uploads/2024/07/krm-logo-1.png",
+    "hero_image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/KRM_World_School_Sonipat.jpg",
+    "gallery_images": [
+      {
+        "title": "Playground and Sports Court",
+        "category": "Sports",
+        "url": "https://krmangalamsonipat.com/wp-content/uploads/2026/04/1J3A9141-1.jpg"
+      },
+      {
+        "title": "Science Lab",
+        "category": "Academics",
+        "url": "https://krmangalamsonipat.com/wp-content/uploads/2026/04/123A1543-1-1.jpg"
+      },
+      {
+        "title": "School Bus",
+        "category": "Transport",
+        "url": "https://krmangalamsonipat.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-21-at-9.48.09-AM-scaled.webp"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A K.R. Mangalam CBSE school in TDI City, Kundli encouraging dynamic, continuous learning and active play",
+    "about": "K.R. Mangalam World School, Sonipat is a CBSE school at E-Block, TDI City, Kundli, part of the K.R. Mangalam group of World and IB schools with over twenty years of experience. The school says it strives to instil consistent learning that is dynamic, continuous and interesting, encouraging students to explore new horizons in search of knowledge. Its facilities include a playground area for active play and outdoor activities, well-equipped laboratories and school transport.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Science Labs",
+      "Computer Lab",
+      "Library",
+      "Playground",
+      "Sports Court",
+      "School Transport"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

@@ -1,0 +1,401 @@
+[
+  {
+    "slug": "bal-bharati-public-school-ganga-ram-hospital-marg-delhi",
+    "name": "Bal Bharati Public School, Ganga Ram Hospital Marg",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "bbpsgrh@balbharati.org",
+    "official_phone": "011-25782419",
+    "website": "https://bbpsgr.balbharati.org",
+    "address": "Ganga Ram Hospital Marg",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110060",
+    "logo_url": "https://apibbpsgr.balbharati.org//sites/default/files/2026-06/gangaram_1.png",
+    "hero_image_url": "https://apibbpsgr.balbharati.org//sites/default/files/2026-06/BANNER2_6.png",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://apibbpsgr.balbharati.org//sites/default/files/2026-06/about_us_Infrastructure_Overview_library%20%281%29_0.png"
+      },
+      {
+        "title": "Computer Aided Learning Lab",
+        "category": "Academics",
+        "url": "https://apibbpsgr.balbharati.org//sites/default/files/2026-06/about_us_Infrastructure_Overview_computer_lab.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://apibbpsgr.balbharati.org//sites/default/files/2026-06/sports%20-%20basketball.jpg"
+      }
+    ],
+    "theme_color": "#0f766e",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "The founding Bal Bharati campus on Ganga Ram Hospital Marg with auditorium, labs, libraries and sports courts",
+    "about": "Bal Bharati Public School on Ganga Ram Hospital Marg is a CBSE-affiliated co-educational school of the Child Education Society, on a campus of about 25,779 square metres. The school says that since 1944 it has worked to preserve India's culture, heritage and traditions while taking a progressive outlook, valuing honesty, integrity, sincerity and diligence. Its campus page lists an auditorium, laboratories, libraries, a clinic, transport, a tuck shop, computer-aided learning, art, dance and music rooms, and sports and games areas.",
+    "established_year": 1944,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Auditorium",
+      "Laboratories",
+      "Libraries",
+      "Clinic",
+      "School Transport",
+      "Tuck Shop",
+      "Computer Aided Learning",
+      "Art Rooms",
+      "Dance Room",
+      "Music Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "venkateshwar-global-school-rohini-sector-13-delhi",
+    "name": "Venkateshwar Global School, Rohini",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730687",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://skoolroom.in/vgs_rohini_web/",
+    "address": "Sector 13, Rohini",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110089",
+    "logo_url": "https://skoolroom.in/vgs_rohini_web/images/logo.png",
+    "hero_image_url": "https://skoolroom.in/vgs_rohini_web/images/RECEPTION.jpg",
+    "gallery_images": [
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://skoolroom.in/vgs_rohini_web/infrastructure/lab.jpg"
+      },
+      {
+        "title": "Atal Tinkering & 3D Printing Lab",
+        "category": "Academics",
+        "url": "https://skoolroom.in/vgs_rohini_web/infrastructure/ATAL_TINKERING_3D_PRINTING_LABS.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://skoolroom.in/vgs_rohini_web/infrastructure/v4.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://skoolroom.in/vgs_rohini_web/infrastructure/SPORTS_&_FITNESS_FACILITIES.JPG"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://skoolroom.in/vgs_rohini_web/infrastructure/SCHOOL_BUSES.jpg"
+      }
+    ],
+    "theme_color": "#b91c1c",
+    "accent_color": "#15803d",
+    "motto": null,
+    "tagline": "A Rohini Sector 13 school with tinkering and 3D printing labs, a swimming pool and its own bus fleet",
+    "about": "Venkateshwar Global School is an independent CBSE school in Sector 13, Rohini, which CBSE records show was founded and opened in 2008. The school describes its classrooms and activity rooms as lively, vibrant learning spaces, with music, dance, junior and senior art and resource rooms and indoor and outdoor play areas. Its infrastructure page also lists science, mathematics and computer science labs, an Atal Tinkering and 3D printing lab, a library, a performance stage, sports and fitness facilities, an infirmary, canteen, surveillance room and school buses.",
+    "established_year": 2008,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Science Labs",
+      "Maths Lab",
+      "Computer Lab",
+      "Atal Tinkering & 3D Printing Lab",
+      "Library",
+      "Performance Stage",
+      "Swimming Pool",
+      "Infirmary",
+      "Canteen",
+      "School Buses"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "mother-marys-school-mayur-vihar-phase-1-delhi",
+    "name": "Mother Mary's School, Mayur Vihar",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730573",
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.mothermarys.school",
+    "address": "Site No. 1, Sahkarita Marg, Mayur Vihar Phase I",
+    "city": "East Delhi",
+    "state": "Delhi",
+    "pincode": "110091",
+    "logo_url": "https://www.mothermarys.school/assets/logo-seal-primary.webp",
+    "hero_image_url": "https://www.mothermarys.school/assets/img/schoolBuilding.webp",
+    "gallery_images": [
+      {
+        "title": "Senior Library",
+        "category": "Infrastructure",
+        "url": "https://www.mothermarys.school/assets/img/srLibrary2.webp"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://www.mothermarys.school/assets/img/bioLab3.webp"
+      },
+      {
+        "title": "Sports Court",
+        "category": "Sports",
+        "url": "https://www.mothermarys.school/assets/img/sportsCourt1.webp"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://www.mothermarys.school/assets/img/auditorium.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#be123c",
+    "motto": null,
+    "tagline": "A Mayur Vihar CBSE girls' day school with home science, maths and science labs, smart classrooms and solar power",
+    "about": "Mother Mary's School is an independent CBSE girls' day school on Sahkarita Marg, Mayur Vihar Phase I, established in 2006. The school describes its aim as raising confident, capable young women. Its campus and facilities page shows smart classrooms for primary and secondary classes, biology, physics, chemistry, composite, maths, home science and social science labs, a senior library, a school hall and auditorium, a dance room, sports courts, a play area and a solar power plant.",
+    "established_year": 2006,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Biology Lab",
+      "Physics Lab",
+      "Chemistry Lab",
+      "Maths Lab",
+      "Home Science Lab",
+      "Library",
+      "Auditorium",
+      "Dance Room",
+      "Sports Court"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "st-columbas-school-ashok-place-delhi",
+    "name": "St. Columba's School, Ashok Place",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "stcolumbas@stcolumbas.edu.in",
+    "official_phone": "011-23363462",
+    "website": "https://www.stcolumbas.edu.in",
+    "address": "1 Ashok Place",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "pincode": "110001",
+    "logo_url": "https://www.stcolumbas.edu.in/images/Logo2023.png",
+    "hero_image_url": "https://www.stcolumbas.edu.in/images/0Q5A4849.JPG",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.stcolumbas.edu.in/images/facilities/Thumb/Swimming_Pool_01.jpg"
+      },
+      {
+        "title": "Football and Cricket Ground",
+        "category": "Sports",
+        "url": "https://www.stcolumbas.edu.in/images/facilities/Thumb/Football_Cricket_Ground_01.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://www.stcolumbas.edu.in/images/facilities/Thumb/Basket_Ball_Court_01.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.stcolumbas.edu.in/images/facilities/Thumb/Libraries_01.jpg"
+      },
+      {
+        "title": "Chemistry Laboratory",
+        "category": "Academics",
+        "url": "https://www.stcolumbas.edu.in/images/facilities/Thumb/Chemistry_Laboratories_01.jpg"
+      }
+    ],
+    "theme_color": "#166534",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "A Christian Brothers school at Ashok Place with a swimming pool, playing fields, laboratories and libraries",
+    "about": "St. Columba's School is a school at 1 Ashok Place, New Delhi, run by the Christian Brothers. Its facilities page lists art rooms, basketball courts, a swimming pool, a football and cricket ground, badminton, libraries, computer and multimedia laboratories, chemistry, biology and physics laboratories, an auditorium, counselling rooms and medical rooms. The school's principal is a Christian Brother, and the school publishes its curriculum, achievements and publications on its website.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Football & Cricket Ground",
+      "Basketball Court",
+      "Badminton",
+      "Libraries",
+      "Computer Labs",
+      "Science Laboratories",
+      "Auditorium",
+      "Art Rooms",
+      "Medical Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "shri-ram-global-school-tikri-kalan-west-delhi",
+    "name": "Shri Ram Global School, Delhi West",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@srgsdelhiwest.com",
+    "official_phone": null,
+    "website": "https://srgsdelhiwest.com",
+    "address": "58/11, PVC Market Road, Tikri Kalan",
+    "city": "West Delhi",
+    "state": "Delhi",
+    "pincode": "110041",
+    "logo_url": "https://i0.wp.com/srgsdelhiwest.com/wp-content/uploads/2021/01/SRG-Logo.png",
+    "hero_image_url": "https://i0.wp.com/srgsdelhiwest.com/wp-content/uploads/2023/09/School-ground-2.jpg",
+    "gallery_images": [
+      {
+        "title": "Laboratory",
+        "category": "Academics",
+        "url": "https://i0.wp.com/srgsdelhiwest.com/wp-content/uploads/2023/09/DSCF1173_11zon-scaled.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://i0.wp.com/srgsdelhiwest.com/wp-content/uploads/2023/09/DSC_0007-3_11zon.jpg"
+      },
+      {
+        "title": "Biology Lab",
+        "category": "Academics",
+        "url": "https://i0.wp.com/srgsdelhiwest.com/wp-content/uploads/2023/09/DSC_0379_11zon.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://i0.wp.com/srgsdelhiwest.com/wp-content/uploads/2023/09/DSC_0127_11zon.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A West Delhi senior secondary school with lawns, science labs, tennis, basketball and skating facilities",
+    "about": "Shri Ram Global School, Delhi West is a senior secondary school at PVC Market Road, Tikri Kalan, in West Delhi. Its infrastructure and facilities page shows the school's front view, front and back lawns, reception, classrooms, a concept room, music and art rooms, an activity hall and assembly area. It also lists chemistry and biology labs, a junior computer lab, a lawn tennis court, basketball and volleyball courts, a skating rink, a cricket pitch and a Monkeynastix programme for young children.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Classrooms",
+      "Chemistry Lab",
+      "Biology Lab",
+      "Computer Lab",
+      "Music Room",
+      "Art Room",
+      "Activity Hall",
+      "Lawn Tennis Court",
+      "Basketball Court",
+      "Skating Rink"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "rukmini-devi-public-school-pitampura-delhi",
+    "name": "Rukmini Devi Public School, Pitampura",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "2730165",
+    "school_code": null,
+    "official_email": "contact@rdpschool.edu.in",
+    "official_phone": null,
+    "website": "https://rdpschool.edu.in",
+    "address": "CD Block, Pitampura",
+    "city": "North Delhi",
+    "state": "Delhi",
+    "pincode": "110034",
+    "logo_url": "https://rdpschool.edu.in/wp-content/uploads/2021/08/logo-rdps-20-21.jpg",
+    "hero_image_url": "https://rdpschool.edu.in/wp-content/uploads/2024/10/2-5.png",
+    "gallery_images": [
+      {
+        "title": "School Entrance",
+        "category": "Campus",
+        "url": "https://rdpschool.edu.in/wp-content/uploads/2024/10/1-2.png"
+      },
+      {
+        "title": "Smart Classroom",
+        "category": "Academics",
+        "url": "https://rdpschool.edu.in/wp-content/uploads/2024/10/2Q8A1443.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://rdpschool.edu.in/wp-content/uploads/2024/10/IMG_0012.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://rdpschool.edu.in/wp-content/uploads/2024/10/IMG_9949.jpg"
+      }
+    ],
+    "theme_color": "#1d4ed8",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A Pitampura CBSE school with interactive classrooms, modern labs and a well-designed playground for every age",
+    "about": "Rukmini Devi Public School is an independent CBSE school in CD Block, Pitampura, run under the aegis of the Seth Pokhar Mal Educational Society; CBSE records list 1986 as its year of foundation. The school's infrastructure page describes classrooms equipped with interactive boards, modern laboratory facilities, a well-designed playground and computer labs. Its website also has pages on its library, sports, art and craft, a virtual campus tour, and safety and security arrangements.",
+    "established_year": 1986,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Interactive Classrooms",
+      "Science Laboratories",
+      "Computer Lab",
+      "Library",
+      "Playground",
+      "Sports Facilities",
+      "Art & Craft Room",
+      "CCTV Security"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

@@ -1,0 +1,650 @@
+[
+  {
+    "slug": "chinmaya-international-residential-school-siruvani-coimbatore",
+    "name": "Chinmaya International Residential School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@cirschool.org",
+    "official_phone": "+91 93604 61572",
+    "website": "https://cirschool.org",
+    "address": "Swami Chinmayananda Lane, Nallur Vayal Post, Siruvani",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "pincode": "641114",
+    "logo_url": "https://cirschool.org/assets/img/logo-144.webp",
+    "hero_image_url": "https://cirschool.org/assets/img/experience/jog-wide-1920.webp",
+    "gallery_images": [
+      {
+        "title": "Prayer Hall",
+        "category": "Campus",
+        "url": "https://cirschool.org/assets/img/experience/spiritual-hall-wide-1600.webp"
+      },
+      {
+        "title": "Junior Classroom",
+        "category": "Academics",
+        "url": "https://cirschool.org/assets/img/experience/classroom-wide-1280.webp"
+      },
+      {
+        "title": "Football Field below the Hills",
+        "category": "Sports",
+        "url": "https://cirschool.org/assets/img/experience/field-wide-1280.webp"
+      },
+      {
+        "title": "Billiards Room",
+        "category": "Sports",
+        "url": "https://cirschool.org/assets/img/experience/billiards-wide-1000.webp"
+      }
+    ],
+    "theme_color": "#7c2d12",
+    "accent_color": "#f59e0b",
+    "motto": "Jyanam Seva ca Kaushalam",
+    "tagline": "A residential school at the foot of the Siruvani hills offering CBSE and IB education from Grade V",
+    "about": "Chinmaya International Residential School is a co-educational boarding school founded in 1996 by Chinmaya Mission at Siruvani, near Coimbatore. It teaches Grades V to XII towards CBSE and the International Baccalaureate. The school describes its education around three ideals of knowledge, service and skill, combining academics with spiritual life, sports, the arts and residential community living on a hillside campus.",
+    "established_year": 1996,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Grade V to XII",
+    "facilities": [
+      "Boarding Houses",
+      "Science Laboratories",
+      "Prayer Hall",
+      "Dining Hall",
+      "Sports Fields",
+      "Athletics Track",
+      "Swimming Pool",
+      "Library"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "yuvabharathi-public-school-kanuvai-coimbatore",
+    "name": "Yuvabharathi Public School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": null,
+    "website": "https://www.yuvabharathi.in",
+    "address": "Yuva Enclave, Kanuvai - Thudiyalur Road, Somayampalayam Post, Kanuvai",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "pincode": "641108",
+    "logo_url": "https://www.yuvabharathi.in/images/news/home/logo.webp",
+    "hero_image_url": "https://www.yuvabharathi.in/images/subinner/classrooms/conference.jpg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.yuvabharathi.in/images/subinner/lab/computerlab.jpg"
+      },
+      {
+        "title": "Mathematics Lab",
+        "category": "Academics",
+        "url": "https://www.yuvabharathi.in/images/subinner/lab/math-lab.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.yuvabharathi.in/images/subinner/classrooms/library.jpg"
+      },
+      {
+        "title": "Athletics Hurdles Training",
+        "category": "Sports",
+        "url": "https://www.yuvabharathi.in/images/banner/Sports_Amenities.jpg"
+      }
+    ],
+    "theme_color": "#0f3d7a",
+    "accent_color": "#e11d48",
+    "motto": null,
+    "tagline": "A CBSE day school in Kanuvai, Coimbatore, with dedicated labs, STEM programmes and sports amenities",
+    "about": "Yuvabharathi Public School is a CBSE school at Kanuvai on the Kanuvai - Thudiyalur Road in Coimbatore, established in 2005. It teaches from kindergarten to Class XII. The school's academic pages describe classrooms and libraries, a conference hall, science, computer and mathematics labs, a STEM wing with robotics and an Atal Tinkering Lab, and sports amenities including a multisport turf and a basketball court.",
+    "established_year": 2005,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "KG to XII",
+    "facilities": [
+      "Library",
+      "Science Laboratory",
+      "Computer Lab",
+      "Mathematics Lab",
+      "Robotics Lab",
+      "Atal Tinkering Lab",
+      "Multisport Turf",
+      "Basketball Court",
+      "Conference Hall"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "chettinad-vidyashram-raja-annamalaipuram-chennai",
+    "name": "Chettinad Vidyashram",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "c.vidyashram@gmail.com",
+    "official_phone": "044-24938040",
+    "website": "https://www.chettinadvidyashram.org",
+    "address": "Chettinad House, Rajah Annamalaipuram",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "pincode": "600028",
+    "logo_url": "https://www.chettinadvidyashram.org/wp-content/themes/chettinad-vidhyasrham-2025-v1/images/logo.png",
+    "hero_image_url": "https://www.chettinadvidyashram.org/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-11-at-10.11.58-PM-2.jpeg",
+    "gallery_images": [
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.chettinadvidyashram.org/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-11-at-10.05.39-PM-1.jpeg"
+      },
+      {
+        "title": "Library and Reading Room",
+        "category": "Infrastructure",
+        "url": "https://www.chettinadvidyashram.org/wp-content/uploads/2026/03/496-by-480-pixels.jpg"
+      },
+      {
+        "title": "Veena and Dance Classes",
+        "category": "Arts",
+        "url": "https://www.chettinadvidyashram.org/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-11-at-10.11.57-PM.jpeg"
+      },
+      {
+        "title": "Junior Play Area",
+        "category": "Campus",
+        "url": "https://www.chettinadvidyashram.org/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-11-at-10.11.58-PM-3.jpeg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A Rajah Annamalaipuram CBSE school with over four decades of education, art, dramatics and holistic development",
+    "about": "Chettinad Vidyashram in Rajah Annamalaipuram, Chennai, was conceptualised more than four decades ago as an initiative of Dr. Mrs. Meena Muthiah. The school says it set out to provide education alongside competencies in art, dramatics and other skills needed for a child's holistic development. Beginning with a handful of students, it now has more than 9,500 students and aims to shape well-rounded individuals who contribute to society.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Lab",
+      "Library",
+      "Music Room",
+      "Dance Studio",
+      "Play Area",
+      "Cycling Track"
+    ],
+    "admission_status": null,
+    "student_count_badge": "9500+",
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "psg-public-schools-peelamedu-coimbatore",
+    "name": "PSG Public Schools",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "1930265",
+    "school_code": null,
+    "official_email": "principal@psgps.edu.in",
+    "official_phone": "0422-4344522",
+    "website": "https://www.psgps.edu.in",
+    "address": "Avinashi Road, Peelamedu",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "pincode": "641004",
+    "logo_url": "https://www.psgps.edu.in/images/logo.png",
+    "hero_image_url": "https://www.psgps.edu.in/images/PSGPS_image.avif",
+    "gallery_images": [
+      {
+        "title": "Sports and Games Facilities",
+        "category": "Sports",
+        "url": "https://www.psgps.edu.in/admin/uploads/images/Amenities/Sports-Games-min1.png"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.psgps.edu.in/admin/uploads/images/Amenities/Labs-new.png"
+      },
+      {
+        "title": "Computer Laboratory",
+        "category": "Academics",
+        "url": "https://www.psgps.edu.in/admin/uploads/images/Amenities/labesnew.png"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.psgps.edu.in/admin/uploads/images/Amenities/librarrynew.jpg"
+      },
+      {
+        "title": "Football Practice on the School Ground",
+        "category": "Sports",
+        "url": "https://www.psgps.edu.in/images/admissions-bg.png"
+      }
+    ],
+    "theme_color": "#1e40af",
+    "accent_color": "#f97316",
+    "motto": null,
+    "tagline": "A CBSE school of the PSG Institutions on Avinashi Road, Coimbatore, with labs, library and sports",
+    "about": "PSG Public Schools is a CBSE-affiliated school (affiliation no. 1930265) of the PSG Institutions, located on Avinashi Road in Peelamedu, Coimbatore. The school states that it aims to educate children to fulfil the highest ideals of learning, to use their own initiative, and to accept discipline, responsibility and leadership. Its amenities include school transport, sports and games, physics, chemistry and biology laboratories, computer labs, cultural activities, a library and a canteen.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "School Transport",
+      "Sports Grounds",
+      "Physics Laboratory",
+      "Chemistry Laboratory",
+      "Biology Laboratory",
+      "Computer Lab",
+      "Library",
+      "Canteen"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "srv-public-school-pirattiyur-trichy",
+    "name": "SRV Public School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "0431-2403111",
+    "website": "https://srvschoolstrichy.org/srvcbsetry/",
+    "address": "Trichy - Dindigul High Road, Pirattiyur West",
+    "city": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "pincode": "620009",
+    "logo_url": "https://srvschoolstrichy.org/srvcbsetry/images/newlogo.png",
+    "hero_image_url": "https://srvschoolstrichy.org/srvcbsetry/images/srv/boarding/hostel.jpg",
+    "gallery_images": [
+      {
+        "title": "Hostel Courtyard and Residential Blocks",
+        "category": "Campus",
+        "url": "https://srvschoolstrichy.org/srvcbsetry/images/srv/boarding/srv-board2.png"
+      },
+      {
+        "title": "Hostel Kitchen",
+        "category": "Infrastructure",
+        "url": "https://srvschoolstrichy.org/srvcbsetry/images/srv/boarding/b6.jpg"
+      },
+      {
+        "title": "School Buses",
+        "category": "Transport",
+        "url": "https://srvschoolstrichy.org/srvcbsetry/images/srv/srv-transport/srv-trans2.jpg"
+      },
+      {
+        "title": "Parents Waiting Hall",
+        "category": "Infrastructure",
+        "url": "https://srvschoolstrichy.org/srvcbsetry/images/srv/infrastructure/srv-parents-hall.jpg"
+      }
+    ],
+    "theme_color": "#7f1d1d",
+    "accent_color": "#facc15",
+    "motto": null,
+    "tagline": "An SRV group CBSE school on the Trichy - Dindigul road with boarding, transport and campus facilities",
+    "about": "SRV Public School, Trichy, is part of the SRV group of schools, which also runs SRV Public School Samayapuram and SRV Matriculation Higher Secondary School. Located on the Trichy - Dindigul High Road at Pirattiyur West, the school says it presents the prescribed syllabus in ways that evoke students' curiosity and designs examinations as challenges. Its facilities pages describe a garden, RO drinking water, medical support, a parents' waiting hall, safety and security, boarding and school transport.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Boarding Hostel",
+      "School Transport",
+      "Garden",
+      "RO Drinking Water",
+      "Medical Support",
+      "Parents Waiting Hall",
+      "CCTV Security",
+      "Dining Hall"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "ssvm-school-of-excellence-rajiv-gandhi-nagar-coimbatore",
+    "name": "SSVM School of Excellence",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@ssvmse.com",
+    "official_phone": "0422-2982966",
+    "website": "https://ssvmse.com",
+    "address": "Opp. Perks Manchester, Rajiv Gandhi Nagar Road",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "pincode": "641015",
+    "logo_url": "https://ssvmse.com/wp-content/uploads/2021/12/SSVMSE-logo.png.webp",
+    "hero_image_url": "https://ssvmse.com/wp-content/uploads/2021/07/DSC08315-scaled.jpg.webp",
+    "gallery_images": [
+      {
+        "title": "Reception Lobby",
+        "category": "Infrastructure",
+        "url": "https://ssvmse.com/wp-content/uploads/2025/02/Schools-in-Coimbatore.jpg.webp"
+      },
+      {
+        "title": "Conference Room",
+        "category": "Infrastructure",
+        "url": "https://ssvmse.com/wp-content/uploads/2025/02/International-CBSE-Schools-in-Coimbatore.jpg.webp"
+      },
+      {
+        "title": "Outdoor Playground",
+        "category": "Campus",
+        "url": "https://ssvmse.com/wp-content/uploads/2021/07/DSC08317-scaled.jpg.webp"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#16a34a",
+    "motto": null,
+    "tagline": "A CBSE school in Coimbatore with LED-board classrooms, specialised labs, an auditorium and a secure campus",
+    "about": "SSVM School of Excellence is a CBSE-affiliated school on Rajiv Gandhi Nagar Road in Coimbatore. Its infrastructure page describes a campus monitored by over 80 CCTV cameras, a lower and primary building with LED-board classrooms and early-years playrooms, and the air-conditioned Devdan Arena auditorium beside the library, language lab, 3D design and printing lab and computer lab. The senior block houses science labs, a music room, a maths lab, a fine arts studio, a hydroponics lab and a virtual recording studio.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Auditorium",
+      "Library",
+      "Language Lab",
+      "3D Design and Printing Lab",
+      "Computer Lab",
+      "Science Laboratories",
+      "Music Room",
+      "Fine Arts Studio",
+      "Hydroponics Lab"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "heartfulness-international-school-omega-kolapakkam-chennai",
+    "name": "Heartfulness International School (formerly Lalaji Memorial Omega International School)",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@hisomega.org",
+    "official_phone": "044-66241130",
+    "website": "https://www.hisomega.org",
+    "address": "79, Omega School Road (Pallavaram Road), Kolapakkam, Kovur Post",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "pincode": "600128",
+    "logo_url": "https://www.hisomega.org/wp-content/uploads/2026/10/HIS-Logo.png",
+    "hero_image_url": "https://www.hisomega.org/wp-content/uploads/2025/07/School-Overview-01-2-scaled.jpg",
+    "gallery_images": [
+      {
+        "title": "Aerial View of the Cricket Ground",
+        "category": "Sports",
+        "url": "https://www.hisomega.org/wp-content/uploads/2025/07/School-Overview-05-scaled.jpg"
+      },
+      {
+        "title": "Aerial View of the Campus",
+        "category": "Campus",
+        "url": "https://www.hisomega.org/wp-content/uploads/2024/10/HIS-Omega-Campus-overview-1.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.hisomega.org/wp-content/uploads/2026/10/hisomega-global-education.png"
+      },
+      {
+        "title": "Laboratory Demonstration",
+        "category": "Academics",
+        "url": "https://www.hisomega.org/wp-content/uploads/2026/10/hisomega-cambridege.png"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0ea5e9",
+    "motto": null,
+    "tagline": "A Kolapakkam, Chennai campus offering CBSE, Cambridge and IB Diploma programmes with sports grounds and labs",
+    "about": "Heartfulness International School, Omega Branch, formerly Lalaji Memorial Omega International School, is located on Omega School Road off Pallavaram Road at Kolapakkam, Chennai. The school's website lists CBSE, Cambridge International and IB Diploma Programme curricula along with NIOS, UN programmes, an after-school sports programme and school transportation. Its campus includes a large sports ground and laboratories, and the school lists memberships including Atal Innovation Mission, NCC and Khelo India.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Science Laboratories",
+      "Cricket Ground",
+      "Sports Fields",
+      "School Transport",
+      "After-School Sports Programme",
+      "Atal Tinkering Lab"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "lakshmi-school-veerapanchan-madurai",
+    "name": "Lakshmi School",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "lakshmischool@tvslvs.com",
+    "official_phone": "98434 65255",
+    "website": "https://www.lakshmischool.org",
+    "address": "Sivagangai Road, Veerapanchan",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "pincode": null,
+    "logo_url": "https://www.lakshmischool.org/images/logo.png",
+    "hero_image_url": "https://www.lakshmischool.org/images/1.jpg",
+    "gallery_images": [
+      {
+        "title": "Campus Buildings and Grounds",
+        "category": "Campus",
+        "url": "https://www.lakshmischool.org/images/7.jpg"
+      },
+      {
+        "title": "School Building",
+        "category": "Infrastructure",
+        "url": "https://www.lakshmischool.org/images/8.jpg"
+      },
+      {
+        "title": "Junior Library",
+        "category": "Infrastructure",
+        "url": "https://www.lakshmischool.org/images/junior-library.jpg"
+      },
+      {
+        "title": "Smart Classroom",
+        "category": "Academics",
+        "url": "https://www.lakshmischool.org/images/smartclass-1.jpg"
+      },
+      {
+        "title": "Games on the Sports Field",
+        "category": "Sports",
+        "url": "https://www.lakshmischool.org/images/edusports-2.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#ca8a04",
+    "motto": null,
+    "tagline": "A Lakshmi Vidya Sangham school on Sivagangai Road, Madurai, offering ICSE and ISC education since 2000",
+    "about": "Lakshmi School is run by Lakshmi Vidya Sangham, a trust run by members of the TVS family. The school started in June 2000, initially functioning at TVS Matriculation Higher Secondary School, and moved to its main building at Veerapanchan on 1 October 2001. It is on Sivagangai Road, about 6 km from Anna Bus Stand, and follows the ICSE and ISC curriculum. The school's features include smart classes, day boarding, sports, a science forum, field trips, libraries and an auditorium.",
+    "established_year": 2000,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Smart Classrooms",
+      "Junior Library",
+      "Senior Library",
+      "Auditorium",
+      "Day Boarding",
+      "Sports Fields",
+      "Science Forum"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "american-international-school-taramani-chennai",
+    "name": "American International School Chennai",
+    "affiliation_board": "IB",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "044-22549000",
+    "website": "https://www.aischennai.org",
+    "address": "100 Feet Road, Taramani",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "pincode": "600113",
+    "logo_url": "https://www.aischennai.org/gsd-logo.png",
+    "hero_image_url": "https://www.aischennai.org/userfiles/aiscmvc/2024-25/Banner/banner-images/our-campus.jpg",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.aischennai.org/userfiles/aiscmvc/2024-25/Campus/Side/20241024-AISC-040-CV-X3.jpg"
+      },
+      {
+        "title": "Back Turf Football Field",
+        "category": "Sports",
+        "url": "https://farm66.static.flickr.com/65535/54383535981_1461e96d97_c.jpg"
+      },
+      {
+        "title": "Indoor Tennis and Multi-sport Courts",
+        "category": "Sports",
+        "url": "https://farm66.static.flickr.com/65535/54382646137_cdc757c283_c.jpg"
+      },
+      {
+        "title": "Climbing Wall",
+        "category": "Sports",
+        "url": "https://farm66.static.flickr.com/65535/54383534006_e64e4c0b14_c.jpg"
+      },
+      {
+        "title": "Middle School Hangout Space",
+        "category": "Campus",
+        "url": "https://farm66.static.flickr.com/65535/54383526366_029fe46975_c.jpg"
+      }
+    ],
+    "theme_color": "#1e3a5f",
+    "accent_color": "#b91c1c",
+    "motto": null,
+    "tagline": "A Taramani international school with over 80 teaching spaces for students aged 3 to 18",
+    "about": "American International School Chennai is located on 100 Feet Road, Taramani. Its campus page describes over 80 teaching spaces for students aged 3 to 18, renovated under the Building Futures 2020 plan with flexible furniture. Elementary facilities include the Discovery Studio, classroom libraries, a dance and gymnastics studio, a teaching kitchen, music spaces and an Outdoor Learning Center, while older students use a Design Technology Lab with robotics, CAD stations, 3D printers and laser cutters.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Swimming Pool",
+      "Football Turf",
+      "Tennis Courts",
+      "Climbing Wall",
+      "Design Technology Lab",
+      "Dance and Gymnastics Studio",
+      "Teaching Kitchen",
+      "Music Rooms",
+      "Outdoor Learning Center"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "sishya-school-padmanabha-nagar-adyar-chennai",
+    "name": "Sishya",
+    "affiliation_board": "ICSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": null,
+    "official_phone": "044-24912652",
+    "website": "https://www.sishya.com",
+    "address": "New No. 2, Padmanabha Nagar, Adyar",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "pincode": "600020",
+    "logo_url": "https://www.sishya.com/wp-content/uploads/2020/06/sishya-logo-new.png",
+    "hero_image_url": "https://www.sishya.com/wp-content/uploads/2018/02/About-Sishya-2.jpg",
+    "gallery_images": [
+      {
+        "title": "School Building",
+        "category": "Campus",
+        "url": "https://www.sishya.com/wp-content/uploads/2017/10/About-Sishya-2.jpg"
+      },
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.sishya.com/wp-content/uploads/2017/10/Games-and-Sport2.jpg"
+      },
+      {
+        "title": "Basketball",
+        "category": "Sports",
+        "url": "https://www.sishya.com/wp-content/uploads/2017/10/Games-and-Sport1.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://www.sishya.com/wp-content/uploads/2018/03/Computer-Lab.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#0284c7",
+    "motto": null,
+    "tagline": "An Adyar school founded in 1972 preparing students for the ICSE and ISC examinations",
+    "about": "Sishya was founded in 1972 and moved to Adyar in 1976, growing into a full-fledged higher secondary school offering the +2 since 1986. It is affiliated to the Council for the Indian School Certificate Examinations and prepares students for the ICSE (Class X) and ISC (Class XII) examinations. The school has Christian minority status. Its primary education is grounded in activity-based learning, with no examinations until class 6, and its facilities include art rooms, maths rooms, a library, science and computer labs.",
+    "established_year": 1972,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Science Laboratory",
+      "Computer Lab",
+      "Art Room",
+      "Mathematics Room",
+      "Swimming Pool",
+      "Basketball Court"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  }
+]

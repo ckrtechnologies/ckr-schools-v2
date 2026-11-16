@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers, fetchClasses } from "../features/dataSlice";
+import { fetchUsers, fetchClasses, fetchResults } from "../features/dataSlice";
 import { ArrowLeft, User, Phone, Mail, Calendar, BookOpen, GraduationCap, CreditCard, Activity, FileText, Download } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { generateReportCardPDF } from "../utils/reportCardPDF";
@@ -25,7 +25,8 @@ const StudentProfile = () => {
   useEffect(() => {
     if (users.length === 0) dispatch(fetchUsers());
     if (classes.length === 0) dispatch(fetchClasses());
-  }, [dispatch, users.length, classes.length]);
+    if (results.length === 0) dispatch(fetchResults());
+  }, [dispatch, users.length, classes.length, results.length]);
 
   useEffect(() => {
     if (id) {
@@ -76,7 +77,7 @@ const StudentProfile = () => {
   }, [student, classes]);
 
   const studentResults = useMemo(() => {
-    return results?.filter(r => r.studentId === student?.id) || [];
+    return results?.filter(r => String(r.studentId || r.student_id) === String(student?.id)) || [];
   }, [results, student]);
 
   if (loadingUsers) {
@@ -254,10 +255,10 @@ const StudentProfile = () => {
                 ) : (
                   <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
                     {studentResults.map((termResult, idx) => {
-                      const chartData = termResult.subjects.map((sub) => ({
+                      const chartData = (termResult.subjects || []).map((sub) => ({
                         subject: sub.subject,
-                        "Marks Obtained": sub.marksObtained,
-                        "Max Marks": sub.maxMarks,
+                        "Marks Obtained": Number(sub.marksObtained ?? sub.marks ?? 0),
+                        "Max Marks": Number(sub.maxMarks ?? sub.max_marks ?? 100),
                       }));
 
                       return (

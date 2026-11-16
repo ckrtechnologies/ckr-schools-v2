@@ -1,0 +1,1 @@
+Tamil Nadu batch 01 (10 schools). student_count_badge for Chettinad Vidyashram ("9500+") from the school about page: https://www.chettinadvidyashram.org/about-us/ . No fees taken. Yuvabharathi and SSVM School of Excellence heroes are interior/playground shots (no building photo published). Lakshmi School pincode not on site (null).

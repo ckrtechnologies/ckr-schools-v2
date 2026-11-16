@@ -250,5 +250,404 @@
     "student_teacher_ratio": null,
     "avg_rating": null,
     "review_count": 0
+  },
+  {
+    "slug": "euroschool-whitefield-hoodi-bengaluru",
+    "name": "EuroSchool Whitefield",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": "830621",
+    "school_code": null,
+    "official_email": "connect@euroschoolindia.com",
+    "official_phone": "+91 70385 55555",
+    "website": "https://www.euroschoolindia.com/best-schools-in-bangalore/cbse-whitefield/",
+    "address": "36/183, Behind KPS Yard, Hoodi, Mahadevapura Post, Whitefield",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560048",
+    "logo_url": "https://www.euroschoolindia.com/wp-content/uploads/2024/12/euro-logo.webp",
+    "hero_image_url": "https://www.euroschoolindia.com/wp-content/uploads/2025/02/Whitefield-campus-Euros.jpeg.webp",
+    "gallery_images": [
+      {
+        "title": "Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/08/WHITEFIELD-Swimming-Pool.webp"
+      },
+      {
+        "title": "Football Field",
+        "category": "Sports",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/08/WHITEFIELD-Football.webp"
+      },
+      {
+        "title": "Cricket Practice",
+        "category": "Sports",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/08/WHITEFIELD-Cricket.webp"
+      },
+      {
+        "title": "Skating Rink",
+        "category": "Sports",
+        "url": "https://www.euroschoolindia.com/wp-content/uploads/2025/08/WHITEFIELD-Skating.webp"
+      }
+    ],
+    "theme_color": "#0b3a75",
+    "accent_color": "#f5a623",
+    "motto": null,
+    "tagline": "A CBSE campus in Hoodi, Whitefield offering Nursery to Grade 12 with labs, pool and playing fields",
+    "about": "EuroSchool Whitefield is a CBSE school in Whitefield, Bengaluru, part of the EuroSchool group. The campus was established in 2011 and is spread across 3.4 acres. It is affiliated to CBSE (affiliation number 830621) and follows the CBSE curriculum from Nursery to Grade 12, with Science, Commerce and Humanities streams in Grades 11 and 12. The school lists modern science and computer labs, reading rooms and libraries, multi-purpose playgrounds, a swimming pool, a skating rink and technology-enabled smart classrooms.",
+    "established_year": 2011,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": "Nursery to Grade 12",
+    "facilities": [
+      "Swimming Pool",
+      "Skating Rink",
+      "Football Field",
+      "Cricket Pitch",
+      "Science Laboratories",
+      "Computer Labs",
+      "Library",
+      "Smart Classrooms",
+      "Music Rooms"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "delhi-public-school-bangalore-north-sathnur-bengaluru",
+    "name": "Delhi Public School, Bangalore North",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "admissions@dpsbangalorenorth.edu.in",
+    "official_phone": "080 6927 0106",
+    "website": "https://dpsbangalorenorth.edu.in/",
+    "address": "Survey No 35/1A, Sathnur Village, Jala Hobli, Bagalur Post, Bengaluru North",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "562149",
+    "logo_url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/North-4.png",
+    "hero_image_url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/IMG_2938-scaled.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/IMG_2892-2048x1365.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/IMG_2896-2048x1365.jpg"
+      },
+      {
+        "title": "Campus Courtyard",
+        "category": "Campus",
+        "url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/IMG_2929-scaled.jpg"
+      },
+      {
+        "title": "Children's Play Area",
+        "category": "Campus",
+        "url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/IMG_2914-scaled.jpg"
+      },
+      {
+        "title": "School Bus Fleet",
+        "category": "Transport",
+        "url": "https://dpsbangalorenorth.edu.in/wp-content/uploads/2025/01/IMG_2926-2048x1365.jpg"
+      }
+    ],
+    "theme_color": "#0f5132",
+    "accent_color": "#c8a24a",
+    "motto": "Service Before Self",
+    "tagline": "A green north Bengaluru campus near Bagalur offering CBSE and Cambridge programmes with sports, labs and transport",
+    "about": "Delhi Public School, Bangalore North is one of the Delhi Public Schools in Bengaluru (South, North and East) established by the KKECT trust. The school offers CBSE, Cambridge and NIOS programmes on its campus at Sathnur Village near Bagalur in north Bengaluru. Its campus pages show academic blocks around landscaped courtyards, a library, computer labs, a children's play area and a school bus fleet, while its sports programme covers cricket, swimming and football. The school's motto is Service Before Self.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Computer Labs",
+      "Science Laboratories",
+      "Cricket Ground",
+      "Swimming Pool",
+      "Football",
+      "Play Area",
+      "School Buses",
+      "Infirmary"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "delhi-public-school-bangalore-south-konanakunte-bengaluru",
+    "name": "Delhi Public School, Bangalore South",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@dpsbangaloresouth.edu.in",
+    "official_phone": "+91 80 2666 8581",
+    "website": "https://dpsbangaloresouth.edu.in/",
+    "address": "11th KM, Bikaspura Main Road, Kanakapura Road, Konanakunte",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560111",
+    "logo_url": "https://dpsbangaloresouth.edu.in/storage/2020/02/South-2.png",
+    "hero_image_url": "https://dpsbangaloresouth.edu.in/storage/2025/01/DSC04120_1_30.jpg",
+    "gallery_images": [
+      {
+        "title": "Academic Block",
+        "category": "Campus",
+        "url": "https://dpsbangaloresouth.edu.in/storage/2025/01/DSC04986-scaled.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://dpsbangaloresouth.edu.in/storage/2025/01/DSC04901-2048x1365.jpg"
+      },
+      {
+        "title": "Music Room – Drum Kit",
+        "category": "Arts",
+        "url": "https://dpsbangaloresouth.edu.in/storage/2025/01/DSC08387-2048x1365.jpg"
+      }
+    ],
+    "theme_color": "#0f5132",
+    "accent_color": "#d4a017",
+    "motto": "Service Before Self",
+    "tagline": "A KKECT school off Kanakapura Road in south Bengaluru with computer labs, music and sports programmes",
+    "about": "Delhi Public School, Bangalore South is located on Bikaspura Main Road off Kanakapura Road at Konanakunte in south Bengaluru. It is one of the Delhi Public Schools in Bengaluru established by the KKECT trust, alongside the North and East campuses, and follows the CBSE curriculum. The school's campus pages show its academic buildings, computer labs and music rooms, along with sports and co-curricular activities. Like its sister schools, it follows the motto Service Before Self.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Computer Labs",
+      "Science Laboratories",
+      "Library",
+      "Music Room",
+      "Sports Fields",
+      "Basketball Court",
+      "School Buses",
+      "Auditorium"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "national-public-school-koramangala-bengaluru",
+    "name": "National Public School, Koramangala",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@npskrm.com",
+    "official_phone": "+91 80 2570 5171",
+    "website": "https://npskrm.com/",
+    "address": "National Games Village Complex, 80 ft. Road, Koramangala",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560047",
+    "logo_url": "https://npskrm.com/img/nps_krm_logo.png",
+    "hero_image_url": "https://npskrm.com/img/school/krm_hm_abt_nps.jpg",
+    "gallery_images": [
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://npskrm.com/img/school/krm_faci_library.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://npskrm.com/img/school/krm_faci_pc-lab.jpg"
+      },
+      {
+        "title": "Mathematics Lab",
+        "category": "Academics",
+        "url": "https://npskrm.com/img/school/krm_faci_math-lab.jpg"
+      },
+      {
+        "title": "Art Room",
+        "category": "Arts",
+        "url": "https://npskrm.com/img/school/krm_faci_art_room.jpg"
+      },
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://npskrm.com/img/school/krm_faci_auditorium.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#dc2626",
+    "motto": null,
+    "tagline": "A CBSE school of the NPS Group at the National Games Village, Koramangala, founded in 2003",
+    "about": "National Public School, Koramangala was established in 2003 under the chairmanship of Dr. K P Gopalkrishna, following NPS Rajajinagar, NPS Chennai and NPS Indiranagar. The school is affiliated to the Central Board of Secondary Education and is run by the National Education Trust, a linguistic, regional minority institution. It is located in the National Games Village complex on 80 ft. Road, Koramangala. Its facilities page lists classrooms, a computer lab, a library, a mathematics lab, an art room and an auditorium.",
+    "established_year": 2003,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Library",
+      "Computer Lab",
+      "Mathematics Lab",
+      "Science Laboratories",
+      "Art Room",
+      "Auditorium",
+      "Smart Classrooms",
+      "Basketball Court"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "national-public-school-hsr-layout-sector-4-bengaluru",
+    "name": "National Public School, HSR Layout",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "info@npshsr.com",
+    "official_phone": "+91 80 2572 9406",
+    "website": "https://npshsr.com/",
+    "address": "32/P2, 17th B Main, Sector 4, HSR Layout",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560102",
+    "logo_url": "https://npshsr.com/images/logo/nps-hsr-logo.png",
+    "hero_image_url": "https://npshsr.com/images/home-sliders/home-slider-2.jpg",
+    "gallery_images": [
+      {
+        "title": "Auditorium",
+        "category": "Infrastructure",
+        "url": "https://npshsr.com/images/inner-images/facilities/auditorium.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://npshsr.com/images/inner-images/facilities/library-1.jpg"
+      },
+      {
+        "title": "Computer Lab",
+        "category": "Academics",
+        "url": "https://npshsr.com/images/inner-images/facilities/computer-lab.jpg"
+      },
+      {
+        "title": "Chemistry Lab",
+        "category": "Academics",
+        "url": "https://npshsr.com/images/inner-images/facilities/chemistry-lab.jpg"
+      },
+      {
+        "title": "Basketball Court",
+        "category": "Sports",
+        "url": "https://npshsr.com/images/inner-images/facilities/basketball.jpg"
+      }
+    ],
+    "theme_color": "#1e3a8a",
+    "accent_color": "#f59e0b",
+    "motto": null,
+    "tagline": "An NPS Group CBSE school in Sector 4, HSR Layout with labs, auditorium, library and courts",
+    "about": "NPS HSR is a branch of the NPS Group of institutions in Bengaluru, established in 2008 by Chairman Dr. K. P. Gopalkrishna and led by Director Dr. Bindu Hari. The school is affiliated to the CBSE board and is located in Sector 4, HSR Layout. Its facilities page lists classrooms, mathematics, physics, chemistry, biology and junior science labs, a computer lab, libraries, an auditorium, dance, art and yoga rooms, a counselling room, a health care room, indoor games and basketball, volleyball and football areas.",
+    "established_year": 2008,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Physics, Chemistry and Biology Labs",
+      "Mathematics Lab",
+      "Computer Lab",
+      "Library",
+      "Auditorium",
+      "Dance Room",
+      "Art Room",
+      "Yoga Room",
+      "Basketball Court",
+      "Health Care Room"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
+  },
+  {
+    "slug": "the-yenepoya-school-jeppinamogaru-mangaluru",
+    "name": "The Yenepoya School",
+    "affiliation_board": "CBSE",
+    "board_affiliation_number": null,
+    "school_code": null,
+    "official_email": "tys@yenepoya.edu.in",
+    "official_phone": "0824 2241846",
+    "website": "https://www.theyenepoyaschool.com/",
+    "address": "NH 17, Jeppina Mogaru",
+    "city": "Mangaluru",
+    "state": "Karnataka",
+    "pincode": "575007",
+    "logo_url": "https://www.theyenepoyaschool.com/img/yenepoya-school-logo.svg",
+    "hero_image_url": "https://www.theyenepoyaschool.com/img/facility/play-1.jpg",
+    "gallery_images": [
+      {
+        "title": "Indoor Swimming Pool",
+        "category": "Sports",
+        "url": "https://www.theyenepoyaschool.com/img/facility/swim-1.jpg"
+      },
+      {
+        "title": "Library",
+        "category": "Infrastructure",
+        "url": "https://www.theyenepoyaschool.com/img/facility/lib-1.jpg"
+      },
+      {
+        "title": "Science Laboratory",
+        "category": "Academics",
+        "url": "https://www.theyenepoyaschool.com/img/facility/lab-2.jpg"
+      },
+      {
+        "title": "School Bus Fleet",
+        "category": "Transport",
+        "url": "https://www.theyenepoyaschool.com/img/facility/tr-1.jpg"
+      }
+    ],
+    "theme_color": "#3f3f46",
+    "accent_color": "#ea580c",
+    "motto": null,
+    "tagline": "A CBSE and Cambridge school in Jeppinamogaru, Mangaluru with an indoor pool, labs and football turf",
+    "about": "The Yenepoya School was formerly known as Akshara Montessori School and was established at Balmatta in Mangaluru. In 2008 it was relocated to its new campus at Jeppinamogaru on NH 17 and renamed The Yenepoya School. The school is affiliated with the Central Board of Secondary Education (CBSE) as well as Cambridge International Education. Its campus includes an indoor swimming pool, science and mathematics labs, an auditorium, a library, a basketball court and a football turf, along with school transport and meal facilities.",
+    "established_year": null,
+    "min_fee": null,
+    "max_fee": null,
+    "fee_period": "ANNUAL",
+    "grades_offered": null,
+    "facilities": [
+      "Indoor Swimming Pool",
+      "Science Laboratories",
+      "Mathematics Lab",
+      "Auditorium",
+      "Library",
+      "Basketball Court",
+      "Football Turf",
+      "School Buses",
+      "Dining Hall"
+    ],
+    "admission_status": null,
+    "student_count_badge": null,
+    "teacher_count_badge": null,
+    "student_teacher_ratio": null,
+    "avg_rating": null,
+    "review_count": 0
   }
 ]
